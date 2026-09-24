@@ -1,0 +1,67 @@
+{
+ "capturedAt": "2026-09-24T20:54:31.615Z",
+ "viewport": {
+  "width": 1280,
+  "height": 800
+ },
+ "sources": {
+  "v11": "https://react.carbondesignsystem.com",
+  "v12": "https://v12-react.carbondesignsystem.com"
+ },
+ "builds": {
+  "v11": {
+   "url": "https://react.carbondesignsystem.com",
+   "iframeCss": "https://react.carbondesignsystem.com/assets/iframe-J63vKPYG.css",
+   "indexHash": "8de9a913ab5a",
+   "fingerprint": "f957cdb3792f"
+  },
+  "v12": {
+   "url": "https://v12-react.carbondesignsystem.com",
+   "iframeCss": "https://v12-react.carbondesignsystem.com/assets/iframe-d5G8Wi3F.css",
+   "indexHash": "4d0bc20e1962",
+   "fingerprint": "e2bf1a48b030"
+  }
+ },
+ "props": [
+  "display",
+  "border-top-left-radius",
+  "border-top-right-radius",
+  "border-bottom-right-radius",
+  "border-bottom-left-radius",
+  "padding-top",
+  "padding-right",
+  "padding-bottom",
+  "padding-left",
+  "margin-top",
+  "margin-right",
+  "margin-bottom",
+  "margin-left",
+  "row-gap",
+  "column-gap",
+  "background-color",
+  "background-image",
+  "color",
+  "border-top-width",
+  "border-top-style",
+  "border-top-color",
+  "border-right-width",
+  "border-right-style",
+  "border-right-color",
+  "border-bottom-width",
+  "border-bottom-style",
+  "border-bottom-color",
+  "border-left-width",
+  "border-left-style",
+  "border-left-color",
+  "box-shadow",
+  "font-size",
+  "font-weight",
+  "line-height",
+  "letter-spacing",
+  "outline-width",
+  "outline-style",
+  "outline-color",
+  "outline-offset"
+ ],
+ "buildKey": "f957cdb3792f:e2bf1a48b030:e72d76e8"
+}

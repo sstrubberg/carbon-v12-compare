@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carbon V12 Before &amp; After</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --bg:#ffffff; --layer:#f4f4f4; --layer-2:#e8e8e8; --text:#161616; --text-2:#525252; --text-3:#6f6f6f;
+  --border:#e0e0e0; --border-strong:#8d8d8d; --accent:#0f62fe; --accent-text:#0f62fe; --focus:#0f62fe;
+  --ok:#24a148; --ok-bg:#defbe6; --warn:#8e6a00; --warn-bg:#fcf4d6; --info:#0043ce; --info-bg:#edf5ff; --err:#da1e28; --err-bg:#fff1f1; --muted-bg:#f4f4f4;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#161616; --layer:#262626; --layer-2:#333333; --text:#f4f4f4; --text-2:#c6c6c6; --text-3:#a8a8a8;
+    --border:#393939; --border-strong:#6f6f6f; --accent:#4589ff; --accent-text:#78a9ff; --focus:#ffffff;
+    --ok:#42be65; --ok-bg:#0e2a17; --warn:#f1c21b; --warn-bg:#302400; --info:#78a9ff; --info-bg:#0b2046; --err:#ff8389; --err-bg:#3a1215; --muted-bg:#262626;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#161616; --layer:#262626; --layer-2:#333333; --text:#f4f4f4; --text-2:#c6c6c6; --text-3:#a8a8a8;
+  --border:#393939; --border-strong:#6f6f6f; --accent:#4589ff; --accent-text:#78a9ff; --focus:#ffffff;
+  --ok:#42be65; --ok-bg:#0e2a17; --warn:#f1c21b; --warn-bg:#302400; --info:#78a9ff; --info-bg:#0b2046; --err:#ff8389; --err-bg:#3a1215; --muted-bg:#262626;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);margin:0}
+body{font-family:var(--sans);color:var(--text);font-size:14px;line-height:1.45;letter-spacing:.16px}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+
+.shell{position:sticky;top:0;z-index:20;height:48px;background:#161616;color:#f4f4f4;display:flex;align-items:center;gap:16px;padding-inline:16px;border-bottom:1px solid #393939}
+.shell .brand{font-size:14px;white-space:nowrap}
+.shell .brand b{font-weight:600}
+.shell .sep{width:1px;height:20px;background:#525252}
+.shell .ctx{color:#c6c6c6;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shell .spacer{flex:1}
+.stamp{font-family:var(--mono);font-size:11px;letter-spacing:.32px;color:#c6c6c6;white-space:nowrap}
+
+.layout{display:grid;grid-template-columns:272px minmax(0,1fr);min-height:calc(100vh - 48px)}
+.side{border-right:1px solid var(--border);background:var(--layer);padding-block:12px 24px;position:sticky;top:48px;align-self:start;max-height:calc(100vh - 48px);overflow:auto}
+.side h4{margin:16px 16px 6px;font-size:12px;font-weight:400;color:var(--text-3);letter-spacing:.32px}
+.side a{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 16px;color:var(--text-2);text-decoration:none;border-left:3px solid transparent;font-size:14px}
+.side a span.nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.side a:hover{background:var(--layer-2);color:var(--text)}
+.side a[aria-current="page"]{border-left-color:var(--accent);background:var(--layer-2);color:var(--text);font-weight:600}
+.side .search{margin:4px 16px 0;width:calc(100% - 32px);height:32px;padding:0 10px;background:var(--bg);border:0;border-bottom:1px solid var(--border-strong)}
+.side .count{font-family:var(--mono);font-size:12px;color:var(--text-3)}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.dot.changed{background:var(--info)} .dot.new{background:var(--ok)} .dot.removed{background:var(--err)} .dot.unchanged{background:var(--border-strong)}
+.mobile-nav{display:none}
+
+main{padding-inline:32px;padding-block:32px 64px;min-width:0}
+.eyebrow{font-family:var(--mono);font-size:12px;color:var(--text-3);letter-spacing:.32px;margin:0 0 8px}
+h1{font-size:42px;font-weight:300;line-height:1.19;margin:0 0 12px;text-wrap:balance;letter-spacing:0;overflow-wrap:anywhere}
+h2{font-size:24px;font-weight:400;margin:0 0 12px;text-wrap:balance}
+h3{font-size:16px;font-weight:600;margin:0 0 8px}
+.lede{font-size:16px;color:var(--text-2);max-width:66ch;margin:0 0 24px;line-height:1.5}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--border);margin-bottom:32px}
+.stat{padding:16px;border-right:1px solid var(--border)}
+.stat:last-child{border-right:0}
+.stat .n{font-size:32px;font-weight:300;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat .l{font-size:12px;color:var(--text-2);display:flex;align-items:center;gap:6px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.gcard{display:flex;flex-direction:column;border:1px solid var(--border);background:var(--bg);text-decoration:none;color:inherit;transition:border-color .12s}
+.gcard:hover{border-color:var(--border-strong)}
+.gcard .thumbs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border);background:#fff}
+.gcard .thumbs > div{padding:24px 10px 10px;height:132px;display:flex;justify-content:center;align-items:center;position:relative;overflow:hidden}
+.gcard .thumbs > div + div{border-left:1px solid #e0e0e0}
+.gcard .thumbs img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.gcard .thumbs .empty{font-size:12px;color:#6f6f6f;text-align:center}
+.tlabel{position:absolute;top:6px;left:8px;font-family:var(--mono);font-size:10px;color:#6f6f6f;letter-spacing:.32px}
+.gcard .meta{padding:12px 16px 16px;display:flex;flex-direction:column;gap:6px}
+.gcard .meta .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.gcard .meta h3{margin:0;overflow-wrap:anywhere}
+.gcard .meta p{margin:0;color:var(--text-2);font-size:13px}
+
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:2px 8px;border-radius:12px;white-space:nowrap}
+.chip.changed{background:var(--info-bg);color:var(--info)}
+.chip.new{background:var(--ok-bg);color:var(--ok)}
+.chip.removed{background:var(--err-bg);color:var(--err)}
+.chip.unchanged{background:var(--muted-bg);color:var(--text-2)}
+
+.comp-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
+.comp-head .left{max-width:75ch;min-width:0}
+.comp-head p{margin:0;color:var(--text-2);font-size:15px}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:12px}
+.seg{display:inline-flex;border:1px solid var(--border-strong)}
+.seg button{background:transparent;border:0;padding:6px 14px;cursor:pointer;color:var(--text-2);font-size:13px}
+.seg button + button{border-left:1px solid var(--border-strong)}
+.seg button[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.toolbar .lbl{font-size:12px;color:var(--text-3)}
+.story-pick{height:32px;padding:0 10px;background:var(--layer);border:0;border-bottom:1px solid var(--border-strong);max-width:100%;min-width:0}
+.pxbadge{font-family:var(--mono);font-size:12px;color:var(--text-2)}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border)}
+.compare.single{grid-template-columns:1fr}
+.pane{min-width:0;display:flex;flex-direction:column}
+.pane + .pane{border-left:1px solid var(--border)}
+.pane-h{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--border);background:var(--layer);font-family:var(--mono);font-size:12px}
+.pane-h .ver{font-weight:500}
+.pane-h .pkg{color:var(--text-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pane-h a{color:var(--accent-text);text-decoration:none}
+.stage{background:#fff;padding:24px;min-height:200px;display:flex;justify-content:center;align-items:center;overflow:auto}
+.stage img{max-width:100%;height:auto;display:block}
+.stage.live{padding:0}
+.stage iframe{width:100%;height:560px;border:0;background:#fff;display:block}
+.stage .empty{color:#6f6f6f;font-size:13px}
+.wipe{position:relative;border:1px solid var(--border);background:#fff}
+.wipe .layers{display:grid;justify-items:center;padding:24px}
+.wipe .layers img{grid-area:1/1;max-width:100%;height:auto;display:block}
+.wipe .layers img.top{clip-path:inset(0 0 0 var(--cut,50%))}
+.wipe .frame{position:relative;display:grid}
+.wipe .handle{position:absolute;top:-24px;bottom:-24px;left:var(--cut,50%);width:2px;background:var(--accent);pointer-events:none}
+.wipe .handle::after{content:"";position:absolute;top:50%;left:-9px;width:20px;height:20px;border-radius:50%;background:var(--accent);transform:translateY(-50%);box-shadow:0 0 0 3px #fff}
+.wipe input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.wipe .tags{display:flex;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--border);background:var(--layer);font-family:var(--mono);font-size:12px}
+
+.log{margin-top:32px}
+.log table{width:100%;border-collapse:collapse;font-size:14px}
+.tablewrap{overflow-x:auto;border:1px solid var(--border)}
+.log th{text-align:left;font-weight:600;font-size:12px;color:var(--text-2);background:var(--layer);padding:10px 16px;white-space:nowrap}
+.log td{padding:10px 16px;border-top:1px solid var(--border);vertical-align:top}
+.log td.el{font-family:var(--mono);font-size:12px;color:var(--text-2);max-width:280px;overflow-wrap:anywhere}
+.log td.diff{font-family:var(--mono);font-size:12px;color:var(--text-2);min-width:240px;max-width:520px;overflow-wrap:anywhere}
+.log td.num{font-family:var(--mono);font-size:12px;color:var(--text-3);white-space:nowrap}
+.diff .from{text-decoration:line-through;text-decoration-color:var(--text-3)}
+.diff .arrow{color:var(--text-3);padding-inline:6px}
+.diff .to{color:var(--text)}
+.nt{display:block;margin-top:2px;color:var(--text-3);font-family:var(--sans)}
+.sw{display:inline-block;width:10px;height:10px;border:1px solid var(--border-strong);vertical-align:-1px;margin-right:3px}
+.type{font-family:var(--mono);font-size:11px;letter-spacing:.32px;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-strong);color:var(--text-2);white-space:nowrap}
+.flag{font-family:var(--mono);font-size:12px;background:var(--layer);padding:2px 6px;color:var(--text)}
+.note{margin-top:12px;font-size:13px;color:var(--text-3)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center}
+.filters button{border:1px solid var(--border-strong);background:transparent;border-radius:16px;padding:4px 12px;font-size:13px;cursor:pointer;color:var(--text-2)}
+.filters button[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+.filters input{height:30px;padding:0 10px;background:var(--layer);border:0;border-bottom:1px solid var(--border-strong);min-width:220px}
+.log a,.lnk{color:var(--accent-text);text-decoration:none}
+.log a:hover,.lnk:hover{text-decoration:underline}
+.banner{border:1px solid var(--border);border-left:3px solid var(--info);background:var(--layer);padding:12px 16px;font-size:13px;color:var(--text-2);margin-bottom:28px;max-width:84ch}
+.banner b{color:var(--text)}
+.notes{display:flex;flex-direction:column;gap:12px;max-width:84ch}
+.notes .n{border-left:3px solid var(--border-strong);padding:4px 0 4px 16px}
+.notes .n .d{font-family:var(--mono);font-size:12px;color:var(--text-3)}
+.notes .n p{margin:4px 0 0;white-space:pre-line;color:var(--text-2)}
+.more{background:none;border:0;color:var(--accent-text);cursor:pointer;padding:12px 0 0;font-size:13px}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .side{display:none}
+  .mobile-nav{display:block;margin-bottom:20px}
+  .mobile-nav select{width:100%;height:40px;padding:0 12px;background:var(--layer);border:0;border-bottom:1px solid var(--border-strong)}
+  main{padding-inline:16px;padding-block:24px 48px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  h1{font-size:32px}
+  .shell .ctx,.shell .sep,.stamp{display:none}
+}
+@media (max-width:640px){
+  .compare{grid-template-columns:1fr}
+  .pane + .pane{border-left:0;border-top:1px solid var(--border)}
+  .stage{padding:16px}
+  .grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="shell">
+  <span class="brand">IBM <b>Carbon</b></span>
+  <span class="sep"></span>
+  <span class="ctx">V12 Before &amp; After</span>
+  <span class="spacer"></span>
+  <span class="stamp" id="stamp"></span>
+</header>
+
+<div class="layout">
+  <nav class="side" id="side" aria-label="Components"></nav>
+  <main id="main"><p class="lede">Loading captured data…</p></main>
+</div>
+
+<script>
+const STATUS = {
+  changed:{label:"Changed", cls:"changed"},
+  new:{label:"New in V12", cls:"new"},
+  removed:{label:"Removed in V12", cls:"removed"},
+  unchanged:{label:"No visual change", cls:"unchanged"}
+};
+const SRC = { v11:"https://react.carbondesignsystem.com", v12:"https://v12-react.carbondesignsystem.com" };
+const TYPES = ["Visual","Layout","Structure","Story","Flag"];
+const STATUS_ORDER = {changed:0,new:1,removed:2,unchanged:3};
+
+let DATA, META, COMPONENTS = [];
+const state = { mode:"live", cut:50, filter:"All", q:"", navQ:"", story:{}, statusFilter:"All", thisStory:false, limit:200 };
+try{ Object.assign(state, JSON.parse(localStorage.getItem("v12ba3")||"{}")); }catch(e){}
+if(!["live","wipe","diff"].includes(state.mode)) state.mode = "live";
+const save = ()=>{ try{ localStorage.setItem("v12ba3", JSON.stringify({mode:state.mode})); }catch(e){} };
+
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const chip = st=>`<span class="chip ${STATUS[st].cls}"><span class="dot ${STATUS[st].cls}"></span>${STATUS[st].label}</span>`;
+const pct = r=>r==null?"—":(r*100<0.1&&r>0?"<0.1":(r*100).toFixed(1))+"%";
+const shot = (v,id)=>`data/shots/${v}/${encodeURIComponent(id)}.png`;
+const storyUrl = (v,id)=>`${SRC[v]}/iframe.html?id=${encodeURIComponent(id)}&viewMode=story`;
+const sbUrl = (v,id)=>`${SRC[v]}/?path=/story/${encodeURIComponent(id)}`;
+// Hex values get a colour swatch so a token swap is visible at a glance.
+// The story a component page opens on: its "Default" story if it has one, else the first listed.
+const isDefault = (id, name)=>/^default$/i.test(name||"") || /--default$/.test(id);
+const defaultFirst = (list, id=x=>x.id, name=x=>x.name)=>{
+  const i = list.findIndex(x=>isDefault(id(x), name(x)));
+  return i>0 ? [list[i], ...list.slice(0,i), ...list.slice(i+1)] : list;
+};
+const val = s=>esc(s).replace(/#[0-9a-f]{6}\b/gi, h=>`<span class="sw" style="background:${h}"></span>${h}`);
+
+async function load(){
+  const [c, m] = await Promise.all([fetch("data/changelog.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json())]);
+  DATA = c; META = m;
+  COMPONENTS = c.components.map(x=>{
+    const captured = x.stories.filter(s=>s.captured && !s.error);
+    const added = x.changes.filter(ch=>ch.prop==="story added").map(ch=>ch.stories[0]);
+    const removed = x.changes.filter(ch=>ch.prop==="story removed").map(ch=>ch.stories[0]);
+    return {...x, captured, added, removed, lead: captured[0] || null};
+  });
+  $("#stamp").textContent = `Captured ${new Date(m.capturedAt).toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"})} · ${c.counts.storiesCompared} stories`;
+  route();
+}
+
+function nav(active){
+  const q = state.navQ.toLowerCase();
+  const bySection = {};
+  for(const c of COMPONENTS){ if(q && !c.name.toLowerCase().includes(q)) continue; (bySection[c.section] ??= []).push(c); }
+  const order = ["Components", ...Object.keys(bySection).filter(s=>s!=="Components").sort()];
+  const groups = order.filter(s=>bySection[s]).map(s=>`<h4>${esc(s)}</h4>`+bySection[s].map(c=>
+    `<a href="#${c.id}" ${active===c.id?'aria-current="page"':''}><span class="nm">${esc(c.name)}</span><span class="dot ${c.status}" title="${STATUS[c.status].label}"></span></a>`).join("")).join("");
+  $("#side").innerHTML = `
+    <h4>Release</h4>
+    <a href="#overview" ${active==="overview"?'aria-current="page"':''}>Overview</a>
+    <a href="#changelog" ${active==="changelog"?'aria-current="page"':''}>Full changelog<span class="count">${DATA.counts.changes}</span></a>
+    <a href="#notes" ${active==="notes"?'aria-current="page"':''}>Release notes, flags &amp; tokens</a>
+    <input class="search" id="navq" type="search" placeholder="Filter components" value="${esc(state.navQ)}" aria-label="Filter components">
+    ${groups || `<h4>No match</h4>`}`;
+  const i = $("#navq");
+  i.oninput = e=>{ state.navQ=e.target.value; const pos=e.target.selectionStart; nav(active); const n=$("#navq"); n.focus(); n.setSelectionRange(pos,pos); };
+}
+function mobileNav(active){
+  const opts = [["overview","Overview"],["changelog","Full changelog"],["notes","Release notes, flags & tokens"],...COMPONENTS.map(c=>[c.id,c.name])]
+    .map(([v,l])=>`<option value="${v}" ${v===active?"selected":""}>${esc(l)}</option>`).join("");
+  return `<div class="mobile-nav"><label class="eyebrow" for="mnav">Go to</label><select id="mnav">${opts}</select></div>`;
+}
+
+function thumbs(c){
+  if(c.lead) return `
+    <div><span class="tlabel">V11</span><img loading="lazy" src="${shot("v11",c.lead.id)}" alt="V11 ${esc(c.name)}"></div>
+    <div><span class="tlabel">V12</span><img loading="lazy" src="${shot("v12",c.lead.id)}" alt="V12 ${esc(c.name)}"></div>`;
+  if(c.status==="new") return `<div><span class="tlabel">V11</span><span class="empty">Not in V11</span></div><div><span class="tlabel">V12</span><span class="empty">${c.added.length} stor${c.added.length===1?"y":"ies"}</span></div>`;
+  return `<div><span class="tlabel">V11</span><span class="empty">${c.removed.length} stor${c.removed.length===1?"y":"ies"}</span></div><div><span class="tlabel">V12</span><span class="empty">Not in V12</span></div>`;
+}
+function summaryLine(c){
+  const n = c.changes.length;
+  if(c.status==="new") return `${c.added.length} new stor${c.added.length===1?"y":"ies"}`;
+  if(c.status==="removed") return `${c.removed.length} stor${c.removed.length===1?"y":"ies"} dropped`;
+  const px = c.pixel ? ` · ${c.pixel.storiesChanged}/${c.pixel.storiesCompared} stories differ, up to ${pct(c.pixel.max)} pixels` : "";
+  return `${n ? n+" change"+(n>1?"s":"") : "No changes"}${px}`;
+}
+
+function overview(){
+  const counts = k=>COMPONENTS.filter(c=>c.status===k).length;
+  let list = [...COMPONENTS].sort((a,b)=>STATUS_ORDER[a.status]-STATUS_ORDER[b.status] || (b.pixel?.max??0)-(a.pixel?.max??0) || a.name.localeCompare(b.name));
+  if(state.statusFilter!=="All") list = list.filter(c=>c.status===state.statusFilter);
+  const cards = list.map(c=>`
+    <a class="gcard" href="#${c.id}">
+      <div class="thumbs">${thumbs(c)}</div>
+      <div class="meta"><div class="row"><h3>${esc(c.name)}</h3>${chip(c.status)}</div>
+        <p>${summaryLine(c)}</p></div>
+    </a>`).join("");
+  const sf = ["All","changed","new","removed","unchanged"];
+  return `
+    <p class="eyebrow">CARBON V12 · CAPTURED FROM THE LIVE STORYBOOKS</p>
+    <h1>See every component, before and after</h1>
+    <p class="lede">Every story that exists in both the V11 and V12 Storybooks, screenshotted side by side, with the computed-style differences behind each change. Open a component to try the real V11 and V12 stories side by side, or switch to the captured screenshots for a wipe and pixel diff.</p>
+    <div class="banner"><b>How to read this.</b> Screenshots use the white theme at 1280×800. Change entries compare the computed styles of every <code>cds--</code> element. A shift that no recorded style explains is marked as unexplained. Re-run <code>npm run capture &amp;&amp; npm run diff</code> to refresh.</div>
+    <div class="stats">
+      <div class="stat"><div class="n">${COMPONENTS.length}</div><div class="l">Components tracked</div></div>
+      ${["changed","new","removed"].map(k=>`<div class="stat"><div class="n">${counts(k)}</div><div class="l"><span class="dot ${k}"></span>${STATUS[k].label}</div></div>`).join("")}
+    </div>
+    <div class="filters" role="group" aria-label="Filter by status">
+      ${sf.map(s=>`<button data-sfilter="${s}" aria-pressed="${state.statusFilter===s}">${s==="All"?"All":STATUS[s].label} <span style="opacity:.7">${s==="All"?COMPONENTS.length:counts(s)}</span></button>`).join("")}
+    </div>
+    <div class="grid">${cards}</div>`;
+}
+
+function changeRows(list, withComp){
+  const cols = withComp?6:5;
+  if(!list.length) return `<tr><td colspan="${cols}" style="color:var(--text-3)">No changes.</td></tr>`;
+  return list.map(({c,ch})=>{
+    const note = ch.note && ch.type!=="Flag" ? `<span class="nt">${esc(ch.note)}</span>` : ch.type==="Flag" && ch.note ? `<span class="nt">${esc(ch.note)}</span>` : "";
+    const el = ch.element ? esc(ch.element) : "";
+    const stories = ch.stories?.length ?? 0;
+    return `<tr>
+      ${withComp?`<td><a href="#${c.id}">${esc(c.name)}</a></td>`:""}
+      <td><span class="type">${ch.type}</span></td>
+      <td class="el">${el}${ch.variants && ch.variants.length>1?`<span class="nt">${ch.variants.length} variants</span>`:""}</td>
+      <td>${ch.type==="Flag"?`<span class="flag">${esc(ch.prop)}</span>`:esc(ch.prop)}</td>
+      <td class="diff"><span class="from">${val(ch.from)}</span><span class="arrow">→</span><span class="to">${val(ch.to)}</span>${note}</td>
+      <td class="num">${stories>1?stories+" stories":stories===1?"1 story":""}</td>
+    </tr>`;}).join("");
+}
+
+function compView(c){
+  const stories = defaultFirst(c.captured);
+  let sid = state.story[c.id];
+  if(!stories.find(s=>s.id===sid)) sid = stories[0]?.id;
+  const s = stories.find(x=>x.id===sid);
+  let body = "", toolbar = "";
+
+  if(s){
+    const pick = `<select class="story-pick" id="storypick" aria-label="Story">${stories.map(x=>`<option value="${esc(x.id)}" ${x.id===sid?"selected":""}>${esc(x.name)}${x.pixel?.ratio>0.001?` · ${pct(x.pixel.ratio)}`:""}</option>`).join("")}</select>`;
+    toolbar = `<div class="toolbar">
+      <span class="lbl">Story</span>${pick}
+      <div class="seg" role="group" aria-label="Compare mode">
+        <button data-mode="live" aria-pressed="${state.mode==="live"}">Live</button>
+        <button data-mode="wipe" aria-pressed="${state.mode==="wipe"}">Wipe</button>
+        <button data-mode="diff" aria-pressed="${state.mode==="diff"}">Pixel diff</button>
+      </div>
+      <span class="pxbadge">${state.mode==="live"?"Live from both Storybooks · ":"From capture · "}${s.pixel?`${s.pixel.diffPixels.toLocaleString()} px differ (${pct(s.pixel.ratio)})${s.pixel.sizeChanged?" · size changed":""}`:""}</span>
+    </div>`;
+    const head = (v)=>`<div class="pane-h"><span class="ver">${v.toUpperCase()}</span><a class="pkg" href="${sbUrl(v, v==="v11"?s.v11Id:s.id)}" target="_blank" rel="noopener">Open in Storybook ↗</a></div>`;
+    if(state.mode==="wipe"){
+      body = `<div class="wipe" style="--cut:${state.cut}%">
+        <div class="layers"><div class="frame">
+          <img src="${shot("v11",s.id)}" alt="V11 ${esc(s.name)}"><img class="top" src="${shot("v12",s.id)}" alt="V12 ${esc(s.name)}">
+          <div class="handle" aria-hidden="true"></div>
+          <input type="range" id="cut" min="0" max="100" value="${state.cut}" aria-label="Wipe between V11 and V12">
+        </div></div>
+        <div class="tags"><span>← V11</span><span>V12 →</span></div>
+      </div>`;
+    } else if(state.mode==="diff"){
+      body = `<div class="compare single"><div class="pane"><div class="pane-h"><span class="ver">PIXEL DIFF</span><span class="pkg">red = changed pixels</span></div>
+        <div class="stage"><img src="${shot("diff",s.id)}" alt="Pixel diff for ${esc(s.name)}"></div></div></div>`;
+    } else {
+      body = `<div class="compare">
+        <div class="pane">${head("v11")}<div class="stage live"><iframe loading="lazy" title="V11 ${esc(s.name)}" src="${storyUrl("v11",s.v11Id)}"></iframe></div></div>
+        <div class="pane">${head("v12")}<div class="stage live"><iframe loading="lazy" title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div></div>
+      </div>`;
+    }
+  } else {
+    // New or removed component: nothing to compare, so show the live story from the version that has it.
+    const v = c.status==="new" ? "v12" : "v11";
+    const names = Object.fromEntries(c.changes.filter(ch=>ch.type==="Story").map(ch=>[ch.stories[0], ch.to!=="—"?ch.to:ch.from]));
+    const ids = defaultFirst(v==="v12" ? c.added : c.removed, id=>id, id=>names[id]);
+    let pickId = state.story[c.id]; if(!ids.includes(pickId)) pickId = ids[0];
+    toolbar = `<div class="toolbar"><span class="lbl">Story</span><select class="story-pick" id="storypick" aria-label="Story">${ids.map(id=>`<option value="${esc(id)}" ${id===pickId?"selected":""}>${esc(names[id]||id)}</option>`).join("")}</select></div>`;
+    const live = pickId ? `<div class="pane"><div class="pane-h"><span class="ver">${v.toUpperCase()}</span><a class="pkg" href="${sbUrl(v,pickId)}" target="_blank" rel="noopener">Open in Storybook ↗</a></div>
+        <div class="stage live"><iframe loading="lazy" title="${esc(c.name)}" src="${storyUrl(v,pickId)}"></iframe></div></div>` : "";
+    const missing = `<div class="pane"><div class="pane-h"><span class="ver">${v==="v12"?"V11":"V12"}</span></div><div class="stage"><span class="empty">Not in ${v==="v12"?"V11":"V12"}</span></div></div>`;
+    body = `<div class="compare">${v==="v12" ? missing+live : live+missing}</div>`;
+  }
+
+  let list = c.changes;
+  if(state.thisStory && s) list = list.filter(ch=>ch.stories.includes(s.id) || ch.type==="Flag");
+  const rows = changeRows(list.map(ch=>({c,ch})), false);
+  const flags = c.changes.filter(ch=>ch.type==="Flag");
+  const notes = c.notes.length ? `<div class="notes" style="margin-bottom:16px">${c.notes.map(n=>`<div class="n"><span class="d">${esc(n.date)} · V12 changelog</span><p>${esc(n.text)}</p></div>`).join("")}</div>` : "";
+  return `
+    <div class="comp-head">
+      <div class="left"><p class="eyebrow">${esc(c.section.toUpperCase())}</p><h1>${esc(c.name)}</h1><p>${summaryLine(c)}</p></div>
+      ${chip(c.status)}
+    </div>
+    ${toolbar}
+    ${body}
+    <section class="log">
+      <h2>What changed</h2>
+      ${notes}
+      ${flags.length?`<p style="margin:0 0 12px;color:var(--text-2)">Try it in V11 today with ${flags.map(f=>`<span class="flag">${esc(f.prop)}</span>`).join(" ")}</p>`:""}
+      ${s?`<div class="filters"><button id="thisStory" aria-pressed="${state.thisStory}">Only “${esc(s.name)}”</button></div>`:""}
+      <div class="tablewrap"><table>
+        <thead><tr><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Scope</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>
+      <p class="note">Computed styles captured at 1280×800 in the white theme. Colours are shown as hex, and radii of 9999px or more are labelled as pills.</p>
+    </section>`;
+}
+
+function changelog(){
+  const all = COMPONENTS.flatMap(c=>c.changes.map(ch=>({c,ch})));
+  const q = state.q.toLowerCase();
+  const searched = q ? all.filter(x=>`${x.c.name} ${x.ch.element??""} ${x.ch.prop} ${x.ch.from} ${x.ch.to}`.toLowerCase().includes(q)) : all;
+  const list = state.filter==="All"?searched:searched.filter(x=>x.ch.type===state.filter);
+  const shown = list.slice(0, state.limit);
+  return `
+    <p class="eyebrow">CARBON V12</p>
+    <h1>Full changelog</h1>
+    <p class="lede">Every difference between V11 and V12 across all captured stories. Identical changes on the same element are merged, so one row can cover many stories.</p>
+    <div class="filters" role="group" aria-label="Filter by type">
+      ${["All",...TYPES].map(t=>`<button data-filter="${t}" aria-pressed="${state.filter===t}">${t} <span style="opacity:.7">${t==="All"?searched.length:searched.filter(x=>x.ch.type===t).length}</span></button>`).join("")}
+      <input type="search" id="clq" placeholder="Search: border-radius, Tag, #0f62fe…" value="${esc(state.q)}" aria-label="Search changelog">
+    </div>
+    <div class="log" style="margin-top:0"><div class="tablewrap"><table>
+      <thead><tr><th>Component</th><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Scope</th></tr></thead>
+      <tbody>${changeRows(shown,true)}</tbody></table></div>
+      ${list.length>shown.length?`<button class="more" id="more">Show ${Math.min(200,list.length-shown.length)} more of ${list.length-shown.length} remaining</button>`:""}
+    </div>`;
+}
+
+function notesPage(){
+  const t = DATA.tokens;
+  const tokenRows = t ? [
+    ...t.added.map(x=>["Added",x.token,"—",x.v12]),
+    ...t.changed.map(x=>["Changed",x.token,x.v11,x.v12]),
+    ...t.removed.map(x=>["Removed",x.token,x.v11,"—"])
+  ] : [];
+  return `
+    <p class="eyebrow">CARBON V12 · FROM THE V12 STORYBOOK DOCS</p>
+    <h1>Release notes, flags &amp; tokens</h1>
+    <p class="lede">Taken from the V12 Storybook's <i>Getting Started/Changelog</i> and <i>Feature Flags</i> pages, plus a diff of the <code>--cds-*</code> custom properties in each Storybook's compiled CSS.</p>
+    <h2>Release notes</h2>
+    <div class="notes">${DATA.releaseNotes.map(n=>`<div class="n"><span class="d">${esc(n.date)}</span><p>${esc(n.text)}</p></div>`).join("")}</div>
+    <section class="log">
+      <h2>Feature flags</h2>
+      <p style="margin:0 0 12px;color:var(--text-2);max-width:80ch">Flags named <span class="flag">enable-v12-*</span> are stable and turn on by default in V12. Turn them all on in V11 with <span class="flag">enable-v12-release</span>.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Flag</th><th>Description</th><th>Availability</th><th>Codemod</th></tr></thead>
+        <tbody>${DATA.featureFlags.map(f=>`<tr><td><span class="flag">${esc(f.flag)}</span>${f.section==="deprecated"?` <span class="type">deprecated</span>`:""}</td><td>${esc(f.description)}</td><td class="num">${esc(f.availability.join(", "))}</td><td class="num">${f.codemod?"yes":""}</td></tr>`).join("")}</tbody>
+      </table></div>
+    </section>
+    <section class="log">
+      <h2>Token changes</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Change</th><th>Token</th><th>V11 → V12</th></tr></thead>
+        <tbody>${tokenRows.map(([k,n,a,b])=>`<tr><td><span class="type">${k}</span></td><td class="el">${esc(n)}</td><td class="diff"><span class="from">${val(a)}</span><span class="arrow">→</span><span class="to">${val(b)}</span></td></tr>`).join("") || `<tr><td colspan="3">No token changes.</td></tr>`}</tbody>
+      </table></div>
+    </section>`;
+}
+
+function route(){
+  const id = (location.hash||"#overview").slice(1);
+  const c = COMPONENTS.find(x=>x.id===id);
+  const key = c?c.id:(["changelog","notes"].includes(id)?id:"overview");
+  nav(key);
+  $("#main").innerHTML = mobileNav(key) + (c?compView(c):key==="changelog"?changelog():key==="notes"?notesPage():overview());
+  document.title = (c?c.name+" · ":key==="changelog"?"Changelog · ":"") + "Carbon V12 Before & After";
+  bind(key, c);
+}
+function bind(key, c){
+  const m = $("#mnav"); if(m) m.onchange = e=>{ location.hash = e.target.value; };
+  document.querySelectorAll("[data-mode]").forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;save();route();});
+  document.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{state.filter=b.dataset.filter;state.limit=200;route();});
+  document.querySelectorAll("[data-sfilter]").forEach(b=>b.onclick=()=>{state.statusFilter=b.dataset.sfilter;route();});
+  const sp = $("#storypick"); if(sp && c) sp.onchange = e=>{ state.story[c.id]=e.target.value; route(); };
+  const ts = $("#thisStory"); if(ts) ts.onclick = ()=>{ state.thisStory=!state.thisStory; route(); };
+  const more = $("#more"); if(more) more.onclick = ()=>{ state.limit+=200; route(); };
+  const q = $("#clq");
+  if(q) q.oninput = e=>{ state.q=e.target.value; state.limit=200; const pos=e.target.selectionStart; route(); const n=$("#clq"); n.focus(); n.setSelectionRange(pos,pos); };
+  const r = $("#cut");
+  if(r) r.oninput = e=>{ state.cut=+e.target.value; r.closest(".wipe").style.setProperty("--cut",state.cut+"%"); };
+}
+window.addEventListener("hashchange",()=>{route();window.scrollTo(0,0);});
+load().catch(e=>{ $("#main").innerHTML = `<h1>Couldn't load data</h1><p class="lede">${esc(e.message)}. Serve this folder over HTTP (<code>npm run serve</code>) after running <code>npm run capture &amp;&amp; npm run diff</code>.</p>`; });
+</script>
+</html>

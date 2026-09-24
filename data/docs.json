@@ -1,0 +1,170 @@
+{
+ "source": "https://v12-react.carbondesignsystem.com",
+ "changelog": {
+  "id": "getting-started-changelog--changelog",
+  "entries": [
+   {
+    "date": "August 31, 2026",
+    "text": "New border-radius tokens have been introduced for various border-radius values. These tokens are accompanied by new visual updates made to input components such as TextInput, NumberInput, Search and more. Updates include rounded corners, a new gradient border, and some added margins and insets for surrounding buttons and menus."
+   },
+   {
+    "date": "August 5, 2026",
+    "text": "A new preview DatePicker has been added to @carbon/react as preview__DatePicker. It is built on the Temporal API and a framework-agnostic state machine shared with @carbon/web-components, replacing the Flatpickr-based implementation. Stories and documentation can be found in the Components/Preview/preview__DatePicker section of Storybook.\nThe preview namespace exports DatePicker, DatePickerInput, and DatePickerSkeleton under preview__DatePicker. Migrating is largely an import change — see the migration guide . Flatpickr-specific props on the v11 DatePicker (appendTo, enable, parseDate, etc.) are now deprecated and will be removed in the next major release.\nWe'd like feedback on github or any of the #carbon-* channels on Slack on the following:\nAPI and prop surface\nBehavioral differences from the Flatpickr-backed component\nAccessibility concerns\nAny blockers, issues, etc."
+   },
+   {
+    "date": "July 22, 2026",
+    "text": "Initial motion API has been added to @carbon/motion and @carbon/react packages. Stories along with documentation in the Overview page can be viewed in the Elements/Motion section of Storybook. The initial work covers definition of \"surfaces\" which are different motion animations we want to standardize (currently examples!) and new React wrapper components that implement the Motion library under the hood. There is an option to also utilize native CSS for the \"reveal\" surfaces.\nIn terms of accessibility, if use-prefer-reduced-motion is detected, the motion API will fallback to the current behavior in Carbon motion. Exploration of motion accessibility was done and captured in issue #22686.\nWe'd like feedback in #carbon-collective channel on Slack on the following:\nDesign concerns\nAccessibility concerns\nDeveloper ergonomics/api"
+   }
+  ]
+ },
+ "featureFlags": {
+  "id": "getting-started-feature-flags--overview",
+  "flags": [
+   {
+    "flag": "enable-dialog-element",
+    "description": "Enable components to utilize the native dialog element",
+    "availability": [
+     "React",
+     "Sass"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-enhanced-file-uploader",
+    "description": "Enable enhanced FileUploader callbacks with richer data and expanded triggers.",
+    "availability": [
+     "React"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-focus-wrap-without-sentinels",
+    "description": "Enable the new focus wrap behavior that doesn't use sentinel nodes",
+    "availability": [
+     "React"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-presence",
+    "description": "Enable components to remain unmounted in closed state and mount in open state.",
+    "availability": [
+     "React",
+     "Sass"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-tile-contrast",
+    "description": "Enable the improved styling for tiles that provides better contrast",
+    "availability": [
+     "Sass"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-treeview-controllable",
+    "description": "Enable the new TreeView controllable API",
+    "availability": [
+     "React"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-dynamic-floating-styles",
+    "description": "Enable dynamic setting of floating styles for components like Popover, Tooltip, etc.",
+    "availability": [
+     "React",
+     "Web Components"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-overflowmenu",
+    "description": "Enable the use of the v12 OverflowMenu leveraging the Menu subcomponents",
+    "availability": [
+     "React",
+     "Web Components"
+    ],
+    "codemod": "enable-v12-overflowmenu",
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-release",
+    "description": "Enable all v12 feature flags",
+    "availability": [
+     "React",
+     "Sass",
+     "Web Components"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-structured-list-visible-icons",
+    "description": "Enable icon components within StructuredList to always be visible",
+    "availability": [
+     "Sass"
+    ],
+    "codemod": "enable-v12-structured-list-visible-icons",
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-tile-default-icons",
+    "description": "Enable default icons for Tile components",
+    "availability": [
+     "React",
+     "Web Components"
+    ],
+    "codemod": "enable-v12-tile-default-icons",
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-tile-radio-icons",
+    "description": "Enable rendering of updated radio icon in the tile components",
+    "availability": [
+     "React",
+     "Sass",
+     "Web Components"
+    ],
+    "codemod": "enable-v12-tile-radio-icons",
+    "section": "current"
+   },
+   {
+    "flag": "enable-v12-toggle-reduced-label-spacing",
+    "description": "Enable a reduced spacing between the toggle control and its label",
+    "availability": [
+     "Sass",
+     "Web Components"
+    ],
+    "codemod": null,
+    "section": "current"
+   },
+   {
+    "flag": "enable-experimental-tile-contrast",
+    "description": "Deprecated, use enable-tile-contrast instead",
+    "availability": [
+     "Sass"
+    ],
+    "codemod": null,
+    "section": "deprecated"
+   },
+   {
+    "flag": "enable-experimental-focus-wrap-without-sentinels",
+    "description": "Deprecated, use enable-focus-wrap-without-sentinels instead",
+    "availability": [
+     "React"
+    ],
+    "codemod": null,
+    "section": "deprecated"
+   }
+  ]
+ }
+}

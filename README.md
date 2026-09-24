@@ -1,0 +1,27 @@
+# Carbon V12 before & after: data pipeline
+
+Captures every Carbon React story that exists in both the V11 and V12 Storybooks and turns the differences into a per-component changelog.
+
+```bash
+npm install && npx playwright install chromium
+npm run capture     # screenshots + computed styles + pixel diff → data/
+npm run diff        # data/ → data/changelog.json + data/CHANGELOG.md
+npm run serve       # site at http://localhost:4321
+```
+
+The site (`index.html`) is static and reads `data/changelog.json`, `data/meta.json` and the screenshots, so it can be hosted anywhere, including GitHub Pages. `data/stories/` holds the raw per-story styles. It's gitignored because it's large, so on a fresh clone run `npm run capture` before `npm run diff`.
+
+`capture.mjs` is incremental. It fingerprints each Storybook build (the `index.json` hash plus the hashed `iframe-*.css` name) and skips stories already captured against the same pair of builds. Use `--force` to redo everything, `--only <substring>` to limit by story id, and `--concurrency N` (default 4).
+
+## What gets captured
+
+- **Matching:** stories are paired by id. V11 `…-feature-flag--x` stories that graduated to `…--x` in V12 (for example, the floating-styles stories) are paired too and marked `flag-graduated`.
+- **Screenshots:** 1280×800 viewport, DPR 1, reduced motion, animations and transitions frozen, fonts and images loaded. Both versions are cropped to the same rectangle (the union of their painted content), so the pixel diff lines up.
+- **Styles:** every element with a `cds--` class, including portals outside `#storybook-root`, is keyed by `sorted cds classes @ DOM path`.
+- **Pixel diff:** pixelmatch, threshold 0.1, anti-aliasing ignored. The diff image goes to `data/shots/diff/`.
+- **Docs:** the V12 *Getting Started/Changelog* and *Feature Flags* pages are parsed into `data/docs.json`.
+- **Tokens:** `--cds-*` custom properties that differ between the two `iframe-*.css` bundles.
+
+## How the diff aligns elements
+
+Elements are paired by exact key first. Whatever is left is paired by tag, depth, and class overlap along the ancestor path, so a node still lines up when V12 adds a wrapper or modifier class (for example, `cds--autoalign` on tooltips). Per-side properties are folded into shorthands, and colors are normalized to hex. Size changes under 1px, and size changes on elements that paint nothing, are dropped.

@@ -1,0 +1,18 @@
+{
+  "name": "carbon-v12-compare",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "capture": "node capture.mjs",
+    "diff": "node diff.mjs",
+    "build": "node capture.mjs && node diff.mjs",
+    "serve": "node serve.mjs"
+  },
+  "type": "module",
+  "devDependencies": {
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.63.0",
+    "pngjs": "^7.0.0"
+  },
+  "private": true
+}
