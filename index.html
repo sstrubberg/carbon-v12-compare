@@ -114,13 +114,19 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
 .stage iframe{width:100%;height:560px;border:0;background:#fff;display:block}
 .stage .empty{color:#6f6f6f;font-size:13px}
 .wipe{position:relative;border:1px solid var(--border);background:#fff}
-.wipe .layers{display:grid;justify-items:center;padding:24px}
-.wipe .layers img{grid-area:1/1;max-width:100%;height:auto;display:block}
-.wipe .layers img.top{clip-path:inset(0 0 0 var(--cut,50%))}
-.wipe .frame{position:relative;display:grid}
-.wipe .handle{position:absolute;top:-24px;bottom:-24px;left:var(--cut,50%);width:2px;background:var(--accent);pointer-events:none}
-.wipe .handle::after{content:"";position:absolute;top:50%;left:-9px;width:20px;height:20px;border-radius:50%;background:var(--accent);transform:translateY(-50%);box-shadow:0 0 0 3px #fff}
-.wipe input[type=range]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.wipe .layers{position:relative;height:560px;overflow:hidden}
+/* Each layer fills the wipe; its iframe renders the story at the capture viewport and is shifted
+   so the story's content is centred. clip-path on the top layer also clips hit-testing, so each
+   side stays clickable as its own version. */
+.wipe .lay{position:absolute;inset:0}
+.wipe .lay.top{clip-path:inset(0 0 0 var(--cut,50%))}
+.wipe .lay iframe{position:absolute;left:var(--ox,0px);top:var(--oy,0px);width:1280px;height:800px;border:0;background:#fff;display:block}
+.wipe.dragging .lay{pointer-events:none}
+.wipe.dragging{cursor:ew-resize;user-select:none}
+.wipe .handle{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:2px;margin-left:-1px;background:var(--accent);z-index:2}
+.wipe .handle::before{content:"";position:absolute;top:0;bottom:0;left:-7px;width:16px;cursor:ew-resize}
+.wipe .knob{position:absolute;bottom:20px;left:-13px;width:28px;height:28px;border-radius:50%;background:var(--accent);border:0;box-shadow:0 0 0 3px #fff;cursor:ew-resize;color:#fff;font-size:12px;line-height:28px;padding:0;touch-action:none}
+.wipe .knob:focus-visible{outline:2px solid #161616;outline-offset:3px}
 .wipe .tags{display:flex;justify-content:space-between;padding:8px 12px;border-top:1px solid var(--border);background:var(--layer);font-family:var(--mono);font-size:12px}
 
 .log{margin-top:32px}
@@ -285,7 +291,7 @@ function overview(){
   return `
     <p class="eyebrow">CARBON V12 · CAPTURED FROM THE LIVE STORYBOOKS</p>
     <h1>See every component, before and after</h1>
-    <p class="lede">Every story that exists in both the V11 and V12 Storybooks, screenshotted side by side, with the computed-style differences behind each change. Open a component to try the real V11 and V12 stories side by side, or switch to the captured screenshots for a wipe and pixel diff.</p>
+    <p class="lede">Every story that exists in both the V11 and V12 Storybooks, screenshotted side by side, with the computed-style differences behind each change. Open a component to try the real V11 and V12 stories side by side, drag a wipe across them, or see the captured pixel diff.</p>
     <div class="banner"><b>How to read this.</b> Screenshots use the white theme at 1280×800. Change entries compare the computed styles of every <code>cds--</code> element. A shift that no recorded style explains is marked as unexplained. Re-run <code>npm run capture &amp;&amp; npm run diff</code> to refresh.</div>
     <div class="stats">
       <div class="stat"><div class="n">${COMPONENTS.length}</div><div class="l">Components tracked</div></div>
@@ -330,16 +336,16 @@ function compView(c){
         <button data-mode="wipe" aria-pressed="${state.mode==="wipe"}">Wipe</button>
         <button data-mode="diff" aria-pressed="${state.mode==="diff"}">Pixel diff</button>
       </div>
-      <span class="pxbadge">${state.mode==="live"?"Live from both Storybooks · ":"From capture · "}${s.pixel?`${s.pixel.diffPixels.toLocaleString()} px differ (${pct(s.pixel.ratio)})${s.pixel.sizeChanged?" · size changed":""}`:""}</span>
+      <span class="pxbadge">${state.mode==="diff"?"From capture · ":"Live from both Storybooks · "}${s.pixel?`${s.pixel.diffPixels.toLocaleString()} px differ (${pct(s.pixel.ratio)})${s.pixel.sizeChanged?" · size changed":""}`:""}</span>
     </div>`;
     const head = (v)=>`<div class="pane-h"><span class="ver">${v.toUpperCase()}</span><a class="pkg" href="${sbUrl(v, v==="v11"?s.v11Id:s.id)}" target="_blank" rel="noopener">Open in Storybook ↗</a></div>`;
     if(state.mode==="wipe"){
-      body = `<div class="wipe" style="--cut:${state.cut}%">
-        <div class="layers"><div class="frame">
-          <img src="${shot("v11",s.id)}" alt="V11 ${esc(s.name)}"><img class="top" src="${shot("v12",s.id)}" alt="V12 ${esc(s.name)}">
-          <div class="handle" aria-hidden="true"></div>
-          <input type="range" id="cut" min="0" max="100" value="${state.cut}" aria-label="Wipe between V11 and V12">
-        </div></div>
+      body = `<div class="wipe" id="wipe" style="--cut:${state.cut}%" data-clip="${s.clip?[s.clip.x,s.clip.y,s.clip.width,s.clip.height].join(","):""}">
+        <div class="layers">
+          <div class="lay"><iframe title="V11 ${esc(s.name)}" src="${storyUrl("v11",s.v11Id)}"></iframe></div>
+          <div class="lay top"><iframe title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div>
+          <div class="handle" id="handle"><button class="knob" id="knob" role="slider" aria-label="Wipe between V11 and V12" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.cut}" aria-valuetext="${state.cut}% V11">⇔</button></div>
+        </div>
         <div class="tags"><span>← V11</span><span>V12 →</span></div>
       </div>`;
     } else if(state.mode==="diff"){
@@ -458,9 +464,45 @@ function bind(key, c){
   const more = $("#more"); if(more) more.onclick = ()=>{ state.limit+=200; route(); };
   const q = $("#clq");
   if(q) q.oninput = e=>{ state.q=e.target.value; state.limit=200; const pos=e.target.selectionStart; route(); const n=$("#clq"); n.focus(); n.setSelectionRange(pos,pos); };
-  const r = $("#cut");
-  if(r) r.oninput = e=>{ state.cut=+e.target.value; r.closest(".wipe").style.setProperty("--cut",state.cut+"%"); };
+  const wipe = $("#wipe");
+  if(wipe){
+    centerWipe();
+    // Drag the handle (not the whole surface) so both live stories stay clickable.
+    const knob = $("#knob"), handle = $("#handle");
+    const setCut = v=>{
+      state.cut = Math.max(0, Math.min(100, Math.round(v*10)/10));
+      wipe.style.setProperty("--cut", state.cut+"%");
+      knob.setAttribute("aria-valuenow", state.cut);
+      knob.setAttribute("aria-valuetext", `${Math.round(state.cut)}% V11`);
+    };
+    const move = e=>{ const r = wipe.getBoundingClientRect(); setCut((e.clientX - r.left) / r.width * 100); };
+    handle.onpointerdown = e=>{
+      e.preventDefault();
+      handle.setPointerCapture(e.pointerId);
+      wipe.classList.add("dragging");
+      handle.onpointermove = move;
+      handle.onpointerup = handle.onpointercancel = ()=>{ wipe.classList.remove("dragging"); handle.onpointermove = null; };
+    };
+    knob.onkeydown = e=>{
+      const step = e.shiftKey ? 10 : 2;
+      const k = {ArrowLeft:-step, ArrowDown:-step, ArrowRight:step, ArrowUp:step}[e.key];
+      if(k){ e.preventDefault(); setCut(state.cut + k); }
+      else if(e.key==="Home"){ e.preventDefault(); setCut(0); }
+      else if(e.key==="End"){ e.preventDefault(); setCut(100); }
+    };
+  }
 }
+// Shift both live stories by the same amount so the captured content box sits in the middle
+// of the wipe. Content larger than the wipe is pinned to its top-left instead.
+function centerWipe(){
+  const wipe = $("#wipe"); if(!wipe) return;
+  const box = wipe.querySelector(".layers").getBoundingClientRect();
+  const [x=0, y=0, w=1280, h=800] = (wipe.dataset.clip||"").split(",").filter(Boolean).map(Number);
+  const place = (start, size, avail)=> size <= avail ? Math.round(avail/2 - (start + size/2)) : -start;
+  wipe.style.setProperty("--ox", place(x, w, box.width)+"px");
+  wipe.style.setProperty("--oy", place(y, h, box.height)+"px");
+}
+window.addEventListener("resize", centerWipe);
 window.addEventListener("hashchange",()=>{route();window.scrollTo(0,0);});
 load().catch(e=>{ $("#main").innerHTML = `<h1>Couldn't load data</h1><p class="lede">${esc(e.message)}. Serve this folder over HTTP (<code>npm run serve</code>) after running <code>npm run capture &amp;&amp; npm run diff</code>.</p>`; });
 </script>

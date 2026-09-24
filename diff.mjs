@@ -42,7 +42,8 @@ for (const m of manifest.matched) {
   if (m.match === 'flag-graduated') c.storiesMoved.push({ v11: m.v11, v12: m.v12, name: m.name });
   if (!s) { c.stories.push({ id: m.v12, name: m.name, captured: false }); continue; }
   storyFiles++;
-  const row = { id: s.id, v11Id: s.v11Id, name: s.name, title: s.title, captured: true, error: s.error ?? null, pixel: s.pixel ?? null, changes: 0 };
+  // clip = where the story's content sits in the 1280×800 capture; the site uses it to center live stories.
+  const row = { id: s.id, v11Id: s.v11Id, name: s.name, title: s.title, captured: true, error: s.error ?? null, pixel: s.pixel ?? null, clip: s.v12?.clip ?? s.v11?.clip ?? null, changes: 0 };
   c.stories.push(row);
   if (s.error || !s.v11?.elements || !s.v12?.elements) continue;
 
