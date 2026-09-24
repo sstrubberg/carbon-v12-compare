@@ -9,7 +9,13 @@ npm run diff        # data/ → data/changelog.json + data/CHANGELOG.md
 npm run serve       # site at http://localhost:4321
 ```
 
-The site (`index.html`) is static and reads `data/changelog.json`, `data/meta.json` and the screenshots, so it can be hosted anywhere, including GitHub Pages. `data/stories/` holds the raw per-story styles. It's gitignored because it's large, so on a fresh clone run `npm run capture` before `npm run diff`.
+The site (`index.html`) is static and reads `data/changelog.json`, `data/meta.json` and the screenshots in `data/shots/`.
+
+## Scheduled refresh
+
+`.github/workflows/refresh.yml` runs every other Thursday at 23:30 UTC (7:30pm EDT, 6:30pm EST). It recaptures both Storybooks, rebuilds the changelog, commits the refreshed `data/*.json` and `data/CHANGELOG.md`, and deploys the site to GitHub Pages. Start a run by hand from the repo's Actions tab with **Run workflow**.
+
+Screenshots (`data/shots/`) and raw styles (`data/stories/`) aren't committed. The workflow keeps them in the Actions cache between runs, so stories whose Storybook builds haven't changed are skipped. On a fresh clone, run `npm run capture` before `npm run diff` or `npm run serve`.
 
 `capture.mjs` is incremental. It fingerprints each Storybook build (the `index.json` hash plus the hashed `iframe-*.css` name) and skips stories already captured against the same pair of builds. Use `--force` to redo everything, `--only <substring>` to limit by story id, and `--concurrency N` (default 4).
 

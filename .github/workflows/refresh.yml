@@ -1,0 +1,115 @@
+name: Refresh V11 vs V12 capture
+
+# Every other Thursday around 7:30pm US Eastern, plus a manual "Run workflow" button.
+# GitHub cron is UTC and has no "every two weeks", so this fires weekly and the first
+# step skips odd weeks. 23:30 UTC is 7:30pm EDT (6:30pm EST in winter). GitHub can
+# start scheduled runs late during busy periods.
+on:
+  schedule:
+    - cron: '30 23 * * 4'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit the refreshed changelog
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Every other week
+        id: gate
+        run: |
+          # Epoch weeks start Thursday 00:00 UTC; even weeks run (the first was 2026-09-24).
+          week=$(( $(date +%s) / 604800 ))
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $((week % 2)) -eq 0 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Odd week ($week); skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      # Previous run's raw captures and screenshots, so unchanged Storybook builds are skipped.
+      - name: Restore previous capture
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/stories
+            data/shots
+          key: capture-${{ github.run_id }}
+          restore-keys: capture-
+
+      - name: Capture
+        if: steps.gate.outputs.run == 'true'
+        run: node capture.mjs --concurrency 6
+
+      - name: Diff
+        if: steps.gate.outputs.run == 'true'
+        run: node diff.mjs
+
+      - name: Save capture
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            data/stories
+            data/shots
+          key: capture-${{ github.run_id }}
+
+      # Only the small text outputs go into git, so the history shows what changed run to run.
+      - name: Commit changelog
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json data/CHANGELOG.md
+          if git diff --cached --quiet; then
+            echo "No changelog changes."
+          else
+            git commit -m "Refresh V11 vs V12 capture ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
+      - name: Assemble site
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          mkdir -p _site/data
+          cp index.html .nojekyll _site/
+          cp data/*.json data/CHANGELOG.md _site/data/
+          cp -r data/shots _site/data/shots
+
+      - uses: actions/configure-pages@v5
+        if: steps.gate.outputs.run == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.run == 'true'
+        with:
+          path: _site
+      - name: Deploy
+        id: deploy
+        if: steps.gate.outputs.run == 'true'
+        uses: actions/deploy-pages@v4
