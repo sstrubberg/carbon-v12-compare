@@ -342,9 +342,9 @@ function compView(c){
     if(state.mode==="wipe"){
       body = `<div class="wipe" id="wipe" style="--cut:${state.cut}%" data-clip="${s.clip?[s.clip.x,s.clip.y,s.clip.width,s.clip.height].join(","):""}">
         <div class="layers">
-          <div class="lay"><iframe title="V11 ${esc(s.name)}" src="${storyUrl("v11",s.v11Id)}"></iframe></div>
-          <div class="lay top"><iframe title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div>
-          <div class="handle" id="handle"><button class="knob" id="knob" role="slider" aria-label="Wipe between V11 and V12" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.cut}" aria-valuetext="${state.cut}% V11">⇔</button></div>
+          <div class="lay"><iframe title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div>
+          <div class="lay top"><iframe title="V11 ${esc(s.name)}" src="${storyUrl("v11",s.v11Id)}"></iframe></div>
+          <div class="handle" id="handle"><button class="knob" id="knob" role="slider" aria-label="Wipe between V11 and V12" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.cut}" aria-valuetext="${state.cut}% V12">⇔</button></div>
         </div>
         <div class="tags"><span>← V11</span><span>V12 →</span></div>
       </div>`;
@@ -473,7 +473,7 @@ function bind(key, c){
       state.cut = Math.max(0, Math.min(100, Math.round(v*10)/10));
       wipe.style.setProperty("--cut", state.cut+"%");
       knob.setAttribute("aria-valuenow", state.cut);
-      knob.setAttribute("aria-valuetext", `${Math.round(state.cut)}% V11`);
+      knob.setAttribute("aria-valuetext", `${Math.round(state.cut)}% V12`);
     };
     const move = e=>{ const r = wipe.getBoundingClientRect(); setCut((e.clientX - r.left) / r.width * 100); };
     handle.onpointerdown = e=>{
