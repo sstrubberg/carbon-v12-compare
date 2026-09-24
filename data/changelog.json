@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-24T20:58:09.117Z",
+ "generatedAt": "2026-09-24T23:44:35.978Z",
  "counts": {
   "components": 101,
   "unchanged": 30,
@@ -7,7 +7,7 @@
   "new": 17,
   "removed": 4,
   "storiesCompared": 493,
-  "changes": 731
+  "changes": 730
  },
  "tokens": {
   "added": [
@@ -365,15 +365,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 3432,
+      "totalPixels": 3380,
       "ratio": 0,
       "size": {
        "v11": [
-        66,
+        65,
         52
        ],
        "v12": [
-        66,
+        65,
         52
        ]
       },
@@ -457,8 +457,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.05235,
-    "mean": 0.02765,
+    "max": 0.05775,
+    "mean": 0.03286,
     "storiesChanged": 3,
     "storiesCompared": 5
    },
@@ -471,16 +471,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 3672,
-      "totalPixels": 70140,
-      "ratio": 0.05235,
+      "diffPixels": 3986,
+      "totalPixels": 69020,
+      "ratio": 0.05775,
       "size": {
        "v11": [
-        501,
+        493,
         140
        ],
        "v12": [
-        501,
+        493,
         140
        ]
       },
@@ -496,16 +496,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 914,
-      "totalPixels": 21165,
-      "ratio": 0.04318,
+      "diffPixels": 1166,
+      "totalPixels": 21063,
+      "ratio": 0.05536,
       "size": {
        "v11": [
-        415,
+        413,
         51
        ],
        "v12": [
-        415,
+        413,
         51
        ]
       },
@@ -521,16 +521,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1135,
-      "totalPixels": 26553,
-      "ratio": 0.04274,
+      "diffPixels": 1338,
+      "totalPixels": 26129,
+      "ratio": 0.05121,
       "size": {
        "v11": [
-        501,
+        493,
         53
        ],
        "v12": [
-        501,
+        493,
         53
        ]
       },
@@ -547,15 +547,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 23150,
+      "totalPixels": 22800,
       "ratio": 0,
       "size": {
        "v11": [
-        463,
+        456,
         50
        ],
        "v12": [
-        463,
+        456,
         50
        ]
       },
@@ -572,15 +572,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 18048,
+      "totalPixels": 18000,
       "ratio": 0,
       "size": {
        "v11": [
-        376,
+        375,
         48
        ],
        "v12": [
-        376,
+        375,
         48
        ]
       },
@@ -1654,15 +1654,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 12376,
+      "totalPixels": 12480,
       "ratio": 0,
       "size": {
        "v11": [
-        238,
+        240,
         52
        ],
        "v12": [
-        238,
+        240,
         52
        ]
       },
@@ -1728,15 +1728,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 5356,
+      "totalPixels": 5304,
       "ratio": 0,
       "size": {
        "v11": [
-        103,
+        102,
         52
        ],
        "v12": [
-        103,
+        102,
         52
        ]
       },
@@ -1778,15 +1778,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 559845,
+      "totalPixels": 545985,
       "ratio": 0,
       "size": {
        "v11": [
-        1131,
+        1103,
         495
        ],
        "v12": [
-        1131,
+        1103,
         495
        ]
       },
@@ -1828,15 +1828,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 63576,
+      "totalPixels": 61992,
       "ratio": 0,
       "size": {
        "v11": [
-        883,
+        861,
         72
        ],
        "v12": [
-        883,
+        861,
         72
        ]
       },
@@ -1904,8 +1904,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.00993,
-    "mean": 0.00262,
+    "max": 0.01019,
+    "mean": 0.00266,
     "storiesChanged": 2,
     "storiesCompared": 8
    },
@@ -1918,9 +1918,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 379,
+      "diffPixels": 389,
       "totalPixels": 38180,
-      "ratio": 0.00993,
+      "ratio": 0.01019,
       "size": {
        "v11": [
         332,
@@ -1943,9 +1943,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1873,
+      "diffPixels": 1890,
       "totalPixels": 201392,
-      "ratio": 0.0093,
+      "ratio": 0.00938,
       "size": {
        "v11": [
         1228,
@@ -2459,8 +2459,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.07921,
-    "mean": 0.03258,
+    "max": 0.07897,
+    "mean": 0.03261,
     "storiesChanged": 5,
     "storiesCompared": 5
    },
@@ -2473,9 +2473,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 43091,
+      "diffPixels": 42961,
       "totalPixels": 544004,
-      "ratio": 0.07921,
+      "ratio": 0.07897,
       "size": {
        "v11": [
         1228,
@@ -2516,31 +2516,6 @@
      "changes": 2
     },
     {
-     "id": "components-combobutton--experimental-auto-align",
-     "v11Id": "components-combobutton--experimental-auto-align",
-     "name": "Experimental Auto Align",
-     "title": "Components/ComboButton",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 420,
-      "totalPixels": 20400,
-      "ratio": 0.02059,
-      "size": {
-       "v11": [
-        255,
-        80
-       ],
-       "v12": [
-        255,
-        80
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 2
-    },
-    {
      "id": "components-combobutton--default",
      "v11Id": "components-combobutton--default",
      "name": "Default",
@@ -2549,15 +2524,40 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 20480,
-      "ratio": 0.02051,
+      "totalPixels": 20320,
+      "ratio": 0.02067,
       "size": {
        "v11": [
-        256,
+        254,
         80
        ],
        "v12": [
-        256,
+        254,
+        80
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 2
+    },
+    {
+     "id": "components-combobutton--experimental-auto-align",
+     "v11Id": "components-combobutton--experimental-auto-align",
+     "name": "Experimental Auto Align",
+     "title": "Components/ComboButton",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 420,
+      "totalPixels": 20320,
+      "ratio": 0.02067,
+      "size": {
+       "v11": [
+        254,
+        80
+       ],
+       "v12": [
+        254,
         80
        ]
       },
@@ -2574,15 +2574,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 20480,
-      "ratio": 0.02051,
+      "totalPixels": 20320,
+      "ratio": 0.02067,
       "size": {
        "v11": [
-        256,
+        254,
         80
        ],
        "v12": [
-        256,
+        254,
         80
        ]
       },
@@ -2672,13 +2672,13 @@
      ],
      "prop": "width",
      "from": "48px",
-     "to": "173.22px",
-     "note": "+125.22px",
+     "to": "172.25px",
+     "note": "+124.25px",
      "stories": [
       "components-combobutton--floating-styles"
      ],
      "elements": 1,
-     "text": "ComboButton · .cds--btn · width 48px → 173.22px (+125.22px)"
+     "text": "ComboButton · .cds--btn · width 48px → 172.25px (+124.25px)"
     },
     {
      "type": "Structure",
@@ -2853,8 +2853,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.02532,
-    "mean": 0.00417,
+    "max": 0.02541,
+    "mean": 0.00522,
     "storiesChanged": 8,
     "storiesCompared": 10
    },
@@ -2868,15 +2868,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 553,
-      "totalPixels": 21840,
-      "ratio": 0.02532,
+      "totalPixels": 21760,
+      "ratio": 0.02541,
       "size": {
        "v11": [
-        273,
+        272,
         80
        ],
        "v12": [
-        273,
+        272,
         80
        ]
       },
@@ -2892,9 +2892,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 4231,
+      "diffPixels": 14182,
       "totalPixels": 1024000,
-      "ratio": 0.00413,
+      "ratio": 0.01385,
       "size": {
        "v11": [
         1280,
@@ -2917,9 +2917,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2766,
+      "diffPixels": 2897,
       "totalPixels": 1024000,
-      "ratio": 0.0027,
+      "ratio": 0.00283,
       "size": {
        "v11": [
         1280,
@@ -2942,9 +2942,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1724,
+      "diffPixels": 1824,
       "totalPixels": 1024000,
-      "ratio": 0.00168,
+      "ratio": 0.00178,
       "size": {
        "v11": [
         1280,
@@ -2967,9 +2967,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1724,
+      "diffPixels": 1824,
       "totalPixels": 1024000,
-      "ratio": 0.00168,
+      "ratio": 0.00178,
       "size": {
        "v11": [
         1280,
@@ -2992,9 +2992,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1724,
+      "diffPixels": 1824,
       "totalPixels": 1024000,
-      "ratio": 0.00168,
+      "ratio": 0.00178,
       "size": {
        "v11": [
         1280,
@@ -3017,9 +3017,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1724,
+      "diffPixels": 1824,
       "totalPixels": 1024000,
-      "ratio": 0.00168,
+      "ratio": 0.00178,
       "size": {
        "v11": [
         1280,
@@ -3042,9 +3042,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1627,
+      "diffPixels": 1622,
       "totalPixels": 1024000,
-      "ratio": 0.00159,
+      "ratio": 0.00158,
       "size": {
        "v11": [
         1280,
@@ -3067,9 +3067,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 869,
+      "diffPixels": 983,
       "totalPixels": 1024000,
-      "ratio": 0.00085,
+      "ratio": 0.00096,
       "size": {
        "v11": [
         1280,
@@ -3562,7 +3562,7 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.0037,
+    "max": 0.00369,
     "mean": 0.00035,
     "storiesChanged": 1,
     "storiesCompared": 11
@@ -3576,9 +3576,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1369,
+      "diffPixels": 1365,
       "totalPixels": 369929,
-      "ratio": 0.0037,
+      "ratio": 0.00369,
       "size": {
        "v11": [
         1229,
@@ -5211,9 +5211,9 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.01533,
-    "mean": 0.00623,
-    "storiesChanged": 6,
+    "max": 0.01686,
+    "mean": 0.00683,
+    "storiesChanged": 8,
     "storiesCompared": 9
    },
    "stories": [
@@ -5225,9 +5225,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 471,
+      "diffPixels": 518,
       "totalPixels": 30720,
-      "ratio": 0.01533,
+      "ratio": 0.01686,
       "size": {
        "v11": [
         320,
@@ -5250,9 +5250,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 14592,
-      "ratio": 0.01494,
+      "ratio": 0.01645,
       "size": {
        "v11": [
         152,
@@ -5275,9 +5275,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 30720,
-      "ratio": 0.0071,
+      "ratio": 0.00781,
       "size": {
        "v11": [
         320,
@@ -5300,9 +5300,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 30720,
-      "ratio": 0.0071,
+      "ratio": 0.00781,
       "size": {
        "v11": [
         320,
@@ -5325,9 +5325,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 30720,
-      "ratio": 0.0071,
+      "ratio": 0.00781,
       "size": {
        "v11": [
         320,
@@ -5368,31 +5368,6 @@
      "changes": 4
     },
     {
-     "id": "components-datepicker--range-with-calendar-with-layer",
-     "v11Id": "components-datepicker--range-with-calendar-with-layer",
-     "name": "Range With Calendar With Layer",
-     "title": "Components/DatePicker",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 1007,
-      "totalPixels": 1024000,
-      "ratio": 0.00098,
-      "size": {
-       "v11": [
-        1280,
-        800
-       ],
-       "v12": [
-        1280,
-        800
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 30
-    },
-    {
      "id": "components-datepicker--single-with-calendar-with-layer",
      "v11Id": "components-datepicker--single-with-calendar-with-layer",
      "name": "Single With Calendar With Layer",
@@ -5400,9 +5375,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1008,
+      "diffPixels": 1071,
       "totalPixels": 1024000,
-      "ratio": 0.00098,
+      "ratio": 0.00105,
       "size": {
        "v11": [
         1280,
@@ -5418,6 +5393,31 @@
      "changes": 15
     },
     {
+     "id": "components-datepicker--range-with-calendar-with-layer",
+     "v11Id": "components-datepicker--range-with-calendar-with-layer",
+     "name": "Range With Calendar With Layer",
+     "title": "Components/DatePicker",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 1070,
+      "totalPixels": 1024000,
+      "ratio": 0.00104,
+      "size": {
+       "v11": [
+        1280,
+        800
+       ],
+       "v12": [
+        1280,
+        800
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 30
+    },
+    {
      "id": "components-datepicker--simple-with-layer",
      "v11Id": "components-datepicker--simple-with-layer",
      "name": "Simple With Layer",
@@ -5425,9 +5425,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 840,
+      "diffPixels": 903,
       "totalPixels": 1024000,
-      "ratio": 0.00082,
+      "ratio": 0.00088,
       "size": {
        "v11": [
         1280,
@@ -5766,15 +5766,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 58080,
+      "totalPixels": 59136,
       "ratio": 0,
       "size": {
        "v11": [
-        605,
+        616,
         96
        ],
        "v12": [
-        605,
+        616,
         96
        ]
       },
@@ -5791,15 +5791,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 58080,
+      "totalPixels": 59136,
       "ratio": 0,
       "size": {
        "v11": [
-        605,
+        616,
         96
        ],
        "v12": [
-        605,
+        616,
         96
        ]
       },
@@ -5817,8 +5817,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.01296,
-    "mean": 0.00466,
+    "max": 0.01377,
+    "mean": 0.00512,
     "storiesChanged": 5,
     "storiesCompared": 9
    },
@@ -5831,9 +5831,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 644,
+      "diffPixels": 684,
       "totalPixels": 49680,
-      "ratio": 0.01296,
+      "ratio": 0.01377,
       "size": {
        "v11": [
         432,
@@ -5856,9 +5856,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 144,
+      "diffPixels": 164,
       "totalPixels": 14184,
-      "ratio": 0.01015,
+      "ratio": 0.01156,
       "size": {
        "v11": [
         197,
@@ -5881,9 +5881,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 608,
+      "diffPixels": 670,
       "totalPixels": 78624,
-      "ratio": 0.00773,
+      "ratio": 0.00852,
       "size": {
        "v11": [
         432,
@@ -5906,9 +5906,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 299,
+      "diffPixels": 330,
       "totalPixels": 49680,
-      "ratio": 0.00602,
+      "ratio": 0.00664,
       "size": {
        "v11": [
         432,
@@ -5931,9 +5931,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 147,
+      "diffPixels": 164,
       "totalPixels": 49680,
-      "ratio": 0.00296,
+      "ratio": 0.0033,
       "size": {
        "v11": [
         432,
@@ -5956,9 +5956,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 906,
+      "diffPixels": 955,
       "totalPixels": 1024000,
-      "ratio": 0.00088,
+      "ratio": 0.00093,
       "size": {
        "v11": [
         1280,
@@ -5981,9 +5981,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 147,
+      "diffPixels": 164,
       "totalPixels": 216128,
-      "ratio": 0.00068,
+      "ratio": 0.00076,
       "size": {
        "v11": [
         1228,
@@ -6006,9 +6006,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 430,
+      "diffPixels": 492,
       "totalPixels": 1024000,
-      "ratio": 0.00042,
+      "ratio": 0.00048,
       "size": {
        "v11": [
         1280,
@@ -6316,15 +6316,15 @@
       "cds--dropdown cds--dropdown--inline cds--dropdown--md cds--layout--size-md cds--list-box cds--list-box--md"
      ],
      "prop": "width",
-     "from": "119.14px",
-     "to": "121.14px",
+     "from": "119.28px",
+     "to": "121.28px",
      "note": "+2px",
      "stories": [
       "components-dropdown--inline",
       "components-dropdown--inline-with-layer"
      ],
      "elements": 4,
-     "text": "Dropdown · .cds--dropdown.cds--list-box · width 119.14px → 121.14px (+2px)"
+     "text": "Dropdown · .cds--dropdown.cds--list-box · width 119.28px → 121.28px (+2px)"
     },
     {
      "type": "Story",
@@ -6609,15 +6609,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 77644,
+      "totalPixels": 77268,
       "ratio": 0,
       "size": {
        "v11": [
-        413,
+        411,
         188
        ],
        "v12": [
-        413,
+        411,
         188
        ]
       },
@@ -6634,15 +6634,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 79336,
+      "totalPixels": 78772,
       "ratio": 0,
       "size": {
        "v11": [
-        422,
+        419,
         188
        ],
        "v12": [
-        422,
+        419,
         188
        ]
       },
@@ -6684,15 +6684,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 36576,
+      "totalPixels": 36144,
       "ratio": 0,
       "size": {
        "v11": [
-        508,
+        502,
         72
        ],
        "v12": [
-        508,
+        502,
         72
        ]
       },
@@ -6755,8 +6755,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.0534,
-    "mean": 0.0124,
+    "max": 0.05625,
+    "mean": 0.01306,
     "storiesChanged": 27,
     "storiesCompared": 36
    },
@@ -6769,9 +6769,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1668,
+      "diffPixels": 1757,
       "totalPixels": 31234,
-      "ratio": 0.0534,
+      "ratio": 0.05625,
       "size": {
        "v11": [
         322,
@@ -6794,9 +6794,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 767,
+      "diffPixels": 793,
       "totalPixels": 17444,
-      "ratio": 0.04397,
+      "ratio": 0.04546,
       "size": {
        "v11": [
         178,
@@ -6819,9 +6819,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1115,
+      "diffPixels": 1141,
       "totalPixels": 31556,
-      "ratio": 0.03533,
+      "ratio": 0.03616,
       "size": {
        "v11": [
         322,
@@ -6837,31 +6837,6 @@
      "changes": 9
     },
     {
-     "id": "components-fluid-components-fluidmultiselect--with-ai-label",
-     "v11Id": "components-fluid-components-fluidmultiselect--with-ai-label",
-     "name": "With AI Label",
-     "title": "Components/Fluid Components/FluidMultiSelect",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 1125,
-      "totalPixels": 41472,
-      "ratio": 0.02713,
-      "size": {
-       "v11": [
-        432,
-        96
-       ],
-       "v12": [
-        432,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 5
-    },
-    {
      "id": "components-fluid-components-fluidform--default",
      "v11Id": "components-fluid-components-fluidform--default",
      "name": "Default",
@@ -6869,9 +6844,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 23142,
+      "diffPixels": 26137,
       "totalPixels": 880376,
-      "ratio": 0.02629,
+      "ratio": 0.02969,
       "size": {
        "v11": [
         632,
@@ -6887,6 +6862,31 @@
      "changes": 116
     },
     {
+     "id": "components-fluid-components-fluidmultiselect--with-ai-label",
+     "v11Id": "components-fluid-components-fluidmultiselect--with-ai-label",
+     "name": "With AI Label",
+     "title": "Components/Fluid Components/FluidMultiSelect",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 1146,
+      "totalPixels": 41472,
+      "ratio": 0.02763,
+      "size": {
+       "v11": [
+        432,
+        96
+       ],
+       "v12": [
+        432,
+        96
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 5
+    },
+    {
      "id": "components-fluid-components-fluidnumberinput--default",
      "v11Id": "components-fluid-components-fluidnumberinput--default",
      "name": "Default",
@@ -6894,9 +6894,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 961,
+      "diffPixels": 1006,
       "totalPixels": 42336,
-      "ratio": 0.0227,
+      "ratio": 0.02376,
       "size": {
        "v11": [
         432,
@@ -6919,9 +6919,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 761,
+      "diffPixels": 793,
       "totalPixels": 41472,
-      "ratio": 0.01835,
+      "ratio": 0.01912,
       "size": {
        "v11": [
         432,
@@ -6935,6 +6935,31 @@
       "sizeChanged": false
      },
      "changes": 5
+    },
+    {
+     "id": "components-fluid-components-fluidtimepicker--default",
+     "v11Id": "components-fluid-components-fluidtimepicker--default",
+     "name": "Default",
+     "title": "Components/Fluid Components/FluidTimePicker",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 1190,
+      "totalPixels": 73344,
+      "ratio": 0.01622,
+      "size": {
+       "v11": [
+        382,
+        192
+       ],
+       "v12": [
+        382,
+        192
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 33
     },
     {
      "id": "components-fluid-components-fluidcombobox--skeleton",
@@ -7137,29 +7162,54 @@
      "changes": 9
     },
     {
-     "id": "components-fluid-components-fluidtimepicker--default",
-     "v11Id": "components-fluid-components-fluidtimepicker--default",
+     "id": "components-fluid-components-fluidpasswordinput--default",
+     "v11Id": "components-fluid-components-fluidpasswordinput--default",
      "name": "Default",
-     "title": "Components/Fluid Components/FluidTimePicker",
+     "title": "Components/Fluid Components/FluidPasswordInput",
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 960,
-      "totalPixels": 73344,
-      "ratio": 0.01309,
+      "diffPixels": 391,
+      "totalPixels": 31872,
+      "ratio": 0.01227,
       "size": {
        "v11": [
-        382,
-        192
+        332,
+        96
        ],
        "v12": [
-        382,
-        192
+        332,
+        96
        ]
       },
       "sizeChanged": false
      },
-     "changes": 33
+     "changes": 7
+    },
+    {
+     "id": "components-fluid-components-fluidtextinput--default",
+     "v11Id": "components-fluid-components-fluidtextinput--default",
+     "name": "Default",
+     "title": "Components/Fluid Components/FluidTextInput",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 391,
+      "totalPixels": 31872,
+      "ratio": 0.01227,
+      "size": {
+       "v11": [
+        332,
+        96
+       ],
+       "v12": [
+        332,
+        96
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 6
     },
     {
      "id": "components-fluid-components-fluidcombobox--with-ai-label",
@@ -7187,56 +7237,6 @@
      "changes": 9
     },
     {
-     "id": "components-fluid-components-fluidpasswordinput--default",
-     "v11Id": "components-fluid-components-fluidpasswordinput--default",
-     "name": "Default",
-     "title": "Components/Fluid Components/FluidPasswordInput",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 328,
-      "totalPixels": 31872,
-      "ratio": 0.01029,
-      "size": {
-       "v11": [
-        332,
-        96
-       ],
-       "v12": [
-        332,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 7
-    },
-    {
-     "id": "components-fluid-components-fluidtextinput--default",
-     "v11Id": "components-fluid-components-fluidtextinput--default",
-     "name": "Default",
-     "title": "Components/Fluid Components/FluidTextInput",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 328,
-      "totalPixels": 31872,
-      "ratio": 0.01029,
-      "size": {
-       "v11": [
-        332,
-        96
-       ],
-       "v12": [
-        332,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 6
-    },
-    {
      "id": "components-fluid-components-fluidmultiselect--condensed",
      "v11Id": "components-fluid-components-fluidmultiselect--condensed",
      "name": "Condensed",
@@ -7244,9 +7244,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 400,
+      "diffPixels": 458,
       "totalPixels": 41472,
-      "ratio": 0.00965,
+      "ratio": 0.01104,
       "size": {
        "v11": [
         432,
@@ -7269,9 +7269,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 400,
+      "diffPixels": 458,
       "totalPixels": 41472,
-      "ratio": 0.00965,
+      "ratio": 0.01104,
       "size": {
        "v11": [
         432,
@@ -7294,9 +7294,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 299,
+      "diffPixels": 330,
       "totalPixels": 41472,
-      "ratio": 0.00721,
+      "ratio": 0.00796,
       "size": {
        "v11": [
         432,
@@ -7319,9 +7319,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 299,
+      "diffPixels": 330,
       "totalPixels": 41472,
-      "ratio": 0.00721,
+      "ratio": 0.00796,
       "size": {
        "v11": [
         432,
@@ -7362,6 +7362,31 @@
      "changes": 13
     },
     {
+     "id": "components-fluid-components-fluidsearch--default",
+     "v11Id": "components-fluid-components-fluidsearch--default",
+     "name": "Default",
+     "title": "Components/Fluid Components/FluidSearch",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 258,
+      "totalPixels": 41472,
+      "ratio": 0.00622,
+      "size": {
+       "v11": [
+        432,
+        96
+       ],
+       "v12": [
+        432,
+        96
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 5
+    },
+    {
      "id": "components-fluid-components-fluidselect--with-ai-label",
      "v11Id": "components-fluid-components-fluidselect--with-ai-label",
      "name": "With AI Label",
@@ -7387,31 +7412,6 @@
      "changes": 7
     },
     {
-     "id": "components-fluid-components-fluidsearch--default",
-     "v11Id": "components-fluid-components-fluidsearch--default",
-     "name": "Default",
-     "title": "Components/Fluid Components/FluidSearch",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 219,
-      "totalPixels": 41472,
-      "ratio": 0.00528,
-      "size": {
-       "v11": [
-        432,
-        96
-       ],
-       "v12": [
-        432,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 5
-    },
-    {
      "id": "components-fluid-components-fluidtextinput--default-with-toggletip",
      "v11Id": "components-fluid-components-fluidtextinput--default-with-toggletip",
      "name": "Default With Toggletip",
@@ -7419,9 +7419,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 328,
+      "diffPixels": 391,
       "totalPixels": 117888,
-      "ratio": 0.00278,
+      "ratio": 0.00332,
       "size": {
        "v11": [
         1228,
@@ -7570,15 +7570,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 57512,
+      "totalPixels": 64780,
       "ratio": 0,
       "size": {
        "v11": [
-        364,
+        410,
         158
        ],
        "v12": [
-        364,
+        410,
         158
        ]
       },
@@ -7620,15 +7620,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 57512,
+      "totalPixels": 64780,
       "ratio": 0,
       "size": {
        "v11": [
-        364,
+        410,
         158
        ],
        "v12": [
-        364,
+        410,
         158
        ]
       },
@@ -9606,14 +9606,14 @@
       "cds--date-picker--fluid cds--form-item"
      ],
      "prop": "width",
-     "from": "413px",
-     "to": "417px",
+     "from": "411px",
+     "to": "415px",
      "note": "+4px",
      "stories": [
       "components-fluid-components-fluidform--default"
      ],
      "elements": 1,
-     "text": "Fluid Components · .cds--form-item · width 413px → 417px (+4px)"
+     "text": "Fluid Components · .cds--form-item · width 411px → 415px (+4px)"
     },
     {
      "type": "Layout",
@@ -9622,14 +9622,14 @@
       "cds--date-picker-container"
      ],
      "prop": "width",
-     "from": "206.5px",
-     "to": "207.5px",
+     "from": "205.5px",
+     "to": "206.5px",
      "note": "+1px",
      "stories": [
       "components-fluid-components-fluidform--default"
      ],
      "elements": 2,
-     "text": "Fluid Components · .cds--date-picker-container · width 206.5px → 207.5px (+1px)"
+     "text": "Fluid Components · .cds--date-picker-container · width 205.5px → 206.5px (+1px)"
     },
     {
      "type": "Layout",
@@ -9638,14 +9638,14 @@
       "cds--date-picker__input cds--date-picker__input--md"
      ],
      "prop": "width",
-     "from": "206.5px",
-     "to": "207.5px",
+     "from": "205.5px",
+     "to": "206.5px",
      "note": "+1px",
      "stories": [
       "components-fluid-components-fluidform--default"
      ],
      "elements": 2,
-     "text": "Fluid Components · .cds--date-picker__input.cds--date-picker__input--md · width 206.5px → 207.5px (+1px)"
+     "text": "Fluid Components · .cds--date-picker__input.cds--date-picker__input--md · width 205.5px → 206.5px (+1px)"
     },
     {
      "type": "Layout",
@@ -9863,8 +9863,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.00895,
-    "mean": 0.00687,
+    "max": 0.00964,
+    "mean": 0.0075,
     "storiesChanged": 2,
     "storiesCompared": 2
    },
@@ -9877,9 +9877,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 8913,
+      "diffPixels": 9600,
       "totalPixels": 996342,
-      "ratio": 0.00895,
+      "ratio": 0.00964,
       "size": {
        "v11": [
         633,
@@ -9902,9 +9902,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 4771,
+      "diffPixels": 5350,
       "totalPixels": 996342,
-      "ratio": 0.00479,
+      "ratio": 0.00537,
       "size": {
        "v11": [
         633,
@@ -11447,15 +11447,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 43264,
+      "totalPixels": 43520,
       "ratio": 0,
       "size": {
        "v11": [
-        338,
+        340,
         128
        ],
        "v12": [
-        338,
+        340,
         128
        ]
       },
@@ -11472,15 +11472,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 54756,
+      "totalPixels": 55080,
       "ratio": 0,
       "size": {
        "v11": [
-        338,
+        340,
         162
        ],
        "v12": [
-        338,
+        340,
         162
        ]
       },
@@ -11498,8 +11498,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.09564,
-    "mean": 0.04782,
+    "max": 0.10636,
+    "mean": 0.05318,
     "storiesChanged": 1,
     "storiesCompared": 2
    },
@@ -11512,9 +11512,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1578,
+      "diffPixels": 1755,
       "totalPixels": 16500,
-      "ratio": 0.09564,
+      "ratio": 0.10636,
       "size": {
        "v11": [
         150,
@@ -11626,15 +11626,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 19380,
+      "totalPixels": 19532,
       "ratio": 0,
       "size": {
        "v11": [
-        255,
+        257,
         76
        ],
        "v12": [
-        255,
+        257,
         76
        ]
       },
@@ -11652,8 +11652,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.30018,
-    "mean": 0.15009,
+    "max": 0.30168,
+    "mean": 0.15084,
     "storiesChanged": 1,
     "storiesCompared": 2
    },
@@ -11666,9 +11666,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 10182,
+      "diffPixels": 10233,
       "totalPixels": 33920,
-      "ratio": 0.30018,
+      "ratio": 0.30168,
       "size": {
        "v11": [
         424,
@@ -11734,14 +11734,14 @@
       "cds--btn cds--btn--secondary"
      ],
      "prop": "width",
-     "from": "123.55px",
+     "from": "123.97px",
      "to": "196px",
-     "note": "+72.45px",
+     "note": "+72.03px",
      "stories": [
       "components-inlineloading--ux-example"
      ],
      "elements": 1,
-     "text": "InlineLoading · .cds--btn · width 123.55px → 196px (+72.45px)"
+     "text": "InlineLoading · .cds--btn · width 123.97px → 196px (+72.03px)"
     },
     {
      "type": "Layout",
@@ -11750,14 +11750,14 @@
       "cds--btn cds--btn--primary"
      ],
      "prop": "width",
-     "from": "125.81px",
+     "from": "125.97px",
      "to": "196px",
-     "note": "+70.19px",
+     "note": "+70.03px",
      "stories": [
       "components-inlineloading--ux-example"
      ],
      "elements": 1,
-     "text": "InlineLoading · .cds--btn · width 125.81px → 196px (+70.19px)"
+     "text": "InlineLoading · .cds--btn · width 125.97px → 196px (+70.03px)"
     },
     {
      "type": "Structure",
@@ -12012,16 +12012,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 176400,
+      "totalPixels": 203616,
       "ratio": 0,
       "size": {
        "v11": [
-        1225,
-        144
+        1212,
+        168
        ],
        "v12": [
-        1225,
-        144
+        1212,
+        168
        ]
       },
       "sizeChanged": false
@@ -12037,15 +12037,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 6900,
+      "totalPixels": 6850,
       "ratio": 0,
       "size": {
        "v11": [
-        138,
+        137,
         50
        ],
        "v12": [
-        138,
+        137,
         50
        ]
       },
@@ -12063,8 +12063,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.03646,
-    "mean": 0.02132,
+    "max": 0.03671,
+    "mean": 0.02145,
     "storiesChanged": 2,
     "storiesCompared": 3
    },
@@ -12078,15 +12078,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 11520,
-      "ratio": 0.03646,
+      "totalPixels": 11440,
+      "ratio": 0.03671,
       "size": {
        "v11": [
-        144,
+        143,
         80
        ],
        "v12": [
-        144,
+        143,
         80
        ]
       },
@@ -12103,15 +12103,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 15280,
-      "ratio": 0.02749,
+      "totalPixels": 15200,
+      "ratio": 0.02763,
       "size": {
        "v11": [
-        191,
+        190,
         80
        ],
        "v12": [
-        191,
+        190,
         80
        ]
       },
@@ -12576,8 +12576,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.02586,
-    "mean": 0.00559,
+    "max": 0.02612,
+    "mean": 0.0057,
     "storiesChanged": 7,
     "storiesCompared": 11
    },
@@ -12591,15 +12591,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 16240,
-      "ratio": 0.02586,
+      "totalPixels": 16080,
+      "ratio": 0.02612,
       "size": {
        "v11": [
-        203,
+        201,
         80
        ],
        "v12": [
-        203,
+        201,
         80
        ]
       },
@@ -12615,9 +12615,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 14327,
+      "diffPixels": 14787,
       "totalPixels": 768728,
-      "ratio": 0.01864,
+      "ratio": 0.01924,
       "size": {
        "v11": [
         1228,
@@ -12640,9 +12640,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 4730,
+      "diffPixels": 4916,
       "totalPixels": 1024000,
-      "ratio": 0.00462,
+      "ratio": 0.0048,
       "size": {
        "v11": [
         1280,
@@ -12665,9 +12665,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 3740,
+      "diffPixels": 3896,
       "totalPixels": 1024000,
-      "ratio": 0.00365,
+      "ratio": 0.0038,
       "size": {
        "v11": [
         1280,
@@ -12715,9 +12715,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2332,
+      "diffPixels": 2306,
       "totalPixels": 1024000,
-      "ratio": 0.00228,
+      "ratio": 0.00225,
       "size": {
        "v11": [
         1280,
@@ -12765,9 +12765,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 664,
+      "diffPixels": 693,
       "totalPixels": 1024000,
-      "ratio": 0.00065,
+      "ratio": 0.00068,
       "size": {
        "v11": [
         1280,
@@ -13422,8 +13422,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.01683,
-    "mean": 0.00648,
+    "max": 0.01779,
+    "mean": 0.00701,
     "storiesChanged": 10,
     "storiesCompared": 14
    },
@@ -13436,9 +13436,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 836,
+      "diffPixels": 884,
       "totalPixels": 49680,
-      "ratio": 0.01683,
+      "ratio": 0.01779,
       "size": {
        "v11": [
         432,
@@ -13461,9 +13461,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 761,
+      "diffPixels": 805,
       "totalPixels": 54448,
-      "ratio": 0.01398,
+      "ratio": 0.01478,
       "size": {
        "v11": [
         332,
@@ -13486,9 +13486,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 504,
+      "diffPixels": 543,
       "totalPixels": 38180,
-      "ratio": 0.0132,
+      "ratio": 0.01422,
       "size": {
        "v11": [
         332,
@@ -13511,9 +13511,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 341,
+      "diffPixels": 385,
       "totalPixels": 38180,
-      "ratio": 0.00893,
+      "ratio": 0.01008,
       "size": {
        "v11": [
         332,
@@ -13536,9 +13536,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 341,
+      "diffPixels": 385,
       "totalPixels": 38180,
-      "ratio": 0.00893,
+      "ratio": 0.01008,
       "size": {
        "v11": [
         332,
@@ -13561,9 +13561,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 341,
+      "diffPixels": 385,
       "totalPixels": 38180,
-      "ratio": 0.00893,
+      "ratio": 0.01008,
       "size": {
        "v11": [
         332,
@@ -13586,9 +13586,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 429,
+      "diffPixels": 439,
       "totalPixels": 49680,
-      "ratio": 0.00864,
+      "ratio": 0.00884,
       "size": {
        "v11": [
         432,
@@ -13611,9 +13611,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 499,
+      "diffPixels": 541,
       "totalPixels": 76320,
-      "ratio": 0.00654,
+      "ratio": 0.00709,
       "size": {
        "v11": [
         424,
@@ -13636,9 +13636,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 474,
+      "diffPixels": 547,
       "totalPixels": 216128,
-      "ratio": 0.00219,
+      "ratio": 0.00253,
       "size": {
        "v11": [
         1228,
@@ -13661,9 +13661,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1205,
+      "diffPixels": 1318,
       "totalPixels": 1024000,
-      "ratio": 0.00118,
+      "ratio": 0.00129,
       "size": {
        "v11": [
         1280,
@@ -14251,8 +14251,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.0077,
-    "mean": 0.00229,
+    "max": 0.00887,
+    "mean": 0.00245,
     "storiesChanged": 3,
     "storiesCompared": 7
    },
@@ -14265,9 +14265,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 473,
+      "diffPixels": 545,
       "totalPixels": 61440,
-      "ratio": 0.0077,
+      "ratio": 0.00887,
       "size": {
        "v11": [
         768,
@@ -14610,14 +14610,14 @@
       "cds--toast-notification__close-button"
      ],
      "prop": "margin",
-     "from": "0px 0px 0px 27.0312px",
-     "to": "8px 8px 0px 35.0312px",
+     "from": "0px 0px 0px 25.3125px",
+     "to": "8px 8px 0px 33.3125px",
      "note": null,
      "stories": [
       "components-notifications-toast--default"
      ],
      "elements": 1,
-     "text": "Notifications · .cds--toast-notification__close-button · margin 0px 0px 0px 27.0312px → 8px 8px 0px 35.0312px"
+     "text": "Notifications · .cds--toast-notification__close-button · margin 0px 0px 0px 25.3125px → 8px 8px 0px 33.3125px"
     },
     {
      "type": "Structure",
@@ -14662,8 +14662,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.0058,
-    "mean": 0.00109,
+    "max": 0.0063,
+    "mean": 0.00123,
     "storiesChanged": 1,
     "storiesCompared": 6
    },
@@ -14676,9 +14676,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 288,
+      "diffPixels": 313,
       "totalPixels": 49680,
-      "ratio": 0.0058,
+      "ratio": 0.0063,
       "size": {
        "v11": [
         432,
@@ -14701,9 +14701,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 45,
+      "diffPixels": 69,
       "totalPixels": 141220,
-      "ratio": 0.00032,
+      "ratio": 0.00049,
       "size": {
        "v11": [
         1228,
@@ -14726,9 +14726,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 45,
+      "diffPixels": 69,
       "totalPixels": 141220,
-      "ratio": 0.00032,
+      "ratio": 0.00049,
       "size": {
        "v11": [
         1228,
@@ -15023,15 +15023,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 45530,
+      "totalPixels": 46110,
       "ratio": 0,
       "size": {
        "v11": [
-        157,
+        159,
         290
        ],
        "v12": [
-        157,
+        159,
         290
        ]
       },
@@ -15048,15 +15048,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 67550,
+      "totalPixels": 68250,
       "ratio": 0,
       "size": {
        "v11": [
-        193,
+        195,
         350
        ],
        "v12": [
-        193,
+        195,
         350
        ]
       },
@@ -15073,15 +15073,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 38930,
+      "totalPixels": 39270,
       "ratio": 0,
       "size": {
        "v11": [
-        229,
+        231,
         170
        ],
        "v12": [
-        229,
+        231,
         170
        ]
       },
@@ -15099,8 +15099,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.07488,
-    "mean": 0.01248,
+    "max": 0.07414,
+    "mean": 0.01236,
     "storiesChanged": 1,
     "storiesCompared": 6
    },
@@ -15113,9 +15113,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 11954,
+      "diffPixels": 11835,
       "totalPixels": 159640,
-      "ratio": 0.07488,
+      "ratio": 0.07414,
       "size": {
        "v11": [
         1228,
@@ -15665,8 +15665,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.01284,
-    "mean": 0.00183,
+    "max": 0.01319,
+    "mean": 0.00188,
     "storiesChanged": 1,
     "storiesCompared": 7
    },
@@ -15679,9 +15679,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1234,
+      "diffPixels": 1268,
       "totalPixels": 96102,
-      "ratio": 0.01284,
+      "ratio": 0.01319,
       "size": {
        "v11": [
         843,
@@ -15926,8 +15926,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.00739,
-    "mean": 0.00739,
+    "max": 0.00875,
+    "mean": 0.00875,
     "storiesChanged": 1,
     "storiesCompared": 1
    },
@@ -15940,9 +15940,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 282,
+      "diffPixels": 334,
       "totalPixels": 38180,
-      "ratio": 0.00739,
+      "ratio": 0.00875,
       "size": {
        "v11": [
         332,
@@ -16064,37 +16064,12 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.08154,
-    "mean": 0.04228,
+    "max": 0.09562,
+    "mean": 0.04858,
     "storiesChanged": 5,
     "storiesCompared": 6
    },
    "stories": [
-    {
-     "id": "components-popover--tab-tip-experimental-auto-align",
-     "v11Id": "components-popover--tab-tip-experimental-auto-align",
-     "name": "Tab Tip Experimental Auto Align",
-     "title": "Components/Popover",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 6262,
-      "totalPixels": 76800,
-      "ratio": 0.08154,
-      "size": {
-       "v11": [
-        400,
-        192
-       ],
-       "v12": [
-        400,
-        192
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 1
-    },
     {
      "id": "components-popover--experimental-auto-align",
      "v11Id": "components-popover--experimental-auto-align",
@@ -16103,9 +16078,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 6358,
+      "diffPixels": 7573,
       "totalPixels": 79200,
-      "ratio": 0.08028,
+      "ratio": 0.09562,
       "size": {
        "v11": [
         400,
@@ -16121,6 +16096,31 @@
      "changes": 2
     },
     {
+     "id": "components-popover--tab-tip-experimental-auto-align",
+     "v11Id": "components-popover--tab-tip-experimental-auto-align",
+     "name": "Tab Tip Experimental Auto Align",
+     "title": "Components/Popover",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 7291,
+      "totalPixels": 76800,
+      "ratio": 0.09493,
+      "size": {
+       "v11": [
+        400,
+        192
+       ],
+       "v12": [
+        400,
+        192
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 1
+    },
+    {
      "id": "components-popover--default",
      "v11Id": "components-popover--default",
      "name": "Default",
@@ -16128,16 +16128,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 3003,
-      "totalPixels": 56448,
-      "ratio": 0.0532,
+      "diffPixels": 3196,
+      "totalPixels": 56160,
+      "ratio": 0.05691,
       "size": {
        "v11": [
-        392,
+        390,
         144
        ],
        "v12": [
-        392,
+        390,
         144
        ]
       },
@@ -16153,9 +16153,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2421,
+      "diffPixels": 2808,
       "totalPixels": 99712,
-      "ratio": 0.02428,
+      "ratio": 0.02816,
       "size": {
        "v11": [
         328,
@@ -16178,9 +16178,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 6358,
+      "diffPixels": 7030,
       "totalPixels": 442624,
-      "ratio": 0.01436,
+      "ratio": 0.01588,
       "size": {
        "v11": [
         832,
@@ -16644,15 +16644,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 49686,
+      "totalPixels": 49784,
       "ratio": 0,
       "size": {
        "v11": [
-        507,
+        508,
         98
        ],
        "v12": [
-        507,
+        508,
         98
        ]
       },
@@ -16745,8 +16745,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.00427,
-    "mean": 0.00119,
+    "max": 0.00454,
+    "mean": 0.00125,
     "storiesChanged": 2,
     "storiesCompared": 5
    },
@@ -16759,9 +16759,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 256,
+      "diffPixels": 272,
       "totalPixels": 59976,
-      "ratio": 0.00427,
+      "ratio": 0.00454,
       "size": {
        "v11": [
         833,
@@ -16784,9 +16784,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1634,
+      "diffPixels": 1686,
       "totalPixels": 1024000,
-      "ratio": 0.0016,
+      "ratio": 0.00165,
       "size": {
        "v11": [
         1280,
@@ -17027,8 +17027,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.02511,
-    "mean": 0.00949,
+    "max": 0.02917,
+    "mean": 0.01076,
     "storiesChanged": 4,
     "storiesCompared": 5
    },
@@ -17041,16 +17041,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 754,
-      "totalPixels": 30024,
-      "ratio": 0.02511,
+      "diffPixels": 882,
+      "totalPixels": 30240,
+      "ratio": 0.02917,
       "size": {
        "v11": [
-        417,
+        420,
         72
        ],
        "v12": [
-        417,
+        420,
         72
        ]
       },
@@ -17066,9 +17066,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 632,
+      "diffPixels": 689,
       "totalPixels": 49680,
-      "ratio": 0.01272,
+      "ratio": 0.01387,
       "size": {
        "v11": [
         432,
@@ -17091,9 +17091,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 275,
+      "diffPixels": 315,
       "totalPixels": 49680,
-      "ratio": 0.00554,
+      "ratio": 0.00634,
       "size": {
        "v11": [
         432,
@@ -17116,9 +17116,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1544,
+      "diffPixels": 1680,
       "totalPixels": 400000,
-      "ratio": 0.00386,
+      "ratio": 0.0042,
       "size": {
        "v11": [
         500,
@@ -17636,8 +17636,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.0019,
-    "mean": 0.00043,
+    "max": 0.00302,
+    "mean": 0.00065,
     "storiesChanged": 2,
     "storiesCompared": 10
    },
@@ -17650,16 +17650,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 85,
-      "totalPixels": 44832,
-      "ratio": 0.0019,
+      "diffPixels": 135,
+      "totalPixels": 44640,
+      "ratio": 0.00302,
       "size": {
        "v11": [
-        467,
+        465,
         96
        ],
        "v12": [
-        467,
+        465,
         96
        ]
       },
@@ -17675,16 +17675,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 43,
-      "totalPixels": 36384,
-      "ratio": 0.00118,
+      "diffPixels": 69,
+      "totalPixels": 36192,
+      "ratio": 0.00191,
       "size": {
        "v11": [
-        379,
+        377,
         96
        ],
        "v12": [
-        379,
+        377,
         96
        ]
       },
@@ -17700,16 +17700,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 47,
-      "totalPixels": 65188,
-      "ratio": 0.00072,
+      "diffPixels": 60,
+      "totalPixels": 64844,
+      "ratio": 0.00093,
       "size": {
        "v11": [
-        379,
+        377,
         172
        ],
        "v12": [
-        379,
+        377,
         172
        ]
       },
@@ -17725,9 +17725,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 286,
+      "diffPixels": 335,
       "totalPixels": 1024000,
-      "ratio": 0.00028,
+      "ratio": 0.00033,
       "size": {
        "v11": [
         1280,
@@ -17750,9 +17750,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 256,
+      "diffPixels": 334,
       "totalPixels": 1024000,
-      "ratio": 0.00025,
+      "ratio": 0.00033,
       "size": {
        "v11": [
         1280,
@@ -17801,15 +17801,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 25920,
+      "totalPixels": 26001,
       "ratio": 0,
       "size": {
        "v11": [
-        320,
+        321,
         81
        ],
        "v12": [
-        320,
+        321,
         81
        ]
       },
@@ -17826,15 +17826,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 24219,
+      "totalPixels": 24057,
       "ratio": 0,
       "size": {
        "v11": [
-        299,
+        297,
         81
        ],
        "v12": [
-        299,
+        297,
         81
        ]
       },
@@ -17876,15 +17876,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 25788,
+      "totalPixels": 25620,
       "ratio": 0,
       "size": {
        "v11": [
-        307,
+        305,
         84
        ],
        "v12": [
-        307,
+        305,
         84
        ]
       },
@@ -18042,8 +18042,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.06588,
-    "mean": 0.02711,
+    "max": 0.07024,
+    "mean": 0.02909,
     "storiesChanged": 3,
     "storiesCompared": 5
    },
@@ -18056,9 +18056,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 30501,
+      "diffPixels": 32520,
       "totalPixels": 462956,
-      "ratio": 0.06588,
+      "ratio": 0.07024,
       "size": {
        "v11": [
         1228,
@@ -18081,9 +18081,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 78174,
+      "diffPixels": 82892,
       "totalPixels": 1406720,
-      "ratio": 0.05557,
+      "ratio": 0.05893,
       "size": {
        "v11": [
         1280,
@@ -18106,9 +18106,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 5251,
+      "diffPixels": 6053,
       "totalPixels": 372084,
-      "ratio": 0.01411,
+      "ratio": 0.01627,
       "size": {
        "v11": [
         1228,
@@ -18514,8 +18514,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.03188,
-    "mean": 0.00396,
+    "max": 0.03474,
+    "mean": 0.00425,
     "storiesChanged": 5,
     "storiesCompared": 17
    },
@@ -18528,9 +18528,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 659,
+      "diffPixels": 718,
       "totalPixels": 20670,
-      "ratio": 0.03188,
+      "ratio": 0.03474,
       "size": {
        "v11": [
         195,
@@ -18553,9 +18553,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 678,
+      "diffPixels": 735,
       "totalPixels": 25878,
-      "ratio": 0.0262,
+      "ratio": 0.0284,
       "size": {
        "v11": [
         227,
@@ -18579,15 +18579,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 101202,
-      "ratio": 0.00415,
+      "totalPixels": 101808,
+      "ratio": 0.00413,
       "size": {
        "v11": [
-        501,
+        504,
         202
        ],
        "v12": [
-        501,
+        504,
         202
        ]
       },
@@ -18604,15 +18604,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 120594,
-      "ratio": 0.00348,
+      "totalPixels": 121200,
+      "ratio": 0.00347,
       "size": {
        "v11": [
-        597,
+        600,
         202
        ],
        "v12": [
-        597,
+        600,
         202
        ]
       },
@@ -18779,15 +18779,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 42930,
+      "totalPixels": 43248,
       "ratio": 0,
       "size": {
        "v11": [
-        405,
+        408,
         106
        ],
        "v12": [
-        405,
+        408,
         106
        ]
       },
@@ -18854,15 +18854,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 51728,
+      "totalPixels": 52152,
       "ratio": 0,
       "size": {
        "v11": [
-        488,
+        492,
         106
        ],
        "v12": [
-        488,
+        492,
         106
        ]
       },
@@ -18929,15 +18929,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 64448,
+      "totalPixels": 64872,
       "ratio": 0,
       "size": {
        "v11": [
-        608,
+        612,
         106
        ],
        "v12": [
-        608,
+        612,
         106
        ]
       },
@@ -19044,15 +19044,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 757,
-      "totalPixels": 66696,
-      "ratio": 0.01135,
+      "totalPixels": 66752,
+      "ratio": 0.01134,
       "size": {
        "v11": [
-        1191,
+        1192,
         56
        ],
        "v12": [
-        1191,
+        1192,
         56
        ]
       },
@@ -19119,15 +19119,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 1136,
-      "totalPixels": 165200,
-      "ratio": 0.00688,
+      "totalPixels": 165340,
+      "ratio": 0.00687,
       "size": {
        "v11": [
-        1180,
+        1181,
         140
        ],
        "v12": [
-        1180,
+        1181,
         140
        ]
       },
@@ -19144,15 +19144,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 1178,
-      "totalPixels": 208440,
+      "totalPixels": 208620,
       "ratio": 0.00565,
       "size": {
        "v11": [
-        1158,
+        1159,
         180
        ],
        "v12": [
-        1158,
+        1159,
         180
        ]
       },
@@ -19611,8 +19611,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.01556,
-    "mean": 0.00614,
+    "max": 0.01862,
+    "mean": 0.00686,
     "storiesChanged": 5,
     "storiesCompared": 7
    },
@@ -19625,9 +19625,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 596,
+      "diffPixels": 713,
       "totalPixels": 38295,
-      "ratio": 0.01556,
+      "ratio": 0.01862,
       "size": {
        "v11": [
         333,
@@ -19650,9 +19650,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 500,
+      "diffPixels": 545,
       "totalPixels": 38295,
-      "ratio": 0.01306,
+      "ratio": 0.01423,
       "size": {
        "v11": [
         333,
@@ -19675,9 +19675,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 256,
+      "diffPixels": 272,
       "totalPixels": 38295,
-      "ratio": 0.00668,
+      "ratio": 0.0071,
       "size": {
        "v11": [
         333,
@@ -19700,9 +19700,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 258,
+      "diffPixels": 267,
       "totalPixels": 41452,
-      "ratio": 0.00622,
+      "ratio": 0.00644,
       "size": {
        "v11": [
         482,
@@ -19725,9 +19725,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1279,
+      "diffPixels": 1430,
       "totalPixels": 1024000,
-      "ratio": 0.00125,
+      "ratio": 0.0014,
       "size": {
        "v11": [
         1280,
@@ -20791,8 +20791,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.01749,
-    "mean": 0.0098,
+    "max": 0.02029,
+    "mean": 0.01134,
     "storiesChanged": 2,
     "storiesCompared": 2
    },
@@ -20805,9 +20805,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 581,
+      "diffPixels": 674,
       "totalPixels": 33216,
-      "ratio": 0.01749,
+      "ratio": 0.02029,
       "size": {
        "v11": [
         346,
@@ -20830,9 +20830,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2161,
+      "diffPixels": 2459,
       "totalPixels": 1024000,
-      "ratio": 0.00211,
+      "ratio": 0.0024,
       "size": {
        "v11": [
         1280,
@@ -21126,37 +21126,12 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.07012,
-    "mean": 0.03774,
+    "max": 0.07928,
+    "mean": 0.04172,
     "storiesChanged": 3,
     "storiesCompared": 5
    },
    "stories": [
-    {
-     "id": "components-toggle--default",
-     "v11Id": "components-toggle--default",
-     "name": "Default",
-     "title": "Components/Toggle",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 674,
-      "totalPixels": 9612,
-      "ratio": 0.07012,
-      "size": {
-       "v11": [
-        108,
-        89
-       ],
-       "v12": [
-        108,
-        89
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 1
-    },
     {
      "id": "components-toggle--with-accessible-labels",
      "v11Id": "components-toggle--with-accessible-labels",
@@ -21165,9 +21140,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 4130,
+      "diffPixels": 5227,
       "totalPixels": 65932,
-      "ratio": 0.06264,
+      "ratio": 0.07928,
       "size": {
        "v11": [
         212,
@@ -21183,6 +21158,31 @@
      "changes": 2
     },
     {
+     "id": "components-toggle--default",
+     "v11Id": "components-toggle--default",
+     "name": "Default",
+     "title": "Components/Toggle",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 688,
+      "totalPixels": 9612,
+      "ratio": 0.07158,
+      "size": {
+       "v11": [
+        108,
+        89
+       ],
+       "v12": [
+        108,
+        89
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 1
+    },
+    {
      "id": "components-toggle--small-toggle",
      "v11Id": "components-toggle--small-toggle",
      "name": "Small Toggle",
@@ -21190,9 +21190,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 427,
+      "diffPixels": 441,
       "totalPixels": 7636,
-      "ratio": 0.05592,
+      "ratio": 0.05775,
       "size": {
        "v11": [
         92,
@@ -21312,8 +21312,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.14805,
-    "mean": 0.04951,
+    "max": 0.17899,
+    "mean": 0.05983,
     "storiesChanged": 1,
     "storiesCompared": 3
    },
@@ -21326,9 +21326,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 12365,
+      "diffPixels": 14949,
       "totalPixels": 83520,
-      "ratio": 0.14805,
+      "ratio": 0.17899,
       "size": {
        "v11": [
         320,
@@ -21377,15 +21377,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 6720,
+      "totalPixels": 6672,
       "ratio": 0,
       "size": {
        "v11": [
-        140,
+        139,
         48
        ],
        "v12": [
-        140,
+        139,
         48
        ]
       },
@@ -21459,8 +21459,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.04431,
-    "mean": 0.02062,
+    "max": 0.04388,
+    "mean": 0.02053,
     "storiesChanged": 4,
     "storiesCompared": 5
    },
@@ -21473,9 +21473,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 23236,
+      "diffPixels": 23008,
       "totalPixels": 524356,
-      "ratio": 0.04431,
+      "ratio": 0.04388,
       "size": {
        "v11": [
         1228,
@@ -21777,15 +21777,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 253432,
+      "totalPixels": 254696,
       "ratio": 0,
       "size": {
        "v11": [
-        401,
+        403,
         632
        ],
        "v12": [
-        401,
+        403,
         632
        ]
       },
@@ -21852,15 +21852,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 528612,
+      "totalPixels": 529830,
       "ratio": 0,
       "size": {
        "v11": [
-        868,
+        870,
         609
        ],
        "v12": [
-        868,
+        870,
         609
        ]
       },
@@ -21923,8 +21923,8 @@
    "section": "Components",
    "status": "changed",
    "pixel": {
-    "max": 0.00038,
-    "mean": 0.00036,
+    "max": 0.00037,
+    "mean": 0.00035,
     "storiesChanged": 0,
     "storiesCompared": 11
    },
@@ -21938,16 +21938,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -21963,16 +21963,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -21988,16 +21988,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -22013,16 +22013,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -22038,16 +22038,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -22063,16 +22063,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -22088,16 +22088,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -22113,16 +22113,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1105920,
-      "ratio": 0.00038,
+      "totalPixels": 1136640,
+      "ratio": 0.00037,
       "size": {
        "v11": [
         1280,
-        864
+        888
        ],
        "v12": [
         1280,
-        864
+        888
        ]
       },
       "sizeChanged": false
@@ -22138,16 +22138,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1351680,
-      "ratio": 0.00031,
+      "totalPixels": 1382400,
+      "ratio": 0.0003,
       "size": {
        "v11": [
         1280,
-        1056
+        1080
        ],
        "v12": [
         1280,
-        1056
+        1080
        ]
       },
       "sizeChanged": false
@@ -22163,16 +22163,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1351680,
-      "ratio": 0.00031,
+      "totalPixels": 1382400,
+      "ratio": 0.0003,
       "size": {
        "v11": [
         1280,
-        1056
+        1080
        ],
        "v12": [
         1280,
-        1056
+        1080
        ]
       },
       "sizeChanged": false
@@ -22188,16 +22188,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 420,
-      "totalPixels": 1351680,
-      "ratio": 0.00031,
+      "totalPixels": 1382400,
+      "ratio": 0.0003,
       "size": {
        "v11": [
         1280,
-        1056
+        1080
        ],
        "v12": [
         1280,
-        1056
+        1080
        ]
       },
       "sizeChanged": false
@@ -22256,15 +22256,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 17550,
+      "totalPixels": 17640,
       "ratio": 0,
       "size": {
        "v11": [
-        195,
+        196,
         90
        ],
        "v12": [
-        195,
+        196,
         90
        ]
       },
@@ -22281,15 +22281,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 42500,
+      "totalPixels": 42840,
       "ratio": 0,
       "size": {
        "v11": [
-        250,
+        252,
         170
        ],
        "v12": [
-        250,
+        252,
         170
        ]
       },
@@ -23072,15 +23072,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 27664,
+      "totalPixels": 28704,
       "ratio": 0,
       "size": {
        "v11": [
-        532,
+        552,
         52
        ],
        "v12": [
-        532,
+        552,
         52
        ]
       },
@@ -23097,15 +23097,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 19916,
+      "totalPixels": 20020,
       "ratio": 0,
       "size": {
        "v11": [
-        383,
+        385,
         52
        ],
        "v12": [
-        383,
+        385,
         52
        ]
       },
@@ -23122,15 +23122,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 22848,
+      "totalPixels": 23016,
       "ratio": 0,
       "size": {
        "v11": [
-        408,
+        411,
         56
        ],
        "v12": [
-        408,
+        411,
         56
        ]
       },
@@ -23147,15 +23147,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 125736,
+      "totalPixels": 126152,
       "ratio": 0,
       "size": {
        "v11": [
-        1209,
+        1213,
         104
        ],
        "v12": [
-        1209,
+        1213,
         104
        ]
       },
@@ -23172,15 +23172,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 89148,
+      "totalPixels": 89300,
       "ratio": 0,
       "size": {
        "v11": [
-        1173,
+        1175,
         76
        ],
        "v12": [
-        1173,
+        1175,
         76
        ]
       },
@@ -23197,15 +23197,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 25901,
+      "totalPixels": 26255,
       "ratio": 0,
       "size": {
        "v11": [
-        439,
+        445,
         59
        ],
        "v12": [
-        439,
+        445,
         59
        ]
       },
@@ -23222,15 +23222,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 27671,
+      "totalPixels": 27730,
       "ratio": 0,
       "size": {
        "v11": [
-        469,
+        470,
         59
        ],
        "v12": [
-        469,
+        470,
         59
        ]
       },
@@ -23247,15 +23247,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 21112,
+      "totalPixels": 21372,
       "ratio": 0,
       "size": {
        "v11": [
-        406,
+        411,
         52
        ],
        "v12": [
-        406,
+        411,
         52
        ]
       },
@@ -23522,15 +23522,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 278334,
+      "totalPixels": 276219,
       "ratio": 0,
       "size": {
        "v11": [
-        658,
+        653,
         423
        ],
        "v12": [
-        658,
+        653,
         423
        ]
       },
@@ -23588,15 +23588,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 11700,
+      "totalPixels": 11804,
       "ratio": 0,
       "size": {
        "v11": [
-        225,
+        227,
         52
        ],
        "v12": [
-        225,
+        227,
         52
        ]
       },
@@ -24070,15 +24070,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 126096,
+      "totalPixels": 126735,
       "ratio": 0,
       "size": {
        "v11": [
-        592,
+        595,
         213
        ],
        "v12": [
-        592,
+        595,
         213
        ]
       },
@@ -24153,15 +24153,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 618580,
+      "totalPixels": 617010,
       "ratio": 0,
       "size": {
        "v11": [
-        788,
+        786,
         785
        ],
        "v12": [
-        788,
+        786,
         785
        ]
       },
@@ -24179,9 +24179,9 @@
    "section": "Preview",
    "status": "changed",
    "pixel": {
-    "max": 0.01533,
-    "mean": 0.00623,
-    "storiesChanged": 6,
+    "max": 0.01686,
+    "mean": 0.00683,
+    "storiesChanged": 8,
     "storiesCompared": 9
    },
    "stories": [
@@ -24193,9 +24193,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 471,
+      "diffPixels": 518,
       "totalPixels": 30720,
-      "ratio": 0.01533,
+      "ratio": 0.01686,
       "size": {
        "v11": [
         320,
@@ -24218,9 +24218,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 14592,
-      "ratio": 0.01494,
+      "ratio": 0.01645,
       "size": {
        "v11": [
         152,
@@ -24243,9 +24243,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 30720,
-      "ratio": 0.0071,
+      "ratio": 0.00781,
       "size": {
        "v11": [
         320,
@@ -24268,9 +24268,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 30720,
-      "ratio": 0.0071,
+      "ratio": 0.00781,
       "size": {
        "v11": [
         320,
@@ -24293,9 +24293,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 218,
+      "diffPixels": 240,
       "totalPixels": 30720,
-      "ratio": 0.0071,
+      "ratio": 0.00781,
       "size": {
        "v11": [
         320,
@@ -24336,31 +24336,6 @@
      "changes": 4
     },
     {
-     "id": "preview-preview-datepicker--range-with-calendar-with-layer",
-     "v11Id": "preview-preview-datepicker--range-with-calendar-with-layer",
-     "name": "Range With Calendar With Layer",
-     "title": "Preview/preview__DatePicker",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 1007,
-      "totalPixels": 1024000,
-      "ratio": 0.00098,
-      "size": {
-       "v11": [
-        1280,
-        800
-       ],
-       "v12": [
-        1280,
-        800
-       ]
-      },
-      "sizeChanged": false
-     },
-     "changes": 30
-    },
-    {
      "id": "preview-preview-datepicker--single-with-calendar-with-layer",
      "v11Id": "preview-preview-datepicker--single-with-calendar-with-layer",
      "name": "Single With Calendar With Layer",
@@ -24368,9 +24343,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1008,
+      "diffPixels": 1071,
       "totalPixels": 1024000,
-      "ratio": 0.00098,
+      "ratio": 0.00105,
       "size": {
        "v11": [
         1280,
@@ -24386,6 +24361,31 @@
      "changes": 15
     },
     {
+     "id": "preview-preview-datepicker--range-with-calendar-with-layer",
+     "v11Id": "preview-preview-datepicker--range-with-calendar-with-layer",
+     "name": "Range With Calendar With Layer",
+     "title": "Preview/preview__DatePicker",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 1070,
+      "totalPixels": 1024000,
+      "ratio": 0.00104,
+      "size": {
+       "v11": [
+        1280,
+        800
+       ],
+       "v12": [
+        1280,
+        800
+       ]
+      },
+      "sizeChanged": false
+     },
+     "changes": 30
+    },
+    {
      "id": "preview-preview-datepicker--simple-with-layer",
      "v11Id": "preview-preview-datepicker--simple-with-layer",
      "name": "Simple With Layer",
@@ -24393,9 +24393,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 840,
+      "diffPixels": 903,
       "totalPixels": 1024000,
-      "ratio": 0.00082,
+      "ratio": 0.00088,
       "size": {
        "v11": [
         1280,
@@ -24720,7 +24720,7 @@
    "status": "changed",
    "pixel": {
     "max": 0.02763,
-    "mean": 0.01334,
+    "mean": 0.01339,
     "storiesChanged": 5,
     "storiesCompared": 5
    },
@@ -24783,9 +24783,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2771,
+      "diffPixels": 2906,
       "totalPixels": 631722,
-      "ratio": 0.00439,
+      "ratio": 0.0046,
       "size": {
        "v11": [
         1014,
@@ -24808,9 +24808,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2772,
+      "diffPixels": 2790,
       "totalPixels": 784836,
-      "ratio": 0.00353,
+      "ratio": 0.00355,
       "size": {
        "v11": [
         1014,
@@ -24833,9 +24833,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2772,
+      "diffPixels": 2790,
       "totalPixels": 784836,
-      "ratio": 0.00353,
+      "ratio": 0.00355,
       "size": {
        "v11": [
         1014,
@@ -25093,8 +25093,8 @@
    "section": "Preview",
    "status": "changed",
    "pixel": {
-    "max": 0.00545,
-    "mean": 0.00545,
+    "max": 0.00591,
+    "mean": 0.00591,
     "storiesChanged": 1,
     "storiesCompared": 1
    },
@@ -25107,9 +25107,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 3921,
+      "diffPixels": 4250,
       "totalPixels": 719608,
-      "ratio": 0.00545,
+      "ratio": 0.00591,
       "size": {
        "v11": [
         1228,
@@ -25265,33 +25265,18 @@
      "type": "Layout",
      "element": ".cds--text-input",
      "variants": [
+      "cds--layout--size-sm cds--text-input cds--text-input--sm",
       "cds--text-input"
      ],
      "prop": "width",
-     "from": "210.38px",
-     "to": "211.72px",
-     "note": "+1.34px",
-     "stories": [
-      "preview-preview-layout--default"
-     ],
-     "elements": 2,
-     "text": "preview__Layout · .cds--text-input · width 210.38px → 211.72px (+1.34px)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--layout--size-sm cds--text-input cds--text-input--sm"
-     ],
-     "prop": "width",
-     "from": "210.39px",
-     "to": "211.72px",
+     "from": "230.47px",
+     "to": "231.8px",
      "note": "+1.33px",
      "stories": [
       "preview-preview-layout--default"
      ],
-     "elements": 2,
-     "text": "preview__Layout · .cds--text-input · width 210.39px → 211.72px (+1.33px)"
+     "elements": 4,
+     "text": "preview__Layout · .cds--text-input · width 230.47px → 231.8px (+1.33px)"
     }
    ]
   },
@@ -25359,8 +25344,8 @@
    "section": "Preview",
    "status": "changed",
    "pixel": {
-    "max": 0.00147,
-    "mean": 0.00037,
+    "max": 0.00168,
+    "mean": 0.00042,
     "storiesChanged": 1,
     "storiesCompared": 4
    },
@@ -25373,9 +25358,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 468,
+      "diffPixels": 536,
       "totalPixels": 319280,
-      "ratio": 0.00147,
+      "ratio": 0.00168,
       "size": {
        "v11": [
         1228,
@@ -25399,15 +25384,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 13984,
+      "totalPixels": 16340,
       "ratio": 0,
       "size": {
        "v11": [
-        184,
+        215,
         76
        ],
        "v12": [
-        184,
+        215,
         76
        ]
       },
@@ -25424,16 +25409,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 179376,
+      "totalPixels": 210872,
       "ratio": 0,
       "size": {
        "v11": [
-        1212,
-        148
+        1226,
+        172
        ],
        "v12": [
-        1212,
-        148
+        1226,
+        172
        ]
       },
       "sizeChanged": false
@@ -25587,15 +25572,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 46158,
+      "totalPixels": 46472,
       "ratio": 0,
       "size": {
        "v11": [
-        147,
+        148,
         314
        ],
        "v12": [
-        147,
+        148,
         314
        ]
       },
@@ -25612,15 +25597,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 57960,
+      "totalPixels": 58320,
       "ratio": 0,
       "size": {
        "v11": [
-        161,
+        162,
         360
        ],
        "v12": [
-        161,
+        162,
         360
        ]
       },
@@ -25662,15 +25647,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 38280,
+      "totalPixels": 38570,
       "ratio": 0,
       "size": {
        "v11": [
-        132,
+        133,
         290
        ],
        "v12": [
-        132,
+        133,
         290
        ]
       },

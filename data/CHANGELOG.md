@@ -1,6 +1,6 @@
 # Carbon React V11 → V12 changelog
 
-Generated 2026-09-24T20:58:09.122Z from the live V11 and V12 Storybooks. Values are computed styles.
+Generated 2026-09-24T23:44:35.985Z from the live V11 and V12 Storybooks. Values are computed styles.
 
 Components: 30 unchanged · 50 changed · 17 new · 4 removed
 
@@ -23,7 +23,7 @@ Components: 30 unchanged · 50 changed · 17 new · 4 removed
 
 ### Breadcrumb
 
-_Components · max 5.2% pixels, 3/5 stories differ_
+_Components · max 5.8% pixels, 3/5 stories differ_
 
 - **Visual** Breadcrumb · .cds--tooltip-trigger__wrapper · line-height 0px → 18.0001px _(2 stories)_
 - **Visual** Breadcrumb · .cds--popover · line-height 0px → 18.0001px _(2 stories)_
@@ -81,7 +81,7 @@ _Components · max 7.9% pixels, 5/5 stories differ_
 - **Visual** ComboButton · .cds--btn.cds--combo-button__trigger · border-radius 0px → 0px 999999px 999999px 0px _(4 stories)_
 - **Visual** ComboButton · .cds--btn · display inline-flex → block
 - **Visual** ComboButton · .cds--btn · padding 0px → 14px 63px 14px 15px
-- **Layout** ComboButton · .cds--btn · width 48px → 173.22px (+125.22px)
+- **Layout** ComboButton · .cds--btn · width 48px → 172.25px (+124.25px)
 - **Structure** ComboButton · .cds--combo-button__container.cds--combo-button__container--lg element added
 - **Structure** ComboButton · .cds--combo-button__primary-action element added
 - **Structure** ComboButton · .cds--autoalign.cds--icon-tooltip.cds--popover--auto-align.cds--popover--high-contrast.cds--popover--top.cds--popover-container.cds--tooltip element added
@@ -171,7 +171,7 @@ _Components · max 0.0% pixels, 0/25 stories differ_
 
 ### DatePicker
 
-_Components · max 1.5% pixels, 6/9 stories differ_
+_Components · max 1.7% pixels, 8/9 stories differ_
 
 > August 5, 2026: A new preview DatePicker has been added to @carbon/react as preview__DatePicker. It is built on the Temporal API and a framework-agnostic state machine shared with @carbon/web-components, replacing the Flatpickr-based implementation. Stories and documentation can be found in the Components/Preview/preview__DatePicker section of Storybook.
 
@@ -194,7 +194,7 @@ _Components · max 1.5% pixels, 6/9 stories differ_
 
 ### Dropdown
 
-_Components · max 1.3% pixels, 5/9 stories differ_
+_Components · max 1.4% pixels, 5/9 stories differ_
 
 - **Visual** Dropdown · .cds--dropdown.cds--list-box · border-radius 0px → 4px _(7 stories)_
 - **Visual** Dropdown · .cds--dropdown.cds--list-box · border-top/right/left none → 1px solid transparent _(7 stories)_
@@ -210,7 +210,7 @@ _Components · max 1.3% pixels, 5/9 stories differ_
 - **Visual** Dropdown · .cds--autoalign.cds--dropdown.cds--list-box · border-radius 0px → 4px
 - **Visual** Dropdown · .cds--dropdown.cds--skeleton · border-radius 0px → 4px
 - **Visual** Dropdown · .cds--autoalign.cds--dropdown.cds--list-box · border-top/right/left none → 1px solid transparent
-- **Layout** Dropdown · .cds--dropdown.cds--list-box · width 119.14px → 121.14px (+2px) _(2 stories)_
+- **Layout** Dropdown · .cds--dropdown.cds--list-box · width 119.28px → 121.28px (+2px) _(2 stories)_
 - **Story** Dropdown · story graduated from Feature Flag: components-dropdown--floating-styles
 - **Flag** Dropdown · feature flag enable-v12-dynamic-floating-styles: off in V11 → on by default in V12
 
@@ -230,7 +230,7 @@ _Components · max 1.2% pixels, 4/8 stories differ_
 
 ### Fluid Components
 
-_Components · max 5.3% pixels, 27/36 stories differ_
+_Components · max 5.6% pixels, 27/36 stories differ_
 
 - **Visual** Fluid Components · .cds--form-item · border-radius 0px → 4px _(10 stories)_
 - **Visual** Fluid Components · .cds--text-input · border-radius 0px → 4px _(9 stories)_
@@ -339,9 +339,9 @@ _Components · max 5.3% pixels, 27/36 stories differ_
 - **Layout** Fluid Components · .cds--number__rule-divider · width 1px → 0px (-1px) _(2 stories)_
 - **Layout** Fluid Components · .cds--label.cds--skeleton · width 200px → 199px (-1px) _(2 stories)_
 - **Layout** Fluid Components · .cds--label.cds--skeleton::before · width 200px → 199px (-1px) _(2 stories)_
-- **Layout** Fluid Components · .cds--form-item · width 413px → 417px (+4px)
-- **Layout** Fluid Components · .cds--date-picker-container · width 206.5px → 207.5px (+1px)
-- **Layout** Fluid Components · .cds--date-picker__input.cds--date-picker__input--md · width 206.5px → 207.5px (+1px)
+- **Layout** Fluid Components · .cds--form-item · width 411px → 415px (+4px)
+- **Layout** Fluid Components · .cds--date-picker-container · width 205.5px → 206.5px (+1px)
+- **Layout** Fluid Components · .cds--date-picker__input.cds--date-picker__input--md · width 205.5px → 206.5px (+1px)
 - **Layout** Fluid Components · .cds--text-input · width 600px → 598px (-2px)
 - **Layout** Fluid Components · .cds--text-input · width 292px → 290px (-2px)
 - **Layout** Fluid Components · .cds--text-input · width 300px → 298px (-2px)
@@ -358,7 +358,7 @@ _Components · max 5.3% pixels, 27/36 stories differ_
 
 ### Form
 
-_Components · max 0.9% pixels, 2/2 stories differ_
+_Components · max 1.0% pixels, 2/2 stories differ_
 
 - **Visual** Form · .cds--search-input · background-color #f4f4f4 → transparent _(2 stories)_
 - **Visual** Form · .cds--text-input · background-color #f4f4f4 → transparent _(2 stories)_
@@ -455,7 +455,7 @@ _Components · max 0.0% pixels, 0/2 stories differ_
 
 ### IconButton
 
-_Components · max 9.6% pixels, 1/2 stories differ_
+_Components · max 10.6% pixels, 1/2 stories differ_
 
 - **Visual** IconButton · .cds--btn · border-radius 0px → 999999px (pill) _(2 stories)_
 - **Visual** IconButton · .cds--popover-content.cds--tooltip-content · border-radius 2px → 4px
@@ -463,16 +463,16 @@ _Components · max 9.6% pixels, 1/2 stories differ_
 
 ### InlineLoading
 
-_Components · max 30.0% pixels, 1/2 stories differ_
+_Components · max 30.2% pixels, 1/2 stories differ_
 
 - **Visual** InlineLoading · .cds--btn · box-shadow none → #e0e0e0 -1px 0px 0px 0px
-- **Layout** InlineLoading · .cds--btn · width 123.55px → 196px (+72.45px)
-- **Layout** InlineLoading · .cds--btn · width 125.81px → 196px (+70.19px)
+- **Layout** InlineLoading · .cds--btn · width 123.97px → 196px (+72.03px)
+- **Layout** InlineLoading · .cds--btn · width 125.97px → 196px (+70.03px)
 - **Structure** InlineLoading · .cds--btn-set element added
 
 ### Loading
 
-_Components · max 3.6% pixels, 2/3 stories differ_
+_Components · max 3.7% pixels, 2/3 stories differ_
 
 - **Visual** Loading · .cds--btn · border-radius 0px → 999999px (pill) _(2 stories)_
 
@@ -534,7 +534,7 @@ _Components · max 2.6% pixels, 7/11 stories differ_
 
 ### MultiSelect
 
-_Components · max 1.7% pixels, 10/14 stories differ_
+_Components · max 1.8% pixels, 10/14 stories differ_
 
 - **Visual** MultiSelect · .cds--autoalign.cds--list-box.cds--multi-select · background-color #f4f4f4 → transparent _(9 stories)_
 - **Visual** MultiSelect · .cds--autoalign.cds--list-box.cds--multi-select · border-radius 0px → 4px _(9 stories)_
@@ -563,7 +563,7 @@ _Components · max 1.7% pixels, 10/14 stories differ_
 
 ### Notifications
 
-_Components · max 0.8% pixels, 3/7 stories differ_
+_Components · max 0.9% pixels, 3/7 stories differ_
 
 - **Visual** Notifications · .cds--actionable-notification · border-radius 0px → 8px _(3 stories)_
 - **Visual** Notifications · .cds--actionable-notification__close-button · border-radius 0px → 999999px (pill) _(3 stories)_
@@ -575,7 +575,7 @@ _Components · max 0.8% pixels, 3/7 stories differ_
 - **Visual** Notifications · .cds--toast-notification · border-radius 0px → 8px
 - **Visual** Notifications · .cds--toast-notification__close-button · border-radius 0px → 999999px (pill)
 - **Visual** Notifications · .cds--inline-notification__close-button · margin 0px → 8px
-- **Visual** Notifications · .cds--toast-notification__close-button · margin 0px 0px 0px 27.0312px → 8px 8px 0px 35.0312px
+- **Visual** Notifications · .cds--toast-notification__close-button · margin 0px 0px 0px 25.3125px → 8px 8px 0px 33.3125px
 - **Structure** Notifications · .cds--visually-hidden element removed _(2 stories)_
 
 ### NumberInput
@@ -595,7 +595,7 @@ _Components · max 0.6% pixels, 1/6 stories differ_
 
 ### OverflowMenu
 
-_Components · max 7.5% pixels, 1/6 stories differ_
+_Components · max 7.4% pixels, 1/6 stories differ_
 
 - **Visual** OverflowMenu · .cds--btn.cds--overflow-menu · border-radius 0px → 999999px (pill) _(5 stories)_
 - **Visual** OverflowMenu · .cds--tooltip-trigger__wrapper · line-height 0px → 16px
@@ -630,7 +630,7 @@ _Components · max 1.3% pixels, 1/7 stories differ_
 
 ### PasswordInput
 
-_Components · max 0.7% pixels, 1/1 stories differ_
+_Components · max 0.9% pixels, 1/1 stories differ_
 
 - **Visual** PasswordInput · .cds--password-input.cds--text-input · background-color #f4f4f4 → transparent
 - **Visual** PasswordInput · .cds--password-input.cds--text-input · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients)
@@ -641,7 +641,7 @@ _Components · max 0.7% pixels, 1/1 stories differ_
 
 ### Popover
 
-_Components · max 8.2% pixels, 5/6 stories differ_
+_Components · max 9.6% pixels, 5/6 stories differ_
 
 - **Visual** Popover · .cds--popover-content · border-radius 2px → 8px _(4 stories)_
 - **Visual** Popover · .cds--popover-content · border-radius 0px → 8px _(2 stories)_
@@ -663,7 +663,7 @@ _Components · max 0.0% pixels, 0/4 stories differ_
 
 ### Search
 
-_Components · max 0.4% pixels, 2/5 stories differ_
+_Components · max 0.5% pixels, 2/5 stories differ_
 
 > August 31, 2026: New border-radius tokens have been introduced for various border-radius values. These tokens are accompanied by new visual updates made to input components such as TextInput, NumberInput, Search and more. Updates include rounded corners, a new gradient border, and some added margins and insets for surrounding buttons and menus.
 
@@ -678,7 +678,7 @@ _Components · max 0.4% pixels, 2/5 stories differ_
 
 ### Select
 
-_Components · max 2.5% pixels, 4/5 stories differ_
+_Components · max 2.9% pixels, 4/5 stories differ_
 
 - **Visual** Select · .cds--select-input · border-radius 0px → 4px _(4 stories)_
 - **Visual** Select · .cds--select-input · background-color #f4f4f4 → transparent _(3 stories)_
@@ -695,7 +695,7 @@ _Components · max 2.5% pixels, 4/5 stories differ_
 
 ### Slider
 
-_Components · max 0.2% pixels, 2/10 stories differ_
+_Components · max 0.3% pixels, 2/10 stories differ_
 
 - **Visual** Slider · .cds--slider-text-input.cds--text-input · background-color #f4f4f4 → transparent _(5 stories)_
 - **Visual** Slider · .cds--slider-text-input.cds--text-input · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients) _(5 stories)_
@@ -707,7 +707,7 @@ _Components · max 0.2% pixels, 2/10 stories differ_
 
 ### StructuredList
 
-_Components · max 6.6% pixels, 3/5 stories differ_
+_Components · max 7.0% pixels, 3/5 stories differ_
 
 - **Visual** StructuredList · .cds--structured-list-td · padding 16px 16px 24px 0px → 16px 16px 24px
 - **Structure** StructuredList · .cds--structured-list.cds--structured-list--selection element added _(2 stories)_
@@ -738,7 +738,7 @@ _Components · max 6.6% pixels, 3/5 stories differ_
 
 ### Tabs
 
-_Components · max 3.2% pixels, 5/17 stories differ_
+_Components · max 3.5% pixels, 5/17 stories differ_
 
 - **Visual** Tabs · .cds--btn · border-radius 0px → 999999px (pill) _(3 stories)_
 - **Visual** Tabs · .cds--popover-content.cds--tooltip-content · border-radius 2px → 4px _(2 stories)_
@@ -755,7 +755,7 @@ _Components · max 1.2% pixels, 6/6 stories differ_
 
 ### TextInput
 
-_Components · max 1.6% pixels, 5/7 stories differ_
+_Components · max 1.9% pixels, 5/7 stories differ_
 
 > August 31, 2026: New border-radius tokens have been introduced for various border-radius values. These tokens are accompanied by new visual updates made to input components such as TextInput, NumberInput, Search and more. Updates include rounded corners, a new gradient border, and some added margins and insets for surrounding buttons and menus.
 
@@ -784,7 +784,7 @@ _Components · max 0.4% pixels, 2/23 stories differ_
 
 ### TimePicker
 
-_Components · max 1.7% pixels, 2/2 stories differ_
+_Components · max 2.0% pixels, 2/2 stories differ_
 
 - **Visual** TimePicker · .cds--text-input.cds--time-picker__input-field · background-color #f4f4f4 → transparent _(2 stories)_
 - **Visual** TimePicker · .cds--select-input · background-color #f4f4f4 → transparent _(2 stories)_
@@ -805,7 +805,7 @@ _Components · max 1.7% pixels, 2/2 stories differ_
 
 ### Toggle
 
-_Components · max 7.0% pixels, 3/5 stories differ_
+_Components · max 7.9% pixels, 3/5 stories differ_
 
 - **Visual** Toggle · .cds--toggle__label-text · margin 0px 0px 16px → 0px 0px 8px _(3 stories)_
 - **Visual** Toggle · .cds--toggle__label-text.cds--visually-hidden · margin -1px -1px 16px → -1px -1px 8px
@@ -813,7 +813,7 @@ _Components · max 7.0% pixels, 3/5 stories differ_
 
 ### Toggletip
 
-_Components · max 14.8% pixels, 1/3 stories differ_
+_Components · max 17.9% pixels, 1/3 stories differ_
 
 - **Visual** Toggletip · .cds--btn · border-radius 0px → 999999px (pill) _(2 stories)_
 - **Visual** Toggletip · .cds--popover-content · border-radius 2px → 4px _(2 stories)_
@@ -856,7 +856,7 @@ _Preview · max 0.0% pixels, 0/17 stories differ_
 
 ### preview__DatePicker
 
-_Preview · max 1.5% pixels, 6/9 stories differ_
+_Preview · max 1.7% pixels, 8/9 stories differ_
 
 > August 5, 2026: A new preview DatePicker has been added to @carbon/react as preview__DatePicker. It is built on the Temporal API and a framework-agnostic state machine shared with @carbon/web-components, replacing the Flatpickr-based implementation. Stories and documentation can be found in the Components/Preview/preview__DatePicker section of Storybook.
 
@@ -897,7 +897,7 @@ _Preview · max 2.8% pixels, 5/5 stories differ_
 
 ### preview__Layout
 
-_Preview · max 0.5% pixels, 1/1 stories differ_
+_Preview · max 0.6% pixels, 1/1 stories differ_
 
 - **Visual** preview__Layout · .cds--text-input · background-color #f4f4f4 → transparent
 - **Visual** preview__Layout · .cds--text-input · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients)
@@ -907,8 +907,7 @@ _Preview · max 0.5% pixels, 1/1 stories differ_
 - **Visual** preview__Layout · .cds--tag · border-radius 16px → 4px
 - **Visual** preview__Layout · .cds--tag · border-radius 16px → 2px
 - **Visual** preview__Layout · .cds--text-input · border-top/right/left none → 1px solid transparent
-- **Layout** preview__Layout · .cds--text-input · width 210.38px → 211.72px (+1.34px)
-- **Layout** preview__Layout · .cds--text-input · width 210.39px → 211.72px (+1.33px)
+- **Layout** preview__Layout · .cds--text-input · width 230.47px → 231.8px (+1.33px)
 
 ### preview__OverflowMenuV2
 
@@ -918,7 +917,7 @@ _Preview · max 0.0% pixels, 0/1 stories differ_
 
 ### preview_Text
 
-_Preview · max 0.1% pixels, 1/4 stories differ_
+_Preview · max 0.2% pixels, 1/4 stories differ_
 
 - **Visual** preview_Text · .cds--dropdown.cds--list-box · background-color #f4f4f4 → transparent
 - **Visual** preview_Text · .cds--dropdown.cds--list-box · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients)
