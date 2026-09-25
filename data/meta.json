@@ -1,5 +1,5 @@
 {
- "capturedAt": "2026-09-24T23:59:17.818Z",
+ "capturedAt": "2026-09-25T14:44:32.048Z",
  "viewport": {
   "width": 1280,
   "height": 800
@@ -17,9 +17,9 @@
   },
   "v12": {
    "url": "https://v12-react.carbondesignsystem.com",
-   "iframeCss": "https://v12-react.carbondesignsystem.com/assets/iframe-d5G8Wi3F.css",
-   "indexHash": "4d0bc20e1962",
-   "fingerprint": "e2bf1a48b030"
+   "iframeCss": "https://v12-react.carbondesignsystem.com/assets/iframe-CTKKboGB.css",
+   "indexHash": "33df8e00b9af",
+   "fingerprint": "b28e598cd929"
   }
  },
  "props": [
@@ -63,5 +63,5 @@
   "outline-color",
   "outline-offset"
  ],
- "buildKey": "f957cdb3792f:e2bf1a48b030:e72d76e8"
+ "buildKey": "f957cdb3792f:b28e598cd929:e72d76e8"
 }

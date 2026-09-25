@@ -1,8 +1,8 @@
 {
- "generatedAt": "2026-09-24T23:59:16.467Z",
+ "generatedAt": "2026-09-25T14:44:29.977Z",
  "counts": {
   "v11Stories": 502,
-  "v12Stories": 570,
+  "v12Stories": 581,
   "matched": 493
  },
  "matched": [
@@ -4017,6 +4017,7 @@
  "onlyV12": {
   "titles": [
    "Components/Coachmark",
+   "Components/ConditionBuilder",
    "Components/EditInPlace",
    "Components/FullPageError",
    "Components/InterstitialScreen",
@@ -4052,6 +4053,61 @@
     "id": "components-coachmark--tooltip",
     "title": "Components/Coachmark",
     "name": "Tooltip"
+   },
+   {
+    "id": "components-conditionbuilder--default",
+    "title": "Components/ConditionBuilder",
+    "name": "Default"
+   },
+   {
+    "id": "components-conditionbuilder--controlled-hierarchical",
+    "title": "Components/ConditionBuilder",
+    "name": "Controlled Hierarchical"
+   },
+   {
+    "id": "components-conditionbuilder--hierarchical",
+    "title": "Components/ConditionBuilder",
+    "name": "Hierarchical"
+   },
+   {
+    "id": "components-conditionbuilder--hierarchical-with-actions",
+    "title": "Components/ConditionBuilder",
+    "name": "Hierarchical With Actions"
+   },
+   {
+    "id": "components-conditionbuilder--hierarchical-with-initial-state",
+    "title": "Components/ConditionBuilder",
+    "name": "Hierarchical With Initial State"
+   },
+   {
+    "id": "components-conditionbuilder--with-actions",
+    "title": "Components/ConditionBuilder",
+    "name": "With Actions"
+   },
+   {
+    "id": "components-conditionbuilder--with-custom-operators",
+    "title": "Components/ConditionBuilder",
+    "name": "With Custom Operators"
+   },
+   {
+    "id": "components-conditionbuilder--with-custom-statements",
+    "title": "Components/ConditionBuilder",
+    "name": "With Custom Statements"
+   },
+   {
+    "id": "components-conditionbuilder--with-disabled-properties",
+    "title": "Components/ConditionBuilder",
+    "name": "With Disabled Properties"
+   },
+   {
+    "id": "components-conditionbuilder--with-dynamic-options",
+    "title": "Components/ConditionBuilder",
+    "name": "With Dynamic Options"
+   },
+   {
+    "id": "components-conditionbuilder--with-initial-state",
+    "title": "Components/ConditionBuilder",
+    "name": "With Initial State"
    },
    {
     "id": "components-editinplace--default",
