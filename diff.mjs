@@ -20,9 +20,6 @@ if (!manifest) fail('data/manifest.json not found. Run `node capture.mjs` first.
 const docs = (await readJson('docs.json')) ?? { changelog: { entries: [] }, featureFlags: { flags: [] } };
 const tokens = await readJson('tokens.json');
 
-// ---------------------------------------------------------------------------
-// 1. Per-story element diff
-
 const components = new Map(); // name → accumulator
 const comp = (name, section) => {
   if (!components.has(name)) {
@@ -34,6 +31,86 @@ const comp = (name, section) => {
   }
   return components.get(name);
 };
+
+// ---------------------------------------------------------------------------
+// 0. Who owns each class. A change is "direct" when it lands on an element that belongs to the
+// component being compared, and "inherited" when it belongs to another component nested inside
+// (e.g. a Button in a Modal footer). Ownership is learned from the stories: the outermost
+// cds-- element of a component's own stories is that component's (Button's stories are built
+// around cds--btn, so cds--btn → Button). OWNER_OVERRIDES covers families the vote gets wrong.
+
+const OWNER_OVERRIDES = {
+  btn: 'Button',
+  'actionable-notification': 'Notifications', 'inline-notification': 'Notifications', 'toast-notification': 'Notifications',
+  label: 'FormLabel', 'form-requirement': 'FormLabel', 'list-box': 'Dropdown', 'icon-tooltip': 'IconButton',
+};
+// Layout and utility classes that don't say which component an element belongs to.
+const GENERIC = new Set(['layout', 'form-item', 'css-grid', 'grid', 'row', 'col', 'visually-hidden', 'assistive-text',
+  'skeleton', 'autoalign', 'layer', 'layer-one', 'layer-two', 'layer-three', 'layer-four', 'subgrid', 'stack', 'fieldset', 'form']);
+
+function familiesOf(classes) {
+  const out = [];
+  for (const cls of classes) {
+    if (!cls.startsWith('cds--') || /^cds--[a-z0-9-]*?[a-z0-9]--/.test(cls)) continue; // skip modifiers
+    const fam = cls.slice(5).split('__')[0].replace(/-(wrapper|container|content|trigger)$/, '');
+    if (!GENERIC.has(fam) && !out.includes(fam)) out.push(fam);
+  }
+  return out;
+}
+
+const votes = new Map(); // family → Map(component → stories where it's the outermost cds element)
+for (const m of manifest.matched) {
+  const s = await readJson(path.join('stories', `${m.v12}.json`));
+  if (!s?.v12?.elements) continue;
+  const roots = new Set();
+  for (const el of s.v12.elements) {
+    if (el.pseudo || !familiesOf(el.classes).length) continue;
+    const ancestors = parse(el).segs.slice(0, -1);
+    if (ancestors.some((seg) => familiesOf([...seg.cls]).length)) continue;
+    familiesOf(el.classes).forEach((f) => roots.add(f));
+  }
+  for (const f of roots) {
+    if (!votes.has(f)) votes.set(f, new Map());
+    votes.get(f).set(m.component, (votes.get(f).get(m.component) ?? 0) + 1);
+  }
+}
+// Owner of each family, in priority order:
+//   1. a component whose name is the family (cds--text-input → TextInput, cds--combo-box → ComboBox)
+//   2. OWNER_OVERRIDES
+//   3. the component whose own stories most often (as a share of its stories) start with it.
+//      Umbrella groups that only assemble other components can't win the vote.
+const squash = (x) => x.toLowerCase().replace(/^preview_+/, '').replace(/[^a-z]/g, '');
+const UMBRELLAS = new Set(['Fluid Components', 'Form', 'FormGroup']);
+const storyCount = new Map();
+for (const m of manifest.matched) storyCount.set(m.component, (storyCount.get(m.component) ?? 0) + 1);
+const byName = new Map();
+for (const m of manifest.matched) if (!m.component.startsWith('preview')) byName.set(squash(m.component), m.component);
+const OWNER = new Map();
+for (const fam of votes.keys()) if (byName.has(squash(fam))) OWNER.set(fam, byName.get(squash(fam)));
+for (const [fam, comp] of Object.entries(OWNER_OVERRIDES)) OWNER.set(fam, comp);
+const ownerByName = (fam) => byName.get(squash(fam));
+for (const [fam, byComp] of votes) {
+  if (OWNER.has(fam)) continue;
+  const ranked = [...byComp].filter(([c]) => !UMBRELLAS.has(c))
+    .map(([c, n]) => [c, n / storyCount.get(c)])
+    .sort((a, b) => b[1] - a[1]);
+  if (ranked.length) OWNER.set(fam, ranked[0][0]);
+}
+
+// Owners of an element: its own classes' owners, or failing that the nearest ancestor's.
+function ownersOf(el) {
+  const own = familiesOf(el.classes).map((f) => OWNER.get(f) ?? ownerByName(f)).filter(Boolean);
+  if (own.length) return [...new Set(own)];
+  const segs = parse(el).segs.slice(0, -1).reverse();
+  for (const seg of segs) {
+    const o = familiesOf([...seg.cls]).map((f) => OWNER.get(f) ?? ownerByName(f)).filter(Boolean);
+    if (o.length) return [...new Set(o)];
+  }
+  return []; // unknown: treated as the component's own
+}
+
+// ---------------------------------------------------------------------------
+// 1. Per-story element diff
 
 let storyFiles = 0;
 for (const m of manifest.matched) {
@@ -57,7 +134,10 @@ for (const m of manifest.matched) {
       if ((d.prop === 'width' || d.prop === 'height') && !painted) continue;
       row.changes++;
       const label = block(b.classes) + (b.pseudo ?? '');
-      addTo(c.style, `${label}|${d.prop}|${d.from}|${d.to}`, () => ({ element: label, prop: d.prop, from: d.from, to: d.to, variants: new Set(), stories: new Set(), count: 0 }), (e) => {
+      const owners = ownersOf(b);
+      addTo(c.style, `${label}|${d.prop}|${d.from}|${d.to}`, () => ({ element: label, prop: d.prop, from: d.from, to: d.to, variants: new Set(), stories: new Set(), count: 0, direct: false, sources: new Set() }), (e) => {
+        if (!owners.length || owners.includes(m.component)) e.direct = true;
+        else owners.forEach((o) => e.sources.add(o));
         e.variants.add(b.classes.join(' '));
         e.stories.add(s.id);
         e.count++;
@@ -66,10 +146,16 @@ for (const m of manifest.matched) {
   }
   for (const [kind, list] of [['added', added], ['removed', removed]]) {
     for (const el of list) {
-      if (!el.visible) continue;
+      // Screen-reader-only text is invisible by design; its DOM moves aren't a visual change.
+      if (!el.visible || el.classes.some((x) => x === 'cds--visually-hidden' || x === 'cds--assistive-text')) continue;
       row.changes++;
       const cls = el.classes.join(' ');
-      addTo(c.structure, `${kind}|${cls}`, () => ({ kind, element: cls, stories: new Set(), count: 0 }), (e) => { e.stories.add(s.id); e.count++; });
+      const owners = ownersOf(el);
+      addTo(c.structure, `${kind}|${cls}`, () => ({ kind, element: cls, stories: new Set(), count: 0, direct: false, sources: new Set() }), (e) => {
+        if (!owners.length || owners.includes(m.component)) e.direct = true;
+        else owners.forEach((o) => e.sources.add(o));
+        e.stories.add(s.id); e.count++;
+      });
     }
   }
 }
@@ -104,6 +190,40 @@ for (const e of docs.changelog.entries) {
 // ---------------------------------------------------------------------------
 // 4. Assemble output
 
+// A change counts as inherited unless the source component's own stories contradict it: the
+// same property on the same kind of element ending at a different value there. Toggletip's popover
+// ends at 4px while Popover's own ends at 8px, so Toggletip is overriding it (direct). Tabs' tooltip
+// ends at 4px and Tooltip's own stories never show that element, so it stays inherited.
+// End values only: the starting value can differ just because of the background layer
+// (a Modal's inputs start white, a page's start gray) while the change itself is the same.
+const seen = new Map(); // component → Map(family|prop → Set(end values))
+const note = (comp, fam, prop, to) => {
+  if (!seen.has(comp)) seen.set(comp, new Map());
+  const m = seen.get(comp), k = `${fam}|${prop}`;
+  if (!m.has(k)) m.set(k, new Set());
+  m.get(k).add(to);
+};
+for (const c of components.values()) {
+  for (const e of c.style.values()) if (e.direct) for (const f of familiesOf(e.element.split('.'))) note(c.name, f, e.prop, e.to);
+  for (const e of c.structure.values()) if (e.direct) for (const f of familiesOf(e.element.split(' '))) note(c.name, f, e.kind, '');
+}
+for (const c of components.values()) {
+  const settle = (e, fams, prop, to) => {
+    if (e.direct) return;
+    const matching = [], silent = [];
+    for (const src of e.sources) {
+      const ends = fams.map((f) => seen.get(src)?.get(`${f}|${prop}`)).filter(Boolean);
+      if (!ends.length) silent.push(src);
+      else if (ends.some((set) => set.has(to))) matching.push(src);
+    }
+    if (matching.length) e.sources = new Set(matching);
+    else if (silent.length) e.sources = new Set(silent);
+    else e.direct = true;
+  };
+  for (const e of c.style.values()) settle(e, familiesOf(e.element.split('.')), e.prop, e.to);
+  for (const e of c.structure.values()) settle(e, familiesOf(e.element.split(' ')), e.kind, '');
+}
+
 const out = [];
 for (const c of components.values()) {
   const key = c.name.toLowerCase();
@@ -119,6 +239,7 @@ for (const c of components.values()) {
       note: annotate(e.prop, e.from, e.to),
       stories: [...e.stories].sort(),
       elements: e.count,
+      ...origin(e),
     });
   }
   for (const e of c.structure.values()) {
@@ -128,6 +249,7 @@ for (const c of components.values()) {
       prop: e.kind === 'added' ? 'element added' : 'element removed',
       from: e.kind === 'added' ? '—' : 'present', to: e.kind === 'added' ? 'present' : '—',
       stories: [...e.stories].sort(), elements: e.count,
+      ...origin(e),
     });
   }
   // Pixels moved but no recorded property explains it (e.g. margin/position shifts): say so
@@ -151,11 +273,14 @@ for (const c of components.values()) {
     newComps.has(key) && !matchedComps.has(key) ? 'new' :
     goneComps.has(key) && !matchedComps.has(key) ? 'removed' :
     !c.stories.some((s) => s.captured) ? 'not-captured' :
-    changes.some((ch) => ch.type === 'Visual' || ch.type === 'Structure') || pixels.some((r) => r > PIXEL_CHANGED) ? 'changed' :
+    changes.some((ch) => (ch.type === 'Visual' || ch.type === 'Structure') && !ch.inherited) ? 'changed' :
+    changes.some((ch) => ch.inherited) ? 'inherited' :
+    pixels.some((r) => r > PIXEL_CHANGED) ? 'changed' :
     'unchanged';
+  const inheritsFrom = [...new Set(changes.filter((ch) => ch.inherited).flatMap((ch) => ch.sources))].sort();
 
   out.push({
-    id: slugify(c.name), name: c.name, section: c.section, status,
+    id: slugify(c.name), name: c.name, section: c.section, status, inheritsFrom,
     pixel: pixels.length ? {
       max: Math.max(...pixels), mean: +(pixels.reduce((a, b) => a + b, 0) / pixels.length).toFixed(5),
       storiesChanged: pixels.filter((r) => r > PIXEL_CHANGED).length, storiesCompared: pixels.length,
@@ -290,6 +415,11 @@ function compareStyles(a, b) {
   return diffs;
 }
 
+// A change is inherited only if no occurrence of it landed on the component's own elements.
+function origin(e) {
+  return e.direct ? { inherited: false } : { inherited: true, sources: [...e.sources].sort() };
+}
+
 function paints(st) {
   const bg = norm(st['background-color']);
   return (bg && bg !== 'transparent') || (st['background-image'] ?? 'none') !== 'none' || st['box-shadow'] !== 'none' ||
@@ -333,8 +463,9 @@ function describe(name, ch) {
   if (ch.type === 'Story') return `${name} · ${ch.prop}: ${ch.to !== '—' ? ch.to : ch.from}`;
   if (ch.type === 'Flag') return `${name} · feature flag ${ch.prop}: ${ch.from} → ${ch.to}`;
   if (ch.prop === 'unexplained pixel change') return `${name} · ${ch.to} differ in "${ch.stories[0].split('--')[1]}" with no style change recorded (likely position or content)`;
-  if (ch.type === 'Structure') return `${name} ·${where} ${ch.prop}`;
-  return `${name} ·${where} · ${ch.prop} ${ch.from} → ${ch.to}${note}`;
+  const via = ch.inherited ? ` (inherited from ${ch.sources.join(', ')})` : '';
+  if (ch.type === 'Structure') return `${name} ·${where} ${ch.prop}${via}`;
+  return `${name} ·${where} · ${ch.prop} ${ch.from} → ${ch.to}${note}${via}`;
 }
 
 function markdown(list, counts) {
@@ -354,7 +485,7 @@ function markdown(list, counts) {
     for (const e of docs.changelog.entries) L.push(`- **${e.date}**: ${e.text.split('\n')[0]}`);
     L.push('');
   }
-  for (const status of ['changed', 'new', 'removed', 'unchanged', 'not-captured']) {
+  for (const status of ['changed', 'inherited', 'new', 'removed', 'unchanged', 'not-captured']) {
     const group = list.filter((c) => c.status === status);
     if (!group.length) continue;
     L.push(`## ${status[0].toUpperCase() + status.slice(1)} (${group.length})`, '');

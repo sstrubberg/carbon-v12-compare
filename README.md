@@ -31,3 +31,14 @@ Screenshots (`data/shots/`) and raw styles (`data/stories/`) aren't committed. T
 ## How the diff aligns elements
 
 Elements are paired by exact key first. Whatever is left is paired by tag, depth, and class overlap along the ancestor path, so a node still lines up when V12 adds a wrapper or modifier class (for example, `cds--autoalign` on tooltips). Per-side properties are folded into shorthands, and colors are normalized to hex. Size changes under 1px, and size changes on elements that paint nothing, are dropped.
+
+## Direct vs inherited changes
+
+Each change is labeled by where it lives. A change is **direct** when it lands on the component's own elements. It's **inherited** when it lands on another component nested inside, such as a Button in a Modal footer. A component whose only changes are inherited gets the status `inherited` ("Inherits changes" on the site) instead of `changed`.
+
+Ownership of each `cds--` class is learned from the stories:
+1. A class whose name matches a component belongs to it (`cds--text-input` → TextInput).
+2. Otherwise it belongs to the component whose own stories most often start with that class, as a share of its stories. Umbrella groups (Fluid Components, Form, FormGroup) can't claim a class.
+
+`OWNER_OVERRIDES` in `diff.mjs` fixes the few families this gets wrong. A change stays inherited unless the source component's own stories contradict it (the same property ending at a different value), which means the component is overriding it.
+

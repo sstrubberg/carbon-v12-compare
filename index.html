@@ -52,7 +52,7 @@ button,select,input{font:inherit;color:inherit}
 .side .search{margin:4px 16px 0;width:calc(100% - 32px);height:32px;padding:0 10px;background:var(--bg);border:0;border-bottom:1px solid var(--border-strong)}
 .side .count{font-family:var(--mono);font-size:12px;color:var(--text-3)}
 .dot{width:8px;height:8px;border-radius:50%;flex:none}
-.dot.changed{background:var(--info)} .dot.new{background:var(--ok)} .dot.removed{background:var(--err)} .dot.unchanged{background:var(--border-strong)}
+.dot.changed{background:var(--info)} .dot.inherited{background:transparent;box-shadow:inset 0 0 0 2px var(--info)} .dot.new{background:var(--ok)} .dot.removed{background:var(--err)} .dot.unchanged{background:var(--border-strong)}
 .mobile-nav{display:none}
 
 main{padding-inline:32px;padding-block:32px 64px;min-width:0}
@@ -62,7 +62,7 @@ h2{font-size:24px;font-weight:400;margin:0 0 12px;text-wrap:balance}
 h3{font-size:16px;font-weight:600;margin:0 0 8px}
 .lede{font-size:16px;color:var(--text-2);max-width:66ch;margin:0 0 24px;line-height:1.5}
 
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--border);margin-bottom:32px}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--border);margin-bottom:32px}
 .stat{padding:16px;border-right:1px solid var(--border)}
 .stat:last-child{border-right:0}
 .stat .n{font-size:32px;font-weight:300;font-variant-numeric:tabular-nums;line-height:1.2}
@@ -81,9 +81,13 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
 .gcard .meta .row{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .gcard .meta h3{margin:0;overflow-wrap:anywhere}
 .gcard .meta p{margin:0;color:var(--text-2);font-size:13px}
+.gcard .meta p.via{color:var(--text-3);font-size:12px}
+.log h3{margin:28px 0 4px}
+.log .sub{margin:0 0 12px;color:var(--text-2);font-size:13px;max-width:80ch}
 
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:2px 8px;border-radius:12px;white-space:nowrap}
 .chip.changed{background:var(--info-bg);color:var(--info)}
+.chip.inherited{background:transparent;color:var(--info);box-shadow:inset 0 0 0 1px var(--info)}
 .chip.new{background:var(--ok-bg);color:var(--ok)}
 .chip.removed{background:var(--err-bg);color:var(--err)}
 .chip.unchanged{background:var(--muted-bg);color:var(--text-2)}
@@ -166,8 +170,9 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
   .mobile-nav select{width:100%;height:40px;padding:0 12px;background:var(--layer);border:0;border-bottom:1px solid var(--border-strong)}
   main{padding-inline:16px;padding-block:24px 48px}
   .stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:0}
-  .stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .stat{border-bottom:1px solid var(--border)}
+  .stat:nth-child(2n){border-right:0}
+  .stat:first-child{grid-column:1 / -1;border-right:0}
   h1{font-size:32px}
   .shell .ctx,.shell .sep,.stamp{display:none}
 }
@@ -195,24 +200,29 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
 
 <script>
 const STATUS = {
-  changed:{label:"Changed", cls:"changed"},
+  changed:{label:"Changed", cls:"changed", hint:"The component's own styles changed"},
+  inherited:{label:"Inherits changes", cls:"inherited", hint:"Only components nested inside it changed, such as a Button"},
   new:{label:"New in V12", cls:"new"},
   removed:{label:"Removed in V12", cls:"removed"},
   unchanged:{label:"No visual change", cls:"unchanged"}
 };
 const SRC = { v11:"https://react.carbondesignsystem.com", v12:"https://v12-react.carbondesignsystem.com" };
 const TYPES = ["Visual","Layout","Structure","Story","Flag"];
-const STATUS_ORDER = {changed:0,new:1,removed:2,unchanged:3};
+const STATUS_ORDER = {changed:0,inherited:1,new:2,removed:3,unchanged:4};
 
 let DATA, META, COMPONENTS = [];
-const state = { mode:"live", cut:50, filter:"All", q:"", navQ:"", story:{}, statusFilter:"All", thisStory:false, limit:200 };
+const state = { mode:"live", cut:50, filter:"All", q:"", navQ:"", story:{}, statusFilter:"All", thisStory:false, limit:200, showInherited:false };
 try{ Object.assign(state, JSON.parse(localStorage.getItem("v12ba3")||"{}")); }catch(e){}
 if(!["live","wipe","diff"].includes(state.mode)) state.mode = "live";
 const save = ()=>{ try{ localStorage.setItem("v12ba3", JSON.stringify({mode:state.mode})); }catch(e){} };
 
 const $ = s=>document.querySelector(s);
 const esc = s=>String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-const chip = st=>`<span class="chip ${STATUS[st].cls}"><span class="dot ${STATUS[st].cls}"></span>${STATUS[st].label}</span>`;
+const chip = st=>`<span class="chip ${STATUS[st].cls}" title="${STATUS[st].hint??""}"><span class="dot ${STATUS[st].cls}"></span>${STATUS[st].label}</span>`;
+const own = c=>c.changes.filter(ch=>!ch.inherited);
+const inherited = c=>c.changes.filter(ch=>ch.inherited);
+// "Button, TextInput" with each name linking to that component's page.
+const srcLinks = names=>names.map(n=>{ const t = COMPONENTS.find(x=>x.name===n); return t?`<a class="lnk" href="#${t.id}">${esc(n)}</a>`:esc(n); }).join(", ");
 const pct = r=>r==null?"—":(r*100<0.1&&r>0?"<0.1":(r*100).toFixed(1))+"%";
 const shot = (v,id)=>`data/shots/${v}/${encodeURIComponent(id)}.png`;
 const storyUrl = (v,id)=>`${SRC[v]}/iframe.html?id=${encodeURIComponent(id)}&viewMode=story`;
@@ -270,12 +280,15 @@ function thumbs(c){
   return `<div><span class="tlabel">V11</span><span class="empty">${c.removed.length} stor${c.removed.length===1?"y":"ies"}</span></div><div><span class="tlabel">V12</span><span class="empty">Not in V12</span></div>`;
 }
 function summaryLine(c){
-  const n = c.changes.length;
+  const n = own(c).length, m = inherited(c).length;
   if(c.status==="new") return `${c.added.length} new stor${c.added.length===1?"y":"ies"}`;
   if(c.status==="removed") return `${c.removed.length} stor${c.removed.length===1?"y":"ies"} dropped`;
   const px = c.pixel ? ` · ${c.pixel.storiesChanged}/${c.pixel.storiesCompared} stories differ, up to ${pct(c.pixel.max)} pixels` : "";
-  return `${n ? n+" change"+(n>1?"s":"") : "No changes"}${px}`;
+  if(c.status==="inherited") return `Inherits ${m} change${m>1?"s":""}${px}`;
+  return `${n ? n+" change"+(n>1?"s":"") : "No changes"}${m?` + ${m} inherited`:""}${px}`;
 }
+// Plain-text "from …" line for cards (cards are links, so no nested links here).
+const viaLine = c=>c.inheritsFrom?.length ? `<p class="via">${c.status==="inherited"?"From":"Also inherits from"} ${esc(c.inheritsFrom.slice(0,4).join(", "))}${c.inheritsFrom.length>4?` +${c.inheritsFrom.length-4} more`:""}</p>` : "";
 
 function overview(){
   const counts = k=>COMPONENTS.filter(c=>c.status===k).length;
@@ -285,17 +298,17 @@ function overview(){
     <a class="gcard" href="#${c.id}">
       <div class="thumbs">${thumbs(c)}</div>
       <div class="meta"><div class="row"><h3>${esc(c.name)}</h3>${chip(c.status)}</div>
-        <p>${summaryLine(c)}</p></div>
+        <p>${summaryLine(c)}</p>${viaLine(c)}</div>
     </a>`).join("");
-  const sf = ["All","changed","new","removed","unchanged"];
+  const sf = ["All","changed","inherited","new","removed","unchanged"];
   return `
     <p class="eyebrow">CARBON V12 · CAPTURED FROM THE LIVE STORYBOOKS</p>
     <h1>See every component, before and after</h1>
     <p class="lede">Every story that exists in both the V11 and V12 Storybooks, screenshotted side by side, with the computed-style differences behind each change. Open a component to try the real V11 and V12 stories side by side, drag a wipe across them, or see the captured pixel diff.</p>
-    <div class="banner"><b>How to read this.</b> Screenshots use the white theme at 1280×800. Change entries compare the computed styles of every <code>cds--</code> element. A shift that no recorded style explains is marked as unexplained. Re-run <code>npm run capture &amp;&amp; npm run diff</code> to refresh.</div>
+    <div class="banner"><b>How to read this.</b> Screenshots use the white theme at 1280×800. Change entries compare the computed styles of every <code>cds--</code> element. <b>Changed</b> (solid dot) means the component's own styles changed; <b>Inherits changes</b> (hollow ring) means only something nested inside it changed, such as a Button. A shift that no recorded style explains is marked as unexplained. Re-run <code>npm run capture &amp;&amp; npm run diff</code> to refresh.</div>
     <div class="stats">
       <div class="stat"><div class="n">${COMPONENTS.length}</div><div class="l">Components tracked</div></div>
-      ${["changed","new","removed"].map(k=>`<div class="stat"><div class="n">${counts(k)}</div><div class="l"><span class="dot ${k}"></span>${STATUS[k].label}</div></div>`).join("")}
+      ${["changed","inherited","new","removed"].map(k=>`<div class="stat"><div class="n">${counts(k)}</div><div class="l"><span class="dot ${k}"></span>${STATUS[k].label}</div></div>`).join("")}
     </div>
     <div class="filters" role="group" aria-label="Filter by status">
       ${sf.map(s=>`<button data-sfilter="${s}" aria-pressed="${state.statusFilter===s}">${s==="All"?"All":STATUS[s].label} <span style="opacity:.7">${s==="All"?COMPONENTS.length:counts(s)}</span></button>`).join("")}
@@ -303,8 +316,8 @@ function overview(){
     <div class="grid">${cards}</div>`;
 }
 
-function changeRows(list, withComp){
-  const cols = withComp?6:5;
+function changeRows(list, withComp, withSource){
+  const cols = 5 + (withComp?1:0) + (withSource?1:0);
   if(!list.length) return `<tr><td colspan="${cols}" style="color:var(--text-3)">No changes.</td></tr>`;
   return list.map(({c,ch})=>{
     const note = ch.note && ch.type!=="Flag" ? `<span class="nt">${esc(ch.note)}</span>` : ch.type==="Flag" && ch.note ? `<span class="nt">${esc(ch.note)}</span>` : "";
@@ -316,6 +329,7 @@ function changeRows(list, withComp){
       <td class="el">${el}${ch.variants && ch.variants.length>1?`<span class="nt">${ch.variants.length} variants</span>`:""}</td>
       <td>${ch.type==="Flag"?`<span class="flag">${esc(ch.prop)}</span>`:esc(ch.prop)}</td>
       <td class="diff"><span class="from">${val(ch.from)}</span><span class="arrow">→</span><span class="to">${val(ch.to)}</span>${note}</td>
+      ${withSource?`<td>${ch.inherited?srcLinks(ch.sources):`<span style="color:var(--text-3)">Own</span>`}</td>`:""}
       <td class="num">${stories>1?stories+" stories":stories===1?"1 story":""}</td>
     </tr>`;}).join("");
 }
@@ -370,9 +384,15 @@ function compView(c){
     body = `<div class="compare">${v==="v12" ? missing+live : live+missing}</div>`;
   }
 
-  let list = c.changes;
-  if(state.thisStory && s) list = list.filter(ch=>ch.stories.includes(s.id) || ch.type==="Flag");
-  const rows = changeRows(list.map(ch=>({c,ch})), false);
+  const scope = l=>state.thisStory && s ? l.filter(ch=>ch.stories.includes(s.id) || ch.type==="Flag") : l;
+  const ownRows = changeRows(scope(own(c)).map(ch=>({c,ch})), false, false);
+  const inh = scope(inherited(c));
+  const inhTable = inherited(c).length ? `
+      <h3>Inherited from other components</h3>
+      <p class="sub">These come from components nested inside ${esc(c.name)} and change wherever those components appear. Fix or review them at the source.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>From</th><th>Scope</th></tr></thead>
+        <tbody>${changeRows(inh.map(ch=>({c,ch})), false, true)}</tbody></table></div>` : "";
   const flags = c.changes.filter(ch=>ch.type==="Flag");
   const notes = c.notes.length ? `<div class="notes" style="margin-bottom:16px">${c.notes.map(n=>`<div class="n"><span class="d">${esc(n.date)} · V12 changelog</span><p>${esc(n.text)}</p></div>`).join("")}</div>` : "";
   return `
@@ -387,15 +407,20 @@ function compView(c){
       ${notes}
       ${flags.length?`<p style="margin:0 0 12px;color:var(--text-2)">Try it in V11 today with ${flags.map(f=>`<span class="flag">${esc(f.prop)}</span>`).join(" ")}</p>`:""}
       ${s?`<div class="filters"><button id="thisStory" aria-pressed="${state.thisStory}">Only “${esc(s.name)}”</button></div>`:""}
+      <h3>Changes to ${esc(c.name)}</h3>
       <div class="tablewrap"><table>
         <thead><tr><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Scope</th></tr></thead>
-        <tbody>${rows}</tbody></table></div>
+        <tbody>${ownRows}</tbody></table></div>
+      ${inhTable}
       <p class="note">Computed styles captured at 1280×800 in the white theme. Colours are shown as hex, and radii of 9999px or more are labelled as pills.</p>
     </section>`;
 }
 
 function changelog(){
-  const all = COMPONENTS.flatMap(c=>c.changes.map(ch=>({c,ch})));
+  const everything = COMPONENTS.flatMap(c=>c.changes.map(ch=>({c,ch})));
+  const inhCount = everything.filter(x=>x.ch.inherited).length;
+  // Inherited rows repeat a source component's change once per component that contains it; hidden by default.
+  const all = state.showInherited ? everything : everything.filter(x=>!x.ch.inherited);
   const q = state.q.toLowerCase();
   const searched = q ? all.filter(x=>`${x.c.name} ${x.ch.element??""} ${x.ch.prop} ${x.ch.from} ${x.ch.to}`.toLowerCase().includes(q)) : all;
   const list = state.filter==="All"?searched:searched.filter(x=>x.ch.type===state.filter);
@@ -403,14 +428,15 @@ function changelog(){
   return `
     <p class="eyebrow">CARBON V12</p>
     <h1>Full changelog</h1>
-    <p class="lede">Every difference between V11 and V12 across all captured stories. Identical changes on the same element are merged, so one row can cover many stories.</p>
+    <p class="lede">Every difference between V11 and V12 across all captured stories. Identical changes on the same element are merged, so one row can cover many stories. Inherited changes (a Button's new shape showing up inside a Modal) are hidden until you turn them on.</p>
     <div class="filters" role="group" aria-label="Filter by type">
       ${["All",...TYPES].map(t=>`<button data-filter="${t}" aria-pressed="${state.filter===t}">${t} <span style="opacity:.7">${t==="All"?searched.length:searched.filter(x=>x.ch.type===t).length}</span></button>`).join("")}
+      <button id="showInh" aria-pressed="${state.showInherited}">Show inherited <span style="opacity:.7">${inhCount}</span></button>
       <input type="search" id="clq" placeholder="Search: border-radius, Tag, #0f62fe…" value="${esc(state.q)}" aria-label="Search changelog">
     </div>
     <div class="log" style="margin-top:0"><div class="tablewrap"><table>
-      <thead><tr><th>Component</th><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Scope</th></tr></thead>
-      <tbody>${changeRows(shown,true)}</tbody></table></div>
+      <thead><tr><th>Component</th><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Source</th><th>Scope</th></tr></thead>
+      <tbody>${changeRows(shown,true,true)}</tbody></table></div>
       ${list.length>shown.length?`<button class="more" id="more">Show ${Math.min(200,list.length-shown.length)} more of ${list.length-shown.length} remaining</button>`:""}
     </div>`;
 }
@@ -461,6 +487,7 @@ function bind(key, c){
   document.querySelectorAll("[data-sfilter]").forEach(b=>b.onclick=()=>{state.statusFilter=b.dataset.sfilter;route();});
   const sp = $("#storypick"); if(sp && c) sp.onchange = e=>{ state.story[c.id]=e.target.value; route(); };
   const ts = $("#thisStory"); if(ts) ts.onclick = ()=>{ state.thisStory=!state.thisStory; route(); };
+  const si = $("#showInh"); if(si) si.onclick = ()=>{ state.showInherited=!state.showInherited; state.limit=200; route(); };
   const more = $("#more"); if(more) more.onclick = ()=>{ state.limit+=200; route(); };
   const q = $("#clq");
   if(q) q.oninput = e=>{ state.q=e.target.value; state.limit=200; const pos=e.target.selectionStart; route(); const n=$("#clq"); n.focus(); n.setSelectionRange(pos,pos); };
