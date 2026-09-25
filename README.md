@@ -13,7 +13,7 @@ The site (`index.html`) is static and reads `data/changelog.json`, `data/meta.js
 
 ## Scheduled refresh
 
-`.github/workflows/refresh.yml` runs every other Thursday at 23:30 UTC (7:30pm EDT, 6:30pm EST). It recaptures both Storybooks, rebuilds the changelog, commits the refreshed `data/*.json` and `data/CHANGELOG.md`, and deploys the site to GitHub Pages. Start a run by hand from the repo's Actions tab with **Run workflow**.
+`.github/workflows/refresh.yml` runs every other Thursday at 23:30 UTC (7:30pm EDT, 6:30pm EST). It recaptures both Storybooks, rebuilds the changelog, commits the refreshed `data/*.json` and `data/CHANGELOG.md`, and deploys the site to GitHub Pages. It also runs on any push to `main` that changes `index.html`, `capture.mjs` or `diff.mjs`, so site changes go live on push. Start a run by hand from the repo's Actions tab with **Run workflow**.
 
 Screenshots (`data/shots/`) and raw styles (`data/stories/`) aren't committed. The workflow keeps them in the Actions cache between runs, so stories whose Storybook builds haven't changed are skipped. On a fresh clone, run `npm run capture` before `npm run diff` or `npm run serve`.
 

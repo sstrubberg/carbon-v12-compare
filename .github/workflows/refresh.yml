@@ -1,6 +1,7 @@
 name: Refresh V11 vs V12 capture
 
-# Every other Thursday around 7:30pm US Eastern, plus a manual "Run workflow" button.
+# Every other Thursday around 7:30pm US Eastern, plus a manual "Run workflow" button,
+# plus any push to main that changes the site or the capture/diff scripts.
 # GitHub cron is UTC and has no "every two weeks", so this fires weekly and the first
 # step skips odd weeks. 23:30 UTC is 7:30pm EDT (6:30pm EST in winter). GitHub can
 # start scheduled runs late during busy periods.
@@ -8,6 +9,13 @@ on:
   schedule:
     - cron: '30 23 * * 4'
   workflow_dispatch:
+  push:
+    branches: [main]
+    # The bot's own changelog commits only touch data/, so they don't retrigger this.
+    paths:
+      - index.html
+      - capture.mjs
+      - diff.mjs
 
 permissions:
   contents: write   # commit the refreshed changelog
@@ -31,7 +39,7 @@ jobs:
         run: |
           # Epoch weeks start Thursday 00:00 UTC; even weeks run (the first was 2026-09-24).
           week=$(( $(date +%s) / 604800 ))
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ $((week % 2)) -eq 0 ]; then
+          if [ "${{ github.event_name }}" != "schedule" ] || [ $((week % 2)) -eq 0 ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "Odd week ($week); skipping."
