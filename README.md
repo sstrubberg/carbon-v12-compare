@@ -42,3 +42,11 @@ Ownership of each `cds--` class is learned from the stories:
 
 `OWNER_OVERRIDES` in `diff.mjs` fixes the few families this gets wrong. A change stays inherited unless the source component's own stories contradict it (the same property ending at a different value), which means the component is overriding it.
 
+## Components migrating from Carbon for IBM Products
+
+Components that are new to `@carbon/react` but already exist in [Carbon for IBM Products](https://ibm-products.carbondesignsystem.com) are compared against their IBM Products version instead of V11, and get the status `migrated` ("From IBM Products" on the site). A V12 component counts as migrated when IBM Products has a non-deprecated story group with the same name, or when V12 tags it `ibm-products-migrated`.
+
+- Each V12 story is paired with the IBM Products story that has the same id, else the same story name. Stories with neither stay V12-only and are labeled "No IBM Products equivalent".
+- IBM Products prefixes its own classes `c4p--`; V12 uses `cds--`. The capture records `c4p--` elements normalized to `cds--` so they line up, and the changelog notes the rename.
+- Screenshots of the IBM Products side are in `data/shots/ibmp/`. Use `--only a,b,c` to capture a few components.
+

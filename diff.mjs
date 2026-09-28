@@ -46,7 +46,9 @@ const OWNER_OVERRIDES = {
 };
 // Layout and utility classes that don't say which component an element belongs to.
 const GENERIC = new Set(['layout', 'form-item', 'css-grid', 'grid', 'row', 'col', 'visually-hidden', 'assistive-text',
-  'skeleton', 'autoalign', 'layer', 'layer-one', 'layer-two', 'layer-three', 'layer-four', 'subgrid', 'stack', 'fieldset', 'form']);
+  'skeleton', 'autoalign', 'layer', 'layer-one', 'layer-two', 'layer-three', 'layer-four', 'subgrid', 'stack', 'fieldset', 'form',
+  // Theme wrappers the Storybooks put around stories
+  'white', 'g10', 'g90', 'g100', 'theme', 'theme-zone', 'content']);
 
 function familiesOf(classes) {
   const out = [];
@@ -58,8 +60,10 @@ function familiesOf(classes) {
   return out;
 }
 
+const PAIRS = [...manifest.matched, ...(manifest.migrated ?? [])];
+const MIGRATED = new Map((manifest.migratedComponents ?? []).map((c) => [c.component, c]));
 const votes = new Map(); // family → Map(component → stories where it's the outermost cds element)
-for (const m of manifest.matched) {
+for (const m of PAIRS) {
   const s = await readJson(path.join('stories', `${m.v12}.json`));
   if (!s?.v12?.elements) continue;
   const roots = new Set();
@@ -82,9 +86,9 @@ for (const m of manifest.matched) {
 const squash = (x) => x.toLowerCase().replace(/^preview_+/, '').replace(/[^a-z]/g, '');
 const UMBRELLAS = new Set(['Fluid Components', 'Form', 'FormGroup']);
 const storyCount = new Map();
-for (const m of manifest.matched) storyCount.set(m.component, (storyCount.get(m.component) ?? 0) + 1);
+for (const m of PAIRS) storyCount.set(m.component, (storyCount.get(m.component) ?? 0) + 1);
 const byName = new Map();
-for (const m of manifest.matched) if (!m.component.startsWith('preview')) byName.set(squash(m.component), m.component);
+for (const m of PAIRS) if (!m.component.startsWith('preview')) byName.set(squash(m.component), m.component);
 const OWNER = new Map();
 for (const fam of votes.keys()) if (byName.has(squash(fam))) OWNER.set(fam, byName.get(squash(fam)));
 for (const [fam, comp] of Object.entries(OWNER_OVERRIDES)) OWNER.set(fam, comp);
@@ -112,26 +116,58 @@ function ownersOf(el) {
 // ---------------------------------------------------------------------------
 // 1. Per-story element diff
 
+// Evidence is keyed by the exact kind of element (its block classes, e.g. cds--popover-content.cds--tooltip-content),
+// not the broader family, so a tooltip's container and its content bubble aren't mixed up.
+const kindOf = (classes, pseudo) => block(classes) + (pseudo ?? '');
+const seen = new Map(); // component → Map(element kind|prop → Set(V12 values))
+// "border" and "border-top/right/left" are folded forms of per-side values; evidence is kept per side.
+const SIDES = ['top', 'right', 'bottom', 'left'];
+const atoms = (prop) => prop === 'border' ? SIDES.map((x) => `border-${x}`)
+  : prop.startsWith('border-') && prop.includes('/') ? prop.slice(7).split('/').map((x) => `border-${x}`)
+  : [prop];
+const note = (comp, fam, prop, to) => {
+  if (!seen.has(comp)) seen.set(comp, new Map());
+  const m = seen.get(comp);
+  for (const a of atoms(prop)) {
+    const k = `${fam}|${a}`;
+    if (!m.has(k)) m.set(k, new Set());
+    m.get(k).add(to);
+  }
+};
+// Every property set to a value no real style has, so compareStyles reports all of them.
+const BLANK = new Proxy({}, { get: () => '\u2205' });
+
 let storyFiles = 0;
-for (const m of manifest.matched) {
+for (const m of PAIRS) {
   const s = await readJson(path.join('stories', `${m.v12}.json`));
   const c = comp(m.component, sectionOf(m.title));
   if (m.match === 'flag-graduated') c.storiesMoved.push({ v11: m.v11, v12: m.v12, name: m.name });
   if (!s) { c.stories.push({ id: m.v12, name: m.name, captured: false }); continue; }
   storyFiles++;
   // clip = where the story's content sits in the 1280×800 capture; the site uses it to center live stories.
-  const row = { id: s.id, v11Id: s.v11Id, name: s.name, title: s.title, captured: true, error: s.error ?? null, pixel: s.pixel ?? null, clip: s.v12?.clip ?? s.v11?.clip ?? null, changes: 0 };
+  const base = s.base ?? 'v11';
+  c.base = base;
+  if (base === 'ibmp') c.renamed = (c.renamed ?? 0) + (s.ibmp?.renamed ?? 0);
+  const row = { id: s.id, base, baseId: s.baseId ?? s.v11Id, v11Id: s.v11Id, name: s.name, title: s.title, captured: true, error: s.error ?? null, pixel: s.pixel ?? null, clip: s.v12?.clip ?? s.v11?.clip ?? null, changes: 0 };
   c.stories.push(row);
-  if (s.error || !s.v11?.elements || !s.v12?.elements) continue;
+  if (s.error || !s[base]?.elements || !s.v12?.elements) continue;
 
-  const { pairs, added, removed } = align(s.v11.elements, s.v12.elements);
+  const { pairs, added, removed } = align(s[base].elements, s.v12.elements);
   for (const [a, b] of pairs) {
     if (!a.visible && !b.visible) continue;
+    // What this component's own elements look like in V12, changed or not: evidence for
+    // deciding later whether another component's change could have come from here.
+    if (b.visible && ownersOf(b).includes(m.component)) {
+      for (const d of compareStyles(BLANK, b.style)) note(m.component, kindOf(b.classes, b.pseudo), d.prop, d.to);
+    }
     const painted = paints(a.style) || paints(b.style);
     for (const d of compareStyles(a.style, b.style)) {
       // A size change on a box that draws nothing (layout wrappers, auto-align popover shells)
       // isn't visible on its own; whatever it affects shows up on the painted elements inside.
       if ((d.prop === 'width' || d.prop === 'height') && !painted) continue;
+      // Size changes on wrappers that belong to no component (theme and layout shells) come from
+      // how each Storybook pads its stories, not from Carbon.
+      if ((d.prop === 'width' || d.prop === 'height') && !familiesOf(b.classes).length) continue;
       row.changes++;
       const label = block(b.classes) + (b.pseudo ?? '');
       const owners = ownersOf(b);
@@ -168,6 +204,7 @@ for (const st of manifest.onlyV11.stories) comp(componentOf(st.title), sectionOf
 
 const lower = (list) => new Set(list.map((t) => componentOf(t).toLowerCase()));
 const matchedComps = new Set(manifest.matched.map((m) => m.component.toLowerCase()));
+const migratedComps = new Set([...MIGRATED.keys()].map((k) => k.toLowerCase()));
 const newComps = lower(manifest.onlyV12.titles);
 const goneComps = lower(manifest.onlyV11.titles);
 
@@ -191,37 +228,29 @@ for (const e of docs.changelog.entries) {
 // 4. Assemble output
 
 // A change counts as inherited unless the source component's own stories contradict it: the
-// same property on the same kind of element ending at a different value there. Toggletip's popover
+// same property on the same kind of element with a different V12 value there, changed or not. Toggletip's popover
 // ends at 4px while Popover's own ends at 8px, so Toggletip is overriding it (direct). Tabs' tooltip
 // ends at 4px and Tooltip's own stories never show that element, so it stays inherited.
 // End values only: the starting value can differ just because of the background layer
 // (a Modal's inputs start white, a page's start gray) while the change itself is the same.
-const seen = new Map(); // component → Map(family|prop → Set(end values))
-const note = (comp, fam, prop, to) => {
-  if (!seen.has(comp)) seen.set(comp, new Map());
-  const m = seen.get(comp), k = `${fam}|${prop}`;
-  if (!m.has(k)) m.set(k, new Set());
-  m.get(k).add(to);
-};
 for (const c of components.values()) {
-  for (const e of c.style.values()) if (e.direct) for (const f of familiesOf(e.element.split('.'))) note(c.name, f, e.prop, e.to);
-  for (const e of c.structure.values()) if (e.direct) for (const f of familiesOf(e.element.split(' '))) note(c.name, f, e.kind, '');
+  for (const e of c.structure.values()) if (e.direct) note(c.name, kindOf(e.element.split(' ')), e.kind, '');
 }
 for (const c of components.values()) {
   const settle = (e, fams, prop, to) => {
     if (e.direct) return;
     const matching = [], silent = [];
     for (const src of e.sources) {
-      const ends = fams.map((f) => seen.get(src)?.get(`${f}|${prop}`)).filter(Boolean);
+      const ends = fams.flatMap((f) => atoms(prop).map((a) => seen.get(src)?.get(`${f}|${a}`))).filter(Boolean);
       if (!ends.length) silent.push(src);
-      else if (ends.some((set) => set.has(to))) matching.push(src);
+      else if (ends.every((set) => set.has(to))) matching.push(src);
     }
     if (matching.length) e.sources = new Set(matching);
     else if (silent.length) e.sources = new Set(silent);
     else e.direct = true;
   };
-  for (const e of c.style.values()) settle(e, familiesOf(e.element.split('.')), e.prop, e.to);
-  for (const e of c.structure.values()) settle(e, familiesOf(e.element.split(' ')), e.kind, '');
+  for (const e of c.style.values()) settle(e, [e.element], e.prop, e.to);
+  for (const e of c.structure.values()) settle(e, [kindOf(e.element.split(' '))], e.kind, '');
 }
 
 const out = [];
@@ -260,16 +289,25 @@ for (const c of components.values()) {
         note: 'no recorded style property differs; likely position or content', stories: [st.id] });
     }
   }
-  for (const st of c.storiesAdded) changes.push({ type: 'Story', prop: 'story added', element: null, from: '—', to: st.name, stories: [st.id] });
+  const mig = MIGRATED.get(c.name);
+  for (const st of c.storiesAdded) changes.push({ type: 'Story', prop: 'story added', element: null, from: '—', to: st.name, stories: [st.id],
+    note: mig ? 'no IBM Products equivalent' : null });
+  if (mig) {
+    changes.push({ type: 'API', prop: 'package', element: null, from: '@carbon/ibm-products', to: '@carbon/react', stories: [],
+      note: mig.ibmpTitles.length ? `IBM Products Storybook: ${mig.ibmpTitles.join(', ')}` : 'not in the IBM Products Storybook' });
+    if (c.renamed) changes.push({ type: 'API', prop: 'class prefix', element: null, from: 'c4p--', to: 'cds--', stories: [],
+      note: `${c.renamed} elements renamed across the compared stories; CSS overrides and test selectors on c4p-- classes need updating` });
+  }
   for (const st of c.storiesRemoved) changes.push({ type: 'Story', prop: 'story removed', element: null, from: st.name, to: '—', stories: [st.id] });
   for (const st of c.storiesMoved) changes.push({ type: 'Story', prop: 'story graduated from Feature Flag', element: null, from: st.v11, to: st.v12, stories: [st.v12] });
   for (const f of c.flags) changes.push({ type: 'Flag', prop: f.flag, element: null, from: f.section === 'deprecated' ? 'deprecated' : 'off in V11', to: /^enable-v12-/.test(f.flag) ? 'on by default in V12' : 'opt-in', note: f.description, stories: [] });
 
-  const rank = { Visual: 0, Layout: 1, Structure: 2, Story: 3, Flag: 4 };
+  const rank = { API: 0, Visual: 1, Layout: 2, Structure: 3, Story: 4, Flag: 5 };
   changes.sort((a, b) => rank[a.type] - rank[b.type] || (b.stories.length - a.stories.length) || a.prop.localeCompare(b.prop));
   for (const ch of changes) ch.text = describe(c.name, ch);
 
   const status =
+    migratedComps.has(key) && !matchedComps.has(key) ? 'migrated' :
     newComps.has(key) && !matchedComps.has(key) ? 'new' :
     goneComps.has(key) && !matchedComps.has(key) ? 'removed' :
     !c.stories.some((s) => s.captured) ? 'not-captured' :
@@ -281,6 +319,8 @@ for (const c of components.values()) {
 
   out.push({
     id: slugify(c.name), name: c.name, section: c.section, status, inheritsFrom,
+    base: c.base ?? (mig ? 'ibmp' : 'v11'),
+    migratedFrom: mig ? { ibmpTitles: mig.ibmpTitles, matched: mig.matched, unmatched: mig.unmatched.length } : null,
     pixel: pixels.length ? {
       max: Math.max(...pixels), mean: +(pixels.reduce((a, b) => a + b, 0) / pixels.length).toFixed(5),
       storiesChanged: pixels.filter((r) => r > PIXEL_CHANGED).length, storiesCompared: pixels.length,
@@ -460,7 +500,8 @@ function annotate(prop, from, to) {
 function describe(name, ch) {
   const where = ch.element ? ` ${ch.element}` : '';
   const note = ch.note && ch.type !== 'Flag' ? ` (${ch.note})` : '';
-  if (ch.type === 'Story') return `${name} · ${ch.prop}: ${ch.to !== '—' ? ch.to : ch.from}`;
+  if (ch.type === 'Story') return `${name} · ${ch.prop}: ${ch.to !== '—' ? ch.to : ch.from}${ch.note ? ` (${ch.note})` : ''}`;
+  if (ch.type === 'API') return `${name} · ${ch.prop} ${ch.from} → ${ch.to}`;
   if (ch.type === 'Flag') return `${name} · feature flag ${ch.prop}: ${ch.from} → ${ch.to}`;
   if (ch.prop === 'unexplained pixel change') return `${name} · ${ch.to} differ in "${ch.stories[0].split('--')[1]}" with no style change recorded (likely position or content)`;
   const via = ch.inherited ? ` (inherited from ${ch.sources.join(', ')})` : '';
@@ -485,7 +526,7 @@ function markdown(list, counts) {
     for (const e of docs.changelog.entries) L.push(`- **${e.date}**: ${e.text.split('\n')[0]}`);
     L.push('');
   }
-  for (const status of ['changed', 'inherited', 'new', 'removed', 'unchanged', 'not-captured']) {
+  for (const status of ['changed', 'inherited', 'migrated', 'new', 'removed', 'unchanged', 'not-captured']) {
     const group = list.filter((c) => c.status === status);
     if (!group.length) continue;
     L.push(`## ${status[0].toUpperCase() + status.slice(1)} (${group.length})`, '');

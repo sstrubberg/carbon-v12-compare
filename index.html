@@ -10,7 +10,7 @@
 :root{
   --bg:#ffffff; --layer:#f4f4f4; --layer-2:#e8e8e8; --text:#161616; --text-2:#525252; --text-3:#6f6f6f;
   --border:#e0e0e0; --border-strong:#8d8d8d; --accent:#0f62fe; --accent-text:#0f62fe; --focus:#0f62fe;
-  --ok:#24a148; --ok-bg:#defbe6; --warn:#8e6a00; --warn-bg:#fcf4d6; --info:#0043ce; --info-bg:#edf5ff; --err:#da1e28; --err-bg:#fff1f1; --muted-bg:#f4f4f4;
+  --ok:#24a148; --ok-bg:#defbe6; --warn:#8e6a00; --warn-bg:#fcf4d6; --info:#0043ce; --info-bg:#edf5ff; --err:#da1e28; --err-bg:#fff1f1; --mig:#8a3ffc; --mig-bg:#f6f2ff; --muted-bg:#f4f4f4;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
@@ -19,14 +19,14 @@
     color-scheme:dark;
     --bg:#161616; --layer:#262626; --layer-2:#333333; --text:#f4f4f4; --text-2:#c6c6c6; --text-3:#a8a8a8;
     --border:#393939; --border-strong:#6f6f6f; --accent:#4589ff; --accent-text:#78a9ff; --focus:#ffffff;
-    --ok:#42be65; --ok-bg:#0e2a17; --warn:#f1c21b; --warn-bg:#302400; --info:#78a9ff; --info-bg:#0b2046; --err:#ff8389; --err-bg:#3a1215; --muted-bg:#262626;
+    --ok:#42be65; --ok-bg:#0e2a17; --warn:#f1c21b; --warn-bg:#302400; --info:#78a9ff; --info-bg:#0b2046; --err:#ff8389; --err-bg:#3a1215; --mig:#be95ff; --mig-bg:#31135e; --muted-bg:#262626;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
   --bg:#161616; --layer:#262626; --layer-2:#333333; --text:#f4f4f4; --text-2:#c6c6c6; --text-3:#a8a8a8;
   --border:#393939; --border-strong:#6f6f6f; --accent:#4589ff; --accent-text:#78a9ff; --focus:#ffffff;
-  --ok:#42be65; --ok-bg:#0e2a17; --warn:#f1c21b; --warn-bg:#302400; --info:#78a9ff; --info-bg:#0b2046; --err:#ff8389; --err-bg:#3a1215; --muted-bg:#262626;
+  --ok:#42be65; --ok-bg:#0e2a17; --warn:#f1c21b; --warn-bg:#302400; --info:#78a9ff; --info-bg:#0b2046; --err:#ff8389; --err-bg:#3a1215; --mig:#be95ff; --mig-bg:#31135e; --muted-bg:#262626;
 }
 *{box-sizing:border-box}
 html,body{background:var(--bg);margin:0}
@@ -52,7 +52,7 @@ button,select,input{font:inherit;color:inherit}
 .side .search{margin:4px 16px 0;width:calc(100% - 32px);height:32px;padding:0 10px;background:var(--bg);border:0;border-bottom:1px solid var(--border-strong)}
 .side .count{font-family:var(--mono);font-size:12px;color:var(--text-3)}
 .dot{width:8px;height:8px;border-radius:50%;flex:none}
-.dot.changed{background:var(--info)} .dot.inherited{background:transparent;box-shadow:inset 0 0 0 2px var(--info)} .dot.new{background:var(--ok)} .dot.removed{background:var(--err)} .dot.unchanged{background:var(--border-strong)}
+.dot.changed{background:var(--info)} .dot.inherited{background:transparent;box-shadow:inset 0 0 0 2px var(--info)} .dot.new{background:var(--ok)} .dot.migrated{background:var(--mig)} .dot.removed{background:var(--err)} .dot.unchanged{background:var(--border-strong)}
 .mobile-nav{display:none}
 
 main{padding-inline:32px;padding-block:32px 64px;min-width:0}
@@ -62,7 +62,7 @@ h2{font-size:24px;font-weight:400;margin:0 0 12px;text-wrap:balance}
 h3{font-size:16px;font-weight:600;margin:0 0 8px}
 .lede{font-size:16px;color:var(--text-2);max-width:66ch;margin:0 0 24px;line-height:1.5}
 
-.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--border);margin-bottom:32px}
+.stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid var(--border);margin-bottom:32px}
 .stat{padding:16px;border-right:1px solid var(--border)}
 .stat:last-child{border-right:0}
 .stat .n{font-size:32px;font-weight:300;font-variant-numeric:tabular-nums;line-height:1.2}
@@ -89,6 +89,7 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
 .chip.changed{background:var(--info-bg);color:var(--info)}
 .chip.inherited{background:transparent;color:var(--info);box-shadow:inset 0 0 0 1px var(--info)}
 .chip.new{background:var(--ok-bg);color:var(--ok)}
+.chip.migrated{background:var(--mig-bg);color:var(--mig)}
 .chip.removed{background:var(--err-bg);color:var(--err)}
 .chip.unchanged{background:var(--muted-bg);color:var(--text-2)}
 
@@ -202,13 +203,16 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
 const STATUS = {
   changed:{label:"Changed", cls:"changed", hint:"The component's own styles changed"},
   inherited:{label:"Inherits changes", cls:"inherited", hint:"Only components nested inside it changed, such as a Button"},
-  new:{label:"New in V12", cls:"new"},
+  migrated:{label:"From IBM Products", cls:"migrated", hint:"New to @carbon/react, moved over from Carbon for IBM Products"},
+  new:{label:"New in V12", cls:"new", hint:"New to Carbon"},
   removed:{label:"Removed in V12", cls:"removed"},
   unchanged:{label:"No visual change", cls:"unchanged"}
 };
-const SRC = { v11:"https://react.carbondesignsystem.com", v12:"https://v12-react.carbondesignsystem.com" };
-const TYPES = ["Visual","Layout","Structure","Story","Flag"];
-const STATUS_ORDER = {changed:0,inherited:1,new:2,removed:3,unchanged:4};
+const SRC = { v11:"https://react.carbondesignsystem.com", v12:"https://v12-react.carbondesignsystem.com", ibmp:"https://ibm-products.carbondesignsystem.com" };
+// The "before" side of a comparison: V11, or Carbon for IBM Products for components moving into @carbon/react.
+const BASE = { v11:{label:"V11", pkg:"@carbon/react v11"}, ibmp:{label:"IBM Products", pkg:"@carbon/ibm-products"}, v12:{label:"V12", pkg:"@carbon/react v12"} };
+const TYPES = ["API","Visual","Layout","Structure","Story","Flag"];
+const STATUS_ORDER = {changed:0,inherited:1,migrated:2,new:3,removed:4,unchanged:5};
 
 let DATA, META, COMPONENTS = [];
 const state = { mode:"live", cut:50, filter:"All", q:"", navQ:"", story:{}, statusFilter:"All", thisStory:false, limit:200, showInherited:false };
@@ -273,15 +277,21 @@ function mobileNav(active){
 }
 
 function thumbs(c){
+  const b = c.lead?.base || "v11";
   if(c.lead) return `
-    <div><span class="tlabel">V11</span><img loading="lazy" src="${shot("v11",c.lead.id)}" alt="V11 ${esc(c.name)}"></div>
+    <div><span class="tlabel">${BASE[b].label}</span><img loading="lazy" src="${shot(b,c.lead.id)}" alt="${BASE[b].label} ${esc(c.name)}"></div>
     <div><span class="tlabel">V12</span><img loading="lazy" src="${shot("v12",c.lead.id)}" alt="V12 ${esc(c.name)}"></div>`;
+  if(c.status==="migrated") return `<div><span class="tlabel">IBM Products</span><span class="empty">No matching story</span></div><div><span class="tlabel">V12</span><span class="empty">${c.added.length} stor${c.added.length===1?"y":"ies"}</span></div>`;
   if(c.status==="new") return `<div><span class="tlabel">V11</span><span class="empty">Not in V11</span></div><div><span class="tlabel">V12</span><span class="empty">${c.added.length} stor${c.added.length===1?"y":"ies"}</span></div>`;
   return `<div><span class="tlabel">V11</span><span class="empty">${c.removed.length} stor${c.removed.length===1?"y":"ies"}</span></div><div><span class="tlabel">V12</span><span class="empty">Not in V12</span></div>`;
 }
 function summaryLine(c){
   const n = own(c).length, m = inherited(c).length;
   if(c.status==="new") return `${c.added.length} new stor${c.added.length===1?"y":"ies"}`;
+  if(c.status==="migrated"){
+    const k = c.captured.length, px = c.pixel ? `, up to ${pct(c.pixel.max)} pixels differ` : "";
+    return k ? `${k} stor${k===1?"y":"ies"} compared with IBM Products${px}` : `Not in the IBM Products Storybook under this name`;
+  }
   if(c.status==="removed") return `${c.removed.length} stor${c.removed.length===1?"y":"ies"} dropped`;
   const px = c.pixel ? ` · ${c.pixel.storiesChanged}/${c.pixel.storiesCompared} stories differ, up to ${pct(c.pixel.max)} pixels` : "";
   if(c.status==="inherited") return `Inherits ${m} change${m>1?"s":""}${px}`;
@@ -300,15 +310,15 @@ function overview(){
       <div class="meta"><div class="row"><h3>${esc(c.name)}</h3>${chip(c.status)}</div>
         <p>${summaryLine(c)}</p>${viaLine(c)}</div>
     </a>`).join("");
-  const sf = ["All","changed","inherited","new","removed","unchanged"];
+  const sf = ["All","changed","inherited","migrated","new","removed","unchanged"];
   return `
     <p class="eyebrow">CARBON V12 · CAPTURED FROM THE LIVE STORYBOOKS</p>
     <h1>See every component, before and after</h1>
     <p class="lede">Every story that exists in both the V11 and V12 Storybooks, screenshotted side by side, with the computed-style differences behind each change. Open a component to try the real V11 and V12 stories side by side, drag a wipe across them, or see the captured pixel diff.</p>
-    <div class="banner"><b>How to read this.</b> Screenshots use the white theme at 1280×800. Change entries compare the computed styles of every <code>cds--</code> element. <b>Changed</b> (solid dot) means the component's own styles changed; <b>Inherits changes</b> (hollow ring) means only something nested inside it changed, such as a Button. A shift that no recorded style explains is marked as unexplained. Re-run <code>npm run capture &amp;&amp; npm run diff</code> to refresh.</div>
+    <div class="banner"><b>How to read this.</b> Screenshots use the white theme at 1280×800. Change entries compare the computed styles of every <code>cds--</code> element. <b>Changed</b> (solid dot) means the component's own styles changed; <b>Inherits changes</b> (hollow ring) means only something nested inside it changed, such as a Button. Components marked <b>From IBM Products</b> are new to <code>@carbon/react</code> but not to Carbon; they're compared with their <a class="lnk" href="https://ibm-products.carbondesignsystem.com" target="_blank" rel="noopener">Carbon for IBM Products</a> version instead of V11. A shift that no recorded style explains is marked as unexplained. Re-run <code>npm run capture &amp;&amp; npm run diff</code> to refresh.</div>
     <div class="stats">
       <div class="stat"><div class="n">${COMPONENTS.length}</div><div class="l">Components tracked</div></div>
-      ${["changed","inherited","new","removed"].map(k=>`<div class="stat"><div class="n">${counts(k)}</div><div class="l"><span class="dot ${k}"></span>${STATUS[k].label}</div></div>`).join("")}
+      ${["changed","inherited","migrated","new","removed"].map(k=>`<div class="stat"><div class="n">${counts(k)}</div><div class="l"><span class="dot ${k}"></span>${STATUS[k].label}</div></div>`).join("")}
     </div>
     <div class="filters" role="group" aria-label="Filter by status">
       ${sf.map(s=>`<button data-sfilter="${s}" aria-pressed="${state.statusFilter===s}">${s==="All"?"All":STATUS[s].label} <span style="opacity:.7">${s==="All"?COMPONENTS.length:counts(s)}</span></button>`).join("")}
@@ -335,14 +345,21 @@ function changeRows(list, withComp, withSource){
 }
 
 function compView(c){
+  // Story names for V12-only / V11-only stories come from the changelog's Story rows.
+  const names = Object.fromEntries(c.changes.filter(ch=>ch.type==="Story").map(ch=>[ch.stories[0], ch.to!=="—"?ch.to:ch.from]));
   const stories = defaultFirst(c.captured);
+  // Migrated components also list their V12 stories that have no IBM Products counterpart.
+  const soloIds = c.status==="migrated" || c.status==="new" ? c.added : c.status==="removed" ? c.removed : [];
+  const solo = soloIds.map(id=>({id, name:names[id]||id, solo:true}));
+  const options = defaultFirst([...stories, ...solo]);
   let sid = state.story[c.id];
-  if(!stories.find(s=>s.id===sid)) sid = stories[0]?.id;
+  if(!options.find(o=>o.id===sid)) sid = options[0]?.id;
   const s = stories.find(x=>x.id===sid);
   let body = "", toolbar = "";
+  const pick = options.length ? `<select class="story-pick" id="storypick" aria-label="Story">${options.map(x=>`<option value="${esc(x.id)}" ${x.id===sid?"selected":""}>${esc(x.name)}${x.solo&&c.status==="migrated"?" · V12 only":""}${x.pixel?.ratio>0.001?` · ${pct(x.pixel.ratio)}`:""}</option>`).join("")}</select>` : "";
 
   if(s){
-    const pick = `<select class="story-pick" id="storypick" aria-label="Story">${stories.map(x=>`<option value="${esc(x.id)}" ${x.id===sid?"selected":""}>${esc(x.name)}${x.pixel?.ratio>0.001?` · ${pct(x.pixel.ratio)}`:""}</option>`).join("")}</select>`;
+    const b = s.base || "v11", bid = s.baseId || s.v11Id, B = BASE[b];
     toolbar = `<div class="toolbar">
       <span class="lbl">Story</span>${pick}
       <div class="seg" role="group" aria-label="Compare mode">
@@ -352,35 +369,34 @@ function compView(c){
       </div>
       <span class="pxbadge">${state.mode==="diff"?"From capture · ":"Live from both Storybooks · "}${s.pixel?`${s.pixel.diffPixels.toLocaleString()} px differ (${pct(s.pixel.ratio)})${s.pixel.sizeChanged?" · size changed":""}`:""}</span>
     </div>`;
-    const head = (v)=>`<div class="pane-h"><span class="ver">${v.toUpperCase()}</span><a class="pkg" href="${sbUrl(v, v==="v11"?s.v11Id:s.id)}" target="_blank" rel="noopener">Open in Storybook ↗</a></div>`;
+    const head = (v, id)=>`<div class="pane-h"><span class="ver">${BASE[v].label.toUpperCase()}</span><a class="pkg" href="${sbUrl(v, id)}" target="_blank" rel="noopener">${BASE[v].pkg} · Open in Storybook ↗</a></div>`;
     if(state.mode==="wipe"){
       body = `<div class="wipe" id="wipe" style="--cut:${state.cut}%" data-clip="${s.clip?[s.clip.x,s.clip.y,s.clip.width,s.clip.height].join(","):""}">
         <div class="layers">
           <div class="lay"><iframe title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div>
-          <div class="lay top"><iframe title="V11 ${esc(s.name)}" src="${storyUrl("v11",s.v11Id)}"></iframe></div>
-          <div class="handle" id="handle"><button class="knob" id="knob" role="slider" aria-label="Wipe between V11 and V12" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.cut}" aria-valuetext="${state.cut}% V12">⇔</button></div>
+          <div class="lay top"><iframe title="${B.label} ${esc(s.name)}" src="${storyUrl(b,bid)}"></iframe></div>
+          <div class="handle" id="handle"><button class="knob" id="knob" role="slider" aria-label="Wipe between ${B.label} and V12" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${state.cut}" aria-valuetext="${state.cut}% V12">⇔</button></div>
         </div>
-        <div class="tags"><span>← V11</span><span>V12 →</span></div>
+        <div class="tags"><span>← ${B.label}</span><span>V12 →</span></div>
       </div>`;
     } else if(state.mode==="diff"){
-      body = `<div class="compare single"><div class="pane"><div class="pane-h"><span class="ver">PIXEL DIFF</span><span class="pkg">red = changed pixels</span></div>
+      body = `<div class="compare single"><div class="pane"><div class="pane-h"><span class="ver">PIXEL DIFF · ${B.label.toUpperCase()} → V12</span><span class="pkg">red = changed pixels</span></div>
         <div class="stage"><img src="${shot("diff",s.id)}" alt="Pixel diff for ${esc(s.name)}"></div></div></div>`;
     } else {
       body = `<div class="compare">
-        <div class="pane">${head("v11")}<div class="stage live"><iframe loading="lazy" title="V11 ${esc(s.name)}" src="${storyUrl("v11",s.v11Id)}"></iframe></div></div>
-        <div class="pane">${head("v12")}<div class="stage live"><iframe loading="lazy" title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div></div>
+        <div class="pane">${head(b, bid)}<div class="stage live"><iframe loading="lazy" title="${B.label} ${esc(s.name)}" src="${storyUrl(b,bid)}"></iframe></div></div>
+        <div class="pane">${head("v12", s.id)}<div class="stage live"><iframe loading="lazy" title="V12 ${esc(s.name)}" src="${storyUrl("v12",s.id)}"></iframe></div></div>
       </div>`;
     }
-  } else {
-    // New or removed component: nothing to compare, so show the live story from the version that has it.
-    const v = c.status==="new" ? "v12" : "v11";
-    const names = Object.fromEntries(c.changes.filter(ch=>ch.type==="Story").map(ch=>[ch.stories[0], ch.to!=="—"?ch.to:ch.from]));
-    const ids = defaultFirst(v==="v12" ? c.added : c.removed, id=>id, id=>names[id]);
-    let pickId = state.story[c.id]; if(!ids.includes(pickId)) pickId = ids[0];
-    toolbar = `<div class="toolbar"><span class="lbl">Story</span><select class="story-pick" id="storypick" aria-label="Story">${ids.map(id=>`<option value="${esc(id)}" ${id===pickId?"selected":""}>${esc(names[id]||id)}</option>`).join("")}</select></div>`;
-    const live = pickId ? `<div class="pane"><div class="pane-h"><span class="ver">${v.toUpperCase()}</span><a class="pkg" href="${sbUrl(v,pickId)}" target="_blank" rel="noopener">Open in Storybook ↗</a></div>
-        <div class="stage live"><iframe loading="lazy" title="${esc(c.name)}" src="${storyUrl(v,pickId)}"></iframe></div></div>` : "";
-    const missing = `<div class="pane"><div class="pane-h"><span class="ver">${v==="v12"?"V11":"V12"}</span></div><div class="stage"><span class="empty">Not in ${v==="v12"?"V11":"V12"}</span></div></div>`;
+  } else if(sid) {
+    // Nothing to compare: show the live story from the version that has it.
+    const v = c.status==="removed" ? "v11" : "v12";
+    const other = c.status==="migrated" ? "IBM Products" : v==="v12" ? "V11" : "V12";
+    const why = c.status==="migrated" ? "No IBM Products equivalent" : `Not in ${other}`;
+    toolbar = `<div class="toolbar"><span class="lbl">Story</span>${pick}</div>`;
+    const live = `<div class="pane"><div class="pane-h"><span class="ver">${v.toUpperCase()}</span><a class="pkg" href="${sbUrl(v,sid)}" target="_blank" rel="noopener">Open in Storybook ↗</a></div>
+        <div class="stage live"><iframe loading="lazy" title="${esc(c.name)}" src="${storyUrl(v,sid)}"></iframe></div></div>`;
+    const missing = `<div class="pane"><div class="pane-h"><span class="ver">${other.toUpperCase()}</span></div><div class="stage"><span class="empty">${why}</span></div></div>`;
     body = `<div class="compare">${v==="v12" ? missing+live : live+missing}</div>`;
   }
 
@@ -397,7 +413,7 @@ function compView(c){
   const notes = c.notes.length ? `<div class="notes" style="margin-bottom:16px">${c.notes.map(n=>`<div class="n"><span class="d">${esc(n.date)} · V12 changelog</span><p>${esc(n.text)}</p></div>`).join("")}</div>` : "";
   return `
     <div class="comp-head">
-      <div class="left"><p class="eyebrow">${esc(c.section.toUpperCase())}</p><h1>${esc(c.name)}</h1><p>${summaryLine(c)}</p></div>
+      <div class="left"><p class="eyebrow">${esc(c.section.toUpperCase())}</p><h1>${esc(c.name)}</h1><p>${summaryLine(c)}</p>${c.migratedFrom?`<p style="margin-top:6px">New to <code>@carbon/react</code>, not to Carbon: moving over from <a class="lnk" href="${SRC.ibmp}/?path=/story/${encodeURIComponent((c.captured[0]?.baseId)||"")}" target="_blank" rel="noopener">Carbon for IBM Products</a>${c.migratedFrom.ibmpTitles.length?` (${esc(c.migratedFrom.ibmpTitles.join(", "))})`:""}.</p>`:""}</div>
       ${chip(c.status)}
     </div>
     ${toolbar}

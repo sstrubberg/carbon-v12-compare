@@ -4,7 +4,7 @@
 //
 //   node capture.mjs                 # incremental: skips stories already captured against the same builds
 //   node capture.mjs --force         # recapture everything
-//   node capture.mjs --only button   # only story ids containing "button"
+//   node capture.mjs --only button   # only story ids containing "button" (comma-separate several)
 //   node capture.mjs --limit 20 --concurrency 4
 //
 // Output (all under data/):
@@ -14,7 +14,7 @@
 //   tokens.json        --cds-* custom properties that differ between the two iframe-*.css bundles
 //   captures.json      one summary row per matched story (pixel diff, element counts, errors)
 //   stories/<id>.json  full per-story capture: computed styles for both versions + pixel diff
-//   shots/{v11,v12,diff}/<id>.png
+//   shots/{v11,ibmp,v12,diff}/<id>.png   (ibmp = Carbon for IBM Products, the "before" for migrated components)
 
 import { chromium } from 'playwright';
 import pixelmatch from 'pixelmatch';
@@ -27,6 +27,8 @@ import path from 'node:path';
 const SOURCES = {
   v11: 'https://react.carbondesignsystem.com',
   v12: 'https://v12-react.carbondesignsystem.com',
+  // Carbon for IBM Products: the "before" for components that move into @carbon/react in V12.
+  ibmp: 'https://ibm-products.carbondesignsystem.com',
 };
 const DATA = path.resolve(import.meta.dirname, 'data');
 const VIEWPORT = { width: 1280, height: 800 };
@@ -62,17 +64,19 @@ await main();
 
 async function main() {
   await fs.mkdir(path.join(DATA, 'stories'), { recursive: true });
-  for (const v of ['v11', 'v12', 'diff']) await fs.mkdir(path.join(DATA, 'shots', v), { recursive: true });
+  for (const v of ['v11', 'v12', 'ibmp', 'diff']) await fs.mkdir(path.join(DATA, 'shots', v), { recursive: true });
 
   log('Fetching story manifests…');
-  const [idx11, idx12] = await Promise.all([fetchJson(`${SOURCES.v11}/index.json`), fetchJson(`${SOURCES.v12}/index.json`)]);
-  const manifest = buildManifest(idx11.entries, idx12.entries);
+  const [idx11, idx12, idxP] = await Promise.all([
+    fetchJson(`${SOURCES.v11}/index.json`), fetchJson(`${SOURCES.v12}/index.json`), fetchJson(`${SOURCES.ibmp}/index.json`),
+  ]);
+  const manifest = buildManifest(idx11.entries, idx12.entries, idxP.entries);
   await writeJson('manifest.json', manifest);
-  log(`${manifest.matched.length} matched stories, ${manifest.onlyV11.stories.length} V11-only, ${manifest.onlyV12.stories.length} V12-only`);
+  log(`${manifest.matched.length} matched stories, ${manifest.migrated.length} migrated from IBM Products, ${manifest.onlyV11.stories.length} V11-only, ${manifest.onlyV12.stories.length} V12-only`);
 
   const browser = await chromium.launch();
   try {
-    const builds = await fingerprintBuilds(browser, idx11, idx12);
+    const builds = await fingerprintBuilds(browser, { v11: idx11, v12: idx12, ibmp: idxP });
     const prevMeta = await readJson('meta.json');
     await writeJson('meta.json', {
       capturedAt: new Date().toISOString(),
@@ -86,20 +90,25 @@ async function main() {
     const meta = await readJson('meta.json');
     await diffTokens(builds);
 
-    let todo = manifest.matched;
-    if (args.only) todo = todo.filter((m) => m.v12.includes(args.only) || m.v11.includes(args.only));
+    // Every pair compares a "before" (base: V11, or IBM Products for migrated components) with V12.
+    let todo = [...manifest.matched, ...manifest.migrated];
+    if (args.only) {
+      const parts = args.only.split(',').map((x) => x.trim()).filter(Boolean);
+      todo = todo.filter((m) => parts.some((p) => m.v12.includes(p) || m.baseId.includes(p)));
+    }
     if (args.limit) todo = todo.slice(0, args.limit);
 
     // Incremental: a story is fresh if it was captured against the same two builds.
     // Changing what gets recorded (PROPS, collectStyles) also invalidates earlier captures.
     const schema = sha(PROPS.join() + collectStyles.toString()).slice(0, 8);
-    const buildKey = `${builds.v11.fingerprint}:${builds.v12.fingerprint}:${schema}`;
+    const keyFor = (base) => `${builds[base].fingerprint}:${builds.v12.fingerprint}:${schema}`;
+    const buildKey = `${builds.v11.fingerprint}:${builds.ibmp.fingerprint}:${builds.v12.fingerprint}:${schema}`;
     if (!args.force) {
       const before = todo.length;
       const fresh = [];
       for (const m of todo) {
         const prev = await readJson(path.join('stories', `${m.v12}.json`));
-        if (prev?.buildKey === buildKey && !prev.error) fresh.push(m.v12);
+        if (prev?.buildKey === keyFor(m.base) && !prev.error) fresh.push(m.v12);
       }
       todo = todo.filter((m) => !fresh.includes(m.v12));
       if (fresh.length) log(`Skipping ${fresh.length}/${before} stories already captured against these builds (use --force to redo)`);
@@ -112,7 +121,7 @@ async function main() {
     log(`Capturing ${todo.length} stories with concurrency ${args.concurrency}…`);
     let done = 0;
     await pool(todo, args.concurrency, browser, async (ctx, m) => {
-      const result = await capturePair(ctx, m, buildKey);
+      const result = await capturePair(ctx, m, keyFor(m.base));
       await writeJson(path.join('stories', `${m.v12}.json`), result);
       done++;
       const pct = result.pixel ? `${(result.pixel.ratio * 100).toFixed(2)}% px` : 'ERR';
@@ -129,7 +138,7 @@ async function main() {
 // ---------------------------------------------------------------------------
 // Manifest matching
 
-function buildManifest(e11, e12) {
+function buildManifest(e11, e12, eP) {
   const stories = (e) => Object.values(e).filter((x) => x.type === 'story');
   const s11 = stories(e11), s12 = stories(e12);
   const ids12 = new Set(s12.map((s) => s.id));
@@ -156,6 +165,43 @@ function buildManifest(e11, e12) {
   }
   const matched11 = new Set(matched.map((m) => m.v11));
 
+  // Components new to @carbon/react that already exist in Carbon for IBM Products. A V12 component
+  // counts as migrated when IBM Products has a (non-deprecated) story group with the same name, or
+  // when V12 tags it ibm-products-migrated. Each of its stories is paired with the IBM Products
+  // story that has the same id, else the same story name; stories with neither stay V12-only.
+  const keyOf = (title) => title.split('/').pop().replace(/^preview_+/, '').replace(/[^a-z0-9]/gi, '').toLowerCase();
+  const sP = stories(eP).filter((x) => !/^deprecated\b/i.test(x.title));
+  const pByKey = new Map();
+  for (const p of sP) {
+    if (!pByKey.has(keyOf(p.title))) pByKey.set(keyOf(p.title), []);
+    pByKey.get(keyOf(p.title)).push(p);
+  }
+  const idsP = new Map(sP.map((p) => [p.id, p]));
+  const migrated = [];
+  const migratedComponents = new Map();
+  const usedP = new Set();
+  for (const s of s12) {
+    if (used12.has(s.id) || ids11.has(s.id)) continue;
+    const tagged = (s.tags ?? []).includes('ibm-products-migrated');
+    const candidates = pByKey.get(keyOf(s.title)) ?? [];
+    if (!tagged && !candidates.length) continue;
+    const comp = componentOf(s.title);
+    if (!migratedComponents.has(comp)) {
+      migratedComponents.set(comp, { component: comp, v12Title: s.title, ibmpTitles: [...new Set(candidates.map((p) => p.title))], tagged, matched: 0, unmatched: [] });
+    }
+    const mc = migratedComponents.get(comp);
+    const p = (idsP.has(s.id) && !usedP.has(s.id) ? idsP.get(s.id) : null)
+      ?? candidates.find((c) => !usedP.has(c.id) && c.name.toLowerCase() === s.name.toLowerCase());
+    if (p) {
+      usedP.add(p.id);
+      used12.add(s.id);
+      mc.matched++;
+      migrated.push({ base: 'ibmp', baseId: p.id, v12: s.id, title: s.title, name: s.name, component: comp, match: p.id === s.id ? 'exact' : 'name', ibmpTitle: p.title });
+    } else {
+      mc.unmatched.push({ id: s.id, name: s.name });
+    }
+  }
+
   const onlyStories = (list, taken) => list.filter((s) => !taken.has(s.id)).map((s) => ({ id: s.id, title: s.title, name: s.name }));
   const onlyV11 = onlyStories(s11, matched11);
   const onlyV12 = onlyStories(s12, used12);
@@ -167,14 +213,16 @@ function buildManifest(e11, e12) {
 
   return {
     generatedAt: new Date().toISOString(),
-    counts: { v11Stories: s11.length, v12Stories: s12.length, matched: matched.length },
+    counts: { v11Stories: s11.length, v12Stories: s12.length, ibmpStories: sP.length, matched: matched.length, migrated: migrated.length },
     matched: matched.sort((a, b) => a.v12.localeCompare(b.v12)),
+    migrated: migrated.sort((a, b) => a.v12.localeCompare(b.v12)),
+    migratedComponents: [...migratedComponents.values()].sort((a, b) => a.component.localeCompare(b.component)),
     onlyV11: { titles: onlyTitles(t11, t12), stories: onlyV11 },
     onlyV12: { titles: onlyTitles(t12, t11), stories: onlyV12 },
   };
 
   function pair(a, b, match) {
-    return { v11: a.id, v12: b.id, title: b.title, name: b.name, component: componentOf(b.title), match };
+    return { base: 'v11', baseId: a.id, v11: a.id, v12: b.id, title: b.title, name: b.name, component: componentOf(b.title), match };
   }
 }
 
@@ -187,10 +235,10 @@ function componentOf(title) {
 // ---------------------------------------------------------------------------
 // Build fingerprints: index.json hash + the hashed iframe-*.css asset name.
 
-async function fingerprintBuilds(browser, idx11, idx12) {
+async function fingerprintBuilds(browser, indexes) {
   const out = {};
   const page = await browser.newPage();
-  for (const [v, idx] of [['v11', idx11], ['v12', idx12]]) {
+  for (const [v, idx] of Object.entries(indexes)) {
     await page.goto(`${SOURCES[v]}/iframe.html`, { waitUntil: 'domcontentloaded' });
     const css = await page.evaluate(() =>
       [...document.querySelectorAll('link[rel=stylesheet]')].map((l) => l.href).find((h) => /\/assets\/iframe-[^/]+\.css$/.test(h)));
@@ -294,11 +342,11 @@ async function captureDocs(browser) {
 // Per-story capture
 
 async function capturePair(ctx, m, buildKey) {
-  const result = { id: m.v12, v11Id: m.v11, title: m.title, name: m.name, component: m.component, match: m.match, buildKey, capturedAt: new Date().toISOString() };
+  const result = { id: m.v12, base: m.base, baseId: m.baseId, v11Id: m.v11 ?? null, title: m.title, name: m.name, component: m.component, match: m.match, buildKey, capturedAt: new Date().toISOString() };
   const prepared = {};
-  for (const v of ['v11', 'v12']) {
+  for (const v of [m.base, 'v12']) {
     try {
-      prepared[v] = await prepare(ctx[v], `${SOURCES[v]}/iframe.html?id=${v === 'v11' ? m.v11 : m.v12}&viewMode=story`);
+      prepared[v] = await prepare(ctx[v], `${SOURCES[v]}/iframe.html?id=${v === 'v12' ? m.v12 : m.baseId}&viewMode=story`);
     } catch (e) {
       result[v] = { error: e.message.split('\n')[0] };
       result.error = `${v}: ${result[v].error}`;
@@ -310,16 +358,16 @@ async function capturePair(ctx, m, buildKey) {
   const clip = unionClip(Object.values(prepared).map((p) => p.bounds));
   const shots = {};
   for (const v of Object.keys(prepared)) {
-    const { styles, warnings } = prepared[v];
+    const { styles, warnings, renamed } = prepared[v];
     try {
       shots[v] = await ctx[v].screenshot({ clip, fullPage: true, animations: 'disabled', caret: 'hide' });
       await fs.writeFile(path.join(DATA, 'shots', v, `${m.v12}.png`), shots[v]);
     } catch (e) {
       warnings.push(`screenshot failed: ${e.message.split('\n')[0]}`);
     }
-    result[v] = { clip, elementCount: styles.length, warnings, elements: styles };
+    result[v] = { clip, elementCount: styles.length, warnings, renamed, elements: styles };
   }
-  if (shots.v11 && shots.v12) result.pixel = await pixelDiff(shots.v11, shots.v12, path.join(DATA, 'shots', 'diff', `${m.v12}.png`));
+  if (shots[m.base] && shots.v12) result.pixel = await pixelDiff(shots[m.base], shots.v12, path.join(DATA, 'shots', 'diff', `${m.v12}.png`));
   return result;
 }
 
@@ -367,7 +415,12 @@ async function prepare(page, url) {
 // Runs in the page. Keeps the keying logic in one place so both versions line up.
 function collectStyles(PROPS) {
   const warnings = [];
-  const cdsClasses = (el) => [...el.classList].filter((c) => c.startsWith('cds--')).sort();
+  // Carbon for IBM Products prefixes its own classes c4p-- (they become cds-- in V12). Record both,
+  // normalized to cds--, so c4p--side-panel lines up with cds--side-panel.
+  let renamed = 0;
+  const cdsClasses = (el) => [...el.classList]
+    .filter((c) => c.startsWith('cds--') || c.startsWith('c4p--'))
+    .map((c) => c.replace(/^c4p--/, 'cds--')).sort();
   const segment = (el) => {
     const cls = cdsClasses(el);
     return el.tagName.toLowerCase() + (cls.length ? '.' + cls.join('.') : '');
@@ -385,7 +438,8 @@ function collectStyles(PROPS) {
     return parts.reverse().join(' > ');
   };
 
-  const els = [...document.querySelectorAll('[class*="cds--"]')].filter((el) => cdsClasses(el).length);
+  const els = [...document.querySelectorAll('[class*="cds--"], [class*="c4p--"]')].filter((el) => cdsClasses(el).length);
+  for (const el of els) if ([...el.classList].some((c) => c.startsWith('c4p--'))) renamed++;
   const out = [];
   const seen = new Map();
   for (const el of els) {
@@ -456,7 +510,7 @@ function collectStyles(PROPS) {
     docW: Math.max(document.documentElement.scrollWidth, innerWidth),
     docH: Math.max(document.documentElement.scrollHeight, innerHeight),
   };
-  return { styles: out, bounds, warnings };
+  return { styles: out, bounds, warnings, renamed };
 }
 
 async function pixelDiff(buf11, buf12, outPath) {
@@ -470,7 +524,7 @@ async function pixelDiff(buf11, buf12, outPath) {
     diffPixels,
     totalPixels: width * height,
     ratio: +(diffPixels / (width * height)).toFixed(5),
-    size: { v11: [a.width, a.height], v12: [b.width, b.height] },
+    size: { before: [a.width, a.height], v12: [b.width, b.height] },
     sizeChanged: a.width !== b.width || a.height !== b.height,
   };
 }
@@ -488,15 +542,16 @@ function padTo(png, w, h) {
 
 async function writeSummary(manifest) {
   const rows = [];
-  for (const m of manifest.matched) {
+  for (const m of [...manifest.matched, ...manifest.migrated]) {
     const s = await readJson(path.join('stories', `${m.v12}.json`));
     if (!s) continue;
     rows.push({
       id: s.id, v11Id: s.v11Id, title: s.title, name: s.name, component: s.component, match: s.match,
       capturedAt: s.capturedAt, error: s.error ?? null,
-      elements: { v11: s.v11?.elementCount ?? null, v12: s.v12?.elementCount ?? null },
+      elements: { before: s[s.base ?? 'v11']?.elementCount ?? null, v12: s.v12?.elementCount ?? null },
       pixel: s.pixel ?? null,
-      shots: { v11: `shots/v11/${s.id}.png`, v12: `shots/v12/${s.id}.png`, diff: `shots/diff/${s.id}.png` },
+      base: s.base ?? 'v11', baseId: s.baseId ?? s.v11Id,
+      shots: { before: `shots/${s.base ?? 'v11'}/${s.id}.png`, v12: `shots/v12/${s.id}.png`, diff: `shots/diff/${s.id}.png` },
     });
   }
   await writeJson('captures.json', { generatedAt: new Date().toISOString(), count: rows.length, stories: rows });
@@ -511,12 +566,12 @@ async function pool(items, n, browser, fn) {
   const queue = [...items];
   await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => {
     const opts = { viewport: VIEWPORT, deviceScaleFactor: 1, reducedMotion: 'reduce', colorScheme: 'light', locale: 'en-US', timezoneId: 'UTC' };
-    const c11 = await browser.newContext(opts), c12 = await browser.newContext(opts);
-    const ctx = { v11: await c11.newPage(), v12: await c12.newPage() };
+    const c11 = await browser.newContext(opts), c12 = await browser.newContext(opts), cP = await browser.newContext(opts);
+    const ctx = { v11: await c11.newPage(), v12: await c12.newPage(), ibmp: await cP.newPage() };
     try {
       while (queue.length) await fn(ctx, queue.shift());
     } finally {
-      await c11.close(); await c12.close();
+      await c11.close(); await c12.close(); await cP.close();
     }
   }));
 }
