@@ -1,12 +1,16 @@
 {
- "generatedAt": "2026-09-25T14:44:29.977Z",
+ "generatedAt": "2026-09-28T00:49:48.513Z",
  "counts": {
   "v11Stories": 502,
   "v12Stories": 581,
-  "matched": 493
+  "ibmpStories": 270,
+  "matched": 493,
+  "migrated": 59
  },
  "matched": [
   {
+   "base": "v11",
+   "baseId": "components-accordion--controlled",
    "v11": "components-accordion--controlled",
    "v12": "components-accordion--controlled",
    "title": "Components/Accordion",
@@ -15,6 +19,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-accordion--default",
    "v11": "components-accordion--default",
    "v12": "components-accordion--default",
    "title": "Components/Accordion",
@@ -23,6 +29,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-accordion--skeleton",
    "v11": "components-accordion--skeleton",
    "v12": "components-accordion--skeleton",
    "title": "Components/Accordion",
@@ -31,6 +39,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-accordion--with-layer",
    "v11": "components-accordion--with-layer",
    "v12": "components-accordion--with-layer",
    "title": "Components/Accordion",
@@ -39,6 +49,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ailabel--default",
    "v11": "components-ailabel--default",
    "v12": "components-ailabel--default",
    "title": "Components/AILabel",
@@ -47,6 +59,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ailabel--inline",
    "v11": "components-ailabel--inline",
    "v12": "components-ailabel--inline",
    "title": "Components/AILabel",
@@ -55,6 +69,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ailabel--inline-with-content",
    "v11": "components-ailabel--inline-with-content",
    "v12": "components-ailabel--inline-with-content",
    "title": "Components/AILabel",
@@ -63,6 +79,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-aspectratio--default",
    "v11": "components-aspectratio--default",
    "v12": "components-aspectratio--default",
    "title": "Components/AspectRatio",
@@ -71,6 +89,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-breadcrumb--breadcrumb-with-overflow-menu",
    "v11": "components-breadcrumb--breadcrumb-with-overflow-menu",
    "v12": "components-breadcrumb--breadcrumb-with-overflow-menu",
    "title": "Components/Breadcrumb",
@@ -79,6 +99,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-breadcrumb--breadcrumb-with-overflow-menu-size-small",
    "v11": "components-breadcrumb--breadcrumb-with-overflow-menu-size-small",
    "v12": "components-breadcrumb--breadcrumb-with-overflow-menu-size-small",
    "title": "Components/Breadcrumb",
@@ -87,6 +109,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-breadcrumb--breadcrumb-with-overflow-visual-snapshots",
    "v11": "components-breadcrumb--breadcrumb-with-overflow-visual-snapshots",
    "v12": "components-breadcrumb--breadcrumb-with-overflow-visual-snapshots",
    "title": "Components/Breadcrumb",
@@ -95,6 +119,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-breadcrumb--default",
    "v11": "components-breadcrumb--default",
    "v12": "components-breadcrumb--default",
    "title": "Components/Breadcrumb",
@@ -103,6 +129,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-breadcrumb--skeleton",
    "v11": "components-breadcrumb--skeleton",
    "v12": "components-breadcrumb--skeleton",
    "title": "Components/Breadcrumb",
@@ -111,6 +139,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--danger",
    "v11": "components-button--danger",
    "v12": "components-button--danger",
    "title": "Components/Button",
@@ -119,6 +149,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--danger-ghost",
    "v11": "components-button--danger-ghost",
    "v12": "components-button--danger-ghost",
    "title": "Components/Button",
@@ -127,6 +159,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--danger-tertiary",
    "v11": "components-button--danger-tertiary",
    "v12": "components-button--danger-tertiary",
    "title": "Components/Button",
@@ -135,6 +169,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--default",
    "v11": "components-button--default",
    "v12": "components-button--default",
    "title": "Components/Button",
@@ -143,6 +179,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--ghost",
    "v11": "components-button--ghost",
    "v12": "components-button--ghost",
    "title": "Components/Button",
@@ -151,6 +189,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--icon-button",
    "v11": "components-button--icon-button",
    "v12": "components-button--icon-button",
    "title": "Components/Button",
@@ -159,6 +199,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--icon-button-with-badge",
    "v11": "components-button--icon-button-with-badge",
    "v12": "components-button--icon-button-with-badge",
    "title": "Components/Button",
@@ -167,6 +209,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--secondary",
    "v11": "components-button--secondary",
    "v12": "components-button--secondary",
    "title": "Components/Button",
@@ -175,6 +219,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--skeleton",
    "v11": "components-button--skeleton",
    "v12": "components-button--skeleton",
    "title": "Components/Button",
@@ -183,6 +229,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button--tertiary",
    "v11": "components-button--tertiary",
    "v12": "components-button--tertiary",
    "title": "Components/Button",
@@ -191,6 +239,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--default",
    "v11": "components-button-set-of-buttons--default",
    "v12": "components-button-set-of-buttons--default",
    "title": "Components/Button/Set Of Buttons",
@@ -199,6 +249,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid",
    "v11": "components-button-set-of-buttons--fluid",
    "v12": "components-button-set-of-buttons--fluid",
    "title": "Components/Button/Set Of Buttons",
@@ -207,6 +259,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-four-narrow",
    "v11": "components-button-set-of-buttons--fluid-four-narrow",
    "v12": "components-button-set-of-buttons--fluid-four-narrow",
    "title": "Components/Button/Set Of Buttons",
@@ -215,6 +269,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-four-wide",
    "v11": "components-button-set-of-buttons--fluid-four-wide",
    "v12": "components-button-set-of-buttons--fluid-four-wide",
    "title": "Components/Button/Set Of Buttons",
@@ -223,6 +279,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-four-wide-ghost",
    "v11": "components-button-set-of-buttons--fluid-four-wide-ghost",
    "v12": "components-button-set-of-buttons--fluid-four-wide-ghost",
    "title": "Components/Button/Set Of Buttons",
@@ -231,6 +289,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-one-narrow",
    "v11": "components-button-set-of-buttons--fluid-one-narrow",
    "v12": "components-button-set-of-buttons--fluid-one-narrow",
    "title": "Components/Button/Set Of Buttons",
@@ -239,6 +299,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-one-wide",
    "v11": "components-button-set-of-buttons--fluid-one-wide",
    "v12": "components-button-set-of-buttons--fluid-one-wide",
    "title": "Components/Button/Set Of Buttons",
@@ -247,6 +309,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-one-wide-ghost",
    "v11": "components-button-set-of-buttons--fluid-one-wide-ghost",
    "v12": "components-button-set-of-buttons--fluid-one-wide-ghost",
    "title": "Components/Button/Set Of Buttons",
@@ -255,6 +319,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-three-narrow",
    "v11": "components-button-set-of-buttons--fluid-three-narrow",
    "v12": "components-button-set-of-buttons--fluid-three-narrow",
    "title": "Components/Button/Set Of Buttons",
@@ -263,6 +329,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-three-wide",
    "v11": "components-button-set-of-buttons--fluid-three-wide",
    "v12": "components-button-set-of-buttons--fluid-three-wide",
    "title": "Components/Button/Set Of Buttons",
@@ -271,6 +339,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-three-wide-ghost",
    "v11": "components-button-set-of-buttons--fluid-three-wide-ghost",
    "v12": "components-button-set-of-buttons--fluid-three-wide-ghost",
    "title": "Components/Button/Set Of Buttons",
@@ -279,6 +349,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-two-narrow",
    "v11": "components-button-set-of-buttons--fluid-two-narrow",
    "v12": "components-button-set-of-buttons--fluid-two-narrow",
    "title": "Components/Button/Set Of Buttons",
@@ -287,6 +359,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-two-wide",
    "v11": "components-button-set-of-buttons--fluid-two-wide",
    "v12": "components-button-set-of-buttons--fluid-two-wide",
    "title": "Components/Button/Set Of Buttons",
@@ -295,6 +369,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-button-set-of-buttons--fluid-two-wide-ghost",
    "v11": "components-button-set-of-buttons--fluid-two-wide-ghost",
    "v12": "components-button-set-of-buttons--fluid-two-wide-ghost",
    "title": "Components/Button/Set Of Buttons",
@@ -303,6 +379,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-checkbox--default",
    "v11": "components-checkbox--default",
    "v12": "components-checkbox--default",
    "title": "Components/Checkbox",
@@ -311,6 +389,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-checkbox--horizontal",
    "v11": "components-checkbox--horizontal",
    "v12": "components-checkbox--horizontal",
    "title": "Components/Checkbox",
@@ -319,6 +399,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-checkbox--single",
    "v11": "components-checkbox--single",
    "v12": "components-checkbox--single",
    "title": "Components/Checkbox",
@@ -327,6 +409,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-checkbox--skeleton",
    "v11": "components-checkbox--skeleton",
    "v12": "components-checkbox--skeleton",
    "title": "Components/Checkbox",
@@ -335,6 +419,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-checkbox--with-ai-label",
    "v11": "components-checkbox--with-ai-label",
    "v12": "components-checkbox--with-ai-label",
    "title": "Components/Checkbox",
@@ -343,6 +429,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-classprefix--default",
    "v11": "components-classprefix--default",
    "v12": "components-classprefix--default",
    "title": "Components/ClassPrefix",
@@ -351,6 +439,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--inline",
    "v11": "components-codesnippet--inline",
    "v12": "components-codesnippet--inline",
    "title": "Components/CodeSnippet",
@@ -359,6 +449,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--inline-with-layer",
    "v11": "components-codesnippet--inline-with-layer",
    "v12": "components-codesnippet--inline-with-layer",
    "title": "Components/CodeSnippet",
@@ -367,6 +459,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--multiline",
    "v11": "components-codesnippet--multiline",
    "v12": "components-codesnippet--multiline",
    "title": "Components/CodeSnippet",
@@ -375,6 +469,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--multiline-with-layer",
    "v11": "components-codesnippet--multiline-with-layer",
    "v12": "components-codesnippet--multiline-with-layer",
    "title": "Components/CodeSnippet",
@@ -383,6 +479,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--singleline",
    "v11": "components-codesnippet--singleline",
    "v12": "components-codesnippet--singleline",
    "title": "Components/CodeSnippet",
@@ -391,6 +489,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--singleline-with-layer",
    "v11": "components-codesnippet--singleline-with-layer",
    "v12": "components-codesnippet--singleline-with-layer",
    "title": "Components/CodeSnippet",
@@ -399,6 +499,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-codesnippet--skeleton",
    "v11": "components-codesnippet--skeleton",
    "v12": "components-codesnippet--skeleton",
    "title": "Components/CodeSnippet",
@@ -407,6 +509,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--allow-custom-value",
    "v11": "components-combobox--allow-custom-value",
    "v12": "components-combobox--allow-custom-value",
    "title": "Components/ComboBox",
@@ -415,6 +519,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--autocomplete-with-typeahead",
    "v11": "components-combobox--autocomplete-with-typeahead",
    "v12": "components-combobox--autocomplete-with-typeahead",
    "title": "Components/ComboBox",
@@ -423,6 +529,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--controlled",
    "v11": "components-combobox--controlled",
    "v12": "components-combobox--controlled",
    "title": "Components/ComboBox",
@@ -431,6 +539,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--default",
    "v11": "components-combobox--default",
    "v12": "components-combobox--default",
    "title": "Components/ComboBox",
@@ -439,6 +549,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--experimental-auto-align",
    "v11": "components-combobox--experimental-auto-align",
    "v12": "components-combobox--experimental-auto-align",
    "title": "Components/ComboBox",
@@ -447,6 +559,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox-feature-flag--floating-styles",
    "v11": "components-combobox-feature-flag--floating-styles",
    "v12": "components-combobox--floating-styles",
    "title": "Components/ComboBox",
@@ -455,6 +569,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--with-ai-label",
    "v11": "components-combobox--with-ai-label",
    "v12": "components-combobox--with-ai-label",
    "title": "Components/ComboBox",
@@ -463,6 +579,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobox--with-layer",
    "v11": "components-combobox--with-layer",
    "v12": "components-combobox--with-layer",
    "title": "Components/ComboBox",
@@ -471,6 +589,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobutton--default",
    "v11": "components-combobutton--default",
    "v12": "components-combobutton--default",
    "title": "Components/ComboButton",
@@ -479,6 +599,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobutton--experimental-auto-align",
    "v11": "components-combobutton--experimental-auto-align",
    "v12": "components-combobutton--experimental-auto-align",
    "title": "Components/ComboButton",
@@ -487,6 +609,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobutton-feature-flag--floating-styles",
    "v11": "components-combobutton-feature-flag--floating-styles",
    "v12": "components-combobutton--floating-styles",
    "title": "Components/ComboButton",
@@ -495,6 +619,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobutton--with-danger",
    "v11": "components-combobutton--with-danger",
    "v12": "components-combobutton--with-danger",
    "title": "Components/ComboButton",
@@ -503,6 +629,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-combobutton--with-icons",
    "v11": "components-combobutton--with-icons",
    "v12": "components-combobutton--with-icons",
    "title": "Components/ComboButton",
@@ -511,6 +639,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--default",
    "v11": "components-composedmodal--default",
    "v12": "components-composedmodal--default",
    "title": "Components/ComposedModal",
@@ -519,6 +649,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--full-width",
    "v11": "components-composedmodal--full-width",
    "v12": "components-composedmodal--full-width",
    "title": "Components/ComposedModal",
@@ -527,6 +659,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--passive-modal",
    "v11": "components-composedmodal--passive-modal",
    "v12": "components-composedmodal--passive-modal",
    "title": "Components/ComposedModal",
@@ -535,6 +669,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--with-ai-label",
    "v11": "components-composedmodal--with-ai-label",
    "v12": "components-composedmodal--with-ai-label",
    "title": "Components/ComposedModal",
@@ -543,6 +679,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--with-inline-loading",
    "v11": "components-composedmodal--with-inline-loading",
    "v12": "components-composedmodal--with-inline-loading",
    "title": "Components/ComposedModal",
@@ -551,6 +689,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--with-scrolling-content",
    "v11": "components-composedmodal--with-scrolling-content",
    "v12": "components-composedmodal--with-scrolling-content",
    "title": "Components/ComposedModal",
@@ -559,6 +699,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal--with-state-manager",
    "v11": "components-composedmodal--with-state-manager",
    "v12": "components-composedmodal--with-state-manager",
    "title": "Components/ComposedModal",
@@ -567,6 +709,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal-feature-flags--enable-dialog-element",
    "v11": "components-composedmodal-feature-flags--enable-dialog-element",
    "v12": "components-composedmodal-feature-flags--enable-dialog-element",
    "title": "Components/ComposedModal/Feature Flags",
@@ -575,6 +719,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal-feature-flags--enable-focus-wrap-without-sentinels",
    "v11": "components-composedmodal-feature-flags--enable-focus-wrap-without-sentinels",
    "v12": "components-composedmodal-feature-flags--enable-focus-wrap-without-sentinels",
    "title": "Components/ComposedModal/Feature Flags",
@@ -583,6 +729,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-composedmodal-feature-flags--enable-presence",
    "v11": "components-composedmodal-feature-flags--enable-presence",
    "v12": "components-composedmodal-feature-flags--enable-presence",
    "title": "Components/ComposedModal/Feature Flags",
@@ -591,6 +739,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--default",
    "v11": "components-containedlist--default",
    "v12": "components-containedlist--default",
    "title": "Components/ContainedList",
@@ -599,6 +749,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--disclosed",
    "v11": "components-containedlist--disclosed",
    "v12": "components-containedlist--disclosed",
    "title": "Components/ContainedList",
@@ -607,6 +759,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--usage-examples",
    "v11": "components-containedlist--usage-examples",
    "v12": "components-containedlist--usage-examples",
    "title": "Components/ContainedList",
@@ -615,6 +769,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-actions",
    "v11": "components-containedlist--with-actions",
    "v12": "components-containedlist--with-actions",
    "title": "Components/ContainedList",
@@ -623,6 +779,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-expandable-search",
    "v11": "components-containedlist--with-expandable-search",
    "v12": "components-containedlist--with-expandable-search",
    "title": "Components/ContainedList",
@@ -631,6 +789,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-icons",
    "v11": "components-containedlist--with-icons",
    "v12": "components-containedlist--with-icons",
    "title": "Components/ContainedList",
@@ -639,6 +799,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-interactive-items",
    "v11": "components-containedlist--with-interactive-items",
    "v12": "components-containedlist--with-interactive-items",
    "title": "Components/ContainedList",
@@ -647,6 +809,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-interactive-items-and-actions",
    "v11": "components-containedlist--with-interactive-items-and-actions",
    "v12": "components-containedlist--with-interactive-items-and-actions",
    "title": "Components/ContainedList",
@@ -655,6 +819,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-layer",
    "v11": "components-containedlist--with-layer",
    "v12": "components-containedlist--with-layer",
    "title": "Components/ContainedList",
@@ -663,6 +829,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-list-title-decorators",
    "v11": "components-containedlist--with-list-title-decorators",
    "v12": "components-containedlist--with-list-title-decorators",
    "title": "Components/ContainedList",
@@ -671,6 +839,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-containedlist--with-persistent-search",
    "v11": "components-containedlist--with-persistent-search",
    "v12": "components-containedlist--with-persistent-search",
    "title": "Components/ContainedList",
@@ -679,6 +849,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-contentswitcher--default",
    "v11": "components-contentswitcher--default",
    "v12": "components-contentswitcher--default",
    "title": "Components/ContentSwitcher",
@@ -687,6 +859,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-contentswitcher--icon-only",
    "v11": "components-contentswitcher--icon-only",
    "v12": "components-contentswitcher--icon-only",
    "title": "Components/ContentSwitcher",
@@ -695,6 +869,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-contentswitcher--icon-only-with-layer",
    "v11": "components-contentswitcher--icon-only-with-layer",
    "v12": "components-contentswitcher--icon-only-with-layer",
    "title": "Components/ContentSwitcher",
@@ -703,6 +879,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-contentswitcher--low-contrast",
    "v11": "components-contentswitcher--low-contrast",
    "v12": "components-contentswitcher--low-contrast",
    "title": "Components/ContentSwitcher",
@@ -711,6 +889,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-contentswitcher--low-contrast-icon-only",
    "v11": "components-contentswitcher--low-contrast-icon-only",
    "v12": "components-contentswitcher--low-contrast-icon-only",
    "title": "Components/ContentSwitcher",
@@ -719,6 +899,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-contentswitcher--with-layer",
    "v11": "components-contentswitcher--with-layer",
    "v12": "components-contentswitcher--with-layer",
    "title": "Components/ContentSwitcher",
@@ -727,6 +909,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-copybutton--default",
    "v11": "components-copybutton--default",
    "v12": "components-copybutton--default",
    "title": "Components/CopyButton",
@@ -735,6 +919,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-basic--default",
    "v11": "components-datatable-basic--default",
    "v12": "components-datatable-basic--default",
    "title": "Components/DataTable/Basic",
@@ -743,6 +929,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-basic--xl-with-two-lines",
    "v11": "components-datatable-basic--xl-with-two-lines",
    "v12": "components-datatable-basic--xl-with-two-lines",
    "title": "Components/DataTable/Basic",
@@ -751,6 +939,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-batch-actions--default",
    "v11": "components-datatable-batch-actions--default",
    "v12": "components-datatable-batch-actions--default",
    "title": "Components/DataTable/Batch Actions",
@@ -759,6 +949,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-dynamic--default",
    "v11": "components-datatable-dynamic--default",
    "v12": "components-datatable-dynamic--default",
    "title": "Components/DataTable/Dynamic",
@@ -767,6 +959,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-expansion--batch-expansion",
    "v11": "components-datatable-expansion--batch-expansion",
    "v12": "components-datatable-expansion--batch-expansion",
    "title": "Components/DataTable/Expansion",
@@ -775,6 +969,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-expansion--batch-expansion-multiple-tables",
    "v11": "components-datatable-expansion--batch-expansion-multiple-tables",
    "v12": "components-datatable-expansion--batch-expansion-multiple-tables",
    "title": "Components/DataTable/Expansion",
@@ -783,6 +979,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-expansion--default",
    "v11": "components-datatable-expansion--default",
    "v12": "components-datatable-expansion--default",
    "title": "Components/DataTable/Expansion",
@@ -791,6 +989,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-filtering--default",
    "v11": "components-datatable-filtering--default",
    "v12": "components-datatable-filtering--default",
    "title": "Components/DataTable/Filtering",
@@ -799,6 +999,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-pagination--default",
    "v11": "components-datatable-pagination--default",
    "v12": "components-datatable-pagination--default",
    "title": "Components/DataTable/Pagination",
@@ -807,6 +1009,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-selection--default",
    "v11": "components-datatable-selection--default",
    "v12": "components-datatable-selection--default",
    "title": "Components/DataTable/Selection",
@@ -815,6 +1019,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-selection--with-radio-selection",
    "v11": "components-datatable-selection--with-radio-selection",
    "v12": "components-datatable-selection--with-radio-selection",
    "title": "Components/DataTable/Selection",
@@ -823,6 +1029,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-selection--with-selection-and-sorting",
    "v11": "components-datatable-selection--with-selection-and-sorting",
    "v12": "components-datatable-selection--with-selection-and-sorting",
    "title": "Components/DataTable/Selection",
@@ -831,6 +1039,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-skeleton--skeleton",
    "v11": "components-datatable-skeleton--skeleton",
    "v12": "components-datatable-skeleton--skeleton",
    "title": "Components/DataTable/Skeleton",
@@ -839,6 +1049,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-sorting--default",
    "v11": "components-datatable-sorting--default",
    "v12": "components-datatable-sorting--default",
    "title": "Components/DataTable/Sorting",
@@ -847,6 +1059,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-toolbar--default",
    "v11": "components-datatable-toolbar--default",
    "v12": "components-datatable-toolbar--default",
    "title": "Components/DataTable/Toolbar",
@@ -855,6 +1069,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-toolbar--persistent-toolbar",
    "v11": "components-datatable-toolbar--persistent-toolbar",
    "v12": "components-datatable-toolbar--persistent-toolbar",
    "title": "Components/DataTable/Toolbar",
@@ -863,6 +1079,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-toolbar--small-persistent-toolbar",
    "v11": "components-datatable-toolbar--small-persistent-toolbar",
    "v12": "components-datatable-toolbar--small-persistent-toolbar",
    "title": "Components/DataTable/Toolbar",
@@ -871,6 +1089,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-toolbar--with-overflow-menu",
    "v11": "components-datatable-toolbar--with-overflow-menu",
    "v12": "components-datatable-toolbar--with-overflow-menu",
    "title": "Components/DataTable/Toolbar",
@@ -879,6 +1099,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--ai-label-with-expansion",
    "v11": "components-datatable-withailabel--ai-label-with-expansion",
    "v12": "components-datatable-withailabel--ai-label-with-expansion",
    "title": "Components/DataTable/WithAILabel",
@@ -887,6 +1109,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--ai-label-with-radio-selection",
    "v11": "components-datatable-withailabel--ai-label-with-radio-selection",
    "v12": "components-datatable-withailabel--ai-label-with-radio-selection",
    "title": "Components/DataTable/WithAILabel",
@@ -895,6 +1119,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--ai-label-with-selection",
    "v11": "components-datatable-withailabel--ai-label-with-selection",
    "v12": "components-datatable-withailabel--ai-label-with-selection",
    "title": "Components/DataTable/WithAILabel",
@@ -903,6 +1129,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--ai-label-with-selection-and-expansion",
    "v11": "components-datatable-withailabel--ai-label-with-selection-and-expansion",
    "v12": "components-datatable-withailabel--ai-label-with-selection-and-expansion",
    "title": "Components/DataTable/WithAILabel",
@@ -911,6 +1139,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--column-ai-label-sort",
    "v11": "components-datatable-withailabel--column-ai-label-sort",
    "v12": "components-datatable-withailabel--column-ai-label-sort",
    "title": "Components/DataTable/WithAILabel",
@@ -919,6 +1149,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--column-ai-label-with-selection-and-expansion",
    "v11": "components-datatable-withailabel--column-ai-label-with-selection-and-expansion",
    "v12": "components-datatable-withailabel--column-ai-label-with-selection-and-expansion",
    "title": "Components/DataTable/WithAILabel",
@@ -927,6 +1159,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datatable-withailabel--full-table-ai",
    "v11": "components-datatable-withailabel--full-table-ai",
    "v12": "components-datatable-withailabel--full-table-ai",
    "title": "Components/DataTable/WithAILabel",
@@ -935,6 +1169,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--default",
    "v11": "components-datepicker--default",
    "v12": "components-datepicker--default",
    "title": "Components/DatePicker",
@@ -943,6 +1179,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--range-with-calendar",
    "v11": "components-datepicker--range-with-calendar",
    "v12": "components-datepicker--range-with-calendar",
    "title": "Components/DatePicker",
@@ -951,6 +1189,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--range-with-calendar-with-layer",
    "v11": "components-datepicker--range-with-calendar-with-layer",
    "v12": "components-datepicker--range-with-calendar-with-layer",
    "title": "Components/DatePicker",
@@ -959,6 +1199,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--simple",
    "v11": "components-datepicker--simple",
    "v12": "components-datepicker--simple",
    "title": "Components/DatePicker",
@@ -967,6 +1209,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--simple-with-layer",
    "v11": "components-datepicker--simple-with-layer",
    "v12": "components-datepicker--simple-with-layer",
    "title": "Components/DatePicker",
@@ -975,6 +1219,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--single-with-calendar",
    "v11": "components-datepicker--single-with-calendar",
    "v12": "components-datepicker--single-with-calendar",
    "title": "Components/DatePicker",
@@ -983,6 +1229,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--single-with-calendar-with-layer",
    "v11": "components-datepicker--single-with-calendar-with-layer",
    "v12": "components-datepicker--single-with-calendar-with-layer",
    "title": "Components/DatePicker",
@@ -991,6 +1239,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--skeleton",
    "v11": "components-datepicker--skeleton",
    "v12": "components-datepicker--skeleton",
    "title": "Components/DatePicker",
@@ -999,6 +1249,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-datepicker--with-ai-label",
    "v11": "components-datepicker--with-ai-label",
    "v12": "components-datepicker--with-ai-label",
    "title": "Components/DatePicker",
@@ -1007,6 +1259,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-definitiontooltip--default",
    "v11": "components-definitiontooltip--default",
    "v12": "components-definitiontooltip--default",
    "title": "Components/DefinitionTooltip",
@@ -1015,6 +1269,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-definitiontooltip--with-large-text",
    "v11": "components-definitiontooltip--with-large-text",
    "v12": "components-definitiontooltip--with-large-text",
    "title": "Components/DefinitionTooltip",
@@ -1023,6 +1279,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--default",
    "v11": "components-dropdown--default",
    "v12": "components-dropdown--default",
    "title": "Components/Dropdown",
@@ -1031,6 +1289,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--experimental-auto-align",
    "v11": "components-dropdown--experimental-auto-align",
    "v12": "components-dropdown--experimental-auto-align",
    "title": "Components/Dropdown",
@@ -1039,6 +1299,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown-feature-flag--floating-styles",
    "v11": "components-dropdown-feature-flag--floating-styles",
    "v12": "components-dropdown--floating-styles",
    "title": "Components/Dropdown",
@@ -1047,6 +1309,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--inline",
    "v11": "components-dropdown--inline",
    "v12": "components-dropdown--inline",
    "title": "Components/Dropdown",
@@ -1055,6 +1319,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--inline-with-layer",
    "v11": "components-dropdown--inline-with-layer",
    "v12": "components-dropdown--inline-with-layer",
    "title": "Components/Dropdown",
@@ -1063,6 +1329,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--skeleton",
    "v11": "components-dropdown--skeleton",
    "v12": "components-dropdown--skeleton",
    "title": "Components/Dropdown",
@@ -1071,6 +1339,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--test-invalid-text-no-overlap",
    "v11": "components-dropdown--test-invalid-text-no-overlap",
    "v12": "components-dropdown--test-invalid-text-no-overlap",
    "title": "Components/Dropdown",
@@ -1079,6 +1349,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--with-ai-label",
    "v11": "components-dropdown--with-ai-label",
    "v12": "components-dropdown--with-ai-label",
    "title": "Components/Dropdown",
@@ -1087,6 +1359,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-dropdown--with-layer",
    "v11": "components-dropdown--with-layer",
    "v12": "components-dropdown--with-layer",
    "title": "Components/Dropdown",
@@ -1095,6 +1369,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-errorboundary--default",
    "v11": "components-errorboundary--default",
    "v12": "components-errorboundary--default",
    "title": "Components/ErrorBoundary",
@@ -1103,6 +1379,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-errorboundary--with-custom-context",
    "v11": "components-errorboundary--with-custom-context",
    "v12": "components-errorboundary--with-custom-context",
    "title": "Components/ErrorBoundary",
@@ -1111,6 +1389,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader--default",
    "v11": "components-fileuploader--default",
    "v12": "components-fileuploader--default",
    "title": "Components/FileUploader",
@@ -1119,6 +1399,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader--drag-and-drop-upload-container-example-application",
    "v11": "components-fileuploader--drag-and-drop-upload-container-example-application",
    "v12": "components-fileuploader--drag-and-drop-upload-container-example-application",
    "title": "Components/FileUploader",
@@ -1127,6 +1409,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader--drag-and-drop-upload-single-container-example-application",
    "v11": "components-fileuploader--drag-and-drop-upload-single-container-example-application",
    "v12": "components-fileuploader--drag-and-drop-upload-single-container-example-application",
    "title": "Components/FileUploader",
@@ -1135,6 +1419,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader--file-uploader-drop-container",
    "v11": "components-fileuploader--file-uploader-drop-container",
    "v12": "components-fileuploader--file-uploader-drop-container",
    "title": "Components/FileUploader",
@@ -1143,6 +1429,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader--file-uploader-item",
    "v11": "components-fileuploader--file-uploader-item",
    "v12": "components-fileuploader--file-uploader-item",
    "title": "Components/FileUploader",
@@ -1151,6 +1439,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader--skeleton",
    "v11": "components-fileuploader--skeleton",
    "v12": "components-fileuploader--skeleton",
    "title": "Components/FileUploader",
@@ -1159,6 +1449,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader-feature-flag--controlled-file-state",
    "v11": "components-fileuploader-feature-flag--controlled-file-state",
    "v12": "components-fileuploader-feature-flag--controlled-file-state",
    "title": "Components/FileUploader/Feature Flag",
@@ -1167,6 +1459,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fileuploader-feature-flag--enhanced-callbacks",
    "v11": "components-fileuploader-feature-flag--enhanced-callbacks",
    "v12": "components-fileuploader-feature-flag--enhanced-callbacks",
    "title": "Components/FileUploader/Feature Flag",
@@ -1175,6 +1469,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidcombobox--condensed",
    "v11": "components-fluid-components-fluidcombobox--condensed",
    "v12": "components-fluid-components-fluidcombobox--condensed",
    "title": "Components/Fluid Components/FluidComboBox",
@@ -1183,6 +1479,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidcombobox--default",
    "v11": "components-fluid-components-fluidcombobox--default",
    "v12": "components-fluid-components-fluidcombobox--default",
    "title": "Components/Fluid Components/FluidComboBox",
@@ -1191,6 +1489,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidcombobox--skeleton",
    "v11": "components-fluid-components-fluidcombobox--skeleton",
    "v12": "components-fluid-components-fluidcombobox--skeleton",
    "title": "Components/Fluid Components/FluidComboBox",
@@ -1199,6 +1499,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidcombobox--with-ai-label",
    "v11": "components-fluid-components-fluidcombobox--with-ai-label",
    "v12": "components-fluid-components-fluidcombobox--with-ai-label",
    "title": "Components/Fluid Components/FluidComboBox",
@@ -1207,6 +1509,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddatepicker--range-with-calendar",
    "v11": "components-fluid-components-fluiddatepicker--range-with-calendar",
    "v12": "components-fluid-components-fluiddatepicker--range-with-calendar",
    "title": "Components/Fluid Components/FluidDatePicker",
@@ -1215,6 +1519,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddatepicker--simple",
    "v11": "components-fluid-components-fluiddatepicker--simple",
    "v12": "components-fluid-components-fluiddatepicker--simple",
    "title": "Components/Fluid Components/FluidDatePicker",
@@ -1223,6 +1529,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddatepicker--single",
    "v11": "components-fluid-components-fluiddatepicker--single",
    "v12": "components-fluid-components-fluiddatepicker--single",
    "title": "Components/Fluid Components/FluidDatePicker",
@@ -1231,6 +1539,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddatepicker--skeleton",
    "v11": "components-fluid-components-fluiddatepicker--skeleton",
    "v12": "components-fluid-components-fluiddatepicker--skeleton",
    "title": "Components/Fluid Components/FluidDatePicker",
@@ -1239,6 +1549,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddropdown--condensed",
    "v11": "components-fluid-components-fluiddropdown--condensed",
    "v12": "components-fluid-components-fluiddropdown--condensed",
    "title": "Components/Fluid Components/FluidDropdown",
@@ -1247,6 +1559,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddropdown--default",
    "v11": "components-fluid-components-fluiddropdown--default",
    "v12": "components-fluid-components-fluiddropdown--default",
    "title": "Components/Fluid Components/FluidDropdown",
@@ -1255,6 +1569,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddropdown--skeleton",
    "v11": "components-fluid-components-fluiddropdown--skeleton",
    "v12": "components-fluid-components-fluiddropdown--skeleton",
    "title": "Components/Fluid Components/FluidDropdown",
@@ -1263,6 +1579,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluiddropdown--with-ai-label",
    "v11": "components-fluid-components-fluiddropdown--with-ai-label",
    "v12": "components-fluid-components-fluiddropdown--with-ai-label",
    "title": "Components/Fluid Components/FluidDropdown",
@@ -1271,6 +1589,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidform--default",
    "v11": "components-fluid-components-fluidform--default",
    "v12": "components-fluid-components-fluidform--default",
    "title": "Components/Fluid Components/FluidForm",
@@ -1279,6 +1599,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidmultiselect--condensed",
    "v11": "components-fluid-components-fluidmultiselect--condensed",
    "v12": "components-fluid-components-fluidmultiselect--condensed",
    "title": "Components/Fluid Components/FluidMultiSelect",
@@ -1287,6 +1609,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidmultiselect--default",
    "v11": "components-fluid-components-fluidmultiselect--default",
    "v12": "components-fluid-components-fluidmultiselect--default",
    "title": "Components/Fluid Components/FluidMultiSelect",
@@ -1295,6 +1619,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidmultiselect--filterable",
    "v11": "components-fluid-components-fluidmultiselect--filterable",
    "v12": "components-fluid-components-fluidmultiselect--filterable",
    "title": "Components/Fluid Components/FluidMultiSelect",
@@ -1303,6 +1629,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidmultiselect--filterable-with-layer",
    "v11": "components-fluid-components-fluidmultiselect--filterable-with-layer",
    "v12": "components-fluid-components-fluidmultiselect--filterable-with-layer",
    "title": "Components/Fluid Components/FluidMultiSelect",
@@ -1311,6 +1639,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidmultiselect--skeleton",
    "v11": "components-fluid-components-fluidmultiselect--skeleton",
    "v12": "components-fluid-components-fluidmultiselect--skeleton",
    "title": "Components/Fluid Components/FluidMultiSelect",
@@ -1319,6 +1649,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidmultiselect--with-ai-label",
    "v11": "components-fluid-components-fluidmultiselect--with-ai-label",
    "v12": "components-fluid-components-fluidmultiselect--with-ai-label",
    "title": "Components/Fluid Components/FluidMultiSelect",
@@ -1327,6 +1659,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidnumberinput--default",
    "v11": "components-fluid-components-fluidnumberinput--default",
    "v12": "components-fluid-components-fluidnumberinput--default",
    "title": "Components/Fluid Components/FluidNumberInput",
@@ -1335,6 +1669,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidnumberinput--skeleton",
    "v11": "components-fluid-components-fluidnumberinput--skeleton",
    "v12": "components-fluid-components-fluidnumberinput--skeleton",
    "title": "Components/Fluid Components/FluidNumberInput",
@@ -1343,6 +1679,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidpasswordinput--default",
    "v11": "components-fluid-components-fluidpasswordinput--default",
    "v12": "components-fluid-components-fluidpasswordinput--default",
    "title": "Components/Fluid Components/FluidPasswordInput",
@@ -1351,6 +1689,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidsearch--default",
    "v11": "components-fluid-components-fluidsearch--default",
    "v12": "components-fluid-components-fluidsearch--default",
    "title": "Components/Fluid Components/FluidSearch",
@@ -1359,6 +1699,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidsearch--skeleton",
    "v11": "components-fluid-components-fluidsearch--skeleton",
    "v12": "components-fluid-components-fluidsearch--skeleton",
    "title": "Components/Fluid Components/FluidSearch",
@@ -1367,6 +1709,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidselect--default",
    "v11": "components-fluid-components-fluidselect--default",
    "v12": "components-fluid-components-fluidselect--default",
    "title": "Components/Fluid Components/FluidSelect",
@@ -1375,6 +1719,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidselect--skeleton",
    "v11": "components-fluid-components-fluidselect--skeleton",
    "v12": "components-fluid-components-fluidselect--skeleton",
    "title": "Components/Fluid Components/FluidSelect",
@@ -1383,6 +1729,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidselect--with-ai-label",
    "v11": "components-fluid-components-fluidselect--with-ai-label",
    "v12": "components-fluid-components-fluidselect--with-ai-label",
    "title": "Components/Fluid Components/FluidSelect",
@@ -1391,6 +1739,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextarea--default",
    "v11": "components-fluid-components-fluidtextarea--default",
    "v12": "components-fluid-components-fluidtextarea--default",
    "title": "Components/Fluid Components/FluidTextArea",
@@ -1399,6 +1749,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextarea--default-with-layers",
    "v11": "components-fluid-components-fluidtextarea--default-with-layers",
    "v12": "components-fluid-components-fluidtextarea--default-with-layers",
    "title": "Components/Fluid Components/FluidTextArea",
@@ -1407,6 +1759,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextarea--default-with-toggletip",
    "v11": "components-fluid-components-fluidtextarea--default-with-toggletip",
    "v12": "components-fluid-components-fluidtextarea--default-with-toggletip",
    "title": "Components/Fluid Components/FluidTextArea",
@@ -1415,6 +1769,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextarea--skeleton",
    "v11": "components-fluid-components-fluidtextarea--skeleton",
    "v12": "components-fluid-components-fluidtextarea--skeleton",
    "title": "Components/Fluid Components/FluidTextArea",
@@ -1423,6 +1779,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextinput--default",
    "v11": "components-fluid-components-fluidtextinput--default",
    "v12": "components-fluid-components-fluidtextinput--default",
    "title": "Components/Fluid Components/FluidTextInput",
@@ -1431,6 +1789,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextinput--default-with-toggletip",
    "v11": "components-fluid-components-fluidtextinput--default-with-toggletip",
    "v12": "components-fluid-components-fluidtextinput--default-with-toggletip",
    "title": "Components/Fluid Components/FluidTextInput",
@@ -1439,6 +1799,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtextinput--skeleton",
    "v11": "components-fluid-components-fluidtextinput--skeleton",
    "v12": "components-fluid-components-fluidtextinput--skeleton",
    "title": "Components/Fluid Components/FluidTextInput",
@@ -1447,6 +1809,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtimepicker--default",
    "v11": "components-fluid-components-fluidtimepicker--default",
    "v12": "components-fluid-components-fluidtimepicker--default",
    "title": "Components/Fluid Components/FluidTimePicker",
@@ -1455,6 +1819,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-fluid-components-fluidtimepicker--skeleton",
    "v11": "components-fluid-components-fluidtimepicker--skeleton",
    "v12": "components-fluid-components-fluidtimepicker--skeleton",
    "title": "Components/Fluid Components/FluidTimePicker",
@@ -1463,6 +1829,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-form--default",
    "v11": "components-form--default",
    "v12": "components-form--default",
    "title": "Components/Form",
@@ -1471,6 +1839,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-form--with-ai-label",
    "v11": "components-form--with-ai-label",
    "v12": "components-form--with-ai-label",
    "title": "Components/Form",
@@ -1479,6 +1849,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-formgroup--default",
    "v11": "components-formgroup--default",
    "v12": "components-formgroup--default",
    "title": "Components/FormGroup",
@@ -1487,6 +1859,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-formlabel--default",
    "v11": "components-formlabel--default",
    "v12": "components-formlabel--default",
    "title": "Components/FormLabel",
@@ -1495,6 +1869,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-formlabel--with-toggletip",
    "v11": "components-formlabel--with-toggletip",
    "v12": "components-formlabel--with-toggletip",
    "title": "Components/FormLabel",
@@ -1503,6 +1879,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-heading--custom-level",
    "v11": "components-heading--custom-level",
    "v12": "components-heading--custom-level",
    "title": "Components/Heading",
@@ -1511,6 +1889,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-heading--default",
    "v11": "components-heading--default",
    "v12": "components-heading--default",
    "title": "Components/Heading",
@@ -1519,6 +1899,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-iconbutton--default",
    "v11": "components-iconbutton--default",
    "v12": "components-iconbutton--default",
    "title": "Components/IconButton",
@@ -1527,6 +1909,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-iconbutton--with-badge-indicator",
    "v11": "components-iconbutton--with-badge-indicator",
    "v12": "components-iconbutton--with-badge-indicator",
    "title": "Components/IconButton",
@@ -1535,6 +1919,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-idprefix--default",
    "v11": "components-idprefix--default",
    "v12": "components-idprefix--default",
    "title": "Components/IdPrefix",
@@ -1543,6 +1929,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-inlineloading--default",
    "v11": "components-inlineloading--default",
    "v12": "components-inlineloading--default",
    "title": "Components/InlineLoading",
@@ -1551,6 +1939,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-inlineloading--ux-example",
    "v11": "components-inlineloading--ux-example",
    "v12": "components-inlineloading--ux-example",
    "title": "Components/InlineLoading",
@@ -1559,6 +1949,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-layer--custom-level",
    "v11": "components-layer--custom-level",
    "v12": "components-layer--custom-level",
    "title": "Components/Layer",
@@ -1567,6 +1959,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-layer--default",
    "v11": "components-layer--default",
    "v12": "components-layer--default",
    "title": "Components/Layer",
@@ -1575,6 +1969,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-layer--use-layer",
    "v11": "components-layer--use-layer",
    "v12": "components-layer--use-layer",
    "title": "Components/Layer",
@@ -1583,6 +1979,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-layer--with-background",
    "v11": "components-layer--with-background",
    "v12": "components-layer--with-background",
    "title": "Components/Layer",
@@ -1591,6 +1989,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-link--default",
    "v11": "components-link--default",
    "v12": "components-link--default",
    "title": "Components/Link",
@@ -1599,6 +1999,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-link--inline",
    "v11": "components-link--inline",
    "v12": "components-link--inline",
    "title": "Components/Link",
@@ -1607,6 +2009,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-link--paired-with-icon",
    "v11": "components-link--paired-with-icon",
    "v12": "components-link--paired-with-icon",
    "title": "Components/Link",
@@ -1615,6 +2019,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-loading--default",
    "v11": "components-loading--default",
    "v12": "components-loading--default",
    "title": "Components/Loading",
@@ -1623,6 +2029,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-loading--overlay-loading",
    "v11": "components-loading--overlay-loading",
    "v12": "components-loading--overlay-loading",
    "title": "Components/Loading",
@@ -1631,6 +2039,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-loading--overlay-loading-behind-modal",
    "v11": "components-loading--overlay-loading-behind-modal",
    "v12": "components-loading--overlay-loading-behind-modal",
    "title": "Components/Loading",
@@ -1639,6 +2049,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menu--default",
    "v11": "components-menu--default",
    "v12": "components-menu--default",
    "title": "Components/Menu",
@@ -1647,6 +2059,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--default",
    "v11": "components-menubutton--default",
    "v12": "components-menubutton--default",
    "title": "Components/MenuButton",
@@ -1655,6 +2069,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--experimental-auto-align",
    "v11": "components-menubutton--experimental-auto-align",
    "v12": "components-menubutton--experimental-auto-align",
    "title": "Components/MenuButton",
@@ -1663,6 +2079,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--with-danger",
    "v11": "components-menubutton--with-danger",
    "v12": "components-menubutton--with-danger",
    "title": "Components/MenuButton",
@@ -1671,6 +2089,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--with-dividers",
    "v11": "components-menubutton--with-dividers",
    "v12": "components-menubutton--with-dividers",
    "title": "Components/MenuButton",
@@ -1679,6 +2099,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--with-icons",
    "v11": "components-menubutton--with-icons",
    "v12": "components-menubutton--with-icons",
    "title": "Components/MenuButton",
@@ -1687,6 +2109,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--with-menu-alignment",
    "v11": "components-menubutton--with-menu-alignment",
    "v12": "components-menubutton--with-menu-alignment",
    "title": "Components/MenuButton",
@@ -1695,6 +2119,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton--with-nested-menu",
    "v11": "components-menubutton--with-nested-menu",
    "v12": "components-menubutton--with-nested-menu",
    "title": "Components/MenuButton",
@@ -1703,6 +2129,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-menubutton-feature-flag--floating-styles",
    "v11": "components-menubutton-feature-flag--floating-styles",
    "v12": "components-menubutton-feature-flag--floating-styles",
    "title": "Components/MenuButton/Feature Flag",
@@ -1711,6 +2139,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--danger-modal",
    "v11": "components-modal--danger-modal",
    "v12": "components-modal--danger-modal",
    "title": "Components/Modal",
@@ -1719,6 +2149,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--default",
    "v11": "components-modal--default",
    "v12": "components-modal--default",
    "title": "Components/Modal",
@@ -1727,6 +2159,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--full-width",
    "v11": "components-modal--full-width",
    "v12": "components-modal--full-width",
    "title": "Components/Modal",
@@ -1735,6 +2169,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--passive-modal",
    "v11": "components-modal--passive-modal",
    "v12": "components-modal--passive-modal",
    "title": "Components/Modal",
@@ -1743,6 +2179,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--with-ai-label",
    "v11": "components-modal--with-ai-label",
    "v12": "components-modal--with-ai-label",
    "title": "Components/Modal",
@@ -1751,6 +2189,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--with-inline-loading",
    "v11": "components-modal--with-inline-loading",
    "v12": "components-modal--with-inline-loading",
    "title": "Components/Modal",
@@ -1759,6 +2199,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--with-scrolling-content",
    "v11": "components-modal--with-scrolling-content",
    "v12": "components-modal--with-scrolling-content",
    "title": "Components/Modal",
@@ -1767,6 +2209,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal--with-state-manager",
    "v11": "components-modal--with-state-manager",
    "v12": "components-modal--with-state-manager",
    "title": "Components/Modal",
@@ -1775,6 +2219,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal-feature-flags--enable-dialog-element",
    "v11": "components-modal-feature-flags--enable-dialog-element",
    "v12": "components-modal-feature-flags--enable-dialog-element",
    "title": "Components/Modal/Feature Flags",
@@ -1783,6 +2229,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal-feature-flags--enable-focus-wrap-without-sentinels",
    "v11": "components-modal-feature-flags--enable-focus-wrap-without-sentinels",
    "v12": "components-modal-feature-flags--enable-focus-wrap-without-sentinels",
    "title": "Components/Modal/Feature Flags",
@@ -1791,6 +2239,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-modal-feature-flags--enable-presence",
    "v11": "components-modal-feature-flags--enable-presence",
    "v12": "components-modal-feature-flags--enable-presence",
    "title": "Components/Modal/Feature Flags",
@@ -1799,6 +2249,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--controlled",
    "v11": "components-multiselect--controlled",
    "v12": "components-multiselect--controlled",
    "title": "Components/MultiSelect",
@@ -1807,6 +2259,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--default",
    "v11": "components-multiselect--default",
    "v12": "components-multiselect--default",
    "title": "Components/MultiSelect",
@@ -1815,6 +2269,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--experimental-auto-align",
    "v11": "components-multiselect--experimental-auto-align",
    "v12": "components-multiselect--experimental-auto-align",
    "title": "Components/MultiSelect",
@@ -1823,6 +2279,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--filterable",
    "v11": "components-multiselect--filterable",
    "v12": "components-multiselect--filterable",
    "title": "Components/MultiSelect",
@@ -1831,6 +2289,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--filterable-with-ai-label",
    "v11": "components-multiselect--filterable-with-ai-label",
    "v12": "components-multiselect--filterable-with-ai-label",
    "title": "Components/MultiSelect",
@@ -1839,6 +2299,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--filterable-with-custom-search",
    "v11": "components-multiselect--filterable-with-custom-search",
    "v12": "components-multiselect--filterable-with-custom-search",
    "title": "Components/MultiSelect",
@@ -1847,6 +2309,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--filterable-with-layer",
    "v11": "components-multiselect--filterable-with-layer",
    "v12": "components-multiselect--filterable-with-layer",
    "title": "Components/MultiSelect",
@@ -1855,6 +2319,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--filterable-with-select-all",
    "v11": "components-multiselect--filterable-with-select-all",
    "v12": "components-multiselect--filterable-with-select-all",
    "title": "Components/MultiSelect",
@@ -1863,6 +2329,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--select-all",
    "v11": "components-multiselect--select-all",
    "v12": "components-multiselect--select-all",
    "title": "Components/MultiSelect",
@@ -1871,6 +2339,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--select-all-with-dynamic-items",
    "v11": "components-multiselect--select-all-with-dynamic-items",
    "v12": "components-multiselect--select-all-with-dynamic-items",
    "title": "Components/MultiSelect",
@@ -1879,6 +2349,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--with-ai-label",
    "v11": "components-multiselect--with-ai-label",
    "v12": "components-multiselect--with-ai-label",
    "title": "Components/MultiSelect",
@@ -1887,6 +2359,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--with-initial-selected-items",
    "v11": "components-multiselect--with-initial-selected-items",
    "v12": "components-multiselect--with-initial-selected-items",
    "title": "Components/MultiSelect",
@@ -1895,6 +2369,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect--with-layer-multi-select",
    "v11": "components-multiselect--with-layer-multi-select",
    "v12": "components-multiselect--with-layer-multi-select",
    "title": "Components/MultiSelect",
@@ -1903,6 +2379,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-multiselect-feature-flag--floating-styles",
    "v11": "components-multiselect-feature-flag--floating-styles",
    "v12": "components-multiselect-feature-flag--floating-styles",
    "title": "Components/MultiSelect/Feature Flag",
@@ -1911,6 +2389,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-actionable--default",
    "v11": "components-notifications-actionable--default",
    "v12": "components-notifications-actionable--default",
    "title": "Components/Notifications/Actionable",
@@ -1919,6 +2399,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-actionable--inline",
    "v11": "components-notifications-actionable--inline",
    "v12": "components-notifications-actionable--inline",
    "title": "Components/Notifications/Actionable",
@@ -1927,6 +2409,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-actionable-feature-flag--focus-wrap-without-sentinels",
    "v11": "components-notifications-actionable-feature-flag--focus-wrap-without-sentinels",
    "v12": "components-notifications-actionable-feature-flag--focus-wrap-without-sentinels",
    "title": "Components/Notifications/Actionable/Feature Flag",
@@ -1935,6 +2419,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-callout--default",
    "v11": "components-notifications-callout--default",
    "v12": "components-notifications-callout--default",
    "title": "Components/Notifications/Callout",
@@ -1943,6 +2429,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-callout--with-interactive-elements",
    "v11": "components-notifications-callout--with-interactive-elements",
    "v12": "components-notifications-callout--with-interactive-elements",
    "title": "Components/Notifications/Callout",
@@ -1951,6 +2439,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-inline--default",
    "v11": "components-notifications-inline--default",
    "v12": "components-notifications-inline--default",
    "title": "Components/Notifications/Inline",
@@ -1959,6 +2449,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-notifications-toast--default",
    "v11": "components-notifications-toast--default",
    "v12": "components-notifications-toast--default",
    "title": "Components/Notifications/Toast",
@@ -1967,6 +2459,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-numberinput--default",
    "v11": "components-numberinput--default",
    "v12": "components-numberinput--default",
    "title": "Components/NumberInput",
@@ -1975,6 +2469,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-numberinput--skeleton",
    "v11": "components-numberinput--skeleton",
    "v12": "components-numberinput--skeleton",
    "title": "Components/NumberInput",
@@ -1983,6 +2479,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-numberinput--with-ai-label",
    "v11": "components-numberinput--with-ai-label",
    "v12": "components-numberinput--with-ai-label",
    "title": "Components/NumberInput",
@@ -1991,6 +2489,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-numberinput--with-type-of-custom-validation",
    "v11": "components-numberinput--with-type-of-custom-validation",
    "v12": "components-numberinput--with-type-of-custom-validation",
    "title": "Components/NumberInput",
@@ -1999,6 +2499,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-numberinput--with-type-of-text",
    "v11": "components-numberinput--with-type-of-text",
    "v12": "components-numberinput--with-type-of-text",
    "title": "Components/NumberInput",
@@ -2007,6 +2509,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-numberinput--with-type-of-text-controlled",
    "v11": "components-numberinput--with-type-of-text-controlled",
    "v12": "components-numberinput--with-type-of-text-controlled",
    "title": "Components/NumberInput",
@@ -2015,6 +2519,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-orderedlist--default",
    "v11": "components-orderedlist--default",
    "v12": "components-orderedlist--default",
    "title": "Components/OrderedList",
@@ -2023,6 +2529,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-orderedlist--native-list-styles",
    "v11": "components-orderedlist--native-list-styles",
    "v12": "components-orderedlist--native-list-styles",
    "title": "Components/OrderedList",
@@ -2031,6 +2539,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-orderedlist--nested",
    "v11": "components-orderedlist--nested",
    "v12": "components-orderedlist--nested",
    "title": "Components/OrderedList",
@@ -2039,6 +2549,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-overflowmenu-feature-flag--auto-align",
    "v11": "components-overflowmenu-feature-flag--auto-align",
    "v12": "components-overflowmenu--auto-align",
    "title": "Components/OverflowMenu",
@@ -2047,6 +2559,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-overflowmenu--default",
    "v11": "components-overflowmenu--default",
    "v12": "components-overflowmenu--default",
    "title": "Components/OverflowMenu",
@@ -2055,6 +2569,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-overflowmenu-feature-flag--floating-styles",
    "v11": "components-overflowmenu-feature-flag--floating-styles",
    "v12": "components-overflowmenu--floating-styles",
    "title": "Components/OverflowMenu",
@@ -2063,6 +2579,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-overflowmenu-feature-flag--nested",
    "v11": "components-overflowmenu-feature-flag--nested",
    "v12": "components-overflowmenu--nested",
    "title": "Components/OverflowMenu",
@@ -2071,6 +2589,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-overflowmenu--render-custom-icon",
    "v11": "components-overflowmenu--render-custom-icon",
    "v12": "components-overflowmenu--render-custom-icon",
    "title": "Components/OverflowMenu",
@@ -2079,6 +2599,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-overflowmenu-feature-flag--with-menu-alignment",
    "v11": "components-overflowmenu-feature-flag--with-menu-alignment",
    "v12": "components-overflowmenu--with-menu-alignment",
    "title": "Components/OverflowMenu",
@@ -2087,6 +2609,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--default",
    "v11": "components-pagination--default",
    "v12": "components-pagination--default",
    "title": "Components/Pagination",
@@ -2095,6 +2619,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--multiple-pagination-components",
    "v11": "components-pagination--multiple-pagination-components",
    "v12": "components-pagination--multiple-pagination-components",
    "title": "Components/Pagination",
@@ -2103,6 +2629,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--pagination-unknown-pages",
    "v11": "components-pagination--pagination-unknown-pages",
    "v12": "components-pagination--pagination-unknown-pages",
    "title": "Components/Pagination",
@@ -2111,6 +2639,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--pagination-with-custom-page-sizes-label",
    "v11": "components-pagination--pagination-with-custom-page-sizes-label",
    "v12": "components-pagination--pagination-with-custom-page-sizes-label",
    "title": "Components/Pagination",
@@ -2119,6 +2649,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--tooltip-hover",
    "v11": "components-pagination--tooltip-hover",
    "v12": "components-pagination--tooltip-hover",
    "title": "Components/Pagination",
@@ -2127,6 +2659,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--with-render-page-select",
    "v11": "components-pagination--with-render-page-select",
    "v12": "components-pagination--with-render-page-select",
    "title": "Components/Pagination",
@@ -2135,6 +2669,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-pagination--without-page-sizes",
    "v11": "components-pagination--without-page-sizes",
    "v12": "components-pagination--without-page-sizes",
    "title": "Components/Pagination",
@@ -2143,6 +2679,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-paginationnav--default",
    "v11": "components-paginationnav--default",
    "v12": "components-paginationnav--default",
    "title": "Components/PaginationNav",
@@ -2151,6 +2689,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-passwordinput--default",
    "v11": "components-passwordinput--default",
    "v12": "components-passwordinput--default",
    "title": "Components/PasswordInput",
@@ -2159,6 +2699,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-popover--default",
    "v11": "components-popover--default",
    "v12": "components-popover--default",
    "title": "Components/Popover",
@@ -2167,6 +2709,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-popover--experimental-auto-align",
    "v11": "components-popover--experimental-auto-align",
    "v12": "components-popover--experimental-auto-align",
    "title": "Components/Popover",
@@ -2175,6 +2719,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-popover--experimental-auto-align-boundary",
    "v11": "components-popover--experimental-auto-align-boundary",
    "v12": "components-popover--experimental-auto-align-boundary",
    "title": "Components/Popover",
@@ -2183,6 +2729,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-popover-feature-flag--floating-styles",
    "v11": "components-popover-feature-flag--floating-styles",
    "v12": "components-popover--floating-styles",
    "title": "Components/Popover",
@@ -2191,6 +2739,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-popover--tab-tip",
    "v11": "components-popover--tab-tip",
    "v12": "components-popover--tab-tip",
    "title": "Components/Popover",
@@ -2199,6 +2749,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-popover--tab-tip-experimental-auto-align",
    "v11": "components-popover--tab-tip-experimental-auto-align",
    "v12": "components-popover--tab-tip-experimental-auto-align",
    "title": "Components/Popover",
@@ -2207,6 +2759,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressbar--default",
    "v11": "components-progressbar--default",
    "v12": "components-progressbar--default",
    "title": "Components/ProgressBar",
@@ -2215,6 +2769,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressbar--determinate",
    "v11": "components-progressbar--determinate",
    "v12": "components-progressbar--determinate",
    "title": "Components/ProgressBar",
@@ -2223,6 +2779,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressbar--indeterminate",
    "v11": "components-progressbar--indeterminate",
    "v12": "components-progressbar--indeterminate",
    "title": "Components/ProgressBar",
@@ -2231,6 +2789,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressbar--with-layer",
    "v11": "components-progressbar--with-layer",
    "v12": "components-progressbar--with-layer",
    "title": "Components/ProgressBar",
@@ -2239,6 +2799,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressindicator--default",
    "v11": "components-progressindicator--default",
    "v12": "components-progressindicator--default",
    "title": "Components/ProgressIndicator",
@@ -2247,6 +2809,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressindicator--interactive",
    "v11": "components-progressindicator--interactive",
    "v12": "components-progressindicator--interactive",
    "title": "Components/ProgressIndicator",
@@ -2255,6 +2819,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-progressindicator--skeleton",
    "v11": "components-progressindicator--skeleton",
    "v12": "components-progressindicator--skeleton",
    "title": "Components/ProgressIndicator",
@@ -2263,6 +2829,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-radiobutton--default",
    "v11": "components-radiobutton--default",
    "v12": "components-radiobutton--default",
    "title": "Components/RadioButton",
@@ -2271,6 +2839,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-radiobutton--skeleton",
    "v11": "components-radiobutton--skeleton",
    "v12": "components-radiobutton--skeleton",
    "title": "Components/RadioButton",
@@ -2279,6 +2849,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-radiobutton--vertical",
    "v11": "components-radiobutton--vertical",
    "v12": "components-radiobutton--vertical",
    "title": "Components/RadioButton",
@@ -2287,6 +2859,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-radiobutton--with-ai-label",
    "v11": "components-radiobutton--with-ai-label",
    "v12": "components-radiobutton--with-ai-label",
    "title": "Components/RadioButton",
@@ -2295,6 +2869,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-search--default",
    "v11": "components-search--default",
    "v12": "components-search--default",
    "title": "Components/Search",
@@ -2303,6 +2879,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-search--expandable",
    "v11": "components-search--expandable",
    "v12": "components-search--expandable",
    "title": "Components/Search",
@@ -2311,6 +2889,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-search--expandable-with-layer",
    "v11": "components-search--expandable-with-layer",
    "v12": "components-search--expandable-with-layer",
    "title": "Components/Search",
@@ -2319,6 +2899,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-search--skeleton",
    "v11": "components-search--skeleton",
    "v12": "components-search--skeleton",
    "title": "Components/Search",
@@ -2327,6 +2909,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-search--with-layer",
    "v11": "components-search--with-layer",
    "v12": "components-search--with-layer",
    "title": "Components/Search",
@@ -2335,6 +2919,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-select--default",
    "v11": "components-select--default",
    "v12": "components-select--default",
    "title": "Components/Select",
@@ -2343,6 +2929,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-select--inline",
    "v11": "components-select--inline",
    "v12": "components-select--inline",
    "title": "Components/Select",
@@ -2351,6 +2939,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-select--skeleton",
    "v11": "components-select--skeleton",
    "v12": "components-select--skeleton",
    "title": "Components/Select",
@@ -2359,6 +2949,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-select--with-ai-label",
    "v11": "components-select--with-ai-label",
    "v12": "components-select--with-ai-label",
    "title": "Components/Select",
@@ -2367,6 +2959,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-select--with-layer",
    "v11": "components-select--with-layer",
    "v12": "components-select--with-layer",
    "title": "Components/Select",
@@ -2375,6 +2969,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-skeleton-aiskeleton--ai-skeleton-icon",
    "v11": "components-skeleton-aiskeleton--ai-skeleton-icon",
    "v12": "components-skeleton-aiskeleton--ai-skeleton-icon",
    "title": "Components/Skeleton/AISkeleton",
@@ -2383,6 +2979,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-skeleton-aiskeleton--ai-skeleton-placeholder",
    "v11": "components-skeleton-aiskeleton--ai-skeleton-placeholder",
    "v12": "components-skeleton-aiskeleton--ai-skeleton-placeholder",
    "title": "Components/Skeleton/AISkeleton",
@@ -2391,6 +2989,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-skeleton-aiskeleton--ai-skeleton-text",
    "v11": "components-skeleton-aiskeleton--ai-skeleton-text",
    "v12": "components-skeleton-aiskeleton--ai-skeleton-text",
    "title": "Components/Skeleton/AISkeleton",
@@ -2399,6 +2999,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-skeleton-skeletonicon--default",
    "v11": "components-skeleton-skeletonicon--default",
    "v12": "components-skeleton-skeletonicon--default",
    "title": "Components/Skeleton/SkeletonIcon",
@@ -2407,6 +3009,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-skeleton-skeletonplaceholder--default",
    "v11": "components-skeleton-skeletonplaceholder--default",
    "v12": "components-skeleton-skeletonplaceholder--default",
    "title": "Components/Skeleton/SkeletonPlaceholder",
@@ -2415,6 +3019,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-skeleton-skeletontext--default",
    "v11": "components-skeleton-skeletontext--default",
    "v12": "components-skeleton-skeletontext--default",
    "title": "Components/Skeleton/SkeletonText",
@@ -2423,6 +3029,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--controlled-slider",
    "v11": "components-slider--controlled-slider",
    "v12": "components-slider--controlled-slider",
    "title": "Components/Slider",
@@ -2431,6 +3039,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--controlled-slider-with-layer",
    "v11": "components-slider--controlled-slider-with-layer",
    "v12": "components-slider--controlled-slider-with-layer",
    "title": "Components/Slider",
@@ -2439,6 +3049,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--default",
    "v11": "components-slider--default",
    "v12": "components-slider--default",
    "title": "Components/Slider",
@@ -2447,6 +3059,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--skeleton",
    "v11": "components-slider--skeleton",
    "v12": "components-slider--skeleton",
    "title": "Components/Slider",
@@ -2455,6 +3069,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--slider-with-custom-value-label",
    "v11": "components-slider--slider-with-custom-value-label",
    "v12": "components-slider--slider-with-custom-value-label",
    "title": "Components/Slider",
@@ -2463,6 +3079,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--slider-with-hidden-inputs",
    "v11": "components-slider--slider-with-hidden-inputs",
    "v12": "components-slider--slider-with-hidden-inputs",
    "title": "Components/Slider",
@@ -2471,6 +3089,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--two-handle-skeleton",
    "v11": "components-slider--two-handle-skeleton",
    "v12": "components-slider--two-handle-skeleton",
    "title": "Components/Slider",
@@ -2479,6 +3099,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--two-handle-slider",
    "v11": "components-slider--two-handle-slider",
    "v12": "components-slider--two-handle-slider",
    "title": "Components/Slider",
@@ -2487,6 +3109,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--two-handle-slider-with-hidden-inputs",
    "v11": "components-slider--two-handle-slider-with-hidden-inputs",
    "v12": "components-slider--two-handle-slider-with-hidden-inputs",
    "title": "Components/Slider",
@@ -2495,6 +3119,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-slider--with-layer",
    "v11": "components-slider--with-layer",
    "v12": "components-slider--with-layer",
    "title": "Components/Slider",
@@ -2503,6 +3129,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-structuredlist--default",
    "v11": "components-structuredlist--default",
    "v12": "components-structuredlist--default",
    "title": "Components/StructuredList",
@@ -2511,6 +3139,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-structuredlist--initial-selection",
    "v11": "components-structuredlist--initial-selection",
    "v12": "components-structuredlist--initial-selection",
    "title": "Components/StructuredList",
@@ -2519,6 +3149,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-structuredlist--selection",
    "v11": "components-structuredlist--selection",
    "v12": "components-structuredlist--selection",
    "title": "Components/StructuredList",
@@ -2527,6 +3159,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-structuredlist--skeleton",
    "v11": "components-structuredlist--skeleton",
    "v12": "components-structuredlist--skeleton",
    "title": "Components/StructuredList",
@@ -2535,6 +3169,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-structuredlist--with-background-layer",
    "v11": "components-structuredlist--with-background-layer",
    "v12": "components-structuredlist--with-background-layer",
    "title": "Components/StructuredList",
@@ -2543,6 +3179,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--contained",
    "v11": "components-tabs--contained",
    "v12": "components-tabs--contained",
    "title": "Components/Tabs",
@@ -2551,6 +3189,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--contained-full-width",
    "v11": "components-tabs--contained-full-width",
    "v12": "components-tabs--contained-full-width",
    "title": "Components/Tabs",
@@ -2559,6 +3199,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--contained-with-icons",
    "v11": "components-tabs--contained-with-icons",
    "v12": "components-tabs--contained-with-icons",
    "title": "Components/Tabs",
@@ -2567,6 +3209,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--contained-with-secondary-labels",
    "v11": "components-tabs--contained-with-secondary-labels",
    "v12": "components-tabs--contained-with-secondary-labels",
    "title": "Components/Tabs",
@@ -2575,6 +3219,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--contained-with-secondary-labels-and-icons",
    "v11": "components-tabs--contained-with-secondary-labels-and-icons",
    "v12": "components-tabs--contained-with-secondary-labels-and-icons",
    "title": "Components/Tabs",
@@ -2583,6 +3229,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--default",
    "v11": "components-tabs--default",
    "v12": "components-tabs--default",
    "title": "Components/Tabs",
@@ -2591,6 +3239,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--dismissable",
    "v11": "components-tabs--dismissable",
    "v12": "components-tabs--dismissable",
    "title": "Components/Tabs",
@@ -2599,6 +3249,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--dismissable-contained",
    "v11": "components-tabs--dismissable-contained",
    "v12": "components-tabs--dismissable-contained",
    "title": "Components/Tabs",
@@ -2607,6 +3259,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--dismissable-with-icons",
    "v11": "components-tabs--dismissable-with-icons",
    "v12": "components-tabs--dismissable-with-icons",
    "title": "Components/Tabs",
@@ -2615,6 +3269,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--icon-20-only",
    "v11": "components-tabs--icon-20-only",
    "v12": "components-tabs--icon-20-only",
    "title": "Components/Tabs",
@@ -2623,6 +3279,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--icon-20-only-visual-snapshots",
    "v11": "components-tabs--icon-20-only-visual-snapshots",
    "v12": "components-tabs--icon-20-only-visual-snapshots",
    "title": "Components/Tabs",
@@ -2631,6 +3289,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--icon-only",
    "v11": "components-tabs--icon-only",
    "v12": "components-tabs--icon-only",
    "title": "Components/Tabs",
@@ -2639,6 +3299,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--icon-only-visual-snapshots",
    "v11": "components-tabs--icon-only-visual-snapshots",
    "v12": "components-tabs--icon-only-visual-snapshots",
    "title": "Components/Tabs",
@@ -2647,6 +3309,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--manual",
    "v11": "components-tabs--manual",
    "v12": "components-tabs--manual",
    "title": "Components/Tabs",
@@ -2655,6 +3319,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--skeleton",
    "v11": "components-tabs--skeleton",
    "v12": "components-tabs--skeleton",
    "title": "Components/Tabs",
@@ -2663,6 +3329,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--vertical",
    "v11": "components-tabs--vertical",
    "v12": "components-tabs--vertical",
    "title": "Components/Tabs",
@@ -2671,6 +3339,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tabs--with-icons",
    "v11": "components-tabs--with-icons",
    "v12": "components-tabs--with-icons",
    "title": "Components/Tabs",
@@ -2679,6 +3349,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tag--dismissible",
    "v11": "components-tag--dismissible",
    "v12": "components-tag--dismissible",
    "title": "Components/Tag",
@@ -2687,6 +3359,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tag--operational",
    "v11": "components-tag--operational",
    "v12": "components-tag--operational",
    "title": "Components/Tag",
@@ -2695,6 +3369,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tag--read-only",
    "v11": "components-tag--read-only",
    "v12": "components-tag--read-only",
    "title": "Components/Tag",
@@ -2703,6 +3379,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tag--selectable",
    "v11": "components-tag--selectable",
    "v12": "components-tag--selectable",
    "title": "Components/Tag",
@@ -2711,6 +3389,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tag--skeleton",
    "v11": "components-tag--skeleton",
    "v12": "components-tag--skeleton",
    "title": "Components/Tag",
@@ -2719,6 +3399,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tag--with-ai-label",
    "v11": "components-tag--with-ai-label",
    "v12": "components-tag--with-ai-label",
    "title": "Components/Tag",
@@ -2727,6 +3409,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textarea--default",
    "v11": "components-textarea--default",
    "v12": "components-textarea--default",
    "title": "Components/TextArea",
@@ -2735,6 +3419,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textarea--skeleton",
    "v11": "components-textarea--skeleton",
    "v12": "components-textarea--skeleton",
    "title": "Components/TextArea",
@@ -2743,6 +3429,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textarea--with-ai-label",
    "v11": "components-textarea--with-ai-label",
    "v12": "components-textarea--with-ai-label",
    "title": "Components/TextArea",
@@ -2751,6 +3439,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textarea--with-layer",
    "v11": "components-textarea--with-layer",
    "v12": "components-textarea--with-layer",
    "title": "Components/TextArea",
@@ -2759,6 +3449,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--default",
    "v11": "components-textinput--default",
    "v12": "components-textinput--default",
    "title": "Components/TextInput",
@@ -2767,6 +3459,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--inline",
    "v11": "components-textinput--inline",
    "v12": "components-textinput--inline",
    "title": "Components/TextInput",
@@ -2775,6 +3469,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--read-only",
    "v11": "components-textinput--read-only",
    "v12": "components-textinput--read-only",
    "title": "Components/TextInput",
@@ -2783,6 +3479,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--skeleton",
    "v11": "components-textinput--skeleton",
    "v12": "components-textinput--skeleton",
    "title": "Components/TextInput",
@@ -2791,6 +3489,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--test-invalid-text-no-overlap",
    "v11": "components-textinput--test-invalid-text-no-overlap",
    "v12": "components-textinput--test-invalid-text-no-overlap",
    "title": "Components/TextInput",
@@ -2799,6 +3499,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--with-ai-label",
    "v11": "components-textinput--with-ai-label",
    "v12": "components-textinput--with-ai-label",
    "title": "Components/TextInput",
@@ -2807,6 +3509,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-textinput--with-layer",
    "v11": "components-textinput--with-layer",
    "v12": "components-textinput--with-layer",
    "title": "Components/TextInput",
@@ -2815,6 +3519,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-theme--default",
    "v11": "components-theme--default",
    "v12": "components-theme--default",
    "title": "Components/Theme",
@@ -2823,6 +3529,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-theme--use-prefers-dark-scheme",
    "v11": "components-theme--use-prefers-dark-scheme",
    "v12": "components-theme--use-prefers-dark-scheme",
    "title": "Components/Theme",
@@ -2831,6 +3539,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-theme--use-theme",
    "v11": "components-theme--use-theme",
    "v12": "components-theme--use-theme",
    "title": "Components/Theme",
@@ -2839,6 +3549,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-theme--with-layer",
    "v11": "components-theme--with-layer",
    "v12": "components-theme--with-layer",
    "title": "Components/Theme",
@@ -2847,6 +3559,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--clickable",
    "v11": "components-tile--clickable",
    "v12": "components-tile--clickable",
    "title": "Components/Tile",
@@ -2855,6 +3569,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--clickable-with-custom-icon",
    "v11": "components-tile--clickable-with-custom-icon",
    "v12": "components-tile--clickable-with-custom-icon",
    "title": "Components/Tile",
@@ -2863,6 +3579,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--clickable-with-layer",
    "v11": "components-tile--clickable-with-layer",
    "v12": "components-tile--clickable-with-layer",
    "title": "Components/Tile",
@@ -2871,6 +3589,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--default",
    "v11": "components-tile--default",
    "v12": "components-tile--default",
    "title": "Components/Tile",
@@ -2879,6 +3599,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--default-with-layer",
    "v11": "components-tile--default-with-layer",
    "v12": "components-tile--default-with-layer",
    "title": "Components/Tile",
@@ -2887,6 +3609,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--expandable",
    "v11": "components-tile--expandable",
    "v12": "components-tile--expandable",
    "title": "Components/Tile",
@@ -2895,6 +3619,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--expandable-with-interactive",
    "v11": "components-tile--expandable-with-interactive",
    "v12": "components-tile--expandable-with-interactive",
    "title": "Components/Tile",
@@ -2903,6 +3629,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--expandable-with-layer",
    "v11": "components-tile--expandable-with-layer",
    "v12": "components-tile--expandable-with-layer",
    "title": "Components/Tile",
@@ -2911,6 +3639,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--multi-select",
    "v11": "components-tile--multi-select",
    "v12": "components-tile--multi-select",
    "title": "Components/Tile",
@@ -2919,6 +3649,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--radio",
    "v11": "components-tile--radio",
    "v12": "components-tile--radio",
    "title": "Components/Tile",
@@ -2927,6 +3659,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--radio-with-layer",
    "v11": "components-tile--radio-with-layer",
    "v12": "components-tile--radio-with-layer",
    "title": "Components/Tile",
@@ -2935,6 +3669,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--selectable",
    "v11": "components-tile--selectable",
    "v12": "components-tile--selectable",
    "title": "Components/Tile",
@@ -2943,6 +3679,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile--with-ai-label",
    "v11": "components-tile--with-ai-label",
    "v12": "components-tile--with-ai-label",
    "title": "Components/Tile",
@@ -2951,6 +3689,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--clickable",
    "v11": "components-tile-feature-flag--clickable",
    "v12": "components-tile-feature-flag--clickable",
    "title": "Components/Tile/Feature Flag",
@@ -2959,6 +3699,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--clickable-with-layer",
    "v11": "components-tile-feature-flag--clickable-with-layer",
    "v12": "components-tile-feature-flag--clickable-with-layer",
    "title": "Components/Tile/Feature Flag",
@@ -2967,6 +3709,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--expandable",
    "v11": "components-tile-feature-flag--expandable",
    "v12": "components-tile-feature-flag--expandable",
    "title": "Components/Tile/Feature Flag",
@@ -2975,6 +3719,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--expandable-with-interactive",
    "v11": "components-tile-feature-flag--expandable-with-interactive",
    "v12": "components-tile-feature-flag--expandable-with-interactive",
    "title": "Components/Tile/Feature Flag",
@@ -2983,6 +3729,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--expandable-with-layer",
    "v11": "components-tile-feature-flag--expandable-with-layer",
    "v12": "components-tile-feature-flag--expandable-with-layer",
    "title": "Components/Tile/Feature Flag",
@@ -2991,6 +3739,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--multi-select",
    "v11": "components-tile-feature-flag--multi-select",
    "v12": "components-tile-feature-flag--multi-select",
    "title": "Components/Tile/Feature Flag",
@@ -2999,6 +3749,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--radio",
    "v11": "components-tile-feature-flag--radio",
    "v12": "components-tile-feature-flag--radio",
    "title": "Components/Tile/Feature Flag",
@@ -3007,6 +3759,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--radio-with-layer",
    "v11": "components-tile-feature-flag--radio-with-layer",
    "v12": "components-tile-feature-flag--radio-with-layer",
    "title": "Components/Tile/Feature Flag",
@@ -3015,6 +3769,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--selectable",
    "v11": "components-tile-feature-flag--selectable",
    "v12": "components-tile-feature-flag--selectable",
    "title": "Components/Tile/Feature Flag",
@@ -3023,6 +3779,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tile-feature-flag--with-ai-label",
    "v11": "components-tile-feature-flag--with-ai-label",
    "v12": "components-tile-feature-flag--with-ai-label",
    "title": "Components/Tile/Feature Flag",
@@ -3031,6 +3789,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-timepicker--default",
    "v11": "components-timepicker--default",
    "v12": "components-timepicker--default",
    "title": "Components/TimePicker",
@@ -3039,6 +3799,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-timepicker--with-layer",
    "v11": "components-timepicker--with-layer",
    "v12": "components-timepicker--with-layer",
    "title": "Components/TimePicker",
@@ -3047,6 +3809,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggle--default",
    "v11": "components-toggle--default",
    "v12": "components-toggle--default",
    "title": "Components/Toggle",
@@ -3055,6 +3819,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggle--skeleton",
    "v11": "components-toggle--skeleton",
    "v12": "components-toggle--skeleton",
    "title": "Components/Toggle",
@@ -3063,6 +3829,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggle--small-toggle",
    "v11": "components-toggle--small-toggle",
    "v12": "components-toggle--small-toggle",
    "title": "Components/Toggle",
@@ -3071,6 +3839,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggle--with-accessible-labels",
    "v11": "components-toggle--with-accessible-labels",
    "v12": "components-toggle--with-accessible-labels",
    "title": "Components/Toggle",
@@ -3079,6 +3849,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggle-feature-flag--toggle",
    "v11": "components-toggle-feature-flag--toggle",
    "v12": "components-toggle-feature-flag--toggle",
    "title": "Components/Toggle/Feature Flag",
@@ -3087,6 +3859,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggletip--default",
    "v11": "components-toggletip--default",
    "v12": "components-toggletip--default",
    "title": "Components/Toggletip",
@@ -3095,6 +3869,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggletip--experimental-auto-align",
    "v11": "components-toggletip--experimental-auto-align",
    "v12": "components-toggletip--experimental-auto-align",
    "title": "Components/Toggletip",
@@ -3103,6 +3879,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-toggletip-feature-flag--floating-styles",
    "v11": "components-toggletip-feature-flag--floating-styles",
    "v12": "components-toggletip--floating-styles",
    "title": "Components/Toggletip",
@@ -3111,6 +3889,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-tooltip--alignment",
    "v11": "components-tooltip--alignment",
    "v12": "components-tooltip--alignment",
    "title": "Components/Tooltip",
@@ -3119,6 +3899,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tooltip--default",
    "v11": "components-tooltip--default",
    "v12": "components-tooltip--default",
    "title": "Components/Tooltip",
@@ -3127,6 +3909,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tooltip--duration",
    "v11": "components-tooltip--duration",
    "v12": "components-tooltip--duration",
    "title": "Components/Tooltip",
@@ -3135,6 +3919,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tooltip--experimental-auto-align",
    "v11": "components-tooltip--experimental-auto-align",
    "v12": "components-tooltip--experimental-auto-align",
    "title": "Components/Tooltip",
@@ -3143,6 +3929,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-tooltip-feature-flag--floating-styles",
    "v11": "components-tooltip-feature-flag--floating-styles",
    "v12": "components-tooltip--floating-styles",
    "title": "Components/Tooltip",
@@ -3151,6 +3939,8 @@
    "match": "flag-graduated"
   },
   {
+   "base": "v11",
+   "baseId": "components-treeview--default",
    "v11": "components-treeview--default",
    "v12": "components-treeview--default",
    "title": "components/TreeView",
@@ -3159,6 +3949,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-treeview--with-complex-nesting",
    "v11": "components-treeview--with-complex-nesting",
    "v12": "components-treeview--with-complex-nesting",
    "title": "components/TreeView",
@@ -3167,6 +3959,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-treeview--with-controlled-expansion",
    "v11": "components-treeview--with-controlled-expansion",
    "v12": "components-treeview--with-controlled-expansion",
    "title": "components/TreeView",
@@ -3175,6 +3969,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-treeview--with-icons",
    "v11": "components-treeview--with-icons",
    "v12": "components-treeview--with-icons",
    "title": "components/TreeView",
@@ -3183,6 +3979,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-treeview--with-links",
    "v11": "components-treeview--with-links",
    "v12": "components-treeview--with-links",
    "title": "components/TreeView",
@@ -3191,6 +3989,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-treeview-feature-flag--default",
    "v11": "components-treeview-feature-flag--default",
    "v12": "components-treeview-feature-flag--default",
    "title": "components/TreeView/Feature Flag",
@@ -3199,6 +3999,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-header--header-w-actions-and-right-panel",
    "v11": "components-ui-shell-header--header-w-actions-and-right-panel",
    "v12": "components-ui-shell-header--header-w-actions-and-right-panel",
    "title": "Components/UI Shell/Header",
@@ -3207,6 +4009,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-header--header-w-actions-and-switcher",
    "v11": "components-ui-shell-header--header-w-actions-and-switcher",
    "v12": "components-ui-shell-header--header-w-actions-and-switcher",
    "title": "Components/UI Shell/Header",
@@ -3215,6 +4019,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-header--header-w-navigation",
    "v11": "components-ui-shell-header--header-w-navigation",
    "v12": "components-ui-shell-header--header-w-navigation",
    "title": "Components/UI Shell/Header",
@@ -3223,6 +4029,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-header--header-w-navigation-actions-and-side-nav",
    "v11": "components-ui-shell-header--header-w-navigation-actions-and-side-nav",
    "v12": "components-ui-shell-header--header-w-navigation-actions-and-side-nav",
    "title": "Components/UI Shell/Header",
@@ -3231,6 +4039,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-header--header-w-navigation-and-actions",
    "v11": "components-ui-shell-header--header-w-navigation-and-actions",
    "v12": "components-ui-shell-header--header-w-navigation-and-actions",
    "title": "Components/UI Shell/Header",
@@ -3239,6 +4049,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-header--header-w-side-nav",
    "v11": "components-ui-shell-header--header-w-side-nav",
    "v12": "components-ui-shell-header--header-w-side-nav",
    "title": "Components/UI Shell/Header",
@@ -3247,6 +4059,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-sidenav--fixed-side-nav",
    "v11": "components-ui-shell-sidenav--fixed-side-nav",
    "v12": "components-ui-shell-sidenav--fixed-side-nav",
    "title": "Components/UI Shell/SideNav",
@@ -3255,6 +4069,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-sidenav--fixed-side-nav-w-divider",
    "v11": "components-ui-shell-sidenav--fixed-side-nav-w-divider",
    "v12": "components-ui-shell-sidenav--fixed-side-nav-w-divider",
    "title": "Components/UI Shell/SideNav",
@@ -3263,6 +4079,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-sidenav--fixed-side-nav-w-icons",
    "v11": "components-ui-shell-sidenav--fixed-side-nav-w-icons",
    "v12": "components-ui-shell-sidenav--fixed-side-nav-w-icons",
    "title": "Components/UI Shell/SideNav",
@@ -3271,6 +4089,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-sidenav--side-nav-rail-w-header",
    "v11": "components-ui-shell-sidenav--side-nav-rail-w-header",
    "v12": "components-ui-shell-sidenav--side-nav-rail-w-header",
    "title": "Components/UI Shell/SideNav",
@@ -3279,6 +4099,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-ui-shell-sidenav--side-nav-w-large-side-nav-items",
    "v11": "components-ui-shell-sidenav--side-nav-w-large-side-nav-items",
    "v12": "components-ui-shell-sidenav--side-nav-w-large-side-nav-items",
    "title": "Components/UI Shell/SideNav",
@@ -3287,6 +4109,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-unorderedlist--default",
    "v11": "components-unorderedlist--default",
    "v12": "components-unorderedlist--default",
    "title": "Components/UnorderedList",
@@ -3295,6 +4119,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "components-unorderedlist--nested",
    "v11": "components-unorderedlist--nested",
    "v12": "components-unorderedlist--nested",
    "title": "Components/UnorderedList",
@@ -3303,6 +4129,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--auto-columns",
    "v11": "elements-flexgrid--auto-columns",
    "v12": "elements-flexgrid--auto-columns",
    "title": "Elements/FlexGrid",
@@ -3311,6 +4139,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--condensed",
    "v11": "elements-flexgrid--condensed",
    "v12": "elements-flexgrid--condensed",
    "title": "Elements/FlexGrid",
@@ -3319,6 +4149,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--condensed-columns",
    "v11": "elements-flexgrid--condensed-columns",
    "v12": "elements-flexgrid--condensed-columns",
    "title": "Elements/FlexGrid",
@@ -3327,6 +4159,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--default",
    "v11": "elements-flexgrid--default",
    "v12": "elements-flexgrid--default",
    "title": "Elements/FlexGrid",
@@ -3335,6 +4169,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--full-width",
    "v11": "elements-flexgrid--full-width",
    "v12": "elements-flexgrid--full-width",
    "title": "Elements/FlexGrid",
@@ -3343,6 +4179,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--mixed-gutter-modes",
    "v11": "elements-flexgrid--mixed-gutter-modes",
    "v12": "elements-flexgrid--mixed-gutter-modes",
    "title": "Elements/FlexGrid",
@@ -3351,6 +4189,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--narrow",
    "v11": "elements-flexgrid--narrow",
    "v12": "elements-flexgrid--narrow",
    "title": "Elements/FlexGrid",
@@ -3359,6 +4199,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--narrow-columns",
    "v11": "elements-flexgrid--narrow-columns",
    "v12": "elements-flexgrid--narrow-columns",
    "title": "Elements/FlexGrid",
@@ -3367,6 +4209,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--offset",
    "v11": "elements-flexgrid--offset",
    "v12": "elements-flexgrid--offset",
    "title": "Elements/FlexGrid",
@@ -3375,6 +4219,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--responsive-grid",
    "v11": "elements-flexgrid--responsive-grid",
    "v12": "elements-flexgrid--responsive-grid",
    "title": "Elements/FlexGrid",
@@ -3383,6 +4229,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-flexgrid--with-row-gap",
    "v11": "elements-flexgrid--with-row-gap",
    "v12": "elements-flexgrid--with-row-gap",
    "title": "Elements/FlexGrid",
@@ -3391,6 +4239,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--condensed",
    "v11": "elements-grid--condensed",
    "v12": "elements-grid--condensed",
    "title": "Elements/Grid",
@@ -3399,6 +4249,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--default",
    "v11": "elements-grid--default",
    "v12": "elements-grid--default",
    "title": "Elements/Grid",
@@ -3407,6 +4259,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--full-width",
    "v11": "elements-grid--full-width",
    "v12": "elements-grid--full-width",
    "title": "Elements/Grid",
@@ -3415,6 +4269,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--grid-start-end",
    "v11": "elements-grid--grid-start-end",
    "v12": "elements-grid--grid-start-end",
    "title": "Elements/Grid",
@@ -3423,6 +4279,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--mixed-gutter-modes",
    "v11": "elements-grid--mixed-gutter-modes",
    "v12": "elements-grid--mixed-gutter-modes",
    "title": "Elements/Grid",
@@ -3431,6 +4289,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--narrow",
    "v11": "elements-grid--narrow",
    "v12": "elements-grid--narrow",
    "title": "Elements/Grid",
@@ -3439,6 +4299,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--offset",
    "v11": "elements-grid--offset",
    "v12": "elements-grid--offset",
    "title": "Elements/Grid",
@@ -3447,6 +4309,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--responsive",
    "v11": "elements-grid--responsive",
    "v12": "elements-grid--responsive",
    "title": "Elements/Grid",
@@ -3455,6 +4319,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--subgrid",
    "v11": "elements-grid--subgrid",
    "v12": "elements-grid--subgrid",
    "title": "Elements/Grid",
@@ -3463,6 +4329,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--subgrid-with-row-gap",
    "v11": "elements-grid--subgrid-with-row-gap",
    "v12": "elements-grid--subgrid-with-row-gap",
    "title": "Elements/Grid",
@@ -3471,6 +4339,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--with-grid-settings",
    "v11": "elements-grid--with-grid-settings",
    "v12": "elements-grid--with-grid-settings",
    "title": "Elements/Grid",
@@ -3479,6 +4349,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-grid--with-row-gap",
    "v11": "elements-grid--with-row-gap",
    "v12": "elements-grid--with-row-gap",
    "title": "Elements/Grid",
@@ -3487,6 +4359,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-mono",
    "v11": "elements-ibm-plex--ibm-plex-mono",
    "v12": "elements-ibm-plex--ibm-plex-mono",
    "title": "Elements/IBM Plex",
@@ -3495,6 +4369,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-sans",
    "v11": "elements-ibm-plex--ibm-plex-sans",
    "v12": "elements-ibm-plex--ibm-plex-sans",
    "title": "Elements/IBM Plex",
@@ -3503,6 +4379,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-sans-arabic",
    "v11": "elements-ibm-plex--ibm-plex-sans-arabic",
    "v12": "elements-ibm-plex--ibm-plex-sans-arabic",
    "title": "Elements/IBM Plex",
@@ -3511,6 +4389,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-sans-devanagari",
    "v11": "elements-ibm-plex--ibm-plex-sans-devanagari",
    "v12": "elements-ibm-plex--ibm-plex-sans-devanagari",
    "title": "Elements/IBM Plex",
@@ -3519,6 +4399,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-sans-hebrew",
    "v11": "elements-ibm-plex--ibm-plex-sans-hebrew",
    "v12": "elements-ibm-plex--ibm-plex-sans-hebrew",
    "title": "Elements/IBM Plex",
@@ -3527,6 +4409,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-sans-thai",
    "v11": "elements-ibm-plex--ibm-plex-sans-thai",
    "v12": "elements-ibm-plex--ibm-plex-sans-thai",
    "title": "Elements/IBM Plex",
@@ -3535,6 +4419,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-sans-thai-looped",
    "v11": "elements-ibm-plex--ibm-plex-sans-thai-looped",
    "v12": "elements-ibm-plex--ibm-plex-sans-thai-looped",
    "title": "Elements/IBM Plex",
@@ -3543,6 +4429,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-ibm-plex--ibm-plex-serif",
    "v11": "elements-ibm-plex--ibm-plex-serif",
    "v12": "elements-ibm-plex--ibm-plex-serif",
    "title": "Elements/IBM Plex",
@@ -3551,6 +4439,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-icons--default",
    "v11": "elements-icons--default",
    "v12": "elements-icons--default",
    "title": "Elements/Icons",
@@ -3559,6 +4449,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "elements-icons--with-relative-size",
    "v11": "elements-icons--with-relative-size",
    "v12": "elements-icons--with-relative-size",
    "title": "Elements/Icons",
@@ -3567,6 +4459,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "helpers-hideatbreakpoint--hide-at-breakpoint",
    "v11": "helpers-hideatbreakpoint--hide-at-breakpoint",
    "v12": "helpers-hideatbreakpoint--hide-at-breakpoint",
    "title": "Helpers/HideAtBreakpoint",
@@ -3575,6 +4469,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "hooks-usecontextmenu--specific-element",
    "v11": "hooks-usecontextmenu--specific-element",
    "v12": "hooks-usecontextmenu--specific-element",
    "title": "Hooks/useContextMenu",
@@ -3583,6 +4479,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "hooks-usecontextmenu--use-context-menu",
    "v11": "hooks-usecontextmenu--use-context-menu",
    "v12": "hooks-usecontextmenu--use-context-menu",
    "title": "Hooks/useContextMenu",
@@ -3591,6 +4489,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "layout-stack--default",
    "v11": "layout-stack--default",
    "v12": "layout-stack--default",
    "title": "Layout/Stack",
@@ -3599,6 +4499,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "layout-stack--horizontal",
    "v11": "layout-stack--horizontal",
    "v12": "layout-stack--horizontal",
    "title": "Layout/Stack",
@@ -3607,6 +4509,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--clickable",
    "v11": "preview-preview-card--clickable",
    "v12": "preview-preview-card--clickable",
    "title": "Preview/preview__Card",
@@ -3615,6 +4519,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--default",
    "v11": "preview-preview-card--default",
    "v12": "preview-preview-card--default",
    "title": "Preview/preview__Card",
@@ -3623,6 +4529,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--disabled",
    "v11": "preview-preview-card--disabled",
    "v12": "preview-preview-card--disabled",
    "title": "Preview/preview__Card",
@@ -3631,6 +4539,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--minimal",
    "v11": "preview-preview-card--minimal",
    "v12": "preview-preview-card--minimal",
    "title": "Preview/preview__Card",
@@ -3639,6 +4549,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-ai-label",
    "v11": "preview-preview-card--with-ai-label",
    "v12": "preview-preview-card--with-ai-label",
    "title": "Preview/preview__Card",
@@ -3647,6 +4559,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-densities",
    "v11": "preview-preview-card--with-densities",
    "v12": "preview-preview-card--with-densities",
    "title": "Preview/preview__Card",
@@ -3655,6 +4569,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-flush-body",
    "v11": "preview-preview-card--with-flush-body",
    "v12": "preview-preview-card--with-flush-body",
    "title": "Preview/preview__Card",
@@ -3663,6 +4579,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-header-actions",
    "v11": "preview-preview-card--with-header-actions",
    "v12": "preview-preview-card--with-header-actions",
    "title": "Preview/preview__Card",
@@ -3671,6 +4589,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-header-media",
    "v11": "preview-preview-card--with-header-media",
    "v12": "preview-preview-card--with-header-media",
    "title": "Preview/preview__Card",
@@ -3679,6 +4599,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-horizontal-media",
    "v11": "preview-preview-card--with-horizontal-media",
    "v12": "preview-preview-card--with-horizontal-media",
    "title": "Preview/preview__Card",
@@ -3687,6 +4609,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-icon",
    "v11": "preview-preview-card--with-icon",
    "v12": "preview-preview-card--with-icon",
    "title": "Preview/preview__Card",
@@ -3695,6 +4619,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-media",
    "v11": "preview-preview-card--with-media",
    "v12": "preview-preview-card--with-media",
    "title": "Preview/preview__Card",
@@ -3703,6 +4629,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-title-leading-icon",
    "v11": "preview-preview-card--with-title-leading-icon",
    "v12": "preview-preview-card--with-title-leading-icon",
    "title": "Preview/preview__Card",
@@ -3711,6 +4639,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-title-media",
    "v11": "preview-preview-card--with-title-media",
    "v12": "preview-preview-card--with-title-media",
    "title": "Preview/preview__Card",
@@ -3719,6 +4649,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-title-trailing-icon",
    "v11": "preview-preview-card--with-title-trailing-icon",
    "v12": "preview-preview-card--with-title-trailing-icon",
    "title": "Preview/preview__Card",
@@ -3727,6 +4659,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-truncated-title",
    "v11": "preview-preview-card--with-truncated-title",
    "v12": "preview-preview-card--with-truncated-title",
    "title": "Preview/preview__Card",
@@ -3735,6 +4669,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-card--with-video",
    "v11": "preview-preview-card--with-video",
    "v12": "preview-preview-card--with-video",
    "title": "Preview/preview__Card",
@@ -3743,6 +4679,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-chatbutton--default",
    "v11": "preview-preview-chatbutton--default",
    "v12": "preview-preview-chatbutton--default",
    "title": "Preview/preview__ChatButton",
@@ -3751,6 +4689,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--default",
    "v11": "preview-preview-datepicker--default",
    "v12": "preview-preview-datepicker--default",
    "title": "Preview/preview__DatePicker",
@@ -3759,6 +4699,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--range-with-calendar",
    "v11": "preview-preview-datepicker--range-with-calendar",
    "v12": "preview-preview-datepicker--range-with-calendar",
    "title": "Preview/preview__DatePicker",
@@ -3767,6 +4709,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--range-with-calendar-with-layer",
    "v11": "preview-preview-datepicker--range-with-calendar-with-layer",
    "v12": "preview-preview-datepicker--range-with-calendar-with-layer",
    "title": "Preview/preview__DatePicker",
@@ -3775,6 +4719,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--simple",
    "v11": "preview-preview-datepicker--simple",
    "v12": "preview-preview-datepicker--simple",
    "title": "Preview/preview__DatePicker",
@@ -3783,6 +4729,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--simple-with-layer",
    "v11": "preview-preview-datepicker--simple-with-layer",
    "v12": "preview-preview-datepicker--simple-with-layer",
    "title": "Preview/preview__DatePicker",
@@ -3791,6 +4739,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--single-with-calendar",
    "v11": "preview-preview-datepicker--single-with-calendar",
    "v12": "preview-preview-datepicker--single-with-calendar",
    "title": "Preview/preview__DatePicker",
@@ -3799,6 +4749,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--single-with-calendar-with-layer",
    "v11": "preview-preview-datepicker--single-with-calendar-with-layer",
    "v12": "preview-preview-datepicker--single-with-calendar-with-layer",
    "title": "Preview/preview__DatePicker",
@@ -3807,6 +4759,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--skeleton",
    "v11": "preview-preview-datepicker--skeleton",
    "v12": "preview-preview-datepicker--skeleton",
    "title": "Preview/preview__DatePicker",
@@ -3815,6 +4769,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-datepicker--with-ai-label",
    "v11": "preview-preview-datepicker--with-ai-label",
    "v12": "preview-preview-datepicker--with-ai-label",
    "title": "Preview/preview__DatePicker",
@@ -3823,6 +4779,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-dialog--danger-dialog",
    "v11": "preview-preview-dialog--danger-dialog",
    "v12": "preview-preview-dialog--danger-dialog",
    "title": "Preview/preview__Dialog",
@@ -3831,6 +4789,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-dialog--modal",
    "v11": "preview-preview-dialog--modal",
    "v12": "preview-preview-dialog--modal",
    "title": "Preview/preview__Dialog",
@@ -3839,6 +4799,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-dialog--non-modal",
    "v11": "preview-preview-dialog--non-modal",
    "v12": "preview-preview-dialog--non-modal",
    "title": "Preview/preview__Dialog",
@@ -3847,6 +4809,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-dialog--passive-dialog",
    "v11": "preview-preview-dialog--passive-dialog",
    "v12": "preview-preview-dialog--passive-dialog",
    "title": "Preview/preview__Dialog",
@@ -3855,6 +4819,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-dialog--with-scrolling-content",
    "v11": "preview-preview-dialog--with-scrolling-content",
    "v12": "preview-preview-dialog--with-scrolling-content",
    "title": "Preview/preview__Dialog",
@@ -3863,6 +4829,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-layout--default",
    "v11": "preview-preview-layout--default",
    "v12": "preview-preview-layout--default",
    "title": "Preview/preview__Layout",
@@ -3871,6 +4839,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-overflowmenuv2--overflow-menu-v-2",
    "v11": "preview-preview-overflowmenuv2--overflow-menu-v-2",
    "v12": "preview-preview-overflowmenuv2--overflow-menu-v-2",
    "title": "Preview/preview__OverflowMenuV2",
@@ -3879,6 +4849,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-text--default",
    "v11": "preview-preview-text--default",
    "v12": "preview-preview-text--default",
    "title": "Preview/preview_Text",
@@ -3887,6 +4859,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-text--layout-and-text",
    "v11": "preview-preview-text--layout-and-text",
    "v12": "preview-preview-text--layout-and-text",
    "title": "Preview/preview_Text",
@@ -3895,6 +4869,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-text--set-text-direction",
    "v11": "preview-preview-text--set-text-direction",
    "v12": "preview-preview-text--set-text-direction",
    "title": "Preview/preview_Text",
@@ -3903,6 +4879,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-preview-text--usage-examples",
    "v11": "preview-preview-text--usage-examples",
    "v12": "preview-preview-text--usage-examples",
    "title": "Preview/preview_Text",
@@ -3911,6 +4889,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-statusindicators-preview-iconindicator--default",
    "v11": "preview-statusindicators-preview-iconindicator--default",
    "v12": "preview-statusindicators-preview-iconindicator--default",
    "title": "Preview/StatusIndicators/preview__IconIndicator",
@@ -3919,6 +4899,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-statusindicators-preview-iconindicator--default-with-size-20",
    "v11": "preview-statusindicators-preview-iconindicator--default-with-size-20",
    "v12": "preview-statusindicators-preview-iconindicator--default-with-size-20",
    "title": "Preview/StatusIndicators/preview__IconIndicator",
@@ -3927,6 +4909,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-statusindicators-preview-shapeindicator--default",
    "v11": "preview-statusindicators-preview-shapeindicator--default",
    "v12": "preview-statusindicators-preview-shapeindicator--default",
    "title": "Preview/StatusIndicators/preview__ShapeIndicator",
@@ -3935,6 +4919,8 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "preview-statusindicators-preview-shapeindicator--default-with-text-size-14",
    "v11": "preview-statusindicators-preview-shapeindicator--default-with-text-size-14",
    "v12": "preview-statusindicators-preview-shapeindicator--default-with-text-size-14",
    "title": "Preview/StatusIndicators/preview__ShapeIndicator",
@@ -3943,12 +4929,876 @@
    "match": "exact"
   },
   {
+   "base": "v11",
+   "baseId": "utilities-overflowhandler--default",
    "v11": "utilities-overflowhandler--default",
    "v12": "utilities-overflowhandler--default",
    "title": "Utilities/OverflowHandler",
    "name": "Default",
    "component": "OverflowHandler",
    "match": "exact"
+  }
+ ],
+ "migrated": [
+  {
+   "base": "ibmp",
+   "baseId": "preview-onboarding-coachmark--floating",
+   "v12": "components-coachmark--floating",
+   "title": "Components/Coachmark",
+   "name": "Floating",
+   "component": "Coachmark",
+   "match": "name",
+   "ibmpTitle": "Preview/Onboarding/Coachmark"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-onboarding-coachmark--tooltip",
+   "v12": "components-coachmark--tooltip",
+   "title": "Components/Coachmark",
+   "name": "Tooltip",
+   "component": "Coachmark",
+   "match": "name",
+   "ibmpTitle": "Preview/Onboarding/Coachmark"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-candidate-conditionbuilder--condition-builder-with-actions",
+   "v12": "components-conditionbuilder--with-actions",
+   "title": "Components/ConditionBuilder",
+   "name": "With Actions",
+   "component": "ConditionBuilder",
+   "match": "name",
+   "ibmpTitle": "Preview Candidate/ConditionBuilder"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-candidate-conditionbuilder--condition-builder-with-disabled-properties",
+   "v12": "components-conditionbuilder--with-disabled-properties",
+   "title": "Components/ConditionBuilder",
+   "name": "With Disabled Properties",
+   "component": "ConditionBuilder",
+   "match": "name",
+   "ibmpTitle": "Preview Candidate/ConditionBuilder"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-candidate-conditionbuilder--condition-builder-dynamic-options",
+   "v12": "components-conditionbuilder--with-dynamic-options",
+   "title": "Components/ConditionBuilder",
+   "name": "With Dynamic Options",
+   "component": "ConditionBuilder",
+   "match": "name",
+   "ibmpTitle": "Preview Candidate/ConditionBuilder"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-candidate-conditionbuilder--condition-builder-with-initial-state",
+   "v12": "components-conditionbuilder--with-initial-state",
+   "title": "Components/ConditionBuilder",
+   "name": "With Initial State",
+   "component": "ConditionBuilder",
+   "match": "name",
+   "ibmpTitle": "Preview Candidate/ConditionBuilder"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-editinplace--custom-blur-function",
+   "v12": "components-editinplace--custom-blur-function",
+   "title": "Components/EditInPlace",
+   "name": "Custom Blur Function",
+   "component": "EditInPlace",
+   "match": "exact",
+   "ibmpTitle": "Components/EditInPlace"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-editinplace--default",
+   "v12": "components-editinplace--default",
+   "title": "Components/EditInPlace",
+   "name": "Default",
+   "component": "EditInPlace",
+   "match": "exact",
+   "ibmpTitle": "Components/EditInPlace"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-editinplace--invalid",
+   "v12": "components-editinplace--invalid",
+   "title": "Components/EditInPlace",
+   "name": "Invalid",
+   "component": "EditInPlace",
+   "match": "exact",
+   "ibmpTitle": "Components/EditInPlace"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-editinplace--read-only",
+   "v12": "components-editinplace--read-only",
+   "title": "Components/EditInPlace",
+   "name": "Read Only",
+   "component": "EditInPlace",
+   "match": "exact",
+   "ibmpTitle": "Components/EditInPlace"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-fullpageerror--full-page-error",
+   "v12": "components-fullpageerror--default",
+   "title": "Components/FullPageError",
+   "name": "Default",
+   "component": "FullPageError",
+   "match": "name",
+   "ibmpTitle": "Components/FullPageError"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-onboarding-interstitialscreen--full-screen",
+   "v12": "components-interstitialscreen--full-screen",
+   "title": "Components/InterstitialScreen",
+   "name": "Full Screen",
+   "component": "InterstitialScreen",
+   "match": "name",
+   "ibmpTitle": "Components/Onboarding/InterstitialScreen"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-onboarding-interstitialscreen--full-screen-with-multiple-steps",
+   "v12": "components-interstitialscreen--full-screen-with-multiple-steps",
+   "title": "Components/InterstitialScreen",
+   "name": "Full Screen With Multiple Steps",
+   "component": "InterstitialScreen",
+   "match": "name",
+   "ibmpTitle": "Components/Onboarding/InterstitialScreen"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-onboarding-interstitialscreen--modal",
+   "v12": "components-interstitialscreen--modal",
+   "title": "Components/InterstitialScreen",
+   "name": "Modal",
+   "component": "InterstitialScreen",
+   "match": "name",
+   "ibmpTitle": "Components/Onboarding/InterstitialScreen"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-onboarding-interstitialscreen--modal-with-multiple-steps",
+   "v12": "components-interstitialscreen--modal-with-multiple-steps",
+   "title": "Components/InterstitialScreen",
+   "name": "Modal With Multiple Steps",
+   "component": "InterstitialScreen",
+   "match": "name",
+   "ibmpTitle": "Components/Onboarding/InterstitialScreen"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-onboarding-interstitialscreen--with-asynchronous-action-callback",
+   "v12": "components-interstitialscreen--with-asynchronous-action-callback",
+   "title": "Components/InterstitialScreen",
+   "name": "With Asynchronous Action Callback",
+   "component": "InterstitialScreen",
+   "match": "name",
+   "ibmpTitle": "Components/Onboarding/InterstitialScreen"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-onboarding-interstitialscreen--with-custom-action-buttons",
+   "v12": "components-interstitialscreen--with-custom-action-buttons",
+   "title": "Components/InterstitialScreen",
+   "name": "With Custom Action Buttons",
+   "component": "InterstitialScreen",
+   "match": "name",
+   "ibmpTitle": "Components/Onboarding/InterstitialScreen"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-notificationspanel--default",
+   "v12": "components-notificationspanel--default",
+   "title": "Components/NotificationsPanel",
+   "name": "Default",
+   "component": "NotificationsPanel",
+   "match": "exact",
+   "ibmpTitle": "Components/NotificationsPanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--compact",
+   "v12": "components-pageheader--compact",
+   "title": "Components/PageHeader",
+   "name": "Compact",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--content-with-contextual-actions",
+   "v12": "components-pageheader--content-with-contextual-actions",
+   "title": "Components/PageHeader",
+   "name": "Content With Contextual Actions",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--content-with-contextual-actions-and-page-actions",
+   "v12": "components-pageheader--content-with-contextual-actions-and-page-actions",
+   "title": "Components/PageHeader",
+   "name": "Content With Contextual Actions And Page Actions",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--content-with-hero-image",
+   "v12": "components-pageheader--content-with-hero-image",
+   "title": "Components/PageHeader",
+   "name": "Content With Hero Image",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--content-with-icon",
+   "v12": "components-pageheader--content-with-icon",
+   "title": "Components/PageHeader",
+   "name": "Content With Icon",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--custom-render-with-callbacks",
+   "v12": "components-pageheader--custom-render-with-callbacks",
+   "title": "Components/PageHeader",
+   "name": "Custom Render With Callbacks",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--default",
+   "v12": "components-pageheader--default",
+   "title": "Components/PageHeader",
+   "name": "Default",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--tab-bar-with-tabs-and-tags",
+   "v12": "components-pageheader--tab-bar-with-tabs-and-tags",
+   "title": "Components/PageHeader",
+   "name": "Tab Bar With Tabs And Tags",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-pageheader--with-disabled-sticky-tab-bar",
+   "v12": "components-pageheader--with-disabled-sticky-tab-bar",
+   "title": "Components/PageHeader",
+   "name": "With Disabled Sticky Tab Bar",
+   "component": "PageHeader",
+   "match": "name",
+   "ibmpTitle": "Preview/PageHeader"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--panel-with-second-step",
+   "v12": "components-sidepanel--panel-with-second-step",
+   "title": "Components/SidePanel",
+   "name": "Multi-step panel",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--slide-in",
+   "v12": "components-sidepanel--slide-in",
+   "title": "Components/SidePanel",
+   "name": "Slide in",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--slide-over",
+   "v12": "components-sidepanel--slide-over",
+   "title": "Components/SidePanel",
+   "name": "Slide over",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--specify-element-to-have-initial-focus",
+   "v12": "components-sidepanel--specify-element-to-have-initial-focus",
+   "title": "Components/SidePanel",
+   "name": "Specify element to have initial focus",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--with-action-toolbar",
+   "v12": "components-sidepanel--with-action-toolbar",
+   "title": "Components/SidePanel",
+   "name": "With action toolbar",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--with-ai-label",
+   "v12": "components-sidepanel--with-ai-label",
+   "title": "Components/SidePanel",
+   "name": "With AI Label",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--with-static-title",
+   "v12": "components-sidepanel--with-static-title",
+   "title": "Components/SidePanel",
+   "name": "With static title",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-sidepanel--without-title",
+   "v12": "components-sidepanel--without-title",
+   "title": "Components/SidePanel",
+   "name": "Without title",
+   "component": "SidePanel",
+   "match": "exact",
+   "ibmpTitle": "Components/SidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--custom-components-with-overflow-modal",
+   "v12": "components-tagoverflow--custom-components-with-overflow-modal",
+   "title": "Components/TagOverflow",
+   "name": "Custom Components With Overflow Modal",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--interactive-tags",
+   "v12": "components-tagoverflow--interactive-tags",
+   "title": "Components/TagOverflow",
+   "name": "Interactive Tags",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--multiline-tags",
+   "v12": "components-tagoverflow--multiline-tags",
+   "title": "Components/TagOverflow",
+   "name": "Multiline Tags",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--tags-with-overflow-count",
+   "v12": "components-tagoverflow--tags-with-overflow-count",
+   "title": "Components/TagOverflow",
+   "name": "Tags With Overflow Count",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--tags-with-overflow-modal",
+   "v12": "components-tagoverflow--tags-with-overflow-modal",
+   "title": "Components/TagOverflow",
+   "name": "Tags With Overflow Modal",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--tags-with-truncation",
+   "v12": "components-tagoverflow--tags-with-truncation",
+   "title": "Components/TagOverflow",
+   "name": "Tags With Truncation",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--user-avatars-with-overflow-count",
+   "v12": "components-tagoverflow--user-avatars-with-overflow-count",
+   "title": "Components/TagOverflow",
+   "name": "User Avatars With Overflow Count",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-tagoverflow--user-avatars-with-overflow-modal",
+   "v12": "components-tagoverflow--user-avatars-with-overflow-modal",
+   "title": "Components/TagOverflow",
+   "name": "User Avatars With Overflow Modal",
+   "component": "TagOverflow",
+   "match": "name",
+   "ibmpTitle": "Utilities/TagOverflow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--default",
+   "v12": "components-tearsheet--default",
+   "title": "Components/Tearsheet",
+   "name": "Default",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--narrow-tearsheet",
+   "v12": "components-tearsheet--narrow-tearsheet",
+   "title": "Components/Tearsheet",
+   "name": "Narrow Tearsheet",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--stacking-narrow-tearsheets",
+   "v12": "components-tearsheet--stacking-narrow-tearsheets",
+   "title": "Components/Tearsheet",
+   "name": "Stacking Narrow Tearsheets",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--stacking-tearsheet",
+   "v12": "components-tearsheet--stacking-tearsheet",
+   "title": "Components/Tearsheet",
+   "name": "Stacking Tearsheet",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--stacking-with-different-sizes",
+   "v12": "components-tearsheet--stacking-with-different-sizes",
+   "title": "Components/Tearsheet",
+   "name": "Stacking With Different Sizes",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--with-custom-footer-actions",
+   "v12": "components-tearsheet--with-custom-footer-actions",
+   "title": "Components/Tearsheet",
+   "name": "With Custom Footer Actions",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-tearsheet--with-influencer",
+   "v12": "components-tearsheet--with-influencer",
+   "title": "Components/Tearsheet",
+   "name": "With Influencer",
+   "component": "Tearsheet",
+   "match": "exact",
+   "ibmpTitle": "Components/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--with-steps",
+   "v12": "components-tearsheet--with-steps",
+   "title": "Components/Tearsheet",
+   "name": "With Steps",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--with-steps-and-horizontal-progress-indicator",
+   "v12": "components-tearsheet--with-steps-and-horizontal-progress-indicator",
+   "title": "Components/Tearsheet",
+   "name": "With Steps And Horizontal Progress Indicator",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-tearsheet--with-tabs",
+   "v12": "components-tearsheet--with-tabs",
+   "title": "Components/Tearsheet",
+   "name": "With Tabs",
+   "component": "Tearsheet",
+   "match": "name",
+   "ibmpTitle": "Preview/Tearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-useravatar--default",
+   "v12": "components-useravatar--default",
+   "title": "Components/UserAvatar",
+   "name": "Default",
+   "component": "UserAvatar",
+   "match": "exact",
+   "ibmpTitle": "Components/UserAvatar"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "components-useravatar--with-image",
+   "v12": "components-useravatar--with-image",
+   "title": "Components/UserAvatar",
+   "name": "WithImage",
+   "component": "UserAvatar",
+   "match": "exact",
+   "ibmpTitle": "Components/UserAvatar"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-candidate-onboarding-guidebanner--collapsible",
+   "v12": "preview-onboarding-preview-guidebanner--collapsible",
+   "title": "Preview/Onboarding/preview__Guidebanner",
+   "name": "Collapsible",
+   "component": "Onboarding",
+   "match": "name",
+   "ibmpTitle": "Preview Candidate/Onboarding/Guidebanner"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "preview-candidate-onboarding-guidebanner--many-insights",
+   "v12": "preview-onboarding-preview-guidebanner--many-insights",
+   "title": "Preview/Onboarding/preview__Guidebanner",
+   "name": "Many Insights",
+   "component": "Onboarding",
+   "match": "name",
+   "ibmpTitle": "Preview Candidate/Onboarding/Guidebanner"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-truncatedtext--with-expand",
+   "v12": "utilities-truncatedtext--with-expand",
+   "title": "Utilities/TruncatedText",
+   "name": "With expand",
+   "component": "TruncatedText",
+   "match": "exact",
+   "ibmpTitle": "Utilities/TruncatedText"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "utilities-truncatedtext--with-tooltip",
+   "v12": "utilities-truncatedtext--with-tooltip",
+   "title": "Utilities/TruncatedText",
+   "name": "With tooltip",
+   "component": "TruncatedText",
+   "match": "exact",
+   "ibmpTitle": "Utilities/TruncatedText"
+  }
+ ],
+ "migratedComponents": [
+  {
+   "component": "Coachmark",
+   "v12Title": "Components/Coachmark",
+   "ibmpTitles": [
+    "Preview/Onboarding/Coachmark"
+   ],
+   "tagged": true,
+   "matched": 2,
+   "unmatched": []
+  },
+  {
+   "component": "ConditionBuilder",
+   "v12Title": "Components/ConditionBuilder",
+   "ibmpTitles": [
+    "Preview Candidate/ConditionBuilder"
+   ],
+   "tagged": true,
+   "matched": 4,
+   "unmatched": [
+    {
+     "id": "components-conditionbuilder--default",
+     "name": "Default"
+    },
+    {
+     "id": "components-conditionbuilder--controlled-hierarchical",
+     "name": "Controlled Hierarchical"
+    },
+    {
+     "id": "components-conditionbuilder--hierarchical",
+     "name": "Hierarchical"
+    },
+    {
+     "id": "components-conditionbuilder--hierarchical-with-actions",
+     "name": "Hierarchical With Actions"
+    },
+    {
+     "id": "components-conditionbuilder--hierarchical-with-initial-state",
+     "name": "Hierarchical With Initial State"
+    },
+    {
+     "id": "components-conditionbuilder--with-custom-operators",
+     "name": "With Custom Operators"
+    },
+    {
+     "id": "components-conditionbuilder--with-custom-statements",
+     "name": "With Custom Statements"
+    }
+   ]
+  },
+  {
+   "component": "EditInPlace",
+   "v12Title": "Components/EditInPlace",
+   "ibmpTitles": [
+    "Components/EditInPlace"
+   ],
+   "tagged": true,
+   "matched": 4,
+   "unmatched": []
+  },
+  {
+   "component": "FullPageError",
+   "v12Title": "Components/FullPageError",
+   "ibmpTitles": [
+    "Components/FullPageError"
+   ],
+   "tagged": true,
+   "matched": 1,
+   "unmatched": [
+    {
+     "id": "components-fullpageerror--error-403",
+     "name": "Error 403"
+    },
+    {
+     "id": "components-fullpageerror--error-404",
+     "name": "Error 404"
+    }
+   ]
+  },
+  {
+   "component": "InterstitialScreen",
+   "v12Title": "Components/InterstitialScreen",
+   "ibmpTitles": [
+    "Components/Onboarding/InterstitialScreen"
+   ],
+   "tagged": true,
+   "matched": 6,
+   "unmatched": []
+  },
+  {
+   "component": "NotificationsPanel",
+   "v12Title": "Components/NotificationsPanel",
+   "ibmpTitles": [
+    "Components/NotificationsPanel"
+   ],
+   "tagged": false,
+   "matched": 1,
+   "unmatched": []
+  },
+  {
+   "component": "Onboarding",
+   "v12Title": "Preview/Onboarding/preview__Guidebanner",
+   "ibmpTitles": [
+    "Preview Candidate/Onboarding/Guidebanner"
+   ],
+   "tagged": true,
+   "matched": 2,
+   "unmatched": [
+    {
+     "id": "preview-onboarding-preview-guidebanner--default",
+     "name": "Default"
+    }
+   ]
+  },
+  {
+   "component": "OptionsTile",
+   "v12Title": "Components/OptionsTile",
+   "ibmpTitles": [
+    "Components/OptionsTile"
+   ],
+   "tagged": true,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "components-optionstile--default",
+     "name": "Default"
+    },
+    {
+     "id": "components-optionstile--static",
+     "name": "Static"
+    }
+   ]
+  },
+  {
+   "component": "PageHeader",
+   "v12Title": "Components/PageHeader",
+   "ibmpTitles": [
+    "Preview/PageHeader"
+   ],
+   "tagged": true,
+   "matched": 9,
+   "unmatched": []
+  },
+  {
+   "component": "preview__BigNumber",
+   "v12Title": "Preview/preview__BigNumber",
+   "ibmpTitles": [
+    "Preview Candidate/BigNumber"
+   ],
+   "tagged": true,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "preview-preview-bignumber--default",
+     "name": "Default"
+    }
+   ]
+  },
+  {
+   "component": "Resizer",
+   "v12Title": "Utilities/Resizer",
+   "ibmpTitles": [],
+   "tagged": true,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "utilities-resizer--four-panels",
+     "name": "Four panels"
+    },
+    {
+     "id": "utilities-resizer--single-panel-bounded",
+     "name": "Single panel (bounded)"
+    },
+    {
+     "id": "utilities-resizer--single-panel-no-boundaries",
+     "name": "Single panel (no boundaries)"
+    },
+    {
+     "id": "utilities-resizer--single-panel-overlay",
+     "name": "Single panel (overlay)"
+    },
+    {
+     "id": "utilities-resizer--two-panels-horizontal",
+     "name": "Two panels (horizontal)"
+    },
+    {
+     "id": "utilities-resizer--two-panels-vertical",
+     "name": "Two panels (vertical)"
+    },
+    {
+     "id": "utilities-resizer--two-panels-vertical-grid",
+     "name": "Two panels vertical (grid)"
+    },
+    {
+     "id": "utilities-resizer--with-custom-handles",
+     "name": "With custom handles"
+    }
+   ]
+  },
+  {
+   "component": "ScrollGradient",
+   "v12Title": "Utilities/ScrollGradient",
+   "ibmpTitles": [
+    "Utilities/ScrollGradient"
+   ],
+   "tagged": true,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "utilities-scrollgradient--default",
+     "name": "Default (vertical)"
+    },
+    {
+     "id": "utilities-scrollgradient--with-x-and-y-axis",
+     "name": "With x and y axis"
+    }
+   ]
+  },
+  {
+   "component": "SidePanel",
+   "v12Title": "Components/SidePanel",
+   "ibmpTitles": [
+    "Components/SidePanel"
+   ],
+   "tagged": true,
+   "matched": 8,
+   "unmatched": []
+  },
+  {
+   "component": "TagOverflow",
+   "v12Title": "Components/TagOverflow",
+   "ibmpTitles": [
+    "Utilities/TagOverflow"
+   ],
+   "tagged": true,
+   "matched": 8,
+   "unmatched": []
+  },
+  {
+   "component": "Tearsheet",
+   "v12Title": "Components/Tearsheet",
+   "ibmpTitles": [
+    "Components/Tearsheet",
+    "Preview/Tearsheet"
+   ],
+   "tagged": true,
+   "matched": 10,
+   "unmatched": []
+  },
+  {
+   "component": "TruncatedText",
+   "v12Title": "Utilities/TruncatedText",
+   "ibmpTitles": [
+    "Utilities/TruncatedText"
+   ],
+   "tagged": true,
+   "matched": 2,
+   "unmatched": []
+  },
+  {
+   "component": "UserAvatar",
+   "v12Title": "Components/UserAvatar",
+   "ibmpTitles": [
+    "Components/UserAvatar"
+   ],
+   "tagged": true,
+   "matched": 2,
+   "unmatched": []
   }
  ],
  "onlyV11": {
@@ -4045,16 +5895,6 @@
     "name": "Radius"
    },
    {
-    "id": "components-coachmark--floating",
-    "title": "Components/Coachmark",
-    "name": "Floating"
-   },
-   {
-    "id": "components-coachmark--tooltip",
-    "title": "Components/Coachmark",
-    "name": "Tooltip"
-   },
-   {
     "id": "components-conditionbuilder--default",
     "title": "Components/ConditionBuilder",
     "name": "Default"
@@ -4080,11 +5920,6 @@
     "name": "Hierarchical With Initial State"
    },
    {
-    "id": "components-conditionbuilder--with-actions",
-    "title": "Components/ConditionBuilder",
-    "name": "With Actions"
-   },
-   {
     "id": "components-conditionbuilder--with-custom-operators",
     "title": "Components/ConditionBuilder",
     "name": "With Custom Operators"
@@ -4093,46 +5928,6 @@
     "id": "components-conditionbuilder--with-custom-statements",
     "title": "Components/ConditionBuilder",
     "name": "With Custom Statements"
-   },
-   {
-    "id": "components-conditionbuilder--with-disabled-properties",
-    "title": "Components/ConditionBuilder",
-    "name": "With Disabled Properties"
-   },
-   {
-    "id": "components-conditionbuilder--with-dynamic-options",
-    "title": "Components/ConditionBuilder",
-    "name": "With Dynamic Options"
-   },
-   {
-    "id": "components-conditionbuilder--with-initial-state",
-    "title": "Components/ConditionBuilder",
-    "name": "With Initial State"
-   },
-   {
-    "id": "components-editinplace--default",
-    "title": "Components/EditInPlace",
-    "name": "Default"
-   },
-   {
-    "id": "components-editinplace--custom-blur-function",
-    "title": "Components/EditInPlace",
-    "name": "Custom Blur Function"
-   },
-   {
-    "id": "components-editinplace--invalid",
-    "title": "Components/EditInPlace",
-    "name": "Invalid"
-   },
-   {
-    "id": "components-editinplace--read-only",
-    "title": "Components/EditInPlace",
-    "name": "Read Only"
-   },
-   {
-    "id": "components-fullpageerror--default",
-    "title": "Components/FullPageError",
-    "name": "Default"
    },
    {
     "id": "components-fullpageerror--error-403",
@@ -4145,41 +5940,6 @@
     "name": "Error 404"
    },
    {
-    "id": "components-interstitialscreen--full-screen",
-    "title": "Components/InterstitialScreen",
-    "name": "Full Screen"
-   },
-   {
-    "id": "components-interstitialscreen--full-screen-with-multiple-steps",
-    "title": "Components/InterstitialScreen",
-    "name": "Full Screen With Multiple Steps"
-   },
-   {
-    "id": "components-interstitialscreen--modal",
-    "title": "Components/InterstitialScreen",
-    "name": "Modal"
-   },
-   {
-    "id": "components-interstitialscreen--modal-with-multiple-steps",
-    "title": "Components/InterstitialScreen",
-    "name": "Modal With Multiple Steps"
-   },
-   {
-    "id": "components-interstitialscreen--with-asynchronous-action-callback",
-    "title": "Components/InterstitialScreen",
-    "name": "With Asynchronous Action Callback"
-   },
-   {
-    "id": "components-interstitialscreen--with-custom-action-buttons",
-    "title": "Components/InterstitialScreen",
-    "name": "With Custom Action Buttons"
-   },
-   {
-    "id": "components-notificationspanel--default",
-    "title": "Components/NotificationsPanel",
-    "name": "Default"
-   },
-   {
     "id": "components-optionstile--default",
     "title": "Components/OptionsTile",
     "name": "Default"
@@ -4188,191 +5948,6 @@
     "id": "components-optionstile--static",
     "title": "Components/OptionsTile",
     "name": "Static"
-   },
-   {
-    "id": "components-pageheader--default",
-    "title": "Components/PageHeader",
-    "name": "Default"
-   },
-   {
-    "id": "components-pageheader--compact",
-    "title": "Components/PageHeader",
-    "name": "Compact"
-   },
-   {
-    "id": "components-pageheader--content-with-contextual-actions",
-    "title": "Components/PageHeader",
-    "name": "Content With Contextual Actions"
-   },
-   {
-    "id": "components-pageheader--content-with-contextual-actions-and-page-actions",
-    "title": "Components/PageHeader",
-    "name": "Content With Contextual Actions And Page Actions"
-   },
-   {
-    "id": "components-pageheader--content-with-hero-image",
-    "title": "Components/PageHeader",
-    "name": "Content With Hero Image"
-   },
-   {
-    "id": "components-pageheader--content-with-icon",
-    "title": "Components/PageHeader",
-    "name": "Content With Icon"
-   },
-   {
-    "id": "components-pageheader--custom-render-with-callbacks",
-    "title": "Components/PageHeader",
-    "name": "Custom Render With Callbacks"
-   },
-   {
-    "id": "components-pageheader--tab-bar-with-tabs-and-tags",
-    "title": "Components/PageHeader",
-    "name": "Tab Bar With Tabs And Tags"
-   },
-   {
-    "id": "components-pageheader--with-disabled-sticky-tab-bar",
-    "title": "Components/PageHeader",
-    "name": "With Disabled Sticky Tab Bar"
-   },
-   {
-    "id": "components-sidepanel--panel-with-second-step",
-    "title": "Components/SidePanel",
-    "name": "Multi-step panel"
-   },
-   {
-    "id": "components-sidepanel--slide-in",
-    "title": "Components/SidePanel",
-    "name": "Slide in"
-   },
-   {
-    "id": "components-sidepanel--slide-over",
-    "title": "Components/SidePanel",
-    "name": "Slide over"
-   },
-   {
-    "id": "components-sidepanel--specify-element-to-have-initial-focus",
-    "title": "Components/SidePanel",
-    "name": "Specify element to have initial focus"
-   },
-   {
-    "id": "components-sidepanel--with-action-toolbar",
-    "title": "Components/SidePanel",
-    "name": "With action toolbar"
-   },
-   {
-    "id": "components-sidepanel--with-ai-label",
-    "title": "Components/SidePanel",
-    "name": "With AI Label"
-   },
-   {
-    "id": "components-sidepanel--with-static-title",
-    "title": "Components/SidePanel",
-    "name": "With static title"
-   },
-   {
-    "id": "components-sidepanel--without-title",
-    "title": "Components/SidePanel",
-    "name": "Without title"
-   },
-   {
-    "id": "components-tagoverflow--custom-components-with-overflow-modal",
-    "title": "Components/TagOverflow",
-    "name": "Custom Components With Overflow Modal"
-   },
-   {
-    "id": "components-tagoverflow--interactive-tags",
-    "title": "Components/TagOverflow",
-    "name": "Interactive Tags"
-   },
-   {
-    "id": "components-tagoverflow--multiline-tags",
-    "title": "Components/TagOverflow",
-    "name": "Multiline Tags"
-   },
-   {
-    "id": "components-tagoverflow--tags-with-overflow-count",
-    "title": "Components/TagOverflow",
-    "name": "Tags With Overflow Count"
-   },
-   {
-    "id": "components-tagoverflow--tags-with-overflow-modal",
-    "title": "Components/TagOverflow",
-    "name": "Tags With Overflow Modal"
-   },
-   {
-    "id": "components-tagoverflow--tags-with-truncation",
-    "title": "Components/TagOverflow",
-    "name": "Tags With Truncation"
-   },
-   {
-    "id": "components-tagoverflow--user-avatars-with-overflow-count",
-    "title": "Components/TagOverflow",
-    "name": "User Avatars With Overflow Count"
-   },
-   {
-    "id": "components-tagoverflow--user-avatars-with-overflow-modal",
-    "title": "Components/TagOverflow",
-    "name": "User Avatars With Overflow Modal"
-   },
-   {
-    "id": "components-tearsheet--default",
-    "title": "Components/Tearsheet",
-    "name": "Default"
-   },
-   {
-    "id": "components-tearsheet--narrow-tearsheet",
-    "title": "Components/Tearsheet",
-    "name": "Narrow Tearsheet"
-   },
-   {
-    "id": "components-tearsheet--stacking-narrow-tearsheets",
-    "title": "Components/Tearsheet",
-    "name": "Stacking Narrow Tearsheets"
-   },
-   {
-    "id": "components-tearsheet--stacking-tearsheet",
-    "title": "Components/Tearsheet",
-    "name": "Stacking Tearsheet"
-   },
-   {
-    "id": "components-tearsheet--stacking-with-different-sizes",
-    "title": "Components/Tearsheet",
-    "name": "Stacking With Different Sizes"
-   },
-   {
-    "id": "components-tearsheet--with-custom-footer-actions",
-    "title": "Components/Tearsheet",
-    "name": "With Custom Footer Actions"
-   },
-   {
-    "id": "components-tearsheet--with-influencer",
-    "title": "Components/Tearsheet",
-    "name": "With Influencer"
-   },
-   {
-    "id": "components-tearsheet--with-steps",
-    "title": "Components/Tearsheet",
-    "name": "With Steps"
-   },
-   {
-    "id": "components-tearsheet--with-steps-and-horizontal-progress-indicator",
-    "title": "Components/Tearsheet",
-    "name": "With Steps And Horizontal Progress Indicator"
-   },
-   {
-    "id": "components-tearsheet--with-tabs",
-    "title": "Components/Tearsheet",
-    "name": "With Tabs"
-   },
-   {
-    "id": "components-useravatar--default",
-    "title": "Components/UserAvatar",
-    "name": "Default"
-   },
-   {
-    "id": "components-useravatar--with-image",
-    "title": "Components/UserAvatar",
-    "name": "WithImage"
    },
    {
     "id": "elements-motion-custom-surface--custom-surface-with-motion",
@@ -4403,16 +5978,6 @@
     "id": "preview-onboarding-preview-guidebanner--default",
     "title": "Preview/Onboarding/preview__Guidebanner",
     "name": "Default"
-   },
-   {
-    "id": "preview-onboarding-preview-guidebanner--collapsible",
-    "title": "Preview/Onboarding/preview__Guidebanner",
-    "name": "Collapsible"
-   },
-   {
-    "id": "preview-onboarding-preview-guidebanner--many-insights",
-    "title": "Preview/Onboarding/preview__Guidebanner",
-    "name": "Many Insights"
    },
    {
     "id": "preview-preview-bignumber--default",
@@ -4468,16 +6033,6 @@
     "id": "utilities-scrollgradient--with-x-and-y-axis",
     "title": "Utilities/ScrollGradient",
     "name": "With x and y axis"
-   },
-   {
-    "id": "utilities-truncatedtext--with-expand",
-    "title": "Utilities/TruncatedText",
-    "name": "With expand"
-   },
-   {
-    "id": "utilities-truncatedtext--with-tooltip",
-    "title": "Utilities/TruncatedText",
-    "name": "With tooltip"
    }
   ]
  }
