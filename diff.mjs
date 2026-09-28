@@ -12,6 +12,14 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 const DATA = path.resolve(import.meta.dirname, 'data');
+// Folded changelog property → the physical properties the capture looks tokens up for (see tokenFor).
+const PHYSICAL = {
+  'border-radius': ['border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius'],
+  padding: ['top', 'right', 'bottom', 'left'].map((x) => `padding-${x}`),
+  margin: ['top', 'right', 'bottom', 'left'].map((x) => `margin-${x}`),
+  gap: ['row-gap', 'column-gap'],
+  outline: ['outline-color', 'outline-width', 'outline-style'],
+};
 const SIZE_TOLERANCE = 1; // px; smaller width/height moves are sub-pixel layout noise
 const PIXEL_CHANGED = 0.001; // a story counts as visually changed above 0.1% differing pixels
 
@@ -172,6 +180,8 @@ for (const m of PAIRS) {
       const label = block(b.classes) + (b.pseudo ?? '');
       const owners = ownersOf(b);
       addTo(c.style, `${label}|${d.prop}|${d.from}|${d.to}`, () => ({ element: label, prop: d.prop, from: d.from, to: d.to, variants: new Set(), stories: new Set(), count: 0, direct: false, sources: new Set() }), (e) => {
+        e.fromToken ??= tokenFor(a.authored, d.prop);
+        e.toToken ??= tokenFor(b.authored, d.prop);
         if (!owners.length || owners.includes(m.component)) e.direct = true;
         else owners.forEach((o) => e.sources.add(o));
         e.variants.add(b.classes.join(' '));
@@ -266,6 +276,8 @@ for (const c of components.values()) {
       variants: [...e.variants].sort(),
       prop: e.prop, from: e.from, to: e.to,
       note: annotate(e.prop, e.from, e.to),
+      fromToken: e.fromToken ?? null,
+      toToken: e.toToken ?? null,
       stories: [...e.stories].sort(),
       elements: e.count,
       ...origin(e),
@@ -453,6 +465,45 @@ function compareStyles(a, b) {
     if (norm(a[p]) !== norm(b[p])) diffs.push({ prop: p, from: norm(a[p]) || '—', to: norm(b[p]) || '—' });
   }
   return diffs;
+}
+
+// ---------------------------------------------------------------------------
+// Tokens. The capture records the authored CSS text that won for each changed property
+// ("var(--cds-button-radius-ss, …)", ".25rem"). For a (possibly folded) changelog property this
+// returns { token: "$button-radius-ss" } when the value comes from a Carbon token, { hardcoded: ".25rem" }
+// when it's a literal, or undefined when nothing was recorded (element not looked up, or the
+// browser's own stylesheet won).
+function physicalOf(prop) {
+  if (PHYSICAL[prop]) return PHYSICAL[prop];
+  // Border values are mostly about colour; the colour side is where tokens live.
+  if (prop === 'border') return ['top', 'right', 'bottom', 'left'].map((x) => `border-${x}-color`);
+  if (prop.startsWith('border-') && !prop.endsWith('radius')) return prop.slice(7).split('/').map((x) => `border-${x}-color`);
+  return [prop];
+}
+function tokenFor(authored, prop) {
+  if (!authored) return undefined;
+  const found = [];
+  for (const phys of physicalOf(prop)) {
+    const text = authored[phys];
+    if (text == null || text.startsWith('ua:')) continue;
+    const m = text.match(/var\(\s*--cds-([\w-]+)/);
+    found.push(m ? `$${m[1]}` : `=${text}`);
+  }
+  if (!found.length) return undefined;
+  const uniq = [...new Set(found)];
+  const tokens = uniq.filter((x) => x.startsWith('$'));
+  if (tokens.length) return { token: compactTokens(tokens) };
+  const literal = uniq.map((x) => x.slice(1)).join(' ');
+  // A literal zero or "none" isn't a missing token worth flagging.
+  return /^(0|0px|none|normal|transparent|auto|#0000|#0000{4})$/i.test(literal) ? undefined : { hardcoded: literal };
+}
+// ["$button-radius-ss", "$button-radius-se", …] → "$button-radius-ss/se/ee/es"
+function compactTokens(tokens) {
+  if (tokens.length === 1) return tokens[0];
+  const stem = (t) => t.slice(0, t.lastIndexOf('-') + 1);
+  const s0 = stem(tokens[0]);
+  if (s0.length > 1 && tokens.every((t) => stem(t) === s0)) return s0 + tokens.map((t) => t.slice(s0.length)).join('/');
+  return tokens.join(' ');
 }
 
 // A change is inherited only if no occurrence of it landed on the component's own elements.

@@ -54,6 +54,13 @@ const PROPS = [
   'outline-width', 'outline-style', 'outline-color', 'outline-offset',
 ];
 
+// Token lookup (see recordAuthored): max elements per story side, and how physical properties
+// map to the logical/shorthand declarations that can set them (LTR).
+const AUTHORED_MAX = 250;
+const SIDE = { top: ['block-start', 0], right: ['inline-end', 1], bottom: ['block-end', 2], left: ['inline-start', 3] };
+const CORNER = { 'top-left': 'start-start', 'top-right': 'start-end', 'bottom-right': 'end-end', 'bottom-left': 'end-start' };
+const INHERITED = new Set(['color', 'font-size', 'font-weight', 'line-height', 'letter-spacing']);
+
 const FREEZE_CSS = `
   *, *::before, *::after {
     animation-duration: 0s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important;
@@ -368,7 +375,151 @@ async function capturePair(ctx, m, buildKey) {
     result[v] = { clip, elementCount: styles.length, warnings, renamed, elements: styles };
   }
   if (shots[m.base] && shots.v12) result.pixel = await pixelDiff(shots[m.base], shots.v12, path.join(DATA, 'shots', 'diff', `${m.v12}.png`));
+  if (prepared[m.base] && prepared.v12) {
+    try {
+      await recordAuthored(ctx[m.base], ctx.v12, prepared[m.base].styles, prepared.v12.styles);
+    } catch (e) {
+      result.v12.warnings.push(`token lookup failed: ${e.message.split('\n')[0]}`);
+    }
+  }
   return result;
+}
+
+// ---------------------------------------------------------------------------
+// Tokens: for elements whose computed styles differ between the two versions, ask Chrome which
+// CSS declaration wins for each differing property and keep its authored text, e.g.
+// "var(--cds-field)" rather than the computed "rgb(244, 244, 244)". The diff step turns those
+// into token names ($field). Only exact-key matches are looked up, to keep captures fast.
+
+
+async function recordAuthored(pageA, pageB, elsA, elsB) {
+  const byKey = new Map(elsA.filter((e) => !e.pseudo).map((e) => [e.key, e]));
+  const work = [];
+  for (const b of elsB) {
+    if (b.pseudo) continue;
+    const a = byKey.get(b.key);
+    if (!a) continue;
+    const props = PROPS.filter((p) => p !== 'display' && a.style[p] !== b.style[p]);
+    if (props.length) work.push([a, b, props]);
+  }
+  if (!work.length) return;
+  const lookA = await authoredLookup(pageA), lookB = await authoredLookup(pageB);
+  for (const [a, b, props] of work.slice(0, AUTHORED_MAX)) {
+    a.authored = await lookA(a.i, props);
+    b.authored = await lookB(b.i, props);
+  }
+}
+
+async function authoredLookup(page) {
+  const cdp = await page.context().newCDPSession(page);
+  await cdp.send('DOM.enable');
+  await cdp.send('CSS.enable');
+  const { root } = await cdp.send('DOM.getDocument', { depth: 0 });
+  return async (i, props) => {
+    const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector: `[data-cmp-i="${i}"]` });
+    if (!nodeId) return null;
+    const m = await cdp.send('CSS.getMatchedStylesForNode', { nodeId });
+    const out = {};
+    for (const p of props) {
+      const v = winningValue(m, p);
+      if (v != null) out[p] = v;
+    }
+    return out;
+  };
+}
+
+
+function sourcesFor(prop) {
+  let m;
+  if ((m = prop.match(/^(padding|margin)-(top|right|bottom|left)$/))) {
+    const [box, side] = [m[1], m[2]];
+    const [logical, idx] = SIDE[side];
+    const axis = logical.split('-')[0];
+    return [[prop, 'whole'], [`${box}-${logical}`, 'whole'], [`${box}-${axis}`, ['start', 'end'].indexOf(logical.split('-')[1])], [box, idx]];
+  }
+  if ((m = prop.match(/^border-(top|right|bottom|left)-(left|right)?-?radius$/)) || (m = prop.match(/^border-(top-left|top-right|bottom-right|bottom-left)-radius$/))) {
+    const corner = prop.slice(7, -7);
+    return [[prop, 'whole'], [`border-${CORNER[corner]}-radius`, 'whole'], ['border-radius', ['top-left', 'top-right', 'bottom-right', 'bottom-left'].indexOf(corner)]];
+  }
+  if ((m = prop.match(/^border-(top|right|bottom|left)-(width|style|color)$/))) {
+    const [side, part] = [m[1], m[2]];
+    const [logical, idx] = SIDE[side];
+    const axis = logical.split('-')[0];
+    return [[prop, 'whole'], [`border-${logical}-${part}`, 'whole'], [`border-${side}`, part], [`border-${logical}`, part],
+      [`border-${part}`, idx], [`border-${axis}-${part}`, 'whole'], [`border-${axis}`, part], ['border', part]];
+  }
+  if ((m = prop.match(/^outline-(width|style|color)$/))) return [[prop, 'whole'], ['outline', m[1]]];
+  if (prop === 'row-gap') return [[prop, 'whole'], ['gap', 0]];
+  if (prop === 'column-gap') return [[prop, 'whole'], ['gap', 1]];
+  if (prop === 'background-color' || prop === 'background-image') return [[prop, 'whole'], ['background', 'whole']];
+  if (['font-size', 'font-weight', 'line-height'].includes(prop)) return [[prop, 'whole'], ['font', 'whole']];
+  return [[prop, 'whole']];
+}
+
+// Split a CSS value on top-level whitespace (not inside parentheses).
+function splitTop(v) {
+  const parts = [];
+  let depth = 0, cur = '';
+  for (const ch of v) {
+    if (ch === '(') depth++;
+    if (ch === ')') depth--;
+    if (/\s/.test(ch) && depth === 0) { if (cur) parts.push(cur); cur = ''; } else cur += ch;
+  }
+  if (cur) parts.push(cur);
+  return parts;
+}
+
+function pick(value, how) {
+  if (how === 'whole') return value;
+  const parts = splitTop(value.split('/')[0].trim());
+  if (typeof how === 'number') {
+    // 1–4 value shorthands (padding, margin, border-radius, border-color) and 1–2 value ones (gap, padding-block)
+    if (parts.length === 1) return parts[0];
+    if (parts.length === 2) return parts[how % 2];
+    if (parts.length === 3) return parts[[0, 1, 2, 1][how]];
+    return parts[how] ?? null;
+  }
+  // how = width | style | color within a border/outline shorthand
+  const isStyle = (p) => /^(none|hidden|solid|dashed|dotted|double|groove|ridge|inset|outset|auto)$/.test(p);
+  const isWidth = (p) => /^(thin|medium|thick|0|[\d.]+[a-z%]*)$/.test(p) || /^(calc|min|max|clamp)\(/.test(p) || /^var\(--[\w-]*(width|size|thickness)/.test(p);
+  if (how === 'style') return parts.find(isStyle) ?? null;
+  if (how === 'width') return parts.find(isWidth) ?? null;
+  return parts.find((p) => !isStyle(p) && !isWidth(p)) ?? null;
+}
+
+// The winning declaration's authored text for one physical property, following the cascade
+// order CDP reports (later rules win, !important beats normal, inline style last).
+function winningValue(matched, prop) {
+  const sources = sourcesFor(prop);
+  const scan = (rules, inline) => {
+    let best = null;
+    const consider = (decls, origin) => {
+      for (const d of decls ?? []) {
+        if (d.disabled || d.parsedOk === false || !d.value) continue;
+        // Explicit declarations carry a source range; rangeless ones are expanded longhands (skip),
+        // except in the browser's own stylesheet, which has no ranges.
+        if (!d.range && origin !== 'user-agent') continue;
+        const src = sources.find(([name]) => name === d.name);
+        if (!src) continue;
+        const part = pick(d.value.replace(/\s*!important\s*$/, ''), src[1]);
+        if (part == null) continue;
+        const cand = { value: part, important: !!d.important, origin };
+        if (!best || cand.important || !best.important) best = cand;
+      }
+    };
+    for (const r of rules ?? []) consider(r.rule.style.cssProperties, r.rule.origin);
+    if (inline) consider(inline.cssProperties, 'inline');
+    return best;
+  };
+  let best = scan(matched.matchedCSSRules, matched.inlineStyle);
+  if (!best && INHERITED.has(prop)) {
+    for (const anc of matched.inherited ?? []) {
+      best = scan(anc.matchedCSSRules, anc.inlineStyle);
+      if (best) { best.inherited = true; break; }
+    }
+  }
+  if (!best) return null;
+  return best.origin === 'user-agent' ? `ua:${best.value}` : best.value;
 }
 
 function unionClip(boundsList) {
@@ -442,7 +593,8 @@ function collectStyles(PROPS) {
   for (const el of els) if ([...el.classList].some((c) => c.startsWith('c4p--'))) renamed++;
   const out = [];
   const seen = new Map();
-  for (const el of els) {
+  els.forEach((el, i) => el.setAttribute('data-cmp-i', String(i)));
+  for (const [i, el] of els.entries()) {
     const cs = getComputedStyle(el);
     const r = el.getBoundingClientRect();
     const visible = cs.display !== 'none' && cs.visibility !== 'hidden' && r.width > 0 && r.height > 0;
@@ -455,7 +607,7 @@ function collectStyles(PROPS) {
     for (const p of PROPS) style[p] = cs.getPropertyValue(p);
     style.width = +r.width.toFixed(2) + 'px';
     style.height = +r.height.toFixed(2) + 'px';
-    out.push({ key, tag: el.tagName.toLowerCase(), classes, visible, text: (el.textContent || '').trim().slice(0, 60), style });
+    out.push({ key, i, tag: el.tagName.toLowerCase(), classes, visible, text: (el.textContent || '').trim().slice(0, 60), style });
     // Generated boxes carry a lot of Carbon's drawing (focus rings, dividers, carets, gradient borders).
     for (const pseudo of ['::before', '::after']) {
       const ps = getComputedStyle(el, pseudo);

@@ -146,6 +146,9 @@ h3{font-size:16px;font-weight:600;margin:0 0 8px}
 .diff .arrow{color:var(--text-3);padding-inline:6px}
 .diff .to{color:var(--text)}
 .nt{display:block;margin-top:2px;color:var(--text-3);font-family:var(--sans)}
+.tok{font-family:var(--mono);color:var(--text)}
+.hard{font-family:var(--sans);font-size:11px;letter-spacing:.32px;padding:0 5px;margin-left:4px;border:1px solid var(--border-strong);color:var(--text-3);white-space:nowrap}
+.rawline{display:block;margin-top:2px;color:var(--text-3)}
 .sw{display:inline-block;width:10px;height:10px;border:1px solid var(--border-strong);vertical-align:-1px;margin-right:3px}
 .type{font-family:var(--mono);font-size:11px;letter-spacing:.32px;text-transform:uppercase;padding:2px 6px;border:1px solid var(--border-strong);color:var(--text-2);white-space:nowrap}
 .flag{font-family:var(--mono);font-size:12px;background:var(--layer);padding:2px 6px;color:var(--text)}
@@ -326,6 +329,18 @@ function overview(){
     <div class="grid">${cards}</div>`;
 }
 
+// Show Carbon token names when the capture found them ($field, $button-radius-ss/…), a "hardcoded"
+// tag when the value is a literal (.25rem), and the computed values underneath for precision.
+function side(tok, raw){
+  if(tok?.token) return `<span class="tok">${esc(tok.token)}</span>`;
+  if(tok?.hardcoded) return `${val(tok.hardcoded)}<span class="hard" title="Set as a literal value, not a Carbon token">hardcoded</span>`;
+  return val(raw);
+}
+function diffCell(ch){
+  const hasTok = ch.fromToken || ch.toToken;
+  const main = `<span class="from">${side(ch.fromToken, ch.from)}</span><span class="arrow">→</span><span class="to">${side(ch.toToken, ch.to)}</span>`;
+  return hasTok ? main + `<span class="rawline">${val(ch.from)} → ${val(ch.to)}</span>` : main;
+}
 function changeRows(list, withComp, withSource){
   const cols = 5 + (withComp?1:0) + (withSource?1:0);
   if(!list.length) return `<tr><td colspan="${cols}" style="color:var(--text-3)">No changes.</td></tr>`;
@@ -338,7 +353,7 @@ function changeRows(list, withComp, withSource){
       <td><span class="type">${ch.type}</span></td>
       <td class="el">${el}${ch.variants && ch.variants.length>1?`<span class="nt">${ch.variants.length} variants</span>`:""}</td>
       <td>${ch.type==="Flag"?`<span class="flag">${esc(ch.prop)}</span>`:esc(ch.prop)}</td>
-      <td class="diff"><span class="from">${val(ch.from)}</span><span class="arrow">→</span><span class="to">${val(ch.to)}</span>${note}</td>
+      <td class="diff">${diffCell(ch)}${note}</td>
       ${withSource?`<td>${ch.inherited?srcLinks(ch.sources):`<span style="color:var(--text-3)">Own</span>`}</td>`:""}
       <td class="num">${stories>1?stories+" stories":stories===1?"1 story":""}</td>
     </tr>`;}).join("");
@@ -428,7 +443,7 @@ function compView(c){
         <thead><tr><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Scope</th></tr></thead>
         <tbody>${ownRows}</tbody></table></div>
       ${inhTable}
-      <p class="note">Computed styles captured at 1280×800 in the white theme. Colours are shown as hex, and radii of 9999px or more are labelled as pills.</p>
+      <p class="note">Values show the Carbon token that set them when the capture could trace it (for example <span class="tok">$field</span>), or <span class="hard">hardcoded</span> when the CSS uses a literal value; the computed value is underneath. Captured at 1280×800 in the white theme. Radii of 9999px or more are labelled as pills.</p>
     </section>`;
 }
 
