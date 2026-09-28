@@ -329,11 +329,13 @@ function overview(){
     <div class="grid">${cards}</div>`;
 }
 
-// Show Carbon token names when the capture found them ($field, $button-radius-ss/…), a "hardcoded"
-// tag when the value is a literal (.25rem), and the computed values underneath for precision.
+// Show Carbon token names when the capture found them ($field, $button-radius-ss/…) or when a radius
+// matches the Sass radius scale ($border-radius-04), a "literal" tag for other plain values, and the
+// computed values underneath for precision.
 function side(tok, raw){
-  if(tok?.token) return `<span class="tok">${esc(tok.token)}</span>`;
-  if(tok?.hardcoded) return `${val(tok.hardcoded)}<span class="hard" title="Set as a literal value, not a Carbon token">hardcoded</span>`;
+  if(tok?.token) return `<span class="tok">${esc(tok.token)}</span>${tok.sass?`<span class="hard" title="A Sass token: the compiled CSS only shows its value, which matches this token exactly">Sass</span>`:""}`;
+  const lit = tok?.literal ?? tok?.hardcoded;
+  if(lit) return `${val(lit)}<span class="hard" title="The compiled CSS has a plain value here. It may come from a Sass variable, which compiles to a number, so this isn't proof of a hardcoded value.">literal</span>`;
   return val(raw);
 }
 function diffCell(ch){
@@ -443,7 +445,7 @@ function compView(c){
         <thead><tr><th>Type</th><th>Element</th><th>Property</th><th>V11 → V12</th><th>Scope</th></tr></thead>
         <tbody>${ownRows}</tbody></table></div>
       ${inhTable}
-      <p class="note">Values show the Carbon token that set them when the capture could trace it (for example <span class="tok">$field</span>), or <span class="hard">hardcoded</span> when the CSS uses a literal value; the computed value is underneath. Captured at 1280×800 in the white theme. Radii of 9999px or more are labelled as pills.</p>
+      <p class="note">Values show the Carbon token that set them when the capture could trace it (for example <span class="tok">$field</span>). Carbon's radius tokens are Sass variables that compile to plain numbers, so radii are matched to the Sass scale and tagged <span class="hard">Sass</span>. Other plain values are tagged <span class="hard">literal</span>; they may still come from Sass. The computed value is underneath. Captured at 1280×800 in the white theme. Radii of 9999px or more are labelled as pills.</p>
     </section>`;
 }
 

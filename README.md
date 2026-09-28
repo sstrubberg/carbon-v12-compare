@@ -137,7 +137,13 @@ About 17 components are new to `@carbon/react` but not to Carbon; they come from
 - **Class prefix:** IBM Products prefixes its own classes `c4p--` (see `prefix: "c4p"` in `@carbon/ibm-products`' `package-settings.js`); V12 uses `cds--`. The capture normalizes `c4p--` to `cds--` so elements line up, and the changelog reports the rename, since CSS overrides and test selectors on `c4p--` will break.
 
 ### Carbon tokens from the authored CSS, not reverse-mapped values
-Designers and developers talk in tokens (`$field`, `$spacing-05`), not `#f4f4f4`. Mapping a computed value back to a token would guess wrong constantly: `#f4f4f4` is several tokens. Reading the winning declaration tells us exactly which token was used. It also shows where V12 uses a **hardcoded** value instead of a token (TextInput's and Tag's new 4px corners are a literal `.25rem`), which is worth feeding back to Carbon.
+Designers and developers talk in tokens (`$field`, `$spacing-05`), not `#f4f4f4`. Mapping a computed value back to a token would guess wrong constantly: `#f4f4f4` is several tokens. Reading the winning declaration tells us exactly which token was used, as long as the token is a CSS custom property (`var(--cds-field)`).
+
+**Sass tokens are the catch.** Some Carbon tokens only exist in Sass and compile to plain numbers, notably the radius scale (`$border-radius-04` → `0.25rem`, defined in `@carbon/layout`). The hosted Storybooks don't publish source maps (checked: none for V11 or V12 CSS; IBM Products' map covers JS only), so the compiled CSS can't tell us where a number came from. An early version flagged the new 4px corners as "hardcoded". Checking the published `@carbon/styles` Sass showed they're `$border-radius-04`. So:
+- A radius that exactly matches the radius scale is reported as that Sass token, tagged **Sass** on the site.
+- Every other plain value is tagged **literal**, meaning "not traceable from the compiled CSS", not "hardcoded".
+
+To know for sure, read the component's rule in the published `@carbon/styles` Sass (`node_modules/@carbon/styles/scss/components/<name>/`), or build the Storybooks with source maps (see [Ideas](#ideas-for-next-steps)).
 
 ### Live components by default
 The site first showed screenshots. Live iframes of the real stories proved more useful: people can hover, open menus and tab through forms in both versions. **Wipe** stacks two live iframes and clips the top one. Clipping also limits where clicks land, so each side stays interactive: V12 left of the divider, the older version right, so dragging left reveals the older version. The page renders both stories at the capture's 1280×800 and shifts them together so the captured content sits centered. **Pixel diff** stays image-based because it has to match the data the changelog came from.
@@ -158,7 +164,8 @@ Screenshots and raw captures are about 90 MB per run and change every run. Commi
 - **One theme, one viewport.** White theme at 1280×800. A Gray 100 pass, or narrow viewports, would need another capture pass per setting.
 - **Hidden content isn't captured.** Tooltips, menus and other content that appears only on hover or click isn't in the default render. Tooltip's own stories never show their bubble, so the ownership rule has less evidence for it.
 - **Ownership is a heuristic.** It's right for everything we've checked, but a new component with unusual class names can be misfiled. Fix it with a line in `OWNER_OVERRIDES`.
-- **Token lookup has limits.** It only covers elements matched by identical key (up to 250 per story side), assumes left-to-right writing, and doesn't resolve `calc()` expressions. Other changes show computed values only. Values set by the browser's own stylesheet show no token.
+- **Token lookup has limits.** It only covers elements matched by identical key (up to 250 per story side), assumes left-to-right writing, and doesn't resolve `calc()` expressions. Other changes show computed values only. Values set by the browser's own stylesheet show no token. Sass-only tokens are invisible in compiled CSS, apart from the radius scale, which is matched by value.
+- **Token lookups are slow.** They roughly doubled a full capture (7 → 14½ minutes on CI).
 - **Rendering varies by platform.** CI runs on Linux, where text renders slightly differently from macOS. Both versions are always captured on the same machine, so comparisons stay fair, but CI and local numbers can differ by a few changes.
 - **The IBM Products Storybook goes away after V12 GA.** Migrated comparisons will fail once it's gone; freeze the last good `data/stories` for those components before then, or drop the source.
 - **Scheduled workflows go dormant.** GitHub disables scheduled workflows after 60 days without repo activity. The bot's commits count as activity, but a quiet stretch in Carbon could still trip it; re-enable it from the Actions tab.
@@ -178,3 +185,4 @@ Screenshots and raw captures are about 90 MB per run and change every run. Commi
 - Capturing hover, focus and open states for popovers, menus and tooltips
 - A "what changed since the last run" view, built from the committed changelog history
 - Per-team views: which components a given product uses, and what changes for them
+- **Run from the Carbon monorepo.** Building the Storybooks locally with CSS source maps would trace every value to its Sass file and line. That gives exact token names, including Sass-only ones, and exact ownership (the file path says which component a rule belongs to), and would replace both the slow DevTools lookup and the ownership heuristics. In the monorepo's CI it could also run on every pull request.

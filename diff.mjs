@@ -12,6 +12,12 @@ import { existsSync } from 'node:fs';
 import path from 'node:path';
 
 const DATA = path.resolve(import.meta.dirname, 'data');
+// Carbon's radius tokens are Sass variables ($border-radius-04 → 0.25rem, from @carbon/layout), so the
+// compiled CSS only shows the number. A literal radius that sits exactly on that scale is reported as
+// the Sass token; other literals are reported as "literal" — they may still come from Sass.
+const SASS_RADIUS = { '0.125rem': '$border-radius-02', '0.25rem': '$border-radius-04', '0.5rem': '$border-radius-08',
+  '1rem': '$border-radius-16', '1.5rem': '$border-radius-24', '999999px': '$border-radius-max' };
+
 // Folded changelog property → the physical properties the capture looks tokens up for (see tokenFor).
 const PHYSICAL = {
   'border-radius': ['border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius'],
@@ -487,15 +493,20 @@ function tokenFor(authored, prop) {
     const text = authored[phys];
     if (text == null || text.startsWith('ua:')) continue;
     const m = text.match(/var\(\s*--cds-([\w-]+)/);
-    found.push(m ? `$${m[1]}` : `=${text}`);
+    const lit = text.trim().replace(/^\./, '0.');
+    if (m) found.push(`$${m[1]}`);
+    else if (phys.endsWith('radius') && SASS_RADIUS[lit]) found.push(`%${SASS_RADIUS[lit]}`);
+    else found.push(`=${text}`);
   }
   if (!found.length) return undefined;
   const uniq = [...new Set(found)];
   const tokens = uniq.filter((x) => x.startsWith('$'));
   if (tokens.length) return { token: compactTokens(tokens) };
+  const sass = uniq.filter((x) => x.startsWith('%')).map((x) => x.slice(1));
+  if (sass.length) return { token: compactTokens(sass), sass: true };
   const literal = uniq.map((x) => x.slice(1)).join(' ');
   // A literal zero or "none" isn't a missing token worth flagging.
-  return /^(0|0px|none|normal|transparent|auto|#0000|#0000{4})$/i.test(literal) ? undefined : { hardcoded: literal };
+  return /^(0|0px|none|normal|transparent|auto|#0000|#0000{4})$/i.test(literal) ? undefined : { literal };
 }
 // ["$button-radius-ss", "$button-radius-se", …] → "$button-radius-ss/se/ee/es"
 function compactTokens(tokens) {
