@@ -1,6 +1,6 @@
 # Carbon React V11 → V12 changelog
 
-Generated 2026-09-28T00:56:53.207Z from the live V11 and V12 Storybooks. Values are computed styles.
+Generated 2026-09-28T01:23:56.843Z from the live V11 and V12 Storybooks. Values are computed styles.
 
 Components: 30 unchanged · 31 changed · 17 migrated · 19 inherited · 4 removed · 1 new
 
@@ -546,7 +546,7 @@ _Components · max 9.6% pixels, 5/6 stories differ_
 
 ### ProgressBar
 
-_Components · max 0.0% pixels, 0/4 stories differ_
+_Components · max 0.8% pixels, 1/4 stories differ_
 
 - **Visual** ProgressBar · .cds--progress-bar__track · border-radius 0px → 999999px (pill) _(4 stories)_
 - **Visual** ProgressBar · .cds--progress-bar__track::after · background-color transparent → #0f62fe _(2 stories)_
@@ -926,7 +926,6 @@ _Components · max 11.1% pixels, 2/2 stories differ_
 - **API** Coachmark · package @carbon/ibm-products → @carbon/react
 - **Visual** Coachmark · .cds--popover-content.cds--tooltip-content · border-radius 2px → 4px (inherited from Popover, Tooltip) _(2 stories)_
 - **Visual** Coachmark · .cds--btn · border-radius 0px → 999999px (pill) (inherited from Button)
-- **Visual** Coachmark · .cds--autoalign.cds--icon-tooltip.cds--popover-container.cds--tooltip · margin 0px → 0px 226px 0px 0px (inherited from Popover, Tooltip)
 - **Structure** Coachmark · .cds--layout element added _(2 stories)_
 - **Structure** Coachmark · .cds--layer-one.cds--white element added _(2 stories)_
 - **Structure** Coachmark · .cds--coachmark--coachmark-content.cds--popover-content element added (inherited from Popover) _(2 stories)_
