@@ -1,6 +1,6 @@
 # Carbon React V11 → V12 changelog
 
-Generated 2026-09-28T01:23:56.843Z from the live V11 and V12 Storybooks. Values are computed styles.
+Generated 2026-09-28T11:16:52.039Z from the live V11 and V12 Storybooks. Values are computed styles.
 
 Components: 30 unchanged · 31 changed · 17 migrated · 19 inherited · 4 removed · 1 new
 
@@ -546,7 +546,7 @@ _Components · max 9.6% pixels, 5/6 stories differ_
 
 ### ProgressBar
 
-_Components · max 0.8% pixels, 1/4 stories differ_
+_Components · max 1.4% pixels, 1/4 stories differ_
 
 - **Visual** ProgressBar · .cds--progress-bar__track · border-radius 0px → 999999px (pill) _(4 stories)_
 - **Visual** ProgressBar · .cds--progress-bar__track::after · background-color transparent → #0f62fe _(2 stories)_
@@ -1454,9 +1454,9 @@ _Components · max 4.4% pixels, 10/10 stories differ_
 - **Visual** Tearsheet · .cds--number__control-btn · border-radius 0px → 4px (inherited from NumberInput) _(6 stories)_
 - **Visual** Tearsheet · .cds--number__rule-divider · display block → none (inherited from NumberInput) _(6 stories)_
 - **Visual** Tearsheet · .cds--btn · background-color #0050e6 → #0f62fe (inherited from Button) _(3 stories)_
+- **Visual** Tearsheet · .cds--progress-line · background-color #c6c6c6 → #e0e0e0 (inherited from ProgressIndicator) _(2 stories)_
 - **Visual** Tearsheet · .cds--layer-one.cds--modal.cds--tearsheet · background-color transparent → #000000 / 60%
 - **Visual** Tearsheet · .cds--modal-header.cds--tearsheet__header.cds--tearsheet__header--with-close-icon · background-color #ffffff → transparent
-- **Visual** Tearsheet · .cds--progress-line · background-color #c6c6c6 → #e0e0e0 (inherited from ProgressIndicator)
 - **Visual** Tearsheet · .cds--modal-header.cds--tearsheet__header.cds--tearsheet__header--with-close-icon · border-bottom 1px solid #e0e0e0 → 1px solid #c6c6c6
 - **Visual** Tearsheet · .cds--tabs__nav-item.cds--tabs__nav-link · border-bottom 2px solid #c6c6c6 → 2px solid #e0e0e0 (inherited from Tabs)
 - **Visual** Tearsheet · .cds--btn.cds--tearsheet__scroller-button · border-radius 0px → 999999px (pill)
@@ -1488,7 +1488,7 @@ _Components · max 4.4% pixels, 10/10 stories differ_
 - **Structure** Tearsheet · .cds--tearsheet__header-title element added _(10 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__content__title.cds--truncated-text element added _(10 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__body element added _(10 stories)_
-- **Structure** Tearsheet · .cds--layer-three.cds--layer__with-background.cds--tearsheet__main-content element added _(10 stories)_
+- **Structure** Tearsheet · .cds--tearsheet__main-content element added _(10 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__footer element added _(10 stories)_
 - **Structure** Tearsheet · .cds--modal-header.cds--tearsheet__header.cds--tearsheet__header--with-close-icon element added _(9 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__header-description element added _(9 stories)_
@@ -1508,8 +1508,6 @@ _Components · max 4.4% pixels, 10/10 stories differ_
 - **Structure** Tearsheet · .cds--tearsheet__next__header-description element removed _(9 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__next__body element removed _(9 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__next__main-content element removed _(9 stories)_
-- **Structure** Tearsheet · .cds--layer-two.cds--modal-content.cds--tearsheet__body-layout element added _(8 stories)_
-- **Structure** Tearsheet · .cds--layer-one.cds--modal-content.cds--tearsheet__next__body-layout element removed _(8 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__next__footer.cds--tearsheet__next__footer--three-actions element removed _(8 stories)_
 - **Structure** Tearsheet · .cds--layout element added _(7 stories)_
 - **Structure** Tearsheet · .cds--layer-one.cds--modal.cds--tearsheet.cds--tearsheet--wide element added _(7 stories)_
@@ -1531,7 +1529,7 @@ _Components · max 4.4% pixels, 10/10 stories differ_
 - **Structure** Tearsheet · .cds--btn.cds--btn--ghost.cds--btn--xl.cds--layout--size-xl element added (inherited from Button) _(2 stories)_
 - **Structure** Tearsheet · .cds--btn.cds--btn--secondary.cds--btn--xl.cds--layout--size-xl element added (inherited from Button) _(2 stories)_
 - **Structure** Tearsheet · .cds--btn.cds--btn--primary.cds--btn--xl.cds--layout--size-xl element added (inherited from Button) _(2 stories)_
-- **Structure** Tearsheet · .cds--layer-two.cds--modal-content.cds--tearsheet__body-layout.cds--tearsheet__body-layout--has-influencer element added _(2 stories)_
+- **Structure** Tearsheet · .cds--layer-one.cds--modal-content.cds--tearsheet__body-layout.cds--tearsheet__body-layout--has-influencer element added _(2 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__influencer element added _(2 stories)_
 - **Structure** Tearsheet · .cds--btn.cds--btn--2xl.cds--btn--disabled.cds--btn--secondary.cds--layout--size-2xl element added (inherited from Button) _(2 stories)_
 - **Structure** Tearsheet · .cds--tearsheet__next__title-start element removed _(2 stories)_

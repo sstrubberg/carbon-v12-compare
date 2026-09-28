@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T01:23:56.828Z",
+ "generatedAt": "2026-09-28T11:16:52.024Z",
  "counts": {
   "components": 102,
   "unchanged": 30,
@@ -9,7 +9,7 @@
   "removed": 4,
   "new": 1,
   "storiesCompared": 552,
-  "changes": 1363
+  "changes": 1361
  },
  "tokens": {
   "added": [
@@ -3048,7 +3048,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-combobox--allow-custom-value",
@@ -3079,7 +3080,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-combobox--allow-custom-value",
@@ -4510,7 +4512,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-composedmodal--default",
@@ -4539,7 +4542,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-composedmodal--default",
@@ -4786,7 +4790,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-composedmodal--with-scrolling-content"
@@ -5780,10 +5785,12 @@
      "to": "2px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "token": "$border-radius-16",
+      "sass": true
      },
      "toToken": {
-      "hardcoded": ".125rem"
+      "token": "$border-radius-02",
+      "sass": true
      },
      "stories": [
       "components-containedlist--with-list-title-decorators"
@@ -5804,7 +5811,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-containedlist--with-persistent-search"
@@ -7159,7 +7167,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datatable-batch-actions--default",
@@ -7942,7 +7951,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datepicker--default",
@@ -8040,7 +8050,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datepicker--range-with-calendar",
@@ -8062,7 +8073,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datepicker--range-with-calendar",
@@ -8168,7 +8180,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datepicker--skeleton"
@@ -8189,7 +8202,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datepicker--skeleton"
@@ -8210,7 +8224,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-datepicker--skeleton"
@@ -8636,7 +8651,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-dropdown--default",
@@ -8904,7 +8920,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-dropdown--experimental-auto-align"
@@ -8925,7 +8942,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-dropdown--skeleton"
@@ -10906,7 +10924,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddatepicker--range-with-calendar",
@@ -10937,7 +10956,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidcombobox--condensed",
@@ -11137,7 +11157,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidcombobox--skeleton",
@@ -11165,7 +11186,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddatepicker--skeleton",
@@ -11193,7 +11215,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddatepicker--skeleton",
@@ -11594,7 +11617,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddropdown--condensed",
@@ -11622,7 +11646,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -11650,7 +11675,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -11674,7 +11700,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -12199,7 +12226,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddatepicker--simple",
@@ -12225,7 +12253,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -12552,7 +12581,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidcombobox--default",
@@ -12577,7 +12607,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddatepicker--range-with-calendar",
@@ -12602,7 +12633,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddatepicker--range-with-calendar",
@@ -12627,7 +12659,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddropdown--default",
@@ -12652,7 +12685,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -12677,7 +12711,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -12702,7 +12737,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidform--default",
@@ -13055,7 +13091,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidcombobox--condensed"
@@ -13079,7 +13116,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidcombobox--with-ai-label"
@@ -13103,7 +13141,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddropdown--condensed"
@@ -13127,7 +13166,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluiddropdown--with-ai-label"
@@ -13176,7 +13216,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidmultiselect--condensed"
@@ -13201,7 +13242,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-fluid-components-fluidmultiselect--with-ai-label"
@@ -14297,7 +14339,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14323,7 +14366,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14348,7 +14392,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14373,7 +14418,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14398,7 +14444,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14423,7 +14470,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14448,7 +14496,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14473,7 +14522,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14498,7 +14548,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -14523,7 +14574,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-form--default",
@@ -15815,7 +15867,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-formgroup--default"
@@ -15973,7 +16026,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".5rem"
+      "token": "$border-radius-08",
+      "sass": true
      },
      "stories": [
       "components-formlabel--with-toggletip"
@@ -16822,7 +16876,7 @@
    },
    "pixel": {
     "max": 0.01468,
-    "mean": 0.00963,
+    "mean": 0.00945,
     "storiesChanged": 4,
     "storiesCompared": 6
    },
@@ -16894,39 +16948,6 @@
      "changes": 19
     },
     {
-     "id": "components-interstitialscreen--with-custom-action-buttons",
-     "base": "ibmp",
-     "baseId": "components-onboarding-interstitialscreen--with-custom-action-buttons",
-     "v11Id": null,
-     "name": "With Custom Action Buttons",
-     "title": "Components/InterstitialScreen",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 15031,
-      "totalPixels": 1024000,
-      "ratio": 0.01468,
-      "size": {
-       "before": [
-        1280,
-        800
-       ],
-       "v12": [
-        1280,
-        800
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 0,
-      "y": 0,
-      "width": 1280,
-      "height": 800
-     },
-     "changes": 19
-    },
-    {
      "id": "components-interstitialscreen--modal",
      "base": "ibmp",
      "baseId": "components-onboarding-interstitialscreen--modal",
@@ -16958,6 +16979,39 @@
       "height": 800
      },
      "changes": 17
+    },
+    {
+     "id": "components-interstitialscreen--with-custom-action-buttons",
+     "base": "ibmp",
+     "baseId": "components-onboarding-interstitialscreen--with-custom-action-buttons",
+     "v11Id": null,
+     "name": "With Custom Action Buttons",
+     "title": "Components/InterstitialScreen",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 13957,
+      "totalPixels": 1024000,
+      "ratio": 0.01363,
+      "size": {
+       "before": [
+        1280,
+        800
+       ],
+       "v12": [
+        1280,
+        800
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 800
+     },
+     "changes": 19
     },
     {
      "id": "components-interstitialscreen--full-screen",
@@ -17357,7 +17411,7 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": "42px"
+      "literal": "42px"
      },
      "stories": [
       "components-interstitialscreen--modal",
@@ -19074,7 +19128,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-modal--default",
@@ -19100,7 +19155,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-modal--default",
@@ -19350,7 +19406,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-modal--default",
@@ -19375,7 +19432,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-modal--default",
@@ -19517,7 +19575,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-modal--default"
@@ -20169,7 +20228,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-multiselect--controlled",
@@ -20316,7 +20376,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-multiselect--filterable",
@@ -20341,7 +20402,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-multiselect--filterable",
@@ -20972,7 +21034,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".5rem"
+      "token": "$border-radius-08",
+      "sass": true
      },
      "stories": [
       "components-notifications-actionable--default",
@@ -20995,7 +21058,8 @@
      "note": "pill",
      "fromToken": null,
      "toToken": {
-      "hardcoded": "999999px"
+      "token": "$border-radius-max",
+      "sass": true
      },
      "stories": [
       "components-notifications-actionable--default",
@@ -21018,7 +21082,8 @@
      "note": "pill",
      "fromToken": null,
      "toToken": {
-      "hardcoded": "999999px"
+      "token": "$border-radius-max",
+      "sass": true
      },
      "stories": [
       "components-notifications-actionable--default",
@@ -21080,7 +21145,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-notifications-inline--default"
@@ -21101,7 +21167,8 @@
      "note": "pill",
      "fromToken": null,
      "toToken": {
-      "hardcoded": "999999px"
+      "token": "$border-radius-max",
+      "sass": true
      },
      "stories": [
       "components-notifications-inline--default"
@@ -21122,7 +21189,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".5rem"
+      "token": "$border-radius-08",
+      "sass": true
      },
      "stories": [
       "components-notifications-toast--default"
@@ -21143,7 +21211,8 @@
      "note": "pill",
      "fromToken": null,
      "toToken": {
-      "hardcoded": "999999px"
+      "token": "$border-radius-max",
+      "sass": true
      },
      "stories": [
       "components-notifications-toast--default"
@@ -21164,7 +21233,7 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".5rem"
+      "literal": ".5rem"
      },
      "stories": [
       "components-notifications-inline--default"
@@ -21185,7 +21254,7 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".5rem auto"
+      "literal": ".5rem auto"
      },
      "stories": [
       "components-notifications-toast--default"
@@ -22062,7 +22131,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-numberinput--default",
@@ -22109,7 +22179,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-numberinput--skeleton"
@@ -22133,7 +22204,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-numberinput--skeleton"
@@ -27404,7 +27476,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-passwordinput--default"
@@ -27786,8 +27859,8 @@
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.00823,
-    "mean": 0.00208,
+    "max": 0.01423,
+    "mean": 0.00358,
     "storiesChanged": 1,
     "storiesCompared": 4
    },
@@ -27802,9 +27875,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 899,
+      "diffPixels": 1555,
       "totalPixels": 109292,
-      "ratio": 0.00823,
+      "ratio": 0.01423,
       "size": {
        "before": [
         1228,
@@ -27939,7 +28012,8 @@
      "note": "pill",
      "fromToken": null,
      "toToken": {
-      "hardcoded": "999999px"
+      "token": "$border-radius-max",
+      "sass": true
      },
      "stories": [
       "components-progressbar--default",
@@ -28003,7 +28077,8 @@
      "note": "pill",
      "fromToken": null,
      "toToken": {
-      "hardcoded": "999999px"
+      "token": "$border-radius-max",
+      "sass": true
      },
      "stories": [
       "components-progressbar--default",
@@ -28526,7 +28601,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-search--default",
@@ -28895,7 +28971,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-select--default",
@@ -29123,7 +29200,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-select--skeleton"
@@ -29147,7 +29225,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-select--skeleton"
@@ -29397,9 +29476,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 92919,
+      "diffPixels": 92939,
       "totalPixels": 1024000,
-      "ratio": 0.09074,
+      "ratio": 0.09076,
       "size": {
        "before": [
         1280,
@@ -31406,7 +31485,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-slider--controlled-slider",
@@ -31698,7 +31778,7 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": "1rem"
+      "literal": "1rem"
      },
      "stories": [
       "components-structuredlist--initial-selection"
@@ -32933,10 +33013,12 @@
      "to": "4px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "token": "$border-radius-16",
+      "sass": true
      },
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-tag--dismissible",
@@ -33004,10 +33086,12 @@
      "to": "4px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "token": "$border-radius-16",
+      "sass": true
      },
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-tag--skeleton"
@@ -33040,8 +33124,8 @@
     "unmatched": 0
    },
    "pixel": {
-    "max": 0.02544,
-    "mean": 0.01758,
+    "max": 0.02534,
+    "mean": 0.01757,
     "storiesChanged": 8,
     "storiesCompared": 8
    },
@@ -33056,9 +33140,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 13871,
+      "diffPixels": 13818,
       "totalPixels": 545280,
-      "ratio": 0.02544,
+      "ratio": 0.02534,
       "size": {
        "before": [
         1280,
@@ -33188,9 +33272,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 11050,
+      "diffPixels": 11001,
       "totalPixels": 545280,
-      "ratio": 0.02026,
+      "ratio": 0.02017,
       "size": {
        "before": [
         1280,
@@ -33287,9 +33371,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 3965,
+      "diffPixels": 4010,
       "totalPixels": 545280,
-      "ratio": 0.00727,
+      "ratio": 0.00735,
       "size": {
        "before": [
         1280,
@@ -33308,7 +33392,7 @@
       "width": 1280,
       "height": 426
      },
-     "changes": 38
+     "changes": 40
     }
    ],
    "notes": [],
@@ -33806,7 +33890,7 @@
       "components-tagoverflow--user-avatars-with-overflow-count",
       "components-tagoverflow--user-avatars-with-overflow-modal"
      ],
-     "elements": 48,
+     "elements": 49,
      "inherited": false,
      "text": "TagOverflow · .cds--tag-overflow__tag-container element added"
     },
@@ -34471,7 +34555,7 @@
      "stories": [
       "components-tagoverflow--custom-components-with-overflow-modal"
      ],
-     "elements": 5,
+     "elements": 6,
      "inherited": false,
      "text": "TagOverflow · .cds--tag-overflow__item element added"
     },
@@ -34938,7 +35022,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 150
+     "changes": 148
     },
     {
      "id": "components-tearsheet--with-custom-footer-actions",
@@ -34971,7 +35055,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 97
+     "changes": 95
     },
     {
      "id": "components-tearsheet--with-steps-and-horizontal-progress-indicator",
@@ -35004,7 +35088,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 80
+     "changes": 78
     },
     {
      "id": "components-tearsheet--with-steps",
@@ -35037,7 +35121,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 80
+     "changes": 82
     },
     {
      "id": "components-tearsheet--default",
@@ -35070,7 +35154,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 141
+     "changes": 139
     },
     {
      "id": "components-tearsheet--with-tabs",
@@ -35103,7 +35187,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 85
+     "changes": 83
     },
     {
      "id": "components-tearsheet--stacking-tearsheet",
@@ -35136,7 +35220,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 86
+     "changes": 84
     },
     {
      "id": "components-tearsheet--stacking-with-different-sizes",
@@ -35169,7 +35253,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 86
+     "changes": 84
     },
     {
      "id": "components-tearsheet--stacking-narrow-tearsheets",
@@ -35202,7 +35286,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 84
+     "changes": 82
     }
    ],
    "notes": [],
@@ -35365,7 +35449,7 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": "42px"
+      "literal": "42px"
      },
      "stories": [
       "components-tearsheet--default",
@@ -36010,6 +36094,29 @@
     },
     {
      "type": "Visual",
+     "element": ".cds--progress-line",
+     "variants": [
+      "cds--progress-line"
+     ],
+     "prop": "background-color",
+     "from": "#c6c6c6",
+     "to": "#e0e0e0",
+     "note": null,
+     "fromToken": null,
+     "toToken": null,
+     "stories": [
+      "components-tearsheet--with-steps",
+      "components-tearsheet--with-steps-and-horizontal-progress-indicator"
+     ],
+     "elements": 4,
+     "inherited": true,
+     "sources": [
+      "ProgressIndicator"
+     ],
+     "text": "Tearsheet · .cds--progress-line · background-color #c6c6c6 → #e0e0e0 (inherited from ProgressIndicator)"
+    },
+    {
+     "type": "Visual",
      "element": ".cds--layer-one.cds--modal.cds--tearsheet",
      "variants": [
       "cds--layer-one cds--modal cds--tearsheet cds--tearsheet--wide"
@@ -36019,7 +36126,7 @@
      "to": "#000000 / 60%",
      "note": null,
      "fromToken": {
-      "hardcoded": "initial"
+      "literal": "initial"
      },
      "toToken": {
       "token": "$overlay"
@@ -36049,28 +36156,6 @@
      "elements": 1,
      "inherited": false,
      "text": "Tearsheet · .cds--modal-header.cds--tearsheet__header.cds--tearsheet__header--with-close-icon · background-color #ffffff → transparent"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--progress-line",
-     "variants": [
-      "cds--progress-line"
-     ],
-     "prop": "background-color",
-     "from": "#c6c6c6",
-     "to": "#e0e0e0",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-tearsheet--with-steps-and-horizontal-progress-indicator"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "ProgressIndicator"
-     ],
-     "text": "Tearsheet · .cds--progress-line · background-color #c6c6c6 → #e0e0e0 (inherited from ProgressIndicator)"
     },
     {
      "type": "Visual",
@@ -36756,7 +36841,7 @@
     },
     {
      "type": "Structure",
-     "element": ".cds--layer-three.cds--layer__with-background.cds--tearsheet__main-content",
+     "element": ".cds--tearsheet__main-content",
      "prop": "element added",
      "from": "—",
      "to": "present",
@@ -36774,7 +36859,7 @@
      ],
      "elements": 10,
      "inherited": false,
-     "text": "Tearsheet · .cds--layer-three.cds--layer__with-background.cds--tearsheet__main-content element added"
+     "text": "Tearsheet · .cds--tearsheet__main-content element added"
     },
     {
      "type": "Structure",
@@ -37181,46 +37266,6 @@
     },
     {
      "type": "Structure",
-     "element": ".cds--layer-two.cds--modal-content.cds--tearsheet__body-layout",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-tearsheet--default",
-      "components-tearsheet--narrow-tearsheet",
-      "components-tearsheet--stacking-narrow-tearsheets",
-      "components-tearsheet--stacking-tearsheet",
-      "components-tearsheet--stacking-with-different-sizes",
-      "components-tearsheet--with-custom-footer-actions",
-      "components-tearsheet--with-steps-and-horizontal-progress-indicator",
-      "components-tearsheet--with-tabs"
-     ],
-     "elements": 8,
-     "inherited": false,
-     "text": "Tearsheet · .cds--layer-two.cds--modal-content.cds--tearsheet__body-layout element added"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--layer-one.cds--modal-content.cds--tearsheet__next__body-layout",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-tearsheet--default",
-      "components-tearsheet--narrow-tearsheet",
-      "components-tearsheet--stacking-narrow-tearsheets",
-      "components-tearsheet--stacking-tearsheet",
-      "components-tearsheet--stacking-with-different-sizes",
-      "components-tearsheet--with-custom-footer-actions",
-      "components-tearsheet--with-steps-and-horizontal-progress-indicator",
-      "components-tearsheet--with-tabs"
-     ],
-     "elements": 8,
-     "inherited": false,
-     "text": "Tearsheet · .cds--layer-one.cds--modal-content.cds--tearsheet__next__body-layout element removed"
-    },
-    {
-     "type": "Structure",
      "element": ".cds--tearsheet__next__footer.cds--tearsheet__next__footer--three-actions",
      "prop": "element removed",
      "from": "present",
@@ -37604,7 +37649,7 @@
     },
     {
      "type": "Structure",
-     "element": ".cds--layer-two.cds--modal-content.cds--tearsheet__body-layout.cds--tearsheet__body-layout--has-influencer",
+     "element": ".cds--layer-one.cds--modal-content.cds--tearsheet__body-layout.cds--tearsheet__body-layout--has-influencer",
      "prop": "element added",
      "from": "—",
      "to": "present",
@@ -37614,7 +37659,7 @@
      ],
      "elements": 2,
      "inherited": false,
-     "text": "Tearsheet · .cds--layer-two.cds--modal-content.cds--tearsheet__body-layout.cds--tearsheet__body-layout--has-influencer element added"
+     "text": "Tearsheet · .cds--layer-one.cds--modal-content.cds--tearsheet__body-layout.cds--tearsheet__body-layout--has-influencer element added"
     },
     {
      "type": "Structure",
@@ -39158,7 +39203,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-textinput--default",
@@ -39323,7 +39369,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-textinput--skeleton"
@@ -39347,7 +39394,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-textinput--skeleton"
@@ -40603,7 +40651,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-timepicker--default",
@@ -40625,7 +40674,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "components-timepicker--default",
@@ -41001,10 +41051,10 @@
      "to": "0px 0px 8px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "literal": "1rem"
      },
      "toToken": {
-      "hardcoded": ".5rem"
+      "literal": ".5rem"
      },
      "stories": [
       "components-toggle--default",
@@ -41026,10 +41076,10 @@
      "to": "-1px -1px 8px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "literal": "1rem"
      },
      "toToken": {
-      "hardcoded": ".5rem"
+      "literal": ".5rem"
      },
      "stories": [
       "components-toggle--with-accessible-labels"
@@ -45560,10 +45610,12 @@
      "to": "4px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "token": "$border-radius-16",
+      "sass": true
      },
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-card--with-header-media"
@@ -46057,7 +46109,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-datepicker--default",
@@ -46167,7 +46220,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-datepicker--range-with-calendar",
@@ -46192,7 +46246,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-datepicker--range-with-calendar",
@@ -46313,7 +46368,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-datepicker--skeleton"
@@ -46337,7 +46393,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-datepicker--skeleton"
@@ -46361,7 +46418,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-datepicker--skeleton"
@@ -46766,7 +46824,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-dialog--modal",
@@ -46792,7 +46851,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-dialog--modal",
@@ -47044,7 +47104,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-layout--default"
@@ -47092,10 +47153,12 @@
      "to": "4px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "token": "$border-radius-16",
+      "sass": true
      },
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-layout--default"
@@ -47118,10 +47181,12 @@
      "to": "2px",
      "note": null,
      "fromToken": {
-      "hardcoded": "1rem"
+      "token": "$border-radius-16",
+      "sass": true
      },
      "toToken": {
-      "hardcoded": ".125rem"
+      "token": "$border-radius-02",
+      "sass": true
      },
      "stories": [
       "preview-preview-layout--default"
@@ -47518,7 +47583,8 @@
      "note": null,
      "fromToken": null,
      "toToken": {
-      "hardcoded": ".25rem"
+      "token": "$border-radius-04",
+      "sass": true
      },
      "stories": [
       "preview-preview-text--usage-examples"
