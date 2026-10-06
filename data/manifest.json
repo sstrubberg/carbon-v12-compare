@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-28T11:02:18.858Z",
+ "generatedAt": "2026-10-06T16:18:33.230Z",
  "counts": {
   "v11Stories": 502,
-  "v12Stories": 581,
+  "v12Stories": 624,
   "ibmpStories": 270,
   "matched": 493,
-  "migrated": 59
+  "migrated": 91
  },
  "matched": [
   {
@@ -5492,6 +5492,326 @@
   },
   {
    "base": "ibmp",
+   "baseId": "patterns-coachmark-fixed--coachmark-fixed",
+   "v12": "examples-coachmark-coachmark-fixed--coachmark-fixed",
+   "title": "Examples/Coachmark/Coachmark Fixed",
+   "name": "Coachmark Fixed",
+   "component": "Coachmark",
+   "match": "name",
+   "ibmpTitle": "Patterns/Coachmark Fixed"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-coachmark-overlay-elements--coachmark-overlay",
+   "v12": "examples-coachmark-coachmark-overlay-elements--coachmark-overlay",
+   "title": "Examples/Coachmark/Coachmark Overlay Elements",
+   "name": "Coachmark Overlay",
+   "component": "Coachmark",
+   "match": "name",
+   "ibmpTitle": "Patterns/Coachmark Overlay Elements"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-coachmark-stacked--coachmark-stack",
+   "v12": "examples-coachmark-coachmark-stacked--coachmark-stack",
+   "title": "Examples/Coachmark/Coachmark Stacked",
+   "name": "Coachmark Stack",
+   "component": "Coachmark",
+   "match": "name",
+   "ibmpTitle": "Patterns/Coachmark Stacked"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-full-page--create-full-page",
+   "v12": "examples-create-flows-create-full-page--create-full-page",
+   "title": "Examples/Create flows/Create Full Page",
+   "name": "Create Full Page",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Full Page"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-full-page--create-full-page-with-global-header",
+   "v12": "examples-create-flows-create-full-page--create-full-page-with-global-header",
+   "title": "Examples/Create flows/Create Full Page",
+   "name": "Create Full Page With Global Header",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Full Page"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-full-page--create-full-page-with-header",
+   "v12": "examples-create-flows-create-full-page--create-full-page-with-header",
+   "title": "Examples/Create flows/Create Full Page",
+   "name": "Create Full Page With Header",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Full Page"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-full-page--create-full-page-with-sections",
+   "v12": "examples-create-flows-create-full-page--create-full-page-with-sections",
+   "title": "Examples/Create flows/Create Full Page",
+   "name": "Create Full Page With Sections",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Full Page"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-full-page--create-full-page-with-step-in-error-state",
+   "v12": "examples-create-flows-create-full-page--create-full-page-with-step-in-error-state",
+   "title": "Examples/Create flows/Create Full Page",
+   "name": "Create Full Page With Step In Error State",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Full Page"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-modal--create-modal",
+   "v12": "examples-create-flows-create-modal--create-modal",
+   "title": "Examples/Create flows/Create Modal",
+   "name": "Create Modal",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Modal"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-create-modal--with-form-validation",
+   "v12": "examples-create-flows-create-modal--with-form-validation",
+   "title": "Examples/Create flows/Create Modal",
+   "name": "With Form Validation",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/Create Modal"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createsidepanel--create-side-panel",
+   "v12": "examples-create-flows-create-side-panel--create-side-panel",
+   "title": "Examples/Create flows/Create Side Panel",
+   "name": "Default",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateSidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createsidepanel--with-form-validation",
+   "v12": "examples-create-flows-create-side-panel--with-form-validation",
+   "title": "Examples/Create flows/Create Side Panel",
+   "name": "With Form Validation",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateSidePanel"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createtearsheet--multi-step-tearsheet",
+   "v12": "examples-create-flows-create-tearsheet--multi-step-tearsheet",
+   "title": "Examples/Create flows/Create Tearsheet",
+   "name": "Create tearsheet",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateTearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createtearsheet--with-error-state",
+   "v12": "examples-create-flows-create-tearsheet--with-error-state",
+   "title": "Examples/Create flows/Create Tearsheet",
+   "name": "Create tearsheet with step in error state",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateTearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createtearsheet--with-intro-step",
+   "v12": "examples-create-flows-create-tearsheet--with-intro-step",
+   "title": "Examples/Create flows/Create Tearsheet",
+   "name": "Create tearsheet with intro step",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateTearsheet"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createtearsheetnarrow--create-tearsheet-narrow",
+   "v12": "examples-create-flows-create-tearsheet-narrow--create-tearsheet-narrow",
+   "title": "Examples/Create flows/Create Tearsheet Narrow",
+   "name": "Default",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateTearsheetNarrow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-create-flows-createtearsheetnarrow--with-form-validation",
+   "v12": "examples-create-flows-create-tearsheet-narrow--with-form-validation",
+   "title": "Examples/Create flows/Create Tearsheet Narrow",
+   "name": "With Form Validation",
+   "component": "Create flows",
+   "match": "name",
+   "ibmpTitle": "Patterns/Create flows/CreateTearsheetNarrow"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-delete-and-remove--high-impact-batch-deletion",
+   "v12": "examples-delete-and-remove--high-impact-batch-deletion",
+   "title": "Examples/Delete and remove",
+   "name": "Batch deletion",
+   "component": "Delete and remove",
+   "match": "name",
+   "ibmpTitle": "Patterns/Delete and remove"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-delete-and-remove--high-impact-deletion",
+   "v12": "examples-delete-and-remove--high-impact-deletion",
+   "title": "Examples/Delete and remove",
+   "name": "High impact deletion",
+   "component": "Delete and remove",
+   "match": "name",
+   "ibmpTitle": "Patterns/Delete and remove"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-delete-and-remove--high-impact-deletion-with-connected-items",
+   "v12": "examples-delete-and-remove--high-impact-deletion-with-connected-items",
+   "title": "Examples/Delete and remove",
+   "name": "Deletion with connected items",
+   "component": "Delete and remove",
+   "match": "name",
+   "ibmpTitle": "Patterns/Delete and remove"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-delete-and-remove--low-impact-deletion",
+   "v12": "examples-delete-and-remove--low-impact-deletion",
+   "title": "Examples/Delete and remove",
+   "name": "Low impact deletion",
+   "component": "Delete and remove",
+   "match": "name",
+   "ibmpTitle": "Patterns/Delete and remove"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-delete-and-remove--medium-impact-deletion",
+   "v12": "examples-delete-and-remove--medium-impact-deletion",
+   "title": "Examples/Delete and remove",
+   "name": "Medium impact deletion",
+   "component": "Delete and remove",
+   "match": "name",
+   "ibmpTitle": "Patterns/Delete and remove"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-export-modal--standard",
+   "v12": "examples-exportmodal--standard",
+   "title": "Examples/ExportModal",
+   "name": "Standard",
+   "component": "ExportModal",
+   "match": "name",
+   "ibmpTitle": "Patterns/Export Modal"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-export-modal--with-extension-validation",
+   "v12": "examples-exportmodal--with-extension-validation",
+   "title": "Examples/ExportModal",
+   "name": "With extension validation",
+   "component": "ExportModal",
+   "match": "name",
+   "ibmpTitle": "Patterns/Export Modal"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-export-modal--with-preformatted-extensions",
+   "v12": "examples-exportmodal--with-preformatted-extensions",
+   "title": "Examples/ExportModal",
+   "name": "With preformatted extensions",
+   "component": "ExportModal",
+   "match": "name",
+   "ibmpTitle": "Patterns/Export Modal"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--custom-edit",
+   "v12": "examples-generate-an-api-key--custom-edit",
+   "title": "Examples/Generate an API Key",
+   "name": "Custom edit",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--custom-generate",
+   "v12": "examples-generate-an-api-key--custom-generate",
+   "title": "Examples/Generate an API Key",
+   "name": "Custom generate",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--edit",
+   "v12": "examples-generate-an-api-key--edit",
+   "title": "Examples/Generate an API Key",
+   "name": "Edit",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--edit-with-error",
+   "v12": "examples-generate-an-api-key--edit-with-error",
+   "title": "Examples/Generate an API Key",
+   "name": "Edit with error",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--generate",
+   "v12": "examples-generate-an-api-key--generate",
+   "title": "Examples/Generate an API Key",
+   "name": "Generate",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--generate-with-error",
+   "v12": "examples-generate-an-api-key--generate-with-error",
+   "title": "Examples/Generate an API Key",
+   "name": "Generate with error",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
+   "baseId": "patterns-generate-an-api-key--instant-generate",
+   "v12": "examples-generate-an-api-key--instant-generate",
+   "title": "Examples/Generate an API Key",
+   "name": "Instant generate",
+   "component": "Generate an API Key",
+   "match": "name",
+   "ibmpTitle": "Patterns/Generate an API key"
+  },
+  {
+   "base": "ibmp",
    "baseId": "preview-candidate-onboarding-guidebanner--collapsible",
    "v12": "preview-onboarding-preview-guidebanner--collapsible",
    "title": "Preview/Onboarding/preview__Guidebanner",
@@ -5533,13 +5853,46 @@
  ],
  "migratedComponents": [
   {
+   "component": "AddSelect",
+   "v12Title": "Components/AddSelect",
+   "ibmpTitles": [],
+   "tagged": true,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "components-addselect--add-select-body",
+     "name": "AddSelect.Body"
+    },
+    {
+     "id": "components-addselect--add-select-column",
+     "name": "AddSelect.Column"
+    },
+    {
+     "id": "components-addselect--add-select-item-panel",
+     "name": "AddSelect.ItemPanel"
+    },
+    {
+     "id": "components-addselect--add-select-row",
+     "name": "AddSelect.Row"
+    },
+    {
+     "id": "components-addselect--add-select-selection-summary",
+     "name": "AddSelect.SelectionSummary"
+    },
+    {
+     "id": "components-addselect--add-select-selection-summary-item",
+     "name": "AddSelect.SelectionSummaryItem"
+    }
+   ]
+  },
+  {
    "component": "Coachmark",
    "v12Title": "Components/Coachmark",
    "ibmpTitles": [
     "Preview/Onboarding/Coachmark"
    ],
    "tagged": true,
-   "matched": 2,
+   "matched": 5,
    "unmatched": []
   },
   {
@@ -5582,6 +5935,26 @@
    ]
   },
   {
+   "component": "Create flows",
+   "v12Title": "Examples/Create flows/Create Full Page",
+   "ibmpTitles": [
+    "Patterns/Create flows/Create Full Page"
+   ],
+   "tagged": false,
+   "matched": 14,
+   "unmatched": []
+  },
+  {
+   "component": "Delete and remove",
+   "v12Title": "Examples/Delete and remove",
+   "ibmpTitles": [
+    "Patterns/Delete and remove"
+   ],
+   "tagged": false,
+   "matched": 5,
+   "unmatched": []
+  },
+  {
    "component": "EditInPlace",
    "v12Title": "Components/EditInPlace",
    "ibmpTitles": [
@@ -5589,6 +5962,39 @@
    ],
    "tagged": true,
    "matched": 4,
+   "unmatched": []
+  },
+  {
+   "component": "EmptyState",
+   "v12Title": "Examples/EmptyState",
+   "ibmpTitles": [
+    "Patterns/Prebuilt patterns/Empty states/EmptyState"
+   ],
+   "tagged": false,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "examples-emptystate--empty-state-in-ui",
+     "name": "Empty State unit"
+    },
+    {
+     "id": "examples-emptystate--empty-state-isometric",
+     "name": "Empty State unit with isometric illustration"
+    },
+    {
+     "id": "examples-emptystate--empty-state-pictogram",
+     "name": "Empty State unit with pictogram illustration"
+    }
+   ]
+  },
+  {
+   "component": "ExportModal",
+   "v12Title": "Examples/ExportModal",
+   "ibmpTitles": [
+    "Patterns/Export Modal"
+   ],
+   "tagged": false,
+   "matched": 3,
    "unmatched": []
   },
   {
@@ -5611,6 +6017,31 @@
    ]
   },
   {
+   "component": "Generate an API Key",
+   "v12Title": "Examples/Generate an API Key",
+   "ibmpTitles": [
+    "Patterns/Generate an API key"
+   ],
+   "tagged": false,
+   "matched": 7,
+   "unmatched": []
+  },
+  {
+   "component": "Import and upload",
+   "v12Title": "Examples/Import and upload",
+   "ibmpTitles": [
+    "Patterns/Import And Upload"
+   ],
+   "tagged": false,
+   "matched": 0,
+   "unmatched": [
+    {
+     "id": "examples-import-and-upload--standard",
+     "name": "Import and Upload"
+    }
+   ]
+  },
+  {
    "component": "InterstitialScreen",
    "v12Title": "Components/InterstitialScreen",
    "ibmpTitles": [
@@ -5626,7 +6057,7 @@
    "ibmpTitles": [
     "Components/NotificationsPanel"
    ],
-   "tagged": false,
+   "tagged": true,
    "matched": 1,
    "unmatched": []
   },
@@ -5866,6 +6297,7 @@
  },
  "onlyV12": {
   "titles": [
+   "Components/AddSelect",
    "Components/Coachmark",
    "Components/ConditionBuilder",
    "Components/EditInPlace",
@@ -5881,6 +6313,19 @@
    "Elements/Motion/Custom surface",
    "Elements/Motion/Expand",
    "Elements/Motion/Invoke",
+   "Examples/Coachmark/Coachmark Fixed",
+   "Examples/Coachmark/Coachmark Overlay Elements",
+   "Examples/Coachmark/Coachmark Stacked",
+   "Examples/Create flows/Create Full Page",
+   "Examples/Create flows/Create Modal",
+   "Examples/Create flows/Create Side Panel",
+   "Examples/Create flows/Create Tearsheet",
+   "Examples/Create flows/Create Tearsheet Narrow",
+   "Examples/Delete and remove",
+   "Examples/EmptyState",
+   "Examples/ExportModal",
+   "Examples/Generate an API Key",
+   "Examples/Import and upload",
    "Getting Started/Changelog",
    "Preview/Onboarding/preview__Guidebanner",
    "Preview/preview__BigNumber",
@@ -5889,6 +6334,36 @@
    "Utilities/TruncatedText"
   ],
   "stories": [
+   {
+    "id": "components-addselect--add-select-body",
+    "title": "Components/AddSelect",
+    "name": "AddSelect.Body"
+   },
+   {
+    "id": "components-addselect--add-select-column",
+    "title": "Components/AddSelect",
+    "name": "AddSelect.Column"
+   },
+   {
+    "id": "components-addselect--add-select-item-panel",
+    "title": "Components/AddSelect",
+    "name": "AddSelect.ItemPanel"
+   },
+   {
+    "id": "components-addselect--add-select-row",
+    "title": "Components/AddSelect",
+    "name": "AddSelect.Row"
+   },
+   {
+    "id": "components-addselect--add-select-selection-summary",
+    "title": "Components/AddSelect",
+    "name": "AddSelect.SelectionSummary"
+   },
+   {
+    "id": "components-addselect--add-select-selection-summary-item",
+    "title": "Components/AddSelect",
+    "name": "AddSelect.SelectionSummaryItem"
+   },
    {
     "id": "components-button--radius",
     "title": "Components/Button",
@@ -5983,6 +6458,31 @@
     "id": "preview-preview-bignumber--default",
     "title": "Preview/preview__BigNumber",
     "name": "Default"
+   },
+   {
+    "id": "preview-preview-chatbutton--skeleton",
+    "title": "Preview/preview__ChatButton",
+    "name": "Skeleton"
+   },
+   {
+    "id": "examples-emptystate--empty-state-in-ui",
+    "title": "Examples/EmptyState",
+    "name": "Empty State unit"
+   },
+   {
+    "id": "examples-emptystate--empty-state-isometric",
+    "title": "Examples/EmptyState",
+    "name": "Empty State unit with isometric illustration"
+   },
+   {
+    "id": "examples-emptystate--empty-state-pictogram",
+    "title": "Examples/EmptyState",
+    "name": "Empty State unit with pictogram illustration"
+   },
+   {
+    "id": "examples-import-and-upload--standard",
+    "title": "Examples/Import and upload",
+    "name": "Import and Upload"
    },
    {
     "id": "utilities-resizer--four-panels",
