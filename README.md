@@ -172,6 +172,7 @@ Screenshots and raw captures are about 90 MB per run and change every run. Commi
 
 ## Working on it
 
+- **Copies hosted outside GitHub Pages** load screenshots from the public site (`GITHUB_PAGES_BASE` in `index.html`), since screenshots aren't committed. On Pages and on localhost the page uses its own `data/shots/`. A copy elsewhere shows the public site's latest screenshots next to its own changelog, so keep its `data/` in step with `main`.
 - **Don't commit local `data/`.** CI owns the committed data. Before committing code, run `git checkout -- data/`, then `git pull` after the workflow's commit lands.
 - **Changing the capture** (`PROPS` or `collectStyles`) invalidates every capture and triggers a full recapture, locally and on CI. Test with `--only` first.
 - **A change is attributed to the wrong component:** look up its element classes in the story's JSON, then add the class family to `OWNER_OVERRIDES` in `diff.mjs`.
