@@ -1,15 +1,15 @@
 {
- "generatedAt": "2026-10-06T16:34:15.647Z",
+ "generatedAt": "2026-10-09T03:15:01.776Z",
  "counts": {
   "components": 109,
-  "unchanged": 28,
-  "migrated": 24,
-  "changed": 33,
-  "inherited": 19,
+  "unchanged": 31,
+  "migrated": 23,
+  "changed": 32,
+  "inherited": 18,
   "removed": 4,
   "new": 1,
-  "storiesCompared": 584,
-  "changes": 1547
+  "storiesCompared": 589,
+  "changes": 1464
  },
  "tokens": {
   "added": [
@@ -1096,9 +1096,9 @@
    "migratedFrom": null,
    "pixel": {
     "max": 0.06563,
-    "mean": 0.00942,
+    "mean": 0.00905,
     "storiesChanged": 7,
-    "storiesCompared": 24
+    "storiesCompared": 25
    },
    "stories": [
     {
@@ -1430,6 +1430,39 @@
       "height": 80
      },
      "changes": 1
+    },
+    {
+     "id": "components-button--radius",
+     "base": "v11",
+     "baseId": "components-button--radius",
+     "v11Id": "components-button--radius",
+     "name": "Radius",
+     "title": "Components/Button",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 466662,
+      "ratio": 0,
+      "size": {
+       "before": [
+        813,
+        574
+       ],
+       "v12": [
+        813,
+        574
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 24,
+      "width": 813,
+      "height": 574
+     },
+     "changes": 0
     },
     {
      "id": "components-button-set-of-buttons--default",
@@ -1914,7 +1947,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -1943,7 +1978,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -1953,18 +1990,6 @@
      "elements": 1,
      "inherited": false,
      "text": "Button · .cds--btn.cds--skeleton · border-radius 0px → 999999px (pill)"
-    },
-    {
-     "type": "Story",
-     "prop": "story added",
-     "element": null,
-     "from": "—",
-     "to": "Radius",
-     "stories": [
-      "components-button--radius"
-     ],
-     "note": null,
-     "text": "Button · story added: Radius"
     }
    ]
   },
@@ -4295,7 +4320,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -4631,7 +4658,9 @@
      "from": "0px",
      "to": "999999px 0px 0px 999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/es"
      },
@@ -4643,8 +4672,11 @@
       "components-combobutton--with-icons"
      ],
      "elements": 5,
-     "inherited": false,
-     "text": "ComboButton · .cds--btn · border-radius 0px → 999999px 0px 0px 999999px (pill)"
+     "inherited": true,
+     "sources": [
+      "Button"
+     ],
+     "text": "ComboButton · .cds--btn · border-radius 0px → 999999px 0px 0px 999999px (pill) (inherited from Button)"
     },
     {
      "type": "Visual",
@@ -4952,8 +4984,8 @@
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.02541,
-    "mean": 0.00522,
+    "max": 0.02528,
+    "mean": 0.0052,
     "storiesChanged": 8,
     "storiesCompared": 10
    },
@@ -4968,9 +5000,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 553,
+      "diffPixels": 550,
       "totalPixels": 21760,
-      "ratio": 0.02541,
+      "ratio": 0.02528,
       "size": {
        "before": [
         272,
@@ -5301,7 +5333,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -10349,7 +10383,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -10660,7 +10696,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -10686,7 +10724,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -10726,20 +10766,18 @@
     "MultiSelect",
     "NumberInput",
     "PasswordInput",
-    "Popover",
     "Search",
     "Select",
     "Tag",
     "TextInput",
-    "Toggletip",
     "Tooltip"
    ],
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
     "max": 0.05625,
-    "mean": 0.015,
-    "storiesChanged": 29,
+    "mean": 0.01324,
+    "storiesChanged": 28,
     "storiesCompared": 36
    },
    "stories": [
@@ -10775,39 +10813,6 @@
       "height": 97
      },
      "changes": 13
-    },
-    {
-     "id": "components-fluid-components-fluidmultiselect--with-ai-label",
-     "base": "v11",
-     "baseId": "components-fluid-components-fluidmultiselect--with-ai-label",
-     "v11Id": "components-fluid-components-fluidmultiselect--with-ai-label",
-     "name": "With AI Label",
-     "title": "Components/Fluid Components/FluidMultiSelect",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 1902,
-      "totalPixels": 41472,
-      "ratio": 0.04586,
-      "size": {
-       "before": [
-        432,
-        96
-       ],
-       "v12": [
-        432,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 432,
-      "height": 96
-     },
-     "changes": 9
     },
     {
      "id": "components-fluid-components-fluiddatepicker--simple",
@@ -10876,18 +10881,18 @@
      "changes": 7
     },
     {
-     "id": "components-fluid-components-fluidtextinput--skeleton",
+     "id": "components-fluid-components-fluidmultiselect--with-ai-label",
      "base": "v11",
-     "baseId": "components-fluid-components-fluidtextinput--skeleton",
-     "v11Id": "components-fluid-components-fluidtextinput--skeleton",
-     "name": "Skeleton",
-     "title": "Components/Fluid Components/FluidTextInput",
+     "baseId": "components-fluid-components-fluidmultiselect--with-ai-label",
+     "v11Id": "components-fluid-components-fluidmultiselect--with-ai-label",
+     "name": "With AI Label",
+     "title": "Components/Fluid Components/FluidMultiSelect",
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1290,
+      "diffPixels": 1307,
       "totalPixels": 41472,
-      "ratio": 0.03111,
+      "ratio": 0.03152,
       "size": {
        "before": [
         432,
@@ -10906,7 +10911,7 @@
       "width": 432,
       "height": 96
      },
-     "changes": 11
+     "changes": 7
     },
     {
      "id": "components-fluid-components-fluidform--default",
@@ -10973,39 +10978,6 @@
       "height": 98
      },
      "changes": 11
-    },
-    {
-     "id": "components-fluid-components-fluidmultiselect--filterable",
-     "base": "v11",
-     "baseId": "components-fluid-components-fluidmultiselect--filterable",
-     "v11Id": "components-fluid-components-fluidmultiselect--filterable",
-     "name": "Filterable",
-     "title": "Components/Fluid Components/FluidMultiSelect",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 903,
-      "totalPixels": 41472,
-      "ratio": 0.02177,
-      "size": {
-       "before": [
-        432,
-        96
-       ],
-       "v12": [
-        432,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 432,
-      "height": 96
-     },
-     "changes": 13
     },
     {
      "id": "components-fluid-components-fluiddropdown--with-ai-label",
@@ -11239,39 +11211,6 @@
      "changes": 39
     },
     {
-     "id": "components-fluid-components-fluidtextinput--default",
-     "base": "v11",
-     "baseId": "components-fluid-components-fluidtextinput--default",
-     "v11Id": "components-fluid-components-fluidtextinput--default",
-     "name": "Default",
-     "title": "Components/Fluid Components/FluidTextInput",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 613,
-      "totalPixels": 41472,
-      "ratio": 0.01478,
-      "size": {
-       "before": [
-        432,
-        96
-       ],
-       "v12": [
-        432,
-        96
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 432,
-      "height": 96
-     },
-     "changes": 8
-    },
-    {
      "id": "components-fluid-components-fluidnumberinput--skeleton",
      "base": "v11",
      "baseId": "components-fluid-components-fluidnumberinput--skeleton",
@@ -11311,6 +11250,39 @@
      "v11Id": "components-fluid-components-fluidsearch--skeleton",
      "name": "Skeleton",
      "title": "Components/Fluid Components/FluidSearch",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 603,
+      "totalPixels": 41472,
+      "ratio": 0.01454,
+      "size": {
+       "before": [
+        432,
+        96
+       ],
+       "v12": [
+        432,
+        96
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 432,
+      "height": 96
+     },
+     "changes": 9
+    },
+    {
+     "id": "components-fluid-components-fluidtextinput--skeleton",
+     "base": "v11",
+     "baseId": "components-fluid-components-fluidtextinput--skeleton",
+     "v11Id": "components-fluid-components-fluidtextinput--skeleton",
+     "name": "Skeleton",
+     "title": "Components/Fluid Components/FluidTextInput",
      "captured": true,
      "error": null,
      "pixel": {
@@ -11470,6 +11442,39 @@
      "changes": 6
     },
     {
+     "id": "components-fluid-components-fluidtextinput--default",
+     "base": "v11",
+     "baseId": "components-fluid-components-fluidtextinput--default",
+     "v11Id": "components-fluid-components-fluidtextinput--default",
+     "name": "Default",
+     "title": "Components/Fluid Components/FluidTextInput",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 391,
+      "totalPixels": 41472,
+      "ratio": 0.00943,
+      "size": {
+       "before": [
+        432,
+        96
+       ],
+       "v12": [
+        432,
+        96
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 432,
+      "height": 96
+     },
+     "changes": 6
+    },
+    {
      "id": "components-fluid-components-fluidtextinput--default-with-toggletip",
      "base": "v11",
      "baseId": "components-fluid-components-fluidtextinput--default-with-toggletip",
@@ -11479,16 +11484,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 1187,
-      "totalPixels": 117888,
-      "ratio": 0.01007,
+      "diffPixels": 391,
+      "totalPixels": 41472,
+      "ratio": 0.00943,
       "size": {
        "before": [
-        1228,
+        432,
         96
        ],
        "v12": [
-        1228,
+        432,
         96
        ]
       },
@@ -11497,10 +11502,10 @@
      "clip": {
       "x": 26,
       "y": 26,
-      "width": 1228,
+      "width": 432,
       "height": 96
      },
-     "changes": 18
+     "changes": 6
     },
     {
      "id": "components-fluid-components-fluiddropdown--condensed",
@@ -11569,39 +11574,6 @@
      "changes": 6
     },
     {
-     "id": "components-fluid-components-fluiddatepicker--skeleton",
-     "base": "v11",
-     "baseId": "components-fluid-components-fluiddatepicker--skeleton",
-     "v11Id": "components-fluid-components-fluiddatepicker--skeleton",
-     "name": "Skeleton",
-     "title": "Components/Fluid Components/FluidDatePicker",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 617,
-      "totalPixels": 95616,
-      "ratio": 0.00645,
-      "size": {
-       "before": [
-        332,
-        288
-       ],
-       "v12": [
-        332,
-        288
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 332,
-      "height": 288
-     },
-     "changes": 13
-    },
-    {
      "id": "components-fluid-components-fluidsearch--default",
      "base": "v11",
      "baseId": "components-fluid-components-fluidsearch--default",
@@ -11668,6 +11640,39 @@
      "changes": 7
     },
     {
+     "id": "components-fluid-components-fluidmultiselect--filterable",
+     "base": "v11",
+     "baseId": "components-fluid-components-fluidmultiselect--filterable",
+     "v11Id": "components-fluid-components-fluidmultiselect--filterable",
+     "name": "Filterable",
+     "title": "Components/Fluid Components/FluidMultiSelect",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 172,
+      "totalPixels": 41472,
+      "ratio": 0.00415,
+      "size": {
+       "before": [
+        432,
+        96
+       ],
+       "v12": [
+        432,
+        96
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 432,
+      "height": 96
+     },
+     "changes": 11
+    },
+    {
      "id": "components-fluid-components-fluidmultiselect--filterable-with-layer",
      "base": "v11",
      "baseId": "components-fluid-components-fluidmultiselect--filterable-with-layer",
@@ -11677,16 +11682,16 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 4357,
-      "totalPixels": 1024000,
-      "ratio": 0.00425,
+      "diffPixels": 569,
+      "totalPixels": 400000,
+      "ratio": 0.00142,
       "size": {
        "before": [
-        1280,
+        500,
         800
        ],
        "v12": [
-        1280,
+        500,
         800
        ]
       },
@@ -11695,10 +11700,43 @@
      "clip": {
       "x": 0,
       "y": 0,
-      "width": 1280,
+      "width": 500,
       "height": 800
      },
-     "changes": 37
+     "changes": 27
+    },
+    {
+     "id": "components-fluid-components-fluiddatepicker--skeleton",
+     "base": "v11",
+     "baseId": "components-fluid-components-fluiddatepicker--skeleton",
+     "v11Id": "components-fluid-components-fluiddatepicker--skeleton",
+     "name": "Skeleton",
+     "title": "Components/Fluid Components/FluidDatePicker",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 41,
+      "totalPixels": 95616,
+      "ratio": 0.00043,
+      "size": {
+       "before": [
+        332,
+        288
+       ],
+       "v12": [
+        332,
+        288
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 332,
+      "height": 288
+     },
+     "changes": 11
     },
     {
      "id": "components-fluid-components-fluidcombobox--condensed",
@@ -11993,9 +12031,10 @@
       "components-fluid-components-fluidmultiselect--filterable",
       "components-fluid-components-fluidmultiselect--filterable-with-layer",
       "components-fluid-components-fluidtextinput--default",
+      "components-fluid-components-fluidtextinput--default-with-toggletip",
       "components-fluid-components-fluidtimepicker--default"
      ],
-     "elements": 15,
+     "elements": 16,
      "inherited": true,
      "sources": [
       "TextInput"
@@ -12339,6 +12378,62 @@
     },
     {
      "type": "Visual",
+     "element": ".cds--form-item.cds--text-input-wrapper",
+     "variants": [
+      "cds--form-item cds--text-input--fluid cds--text-input-wrapper"
+     ],
+     "prop": "background-color",
+     "from": "#f4f4f4",
+     "to": "transparent",
+     "note": null,
+     "fromToken": {
+      "token": "$field"
+     },
+     "toToken": null,
+     "stories": [
+      "components-fluid-components-fluidform--default",
+      "components-fluid-components-fluidtextinput--default",
+      "components-fluid-components-fluidtextinput--default-with-toggletip",
+      "components-fluid-components-fluidtimepicker--default"
+     ],
+     "elements": 7,
+     "inherited": true,
+     "sources": [
+      "TextInput"
+     ],
+     "text": "Fluid Components · .cds--form-item.cds--text-input-wrapper · background-color #f4f4f4 → transparent (inherited from TextInput)"
+    },
+    {
+     "type": "Visual",
+     "element": ".cds--text-input",
+     "variants": [
+      "cds--text-input"
+     ],
+     "prop": "background-color",
+     "from": "#f4f4f4",
+     "to": "transparent",
+     "note": null,
+     "fromToken": {
+      "token": "$field"
+     },
+     "toToken": {
+      "token": "$field"
+     },
+     "stories": [
+      "components-fluid-components-fluidform--default",
+      "components-fluid-components-fluidtextinput--default",
+      "components-fluid-components-fluidtextinput--default-with-toggletip",
+      "components-fluid-components-fluidtimepicker--default"
+     ],
+     "elements": 7,
+     "inherited": true,
+     "sources": [
+      "TextInput"
+     ],
+     "text": "Fluid Components · .cds--text-input · background-color #f4f4f4 → transparent (inherited from TextInput)"
+    },
+    {
+     "type": "Visual",
      "element": ".cds--select",
      "variants": [
       "cds--select",
@@ -12448,6 +12543,33 @@
     },
     {
      "type": "Visual",
+     "element": ".cds--text-input",
+     "variants": [
+      "cds--text-input"
+     ],
+     "prop": "background-image",
+     "from": "none",
+     "to": "linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%)",
+     "note": "now drawn with gradients",
+     "fromToken": null,
+     "toToken": {
+      "token": "$field"
+     },
+     "stories": [
+      "components-fluid-components-fluidform--default",
+      "components-fluid-components-fluidtextinput--default",
+      "components-fluid-components-fluidtextinput--default-with-toggletip",
+      "components-fluid-components-fluidtimepicker--default"
+     ],
+     "elements": 7,
+     "inherited": true,
+     "sources": [
+      "TextInput"
+     ],
+     "text": "Fluid Components · .cds--text-input · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients) (inherited from TextInput)"
+    },
+    {
+     "type": "Visual",
      "element": ".cds--form-item",
      "variants": [
       "cds--form-item cds--text-input--fluid__skeleton"
@@ -12471,6 +12593,33 @@
      "elements": 5,
      "inherited": false,
      "text": "Fluid Components · .cds--form-item · background-image none → linear-gradient(#e8e8e8, #e8e8e8), linear-gradient(#e0e0e0 calc(100% - 4px), #c6c6c6 100%) (now drawn with gradients)"
+    },
+    {
+     "type": "Visual",
+     "element": ".cds--text-input",
+     "variants": [
+      "cds--text-input"
+     ],
+     "prop": "border-bottom",
+     "from": "1px solid #8d8d8d",
+     "to": "1px solid transparent",
+     "note": null,
+     "fromToken": {
+      "token": "$border-strong"
+     },
+     "toToken": null,
+     "stories": [
+      "components-fluid-components-fluidform--default",
+      "components-fluid-components-fluidtextinput--default",
+      "components-fluid-components-fluidtextinput--default-with-toggletip",
+      "components-fluid-components-fluidtimepicker--default"
+     ],
+     "elements": 7,
+     "inherited": true,
+     "sources": [
+      "TextInput"
+     ],
+     "text": "Fluid Components · .cds--text-input · border-bottom 1px solid #8d8d8d → 1px solid transparent (inherited from TextInput)"
     },
     {
      "type": "Visual",
@@ -12710,6 +12859,31 @@
     },
     {
      "type": "Visual",
+     "element": ".cds--text-input",
+     "variants": [
+      "cds--text-input"
+     ],
+     "prop": "border-top/right/left",
+     "from": "none",
+     "to": "1px solid transparent",
+     "note": null,
+     "fromToken": null,
+     "toToken": null,
+     "stories": [
+      "components-fluid-components-fluidform--default",
+      "components-fluid-components-fluidtextinput--default",
+      "components-fluid-components-fluidtextinput--default-with-toggletip",
+      "components-fluid-components-fluidtimepicker--default"
+     ],
+     "elements": 7,
+     "inherited": true,
+     "sources": [
+      "TextInput"
+     ],
+     "text": "Fluid Components · .cds--text-input · border-top/right/left none → 1px solid transparent (inherited from TextInput)"
+    },
+    {
+     "type": "Visual",
      "element": ".cds--select-input",
      "variants": [
       "cds--select-input"
@@ -12780,60 +12954,6 @@
      "elements": 5,
      "inherited": false,
      "text": "Fluid Components · .cds--form-item · border-top/right/left none → 1px solid transparent"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--form-item.cds--text-input-wrapper",
-     "variants": [
-      "cds--form-item cds--text-input--fluid cds--text-input-wrapper"
-     ],
-     "prop": "background-color",
-     "from": "#f4f4f4",
-     "to": "transparent",
-     "note": null,
-     "fromToken": {
-      "token": "$field"
-     },
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidform--default",
-      "components-fluid-components-fluidtextinput--default",
-      "components-fluid-components-fluidtimepicker--default"
-     ],
-     "elements": 6,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--form-item.cds--text-input-wrapper · background-color #f4f4f4 → transparent (inherited from TextInput)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--text-input"
-     ],
-     "prop": "background-color",
-     "from": "#f4f4f4",
-     "to": "transparent",
-     "note": null,
-     "fromToken": {
-      "token": "$field"
-     },
-     "toToken": {
-      "token": "$field"
-     },
-     "stories": [
-      "components-fluid-components-fluidform--default",
-      "components-fluid-components-fluidtextinput--default",
-      "components-fluid-components-fluidtimepicker--default"
-     ],
-     "elements": 6,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input · background-color #f4f4f4 → transparent (inherited from TextInput)"
     },
     {
      "type": "Visual",
@@ -12913,32 +13033,6 @@
       "Dropdown"
      ],
      "text": "Fluid Components · .cds--dropdown.cds--list-box · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients) (inherited from Dropdown)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--text-input"
-     ],
-     "prop": "background-image",
-     "from": "none",
-     "to": "linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%)",
-     "note": "now drawn with gradients",
-     "fromToken": null,
-     "toToken": {
-      "token": "$field"
-     },
-     "stories": [
-      "components-fluid-components-fluidform--default",
-      "components-fluid-components-fluidtextinput--default",
-      "components-fluid-components-fluidtimepicker--default"
-     ],
-     "elements": 6,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients) (inherited from TextInput)"
     },
     {
      "type": "Visual",
@@ -13115,32 +13209,6 @@
     },
     {
      "type": "Visual",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--text-input"
-     ],
-     "prop": "border-bottom",
-     "from": "1px solid #8d8d8d",
-     "to": "1px solid transparent",
-     "note": null,
-     "fromToken": {
-      "token": "$border-strong"
-     },
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidform--default",
-      "components-fluid-components-fluidtextinput--default",
-      "components-fluid-components-fluidtimepicker--default"
-     ],
-     "elements": 6,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input · border-bottom 1px solid #8d8d8d → 1px solid transparent (inherited from TextInput)"
-    },
-    {
-     "type": "Visual",
      "element": ".cds--select-input",
      "variants": [
       "cds--select-input"
@@ -13294,30 +13362,6 @@
       "DatePicker"
      ],
      "text": "Fluid Components · .cds--date-picker__input.cds--date-picker__input--md · border-top/right/left none → 1px solid transparent (inherited from DatePicker)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--text-input"
-     ],
-     "prop": "border-top/right/left",
-     "from": "none",
-     "to": "1px solid transparent",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidform--default",
-      "components-fluid-components-fluidtextinput--default",
-      "components-fluid-components-fluidtimepicker--default"
-     ],
-     "elements": 6,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input · border-top/right/left none → 1px solid transparent (inherited from TextInput)"
     },
     {
      "type": "Visual",
@@ -13805,6 +13849,63 @@
     },
     {
      "type": "Visual",
+     "element": ".cds--tag",
+     "variants": [
+      "cds--tag cds--tag--filter cds--tag--high-contrast"
+     ],
+     "prop": "border-radius",
+     "from": "16px",
+     "to": "4px",
+     "note": null,
+     "fromToken": {
+      "token": "$border-radius-16",
+      "sass": true
+     },
+     "toToken": {
+      "token": "$border-radius-04",
+      "sass": true
+     },
+     "stories": [
+      "components-fluid-components-fluidmultiselect--filterable",
+      "components-fluid-components-fluidmultiselect--with-ai-label"
+     ],
+     "elements": 2,
+     "inherited": true,
+     "sources": [
+      "Tag"
+     ],
+     "text": "Fluid Components · .cds--tag · border-radius 16px → 4px (inherited from Tag)"
+    },
+    {
+     "type": "Visual",
+     "element": ".cds--tag__close-icon",
+     "variants": [
+      "cds--tag__close-icon"
+     ],
+     "prop": "border-radius",
+     "from": "50%",
+     "to": "4px",
+     "note": null,
+     "fromToken": {
+      "literal": "50%"
+     },
+     "toToken": {
+      "token": "$border-radius-04",
+      "sass": true
+     },
+     "stories": [
+      "components-fluid-components-fluidmultiselect--filterable",
+      "components-fluid-components-fluidmultiselect--with-ai-label"
+     ],
+     "elements": 2,
+     "inherited": true,
+     "sources": [
+      "Tag"
+     ],
+     "text": "Fluid Components · .cds--tag__close-icon · border-radius 50% → 4px (inherited from Tag)"
+    },
+    {
+     "type": "Visual",
      "element": ".cds--date-picker__input.cds--date-picker__input--md",
      "variants": [
       "cds--date-picker__input cds--date-picker__input--md"
@@ -13928,8 +14029,12 @@
      "from": "#ffffff",
      "to": "transparent",
      "note": null,
-     "fromToken": null,
-     "toToken": null,
+     "fromToken": {
+      "token": "$field"
+     },
+     "toToken": {
+      "token": "$field"
+     },
      "stories": [
       "components-fluid-components-fluidmultiselect--filterable-with-layer"
      ],
@@ -13999,7 +14104,9 @@
      "to": "linear-gradient(#ffffff, #ffffff), linear-gradient(#c6c6c6 calc(100% - 4px), #8d8d8d 100%)",
      "note": "now drawn with gradients",
      "fromToken": null,
-     "toToken": null,
+     "toToken": {
+      "token": "$field"
+     },
      "stories": [
       "components-fluid-components-fluidmultiselect--filterable-with-layer"
      ],
@@ -14212,7 +14319,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -14299,66 +14408,6 @@
       "Select"
      ],
      "text": "Fluid Components · .cds--select-input · border-top/left none → 1px solid transparent (inherited from Select)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--label.cds--skeleton",
-     "variants": [
-      "cds--label cds--skeleton"
-     ],
-     "prop": "display",
-     "from": "block",
-     "to": "inline-block",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluiddatepicker--skeleton"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label.cds--skeleton · display block → inline-block (inherited from FormLabel)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--text-input cds--text-input--empty"
-     ],
-     "prop": "padding",
-     "from": "33px 64px 13px 16px",
-     "to": "33px 64px 13px 0px",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Fluid Components · .cds--text-input · padding 33px 64px 13px 16px → 33px 64px 13px 0px"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--list-box__field",
-     "variants": [
-      "cds--list-box__field"
-     ],
-     "prop": "padding",
-     "from": "33px 64px 13px 16px",
-     "to": "33px 64px 13px 0px",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--with-ai-label"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Fluid Components · .cds--list-box__field · padding 33px 64px 13px 16px → 33px 64px 13px 0px"
     },
     {
      "type": "Layout",
@@ -14485,6 +14534,54 @@
     },
     {
      "type": "Layout",
+     "element": ".cds--label.cds--skeleton",
+     "variants": [
+      "cds--label cds--skeleton"
+     ],
+     "prop": "width",
+     "from": "200px",
+     "to": "199px",
+     "note": "-1px",
+     "fromToken": null,
+     "toToken": null,
+     "stories": [
+      "components-fluid-components-fluidnumberinput--skeleton",
+      "components-fluid-components-fluidsearch--skeleton",
+      "components-fluid-components-fluidtextinput--skeleton"
+     ],
+     "elements": 3,
+     "inherited": true,
+     "sources": [
+      "FormLabel"
+     ],
+     "text": "Fluid Components · .cds--label.cds--skeleton · width 200px → 199px (-1px) (inherited from FormLabel)"
+    },
+    {
+     "type": "Layout",
+     "element": ".cds--label.cds--skeleton::before",
+     "variants": [
+      "cds--label cds--skeleton"
+     ],
+     "prop": "width",
+     "from": "200px",
+     "to": "199px",
+     "note": "-1px",
+     "fromToken": null,
+     "toToken": null,
+     "stories": [
+      "components-fluid-components-fluidnumberinput--skeleton",
+      "components-fluid-components-fluidsearch--skeleton",
+      "components-fluid-components-fluidtextinput--skeleton"
+     ],
+     "elements": 3,
+     "inherited": true,
+     "sources": [
+      "FormLabel"
+     ],
+     "text": "Fluid Components · .cds--label.cds--skeleton::before · width 200px → 199px (-1px) (inherited from FormLabel)"
+    },
+    {
+     "type": "Layout",
      "element": ".cds--date-picker-container",
      "variants": [
       "cds--date-picker-container"
@@ -14551,52 +14648,6 @@
       "NumberInput"
      ],
      "text": "Fluid Components · .cds--number__rule-divider · width 1px → 0px (-1px) (inherited from NumberInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--label.cds--skeleton",
-     "variants": [
-      "cds--label cds--skeleton"
-     ],
-     "prop": "width",
-     "from": "200px",
-     "to": "199px",
-     "note": "-1px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidnumberinput--skeleton",
-      "components-fluid-components-fluidsearch--skeleton"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label.cds--skeleton · width 200px → 199px (-1px) (inherited from FormLabel)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--label.cds--skeleton::before",
-     "variants": [
-      "cds--label cds--skeleton"
-     ],
-     "prop": "width",
-     "from": "200px",
-     "to": "199px",
-     "note": "-1px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidnumberinput--skeleton",
-      "components-fluid-components-fluidsearch--skeleton"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label.cds--skeleton::before · width 200px → 199px (-1px) (inherited from FormLabel)"
     },
     {
      "type": "Layout",
@@ -14693,9 +14744,9 @@
       "cds--text-input cds--text-input--empty"
      ],
      "prop": "width",
-     "from": "400px",
+     "from": "334.67px",
      "to": "332.67px",
-     "note": "-67.33px",
+     "note": "-2px",
      "fromToken": null,
      "toToken": null,
      "stories": [
@@ -14706,7 +14757,7 @@
      "sources": [
       "TextInput"
      ],
-     "text": "Fluid Components · .cds--text-input · width 400px → 332.67px (-67.33px) (inherited from TextInput)"
+     "text": "Fluid Components · .cds--text-input · width 334.67px → 332.67px (-2px) (inherited from TextInput)"
     },
     {
      "type": "Layout",
@@ -14715,9 +14766,9 @@
       "cds--text-input cds--text-input--empty"
      ],
      "prop": "width",
-     "from": "300px",
+     "from": "450px",
      "to": "448px",
-     "note": "+148px",
+     "note": "-2px",
      "fromToken": null,
      "toToken": null,
      "stories": [
@@ -14728,54 +14779,7 @@
      "sources": [
       "TextInput"
      ],
-     "text": "Fluid Components · .cds--text-input · width 300px → 448px (+148px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--combo-box.cds--list-box.cds--multi-select",
-     "variants": [
-      "cds--combo-box cds--list-box cds--multi-select cds--multi-select--filterable"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "450px",
-     "note": "+150px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "ComboBox",
-      "Dropdown",
-      "MultiSelect"
-     ],
-     "text": "Fluid Components · .cds--combo-box.cds--list-box.cds--multi-select · width 300px → 450px (+150px) (inherited from ComboBox, Dropdown, MultiSelect)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--list-box__wrapper.cds--list-box__wrapper--fluid.cds--multi-select__wrapper",
-     "variants": [
-      "cds--list-box__wrapper cds--list-box__wrapper--fluid cds--multi-select--filterable__wrapper cds--multi-select__wrapper"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "450px",
-     "note": "+150px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Dropdown",
-      "MultiSelect"
-     ],
-     "text": "Fluid Components · .cds--list-box__wrapper.cds--list-box__wrapper--fluid.cds--multi-select__wrapper · width 300px → 450px (+150px) (inherited from Dropdown, MultiSelect)"
+     "text": "Fluid Components · .cds--text-input · width 450px → 448px (-2px) (inherited from TextInput)"
     },
     {
      "type": "Layout",
@@ -14784,9 +14788,9 @@
       "cds--text-input cds--text-input--empty"
      ],
      "prop": "width",
-     "from": "300px",
+     "from": "416px",
      "to": "414px",
-     "note": "+114px",
+     "note": "-2px",
      "fromToken": null,
      "toToken": null,
      "stories": [
@@ -14797,54 +14801,7 @@
      "sources": [
       "TextInput"
      ],
-     "text": "Fluid Components · .cds--text-input · width 300px → 414px (+114px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--combo-box.cds--list-box.cds--multi-select",
-     "variants": [
-      "cds--combo-box cds--list-box cds--multi-select cds--multi-select--filterable"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "416px",
-     "note": "+116px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "ComboBox",
-      "Dropdown",
-      "MultiSelect"
-     ],
-     "text": "Fluid Components · .cds--combo-box.cds--list-box.cds--multi-select · width 300px → 416px (+116px) (inherited from ComboBox, Dropdown, MultiSelect)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--list-box__wrapper.cds--list-box__wrapper--fluid.cds--multi-select__wrapper",
-     "variants": [
-      "cds--list-box__wrapper cds--list-box__wrapper--fluid cds--multi-select--filterable__wrapper cds--multi-select__wrapper"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "416px",
-     "note": "+116px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Dropdown",
-      "MultiSelect"
-     ],
-     "text": "Fluid Components · .cds--list-box__wrapper.cds--list-box__wrapper--fluid.cds--multi-select__wrapper · width 300px → 416px (+116px) (inherited from Dropdown, MultiSelect)"
+     "text": "Fluid Components · .cds--text-input · width 416px → 414px (-2px) (inherited from TextInput)"
     },
     {
      "type": "Layout",
@@ -14853,9 +14810,9 @@
       "cds--text-input cds--text-input--empty"
      ],
      "prop": "width",
-     "from": "300px",
+     "from": "382px",
      "to": "380px",
-     "note": "+80px",
+     "note": "-2px",
      "fromToken": null,
      "toToken": null,
      "stories": [
@@ -14866,186 +14823,7 @@
      "sources": [
       "TextInput"
      ],
-     "text": "Fluid Components · .cds--text-input · width 300px → 380px (+80px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--combo-box.cds--list-box.cds--multi-select",
-     "variants": [
-      "cds--combo-box cds--list-box cds--multi-select cds--multi-select--filterable"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "382px",
-     "note": "+82px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "ComboBox",
-      "Dropdown",
-      "MultiSelect"
-     ],
-     "text": "Fluid Components · .cds--combo-box.cds--list-box.cds--multi-select · width 300px → 382px (+82px) (inherited from ComboBox, Dropdown, MultiSelect)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--list-box__wrapper.cds--list-box__wrapper--fluid.cds--multi-select__wrapper",
-     "variants": [
-      "cds--list-box__wrapper cds--list-box__wrapper--fluid cds--multi-select--filterable__wrapper cds--multi-select__wrapper"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "382px",
-     "note": "+82px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Dropdown",
-      "MultiSelect"
-     ],
-     "text": "Fluid Components · .cds--list-box__wrapper.cds--list-box__wrapper--fluid.cds--multi-select__wrapper · width 300px → 382px (+82px) (inherited from Dropdown, MultiSelect)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--form-item.cds--text-input-wrapper",
-     "variants": [
-      "cds--form-item cds--text-input--fluid cds--text-input-wrapper"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "400px",
-     "note": "+100px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidtextinput--default"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--form-item.cds--text-input-wrapper · width 300px → 400px (+100px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--text-input",
-     "variants": [
-      "cds--text-input"
-     ],
-     "prop": "width",
-     "from": "300px",
-     "to": "400px",
-     "note": "+100px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidtextinput--default"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input · width 300px → 400px (+100px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--label.cds--skeleton",
-     "variants": [
-      "cds--label cds--skeleton"
-     ],
-     "prop": "width",
-     "from": "150px",
-     "to": "199px",
-     "note": "+49px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidtextinput--skeleton"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label.cds--skeleton · width 150px → 199px (+49px) (inherited from FormLabel)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--label.cds--skeleton::before",
-     "variants": [
-      "cds--label cds--skeleton"
-     ],
-     "prop": "width",
-     "from": "150px",
-     "to": "199px",
-     "note": "+49px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidtextinput--skeleton"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label.cds--skeleton::before · width 150px → 199px (+49px) (inherited from FormLabel)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--skeleton.cds--text-input",
-     "variants": [
-      "cds--skeleton cds--text-input"
-     ],
-     "prop": "width",
-     "from": "75px",
-     "to": "99.5px",
-     "note": "+24.5px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidtextinput--skeleton"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--skeleton.cds--text-input · width 75px → 99.5px (+24.5px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--skeleton.cds--text-input::before",
-     "variants": [
-      "cds--skeleton cds--text-input"
-     ],
-     "prop": "width",
-     "from": "75px",
-     "to": "99.5px",
-     "note": "+24.5px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-fluid-components-fluidtextinput--skeleton"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--skeleton.cds--text-input::before · width 75px → 99.5px (+24.5px) (inherited from TextInput)"
+     "text": "Fluid Components · .cds--text-input · width 382px → 380px (-2px) (inherited from TextInput)"
     },
     {
      "type": "Layout",
@@ -15222,401 +15000,6 @@
       "FormLabel"
      ],
      "text": "Fluid Components · .cds--label.cds--skeleton::before · width 75px → 74px (-1px) (inherited from FormLabel)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--tag.cds--tag--filter.cds--tag--high-contrast",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable",
-      "components-fluid-components-fluidmultiselect--with-ai-label"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "Tag"
-     ],
-     "text": "Fluid Components · .cds--tag.cds--tag--filter.cds--tag--high-contrast element added (inherited from Tag)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--tag__label",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable",
-      "components-fluid-components-fluidmultiselect--with-ai-label"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "Tag"
-     ],
-     "text": "Fluid Components · .cds--tag__label element added (inherited from Tag)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--tag__close-icon",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable",
-      "components-fluid-components-fluidmultiselect--with-ai-label"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "Tag"
-     ],
-     "text": "Fluid Components · .cds--tag__close-icon element added (inherited from Tag)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--layer-two.cds--layer__with-background",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Fluid Components · .cds--layer-two.cds--layer__with-background element added"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--layer-three.cds--layer__with-background",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Fluid Components · .cds--layer-three.cds--layer__with-background element added"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--autoalign.cds--popover--auto-align.cds--popover--high-contrast.cds--popover--top-start.cds--popover-container.cds--toggletip",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Popover",
-      "Toggletip"
-     ],
-     "text": "Fluid Components · .cds--autoalign.cds--popover--auto-align.cds--popover--high-contrast.cds--popover--top-start.cds--popover-container.cds--toggletip element added (inherited from Popover, Toggletip)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--toggletip-button",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Popover",
-      "Toggletip"
-     ],
-     "text": "Fluid Components · .cds--toggletip-button element added (inherited from Popover, Toggletip)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--popover",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Popover"
-     ],
-     "text": "Fluid Components · .cds--popover element added (inherited from Popover)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--form-item.cds--text-input--fluid.cds--text-input-wrapper",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--form-item.cds--text-input--fluid.cds--text-input-wrapper element added (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--label",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label element added (inherited from FormLabel)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input__field-outer-wrapper",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input__field-outer-wrapper element added (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input__field-wrapper",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input__field-wrapper element added (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input element added (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input__counter-alert",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input__counter-alert element added (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--layer-two.cds--layer__with-background",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Fluid Components · .cds--layer-two.cds--layer__with-background element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--layer-three.cds--layer__with-background",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidmultiselect--filterable-with-layer"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Fluid Components · .cds--layer-three.cds--layer__with-background element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--popover--caret.cds--popover--high-contrast.cds--popover--top-start.cds--popover-container.cds--toggletip",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Popover",
-      "Toggletip"
-     ],
-     "text": "Fluid Components · .cds--popover--caret.cds--popover--high-contrast.cds--popover--top-start.cds--popover-container.cds--toggletip element removed (inherited from Popover, Toggletip)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--toggletip-button",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Popover",
-      "Toggletip"
-     ],
-     "text": "Fluid Components · .cds--toggletip-button element removed (inherited from Popover, Toggletip)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--popover",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Popover"
-     ],
-     "text": "Fluid Components · .cds--popover element removed (inherited from Popover)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--form-item.cds--text-input--fluid.cds--text-input-wrapper",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--form-item.cds--text-input--fluid.cds--text-input-wrapper element removed (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--label",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "FormLabel"
-     ],
-     "text": "Fluid Components · .cds--label element removed (inherited from FormLabel)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input__field-outer-wrapper",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input__field-outer-wrapper element removed (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input__field-wrapper",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input__field-wrapper element removed (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input element removed (inherited from TextInput)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--text-input__counter-alert",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "components-fluid-components-fluidtextinput--default-with-toggletip"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextInput"
-     ],
-     "text": "Fluid Components · .cds--text-input__counter-alert element removed (inherited from TextInput)"
     }
    ]
   },
@@ -15635,15 +15018,14 @@
     "PasswordInput",
     "Search",
     "Select",
-    "TextArea",
     "TextInput",
     "Tooltip"
    ],
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.0228,
-    "mean": 0.01964,
+    "max": 0.00965,
+    "mean": 0.00752,
     "storiesChanged": 2,
     "storiesCompared": 2
    },
@@ -15658,17 +15040,17 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 22720,
-      "totalPixels": 996342,
-      "ratio": 0.0228,
+      "diffPixels": 9600,
+      "totalPixels": 994443,
+      "ratio": 0.00965,
       "size": {
        "before": [
         633,
-        1574
+        1571
        ],
        "v12": [
         633,
-        1574
+        1571
        ]
       },
       "sizeChanged": false
@@ -15677,9 +15059,9 @@
       "x": 25,
       "y": 26,
       "width": 633,
-      "height": 1574
+      "height": 1571
      },
-     "changes": 82
+     "changes": 80
     },
     {
      "id": "components-form--default",
@@ -15691,17 +15073,17 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 16423,
-      "totalPixels": 996342,
-      "ratio": 0.01648,
+      "diffPixels": 5350,
+      "totalPixels": 994443,
+      "ratio": 0.00538,
       "size": {
        "before": [
         633,
-        1574
+        1571
        ],
        "v12": [
         633,
-        1574
+        1571
        ]
       },
       "sizeChanged": false
@@ -15710,9 +15092,9 @@
       "x": 25,
       "y": 26,
       "width": 633,
-      "height": 1574
+      "height": 1571
      },
-     "changes": 90
+     "changes": 88
     }
    ],
    "notes": [],
@@ -16349,7 +15731,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -17324,58 +16708,6 @@
      "text": "Form · .cds--number__rule-divider · display block → none (inherited from NumberInput)"
     },
     {
-     "type": "Visual",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "padding",
-     "from": "11px 16px",
-     "to": "11px 16px 8px",
-     "note": null,
-     "fromToken": {
-      "literal": ".6875rem"
-     },
-     "toToken": {
-      "literal": ".5rem"
-     },
-     "stories": [
-      "components-form--default"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextArea"
-     ],
-     "text": "Form · .cds--text-area · padding 11px 16px → 11px 16px 8px (inherited from TextArea)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "padding",
-     "from": "11px 40px 11px 16px",
-     "to": "11px 40px 8px 16px",
-     "note": null,
-     "fromToken": {
-      "literal": ".6875rem"
-     },
-     "toToken": {
-      "literal": ".5rem"
-     },
-     "stories": [
-      "components-form--with-ai-label"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextArea"
-     ],
-     "text": "Form · .cds--text-area · padding 11px 40px 11px 16px → 11px 40px 8px 16px (inherited from TextArea)"
-    },
-    {
      "type": "Layout",
      "element": ".cds--text-input",
      "variants": [
@@ -17397,29 +16729,6 @@
       "TextInput"
      ],
      "text": "Form · .cds--text-input · height 39px → 38px (-1px) (inherited from TextInput)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "height",
-     "from": "102.94px",
-     "to": "99.94px",
-     "note": "-3px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-form--default",
-      "components-form--with-ai-label"
-     ],
-     "elements": 2,
-     "inherited": true,
-     "sources": [
-      "TextArea"
-     ],
-     "text": "Form · .cds--text-area · height 102.94px → 99.94px (-3px) (inherited from TextArea)"
     },
     {
      "type": "Layout",
@@ -17715,7 +17024,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -18512,52 +17823,17 @@
    "id": "inlineloading",
    "name": "InlineLoading",
    "section": "Components",
-   "status": "inherited",
-   "inheritsFrom": [
-    "Button"
-   ],
+   "status": "unchanged",
+   "inheritsFrom": [],
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.30168,
-    "mean": 0.15084,
-    "storiesChanged": 1,
+    "max": 0,
+    "mean": 0,
+    "storiesChanged": 0,
     "storiesCompared": 2
    },
    "stories": [
-    {
-     "id": "components-inlineloading--ux-example",
-     "base": "v11",
-     "baseId": "components-inlineloading--ux-example",
-     "v11Id": "components-inlineloading--ux-example",
-     "name": "Ux Example",
-     "title": "Components/InlineLoading",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 10233,
-      "totalPixels": 33920,
-      "ratio": 0.30168,
-      "size": {
-       "before": [
-        424,
-        80
-       ],
-       "v12": [
-        424,
-        80
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 424,
-      "height": 80
-     },
-     "changes": 4
-    },
     {
      "id": "components-inlineloading--default",
      "base": "v11",
@@ -18590,93 +17866,43 @@
       "height": 50
      },
      "changes": 0
+    },
+    {
+     "id": "components-inlineloading--ux-example",
+     "base": "v11",
+     "baseId": "components-inlineloading--ux-example",
+     "v11Id": "components-inlineloading--ux-example",
+     "name": "Ux Example",
+     "title": "Components/InlineLoading",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 33920,
+      "ratio": 0,
+      "size": {
+       "before": [
+        424,
+        80
+       ],
+       "v12": [
+        424,
+        80
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 424,
+      "height": 80
+     },
+     "changes": 0
     }
    ],
    "notes": [],
-   "changes": [
-    {
-     "type": "Visual",
-     "element": ".cds--btn",
-     "variants": [
-      "cds--btn cds--btn--primary"
-     ],
-     "prop": "box-shadow",
-     "from": "none",
-     "to": "#e0e0e0 -1px 0px 0px 0px",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-inlineloading--ux-example"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Button"
-     ],
-     "text": "InlineLoading · .cds--btn · box-shadow none → #e0e0e0 -1px 0px 0px 0px (inherited from Button)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--btn",
-     "variants": [
-      "cds--btn cds--btn--secondary"
-     ],
-     "prop": "width",
-     "from": "123.97px",
-     "to": "196px",
-     "note": "+72.03px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-inlineloading--ux-example"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Button"
-     ],
-     "text": "InlineLoading · .cds--btn · width 123.97px → 196px (+72.03px) (inherited from Button)"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--btn",
-     "variants": [
-      "cds--btn cds--btn--primary"
-     ],
-     "prop": "width",
-     "from": "125.97px",
-     "to": "196px",
-     "note": "+70.03px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-inlineloading--ux-example"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Button"
-     ],
-     "text": "InlineLoading · .cds--btn · width 125.97px → 196px (+70.03px) (inherited from Button)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn-set",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "components-inlineloading--ux-example"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Button"
-     ],
-     "text": "InlineLoading · .cds--btn-set element added (inherited from Button)"
-    }
-   ]
+   "changes": []
   },
   {
    "id": "interstitialscreen",
@@ -19832,7 +19058,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -20324,7 +19552,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -20366,7 +19596,6 @@
     "MultiSelect",
     "Popover",
     "Select",
-    "TextArea",
     "TextInput",
     "Tooltip"
    ],
@@ -20575,7 +19804,7 @@
       "width": 1280,
       "height": 800
      },
-     "changes": 13
+     "changes": 12
     },
     {
      "id": "components-modal-feature-flags--enable-dialog-element",
@@ -20755,7 +19984,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -21458,32 +20689,6 @@
       "Dropdown"
      ],
      "text": "Modal · .cds--autoalign.cds--dropdown.cds--list-box · border-top/right/left none → 1px solid transparent (inherited from Dropdown)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "padding",
-     "from": "11px 16px",
-     "to": "11px 16px 8px",
-     "note": null,
-     "fromToken": {
-      "literal": ".6875rem"
-     },
-     "toToken": {
-      "literal": ".5rem"
-     },
-     "stories": [
-      "components-modal--with-ai-label"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "TextArea"
-     ],
-     "text": "Modal · .cds--text-area · padding 11px 16px → 11px 16px 8px (inherited from TextArea)"
     },
     {
      "type": "Layout",
@@ -22525,7 +21730,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -22932,7 +22139,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$border-radius-max",
       "sass": true
@@ -22957,7 +22166,10 @@
      "to": "4px",
      "note": null,
      "fromToken": null,
-     "toToken": null,
+     "toToken": {
+      "token": "$border-radius-04",
+      "sass": true
+     },
      "stories": [
       "components-notifications-callout--default",
       "components-notifications-callout--with-interactive-elements"
@@ -24527,7 +23739,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -24761,7 +23975,7 @@
     },
     {
      "type": "Structure",
-     "element": ".cds--overflow-menu__icon",
+     "element": ".cds--btn__icon.cds--overflow-menu__icon",
      "prop": "element removed",
      "from": "present",
      "to": "—",
@@ -24770,7 +23984,7 @@
      ],
      "elements": 1,
      "inherited": false,
-     "text": "OverflowMenu · .cds--overflow-menu__icon element removed"
+     "text": "OverflowMenu · .cds--btn__icon.cds--overflow-menu__icon element removed"
     },
     {
      "type": "Structure",
@@ -29392,7 +28606,7 @@
    "migratedFrom": null,
    "pixel": {
     "max": 0.09562,
-    "mean": 0.04858,
+    "mean": 0.04865,
     "storiesChanged": 5,
     "storiesCompared": 6
    },
@@ -29440,9 +28654,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 7291,
+      "diffPixels": 7321,
       "totalPixels": 76800,
-      "ratio": 0.09493,
+      "ratio": 0.09533,
       "size": {
        "before": [
         400,
@@ -29711,8 +28925,8 @@
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.00641,
-    "mean": 0.00162,
+    "max": 0.00599,
+    "mean": 0.00152,
     "storiesChanged": 1,
     "storiesCompared": 4
    },
@@ -29727,9 +28941,9 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 701,
+      "diffPixels": 655,
       "totalPixels": 109292,
-      "ratio": 0.00641,
+      "ratio": 0.00599,
       "size": {
        "before": [
         1228,
@@ -32952,8 +32166,8 @@
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.00302,
-    "mean": 0.00065,
+    "max": 0.00276,
+    "mean": 0.00061,
     "storiesChanged": 2,
     "storiesCompared": 10
    },
@@ -32969,15 +32183,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 135,
-      "totalPixels": 44640,
-      "ratio": 0.00302,
+      "totalPixels": 48960,
+      "ratio": 0.00276,
       "size": {
        "before": [
-        465,
+        510,
         96
        ],
        "v12": [
-        465,
+        510,
         96
        ]
       },
@@ -32986,7 +32200,7 @@
      "clip": {
       "x": 26,
       "y": 26,
-      "width": 465,
+      "width": 510,
       "height": 96
      },
      "changes": 10
@@ -33002,15 +32216,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 69,
-      "totalPixels": 36192,
-      "ratio": 0.00191,
+      "totalPixels": 40512,
+      "ratio": 0.0017,
       "size": {
        "before": [
-        377,
+        422,
         96
        ],
        "v12": [
-        377,
+        422,
         96
        ]
       },
@@ -33019,7 +32233,7 @@
      "clip": {
       "x": 26,
       "y": 26,
-      "width": 377,
+      "width": 422,
       "height": 96
      },
      "changes": 5
@@ -33035,16 +32249,16 @@
      "error": null,
      "pixel": {
       "diffPixels": 60,
-      "totalPixels": 64844,
-      "ratio": 0.00093,
+      "totalPixels": 59924,
+      "ratio": 0.001,
       "size": {
        "before": [
-        377,
-        172
+        422,
+        142
        ],
        "v12": [
-        377,
-        172
+        422,
+        142
        ]
       },
       "sizeChanged": false
@@ -33052,22 +32266,22 @@
      "clip": {
       "x": 26,
       "y": 26,
-      "width": 377,
-      "height": 172
+      "width": 422,
+      "height": 142
      },
      "changes": 5
     },
     {
-     "id": "components-slider--controlled-slider-with-layer",
+     "id": "components-slider--with-layer",
      "base": "v11",
-     "baseId": "components-slider--controlled-slider-with-layer",
-     "v11Id": "components-slider--controlled-slider-with-layer",
-     "name": "Controlled Slider With Layer",
+     "baseId": "components-slider--with-layer",
+     "v11Id": "components-slider--with-layer",
+     "name": "With Layer",
      "title": "Components/Slider",
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 335,
+      "diffPixels": 334,
       "totalPixels": 1024000,
       "ratio": 0.00033,
       "size": {
@@ -33091,18 +32305,18 @@
      "changes": 15
     },
     {
-     "id": "components-slider--with-layer",
+     "id": "components-slider--controlled-slider-with-layer",
      "base": "v11",
-     "baseId": "components-slider--with-layer",
-     "v11Id": "components-slider--with-layer",
-     "name": "With Layer",
+     "baseId": "components-slider--controlled-slider-with-layer",
+     "v11Id": "components-slider--controlled-slider-with-layer",
+     "name": "Controlled Slider With Layer",
      "title": "Components/Slider",
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 334,
+      "diffPixels": 307,
       "totalPixels": 1024000,
-      "ratio": 0.00033,
+      "ratio": 0.0003,
       "size": {
        "before": [
         1280,
@@ -33200,15 +32414,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 24057,
+      "totalPixels": 27702,
       "ratio": 0,
       "size": {
        "before": [
-        297,
+        342,
         81
        ],
        "v12": [
-        297,
+        342,
         81
        ]
       },
@@ -33217,7 +32431,7 @@
      "clip": {
       "x": 26,
       "y": 26,
-      "width": 297,
+      "width": 342,
       "height": 81
      },
      "changes": 0
@@ -33266,15 +32480,15 @@
      "error": null,
      "pixel": {
       "diffPixels": 0,
-      "totalPixels": 25620,
+      "totalPixels": 29400,
       "ratio": 0,
       "size": {
        "before": [
-        305,
+        350,
         84
        ],
        "v12": [
-        305,
+        350,
         84
        ]
       },
@@ -33283,7 +32497,7 @@
      "clip": {
       "x": 26,
       "y": 26,
-      "width": 305,
+      "width": 350,
       "height": 84
      },
      "changes": 0
@@ -34598,7 +33812,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -34969,7 +34185,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -40639,83 +39857,17 @@
    "id": "textarea",
    "name": "TextArea",
    "section": "Components",
-   "status": "changed",
+   "status": "unchanged",
    "inheritsFrom": [],
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.0237,
-    "mean": 0.01293,
-    "storiesChanged": 3,
+    "max": 0,
+    "mean": 0,
+    "storiesChanged": 0,
     "storiesCompared": 4
    },
    "stories": [
-    {
-     "id": "components-textarea--with-ai-label",
-     "base": "v11",
-     "baseId": "components-textarea--with-ai-label",
-     "v11Id": "components-textarea--with-ai-label",
-     "name": "With AI Label",
-     "title": "Components/TextArea",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 5180,
-      "totalPixels": 218584,
-      "ratio": 0.0237,
-      "size": {
-       "before": [
-        1228,
-        178
-       ],
-       "v12": [
-        1228,
-        178
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 1228,
-      "height": 178
-     },
-     "changes": 2
-    },
-    {
-     "id": "components-textarea--with-layer",
-     "base": "v11",
-     "baseId": "components-textarea--with-layer",
-     "v11Id": "components-textarea--with-layer",
-     "name": "With Layer",
-     "title": "Components/TextArea",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 15504,
-      "totalPixels": 1024000,
-      "ratio": 0.01514,
-      "size": {
-       "before": [
-        1280,
-        800
-       ],
-       "v12": [
-        1280,
-        800
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 0,
-      "y": 0,
-      "width": 1280,
-      "height": 800
-     },
-     "changes": 6
-    },
     {
      "id": "components-textarea--default",
      "base": "v11",
@@ -40726,17 +39878,17 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 2817,
-      "totalPixels": 218584,
-      "ratio": 0.01289,
+      "diffPixels": 0,
+      "totalPixels": 214900,
+      "ratio": 0,
       "size": {
        "before": [
         1228,
-        178
+        175
        ],
        "v12": [
         1228,
-        178
+        175
        ]
       },
       "sizeChanged": false
@@ -40745,9 +39897,9 @@
       "x": 26,
       "y": 26,
       "width": 1228,
-      "height": 178
+      "height": 175
      },
-     "changes": 2
+     "changes": 0
     },
     {
      "id": "components-textarea--skeleton",
@@ -40781,79 +39933,76 @@
       "height": 154
      },
      "changes": 0
+    },
+    {
+     "id": "components-textarea--with-ai-label",
+     "base": "v11",
+     "baseId": "components-textarea--with-ai-label",
+     "v11Id": "components-textarea--with-ai-label",
+     "name": "With AI Label",
+     "title": "Components/TextArea",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 214900,
+      "ratio": 0,
+      "size": {
+       "before": [
+        1228,
+        175
+       ],
+       "v12": [
+        1228,
+        175
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 1228,
+      "height": 175
+     },
+     "changes": 0
+    },
+    {
+     "id": "components-textarea--with-layer",
+     "base": "v11",
+     "baseId": "components-textarea--with-layer",
+     "v11Id": "components-textarea--with-layer",
+     "name": "With Layer",
+     "title": "Components/TextArea",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 1024000,
+      "ratio": 0,
+      "size": {
+       "before": [
+        1280,
+        800
+       ],
+       "v12": [
+        1280,
+        800
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 800
+     },
+     "changes": 0
     }
    ],
    "notes": [],
-   "changes": [
-    {
-     "type": "Visual",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "padding",
-     "from": "11px 16px",
-     "to": "11px 16px 8px",
-     "note": null,
-     "fromToken": {
-      "literal": ".6875rem"
-     },
-     "toToken": {
-      "literal": ".5rem"
-     },
-     "stories": [
-      "components-textarea--default",
-      "components-textarea--with-layer"
-     ],
-     "elements": 4,
-     "inherited": false,
-     "text": "TextArea · .cds--text-area · padding 11px 16px → 11px 16px 8px"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "padding",
-     "from": "11px 40px 11px 16px",
-     "to": "11px 40px 8px 16px",
-     "note": null,
-     "fromToken": {
-      "literal": ".6875rem"
-     },
-     "toToken": {
-      "literal": ".5rem"
-     },
-     "stories": [
-      "components-textarea--with-ai-label"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "TextArea · .cds--text-area · padding 11px 40px 11px 16px → 11px 40px 8px 16px"
-    },
-    {
-     "type": "Layout",
-     "element": ".cds--text-area",
-     "variants": [
-      "cds--text-area"
-     ],
-     "prop": "height",
-     "from": "102.94px",
-     "to": "99.94px",
-     "note": "-3px",
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-textarea--default",
-      "components-textarea--with-ai-label",
-      "components-textarea--with-layer"
-     ],
-     "elements": 5,
-     "inherited": false,
-     "text": "TextArea · .cds--text-area · height 102.94px → 99.94px (-3px)"
-    }
-   ]
+   "changes": []
   },
   {
    "id": "textinput",
@@ -41545,78 +40694,12 @@
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.00707,
-    "mean": 0.00082,
-    "storiesChanged": 4,
+    "max": 0.00368,
+    "mean": 0.00025,
+    "storiesChanged": 2,
     "storiesCompared": 23
    },
    "stories": [
-    {
-     "id": "components-tile-feature-flag--radio-with-layer",
-     "base": "v11",
-     "baseId": "components-tile-feature-flag--radio-with-layer",
-     "v11Id": "components-tile-feature-flag--radio-with-layer",
-     "name": "Radio With Layer",
-     "title": "Components/Tile/Feature Flag",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 7017,
-      "totalPixels": 992224,
-      "ratio": 0.00707,
-      "size": {
-       "before": [
-        1228,
-        808
-       ],
-       "v12": [
-        1228,
-        808
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 1228,
-      "height": 808
-     },
-     "changes": 3
-    },
-    {
-     "id": "components-tile-feature-flag--radio",
-     "base": "v11",
-     "baseId": "components-tile-feature-flag--radio",
-     "v11Id": "components-tile-feature-flag--radio",
-     "name": "Radio",
-     "title": "Components/Tile/Feature Flag",
-     "captured": true,
-     "error": null,
-     "pixel": {
-      "diffPixels": 2475,
-      "totalPixels": 395416,
-      "ratio": 0.00626,
-      "size": {
-       "before": [
-        1228,
-        322
-       ],
-       "v12": [
-        1228,
-        322
-       ]
-      },
-      "sizeChanged": false
-     },
-     "clip": {
-      "x": 26,
-      "y": 26,
-      "width": 1228,
-      "height": 322
-     },
-     "changes": 1
-    },
     {
      "id": "components-tile--expandable-with-interactive",
      "base": "v11",
@@ -42245,6 +41328,72 @@
      "changes": 0
     },
     {
+     "id": "components-tile-feature-flag--radio",
+     "base": "v11",
+     "baseId": "components-tile-feature-flag--radio",
+     "v11Id": "components-tile-feature-flag--radio",
+     "name": "Radio",
+     "title": "Components/Tile/Feature Flag",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 395416,
+      "ratio": 0,
+      "size": {
+       "before": [
+        1228,
+        322
+       ],
+       "v12": [
+        1228,
+        322
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 1228,
+      "height": 322
+     },
+     "changes": 0
+    },
+    {
+     "id": "components-tile-feature-flag--radio-with-layer",
+     "base": "v11",
+     "baseId": "components-tile-feature-flag--radio-with-layer",
+     "v11Id": "components-tile-feature-flag--radio-with-layer",
+     "name": "Radio With Layer",
+     "title": "Components/Tile/Feature Flag",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 992224,
+      "ratio": 0,
+      "size": {
+       "before": [
+        1228,
+        808
+       ],
+       "v12": [
+        1228,
+        808
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 1228,
+      "height": 808
+     },
+     "changes": 0
+    },
+    {
      "id": "components-tile-feature-flag--selectable",
      "base": "v11",
      "baseId": "components-tile-feature-flag--selectable",
@@ -42315,26 +41464,6 @@
    "changes": [
     {
      "type": "Visual",
-     "element": ".cds--tile",
-     "variants": [
-      "cds--tile cds--tile--is-selected cds--tile--radio cds--tile--selectable"
-     ],
-     "prop": "border",
-     "from": "1px solid #c6c6c6",
-     "to": "1px solid #161616",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-tile-feature-flag--radio",
-      "components-tile-feature-flag--radio-with-layer"
-     ],
-     "elements": 3,
-     "inherited": false,
-     "text": "Tile · .cds--tile · border 1px solid #c6c6c6 → 1px solid #161616"
-    },
-    {
-     "type": "Visual",
      "element": ".cds--btn",
      "variants": [
       "cds--btn cds--btn--primary"
@@ -42343,7 +41472,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -42357,25 +41488,6 @@
       "Button"
      ],
      "text": "Tile · .cds--btn · border-radius 0px → 999999px (pill) (inherited from Button)"
-    },
-    {
-     "type": "Visual",
-     "element": ".cds--tile",
-     "variants": [
-      "cds--tile cds--tile--is-selected cds--tile--radio cds--tile--selectable"
-     ],
-     "prop": "border",
-     "from": "1px solid #a8a8a8",
-     "to": "1px solid #161616",
-     "note": null,
-     "fromToken": null,
-     "toToken": null,
-     "stories": [
-      "components-tile-feature-flag--radio-with-layer"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "Tile · .cds--tile · border 1px solid #a8a8a8 → 1px solid #161616"
     },
     {
      "type": "Structure",
@@ -43245,7 +42357,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -43853,7 +42967,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -44295,7 +43411,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -47507,65 +46625,222 @@
    "id": "emptystate",
    "name": "EmptyState",
    "section": "Examples",
-   "status": "migrated",
-   "inheritsFrom": [],
-   "base": "ibmp",
-   "migratedFrom": {
-    "ibmpTitles": [
-     "Patterns/Prebuilt patterns/Empty states/EmptyState"
-    ],
-    "matched": 0,
-    "unmatched": 3
+   "status": "changed",
+   "inheritsFrom": [
+    "Search"
+   ],
+   "base": "v11",
+   "migratedFrom": null,
+   "pixel": {
+    "max": 0.00108,
+    "mean": 0.00079,
+    "storiesChanged": 2,
+    "storiesCompared": 3
    },
-   "pixel": null,
-   "stories": [],
+   "stories": [
+    {
+     "id": "examples-emptystate--empty-state-isometric",
+     "base": "v11",
+     "baseId": "examples-emptystate--empty-state-isometric",
+     "v11Id": "examples-emptystate--empty-state-isometric",
+     "name": "Empty State unit with isometric illustration",
+     "title": "Examples/EmptyState",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 106,
+      "totalPixels": 98366,
+      "ratio": 0.00108,
+      "size": {
+       "before": [
+        359,
+        274
+       ],
+       "v12": [
+        359,
+        274
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 359,
+      "height": 274
+     },
+     "changes": 1
+    },
+    {
+     "id": "examples-emptystate--empty-state-pictogram",
+     "base": "v11",
+     "baseId": "examples-emptystate--empty-state-pictogram",
+     "v11Id": "examples-emptystate--empty-state-pictogram",
+     "name": "Empty State unit with pictogram illustration",
+     "title": "Examples/EmptyState",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 106,
+      "totalPixels": 98366,
+      "ratio": 0.00108,
+      "size": {
+       "before": [
+        359,
+        274
+       ],
+       "v12": [
+        359,
+        274
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 359,
+      "height": 274
+     },
+     "changes": 1
+    },
+    {
+     "id": "examples-emptystate--empty-state-in-ui",
+     "base": "v11",
+     "baseId": "examples-emptystate--empty-state-in-ui",
+     "v11Id": "examples-emptystate--empty-state-in-ui",
+     "name": "Empty State unit",
+     "title": "Examples/EmptyState",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 211,
+      "totalPixels": 943360,
+      "ratio": 0.00022,
+      "size": {
+       "before": [
+        1280,
+        737
+       ],
+       "v12": [
+        1280,
+        737
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 737
+     },
+     "changes": 5
+    }
+   ],
    "notes": [],
    "changes": [
     {
-     "type": "API",
-     "prop": "package",
-     "element": null,
-     "from": "@carbon/ibm-products",
-     "to": "@carbon/react",
-     "stories": [],
-     "note": "IBM Products Storybook: Patterns/Prebuilt patterns/Empty states/EmptyState",
-     "text": "EmptyState · package @carbon/ibm-products → @carbon/react"
+     "type": "Visual",
+     "element": ".cds--btn.cds--empty-state__action",
+     "variants": [
+      "cds--btn cds--btn--sm cds--btn--tertiary cds--empty-state__action cds--layout--size-sm"
+     ],
+     "prop": "border-radius",
+     "from": "0px",
+     "to": "999999px",
+     "note": "pill",
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
+     "toToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
+     "stories": [
+      "examples-emptystate--empty-state-in-ui",
+      "examples-emptystate--empty-state-isometric",
+      "examples-emptystate--empty-state-pictogram"
+     ],
+     "elements": 4,
+     "inherited": false,
+     "text": "EmptyState · .cds--btn.cds--empty-state__action · border-radius 0px → 999999px (pill)"
     },
     {
-     "type": "Story",
-     "prop": "story added",
-     "element": null,
-     "from": "—",
-     "to": "Empty State unit",
+     "type": "Visual",
+     "element": ".cds--search-input",
+     "variants": [
+      "cds--search-input"
+     ],
+     "prop": "background-color",
+     "from": "#f4f4f4",
+     "to": "transparent",
+     "note": null,
+     "fromToken": {
+      "token": "$field"
+     },
+     "toToken": {
+      "token": "$field"
+     },
      "stories": [
       "examples-emptystate--empty-state-in-ui"
      ],
-     "note": "no IBM Products equivalent",
-     "text": "EmptyState · story added: Empty State unit (no IBM Products equivalent)"
+     "elements": 1,
+     "inherited": true,
+     "sources": [
+      "Search"
+     ],
+     "text": "EmptyState · .cds--search-input · background-color #f4f4f4 → transparent (inherited from Search)"
     },
     {
-     "type": "Story",
-     "prop": "story added",
-     "element": null,
-     "from": "—",
-     "to": "Empty State unit with isometric illustration",
-     "stories": [
-      "examples-emptystate--empty-state-isometric"
+     "type": "Visual",
+     "element": ".cds--search-input",
+     "variants": [
+      "cds--search-input"
      ],
-     "note": "no IBM Products equivalent",
-     "text": "EmptyState · story added: Empty State unit with isometric illustration (no IBM Products equivalent)"
+     "prop": "background-image",
+     "from": "none",
+     "to": "linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%)",
+     "note": "now drawn with gradients",
+     "fromToken": {
+      "token": "$field"
+     },
+     "toToken": {
+      "token": "$field"
+     },
+     "stories": [
+      "examples-emptystate--empty-state-in-ui"
+     ],
+     "elements": 1,
+     "inherited": true,
+     "sources": [
+      "Search"
+     ],
+     "text": "EmptyState · .cds--search-input · background-image none → linear-gradient(#f4f4f4, #f4f4f4), linear-gradient(#e0e0e0 calc(100% - 4px), #8d8d8d 100%) (now drawn with gradients) (inherited from Search)"
     },
     {
-     "type": "Story",
-     "prop": "story added",
-     "element": null,
-     "from": "—",
-     "to": "Empty State unit with pictogram illustration",
-     "stories": [
-      "examples-emptystate--empty-state-pictogram"
+     "type": "Visual",
+     "element": ".cds--search-input",
+     "variants": [
+      "cds--search-input"
      ],
-     "note": "no IBM Products equivalent",
-     "text": "EmptyState · story added: Empty State unit with pictogram illustration (no IBM Products equivalent)"
+     "prop": "border-radius",
+     "from": "0px",
+     "to": "4px",
+     "note": null,
+     "fromToken": null,
+     "toToken": {
+      "token": "$border-radius-04",
+      "sass": true
+     },
+     "stories": [
+      "examples-emptystate--empty-state-in-ui"
+     ],
+     "elements": 1,
+     "inherited": true,
+     "sources": [
+      "Search"
+     ],
+     "text": "EmptyState · .cds--search-input · border-radius 0px → 4px (inherited from Search)"
     }
    ]
   },
@@ -49790,17 +49065,15 @@
    "id": "preview-chatbutton",
    "name": "preview__ChatButton",
    "section": "Preview",
-   "status": "changed",
-   "inheritsFrom": [
-    "Button"
-   ],
+   "status": "unchanged",
+   "inheritsFrom": [],
    "base": "v11",
    "migratedFrom": null,
    "pixel": {
-    "max": 0.1241,
-    "mean": 0.1241,
-    "storiesChanged": 1,
-    "storiesCompared": 1
+    "max": 0,
+    "mean": 0,
+    "storiesChanged": 0,
+    "storiesCompared": 2
    },
    "stories": [
     {
@@ -49813,441 +49086,65 @@
      "captured": true,
      "error": null,
      "pixel": {
-      "diffPixels": 75598,
-      "totalPixels": 609150,
-      "ratio": 0.1241,
+      "diffPixels": 0,
+      "totalPixels": 12320,
+      "ratio": 0,
       "size": {
        "before": [
-        786,
-        775
+        154,
+        80
        ],
        "v12": [
-        786,
-        775
+        154,
+        80
        ]
       },
       "sizeChanged": false
      },
      "clip": {
       "x": 26,
-      "y": 25,
-      "width": 786,
-      "height": 775
+      "y": 26,
+      "width": 154,
+      "height": 80
      },
-     "changes": 44
+     "changes": 0
+    },
+    {
+     "id": "preview-preview-chatbutton--skeleton",
+     "base": "v11",
+     "baseId": "preview-preview-chatbutton--skeleton",
+     "v11Id": "preview-preview-chatbutton--skeleton",
+     "name": "Skeleton",
+     "title": "Preview/preview__ChatButton",
+     "captured": true,
+     "error": null,
+     "pixel": {
+      "diffPixels": 0,
+      "totalPixels": 14560,
+      "ratio": 0,
+      "size": {
+       "before": [
+        182,
+        80
+       ],
+       "v12": [
+        182,
+        80
+       ]
+      },
+      "sizeChanged": false
+     },
+     "clip": {
+      "x": 26,
+      "y": 26,
+      "width": 182,
+      "height": 80
+     },
+     "changes": 0
     }
    ],
    "notes": [],
-   "changes": [
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--lg.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-lg",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--lg.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-lg element added"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn__icon",
-     "prop": "element added",
-     "from": "—",
-     "to": "present",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": true,
-     "sources": [
-      "Button"
-     ],
-     "text": "preview__ChatButton · .cds--btn__icon element added (inherited from Button)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--primary.cds--btn--sm.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--primary.cds--btn--sm.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn__icon",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 12,
-     "inherited": true,
-     "sources": [
-      "Button"
-     ],
-     "text": "preview__ChatButton · .cds--btn__icon element removed (inherited from Button)"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--md.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-md",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--md.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-md element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--lg.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-lg",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--lg.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon.cds--layout--size-lg element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--primary.cds--btn--sm.cds--chat-btn.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--primary.cds--btn--sm.cds--chat-btn.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--md.cds--btn--primary.cds--chat-btn.cds--layout--size-md",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--md.cds--btn--primary.cds--chat-btn.cds--layout--size-md element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--lg.cds--btn--primary.cds--chat-btn.cds--layout--size-lg",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--lg.cds--btn--primary.cds--chat-btn.cds--layout--size-lg element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--primary.cds--chat-btn.cds--chat-btn--with-icon element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--secondary.cds--chat-btn.cds--chat-btn--with-icon",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--secondary.cds--chat-btn.cds--chat-btn--with-icon element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--tertiary.cds--chat-btn.cds--chat-btn--with-icon",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--tertiary.cds--chat-btn.cds--chat-btn--with-icon element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--ghost.cds--chat-btn.cds--chat-btn--with-icon",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--ghost.cds--chat-btn.cds--chat-btn--with-icon element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--danger.cds--chat-btn.cds--chat-btn--with-icon",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--danger.cds--chat-btn.cds--chat-btn--with-icon element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--primary.cds--chat-btn",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--primary.cds--chat-btn element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--secondary.cds--chat-btn",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--secondary.cds--chat-btn element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--tertiary.cds--chat-btn",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--tertiary.cds--chat-btn element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--ghost.cds--chat-btn",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--ghost.cds--chat-btn element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--danger.cds--chat-btn",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--danger.cds--chat-btn element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--with-icon.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--with-icon.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--chat-btn--with-icon.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--chat-btn--with-icon.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--chat-btn--with-icon.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--chat-btn--with-icon.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--with-icon.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--with-icon.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--chat-btn--quick-action--selected.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--layout--size-sm",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 1,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--btn--disabled.cds--btn--ghost.cds--btn--sm.cds--chat-btn.cds--chat-btn--quick-action.cds--layout--size-sm element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--chat-btn.cds--layout--size-sm.cds--skeleton",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 2,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--chat-btn.cds--layout--size-sm.cds--skeleton element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--chat-btn.cds--layout--size-md.cds--skeleton",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 2,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--chat-btn.cds--layout--size-md.cds--skeleton element removed"
-    },
-    {
-     "type": "Structure",
-     "element": ".cds--btn.cds--chat-btn.cds--skeleton",
-     "prop": "element removed",
-     "from": "present",
-     "to": "—",
-     "stories": [
-      "preview-preview-chatbutton--default"
-     ],
-     "elements": 2,
-     "inherited": false,
-     "text": "preview__ChatButton · .cds--btn.cds--chat-btn.cds--skeleton element removed"
-    },
-    {
-     "type": "Story",
-     "prop": "story added",
-     "element": null,
-     "from": "—",
-     "to": "Skeleton",
-     "stories": [
-      "preview-preview-chatbutton--skeleton"
-     ],
-     "note": null,
-     "text": "preview__ChatButton · story added: Skeleton"
-    }
-   ]
+   "changes": []
   },
   {
    "id": "preview-datepicker",
@@ -51200,7 +50097,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -51696,7 +50595,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },
@@ -52125,7 +51026,9 @@
      "from": "0px",
      "to": "999999px",
      "note": "pill",
-     "fromToken": null,
+     "fromToken": {
+      "token": "$button-radius-ss/se/ee/es"
+     },
      "toToken": {
       "token": "$button-radius-ss/se/ee/es"
      },

@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-10-06T16:18:33.230Z",
+ "generatedAt": "2026-10-09T03:01:32.463Z",
  "counts": {
-  "v11Stories": 502,
+  "v11Stories": 507,
   "v12Stories": 624,
   "ibmpStories": 270,
-  "matched": 493,
+  "matched": 498,
   "migrated": 91
  },
  "matched": [
@@ -205,6 +205,16 @@
    "v12": "components-button--icon-button-with-badge",
    "title": "Components/Button",
    "name": "Icon Button With Badge",
+   "component": "Button",
+   "match": "exact"
+  },
+  {
+   "base": "v11",
+   "baseId": "components-button--radius",
+   "v11": "components-button--radius",
+   "v12": "components-button--radius",
+   "title": "Components/Button",
+   "name": "Radius",
    "component": "Button",
    "match": "exact"
   },
@@ -4460,6 +4470,36 @@
   },
   {
    "base": "v11",
+   "baseId": "examples-emptystate--empty-state-in-ui",
+   "v11": "examples-emptystate--empty-state-in-ui",
+   "v12": "examples-emptystate--empty-state-in-ui",
+   "title": "Examples/EmptyState",
+   "name": "Empty State unit",
+   "component": "EmptyState",
+   "match": "exact"
+  },
+  {
+   "base": "v11",
+   "baseId": "examples-emptystate--empty-state-isometric",
+   "v11": "examples-emptystate--empty-state-isometric",
+   "v12": "examples-emptystate--empty-state-isometric",
+   "title": "Examples/EmptyState",
+   "name": "Empty State unit with isometric illustration",
+   "component": "EmptyState",
+   "match": "exact"
+  },
+  {
+   "base": "v11",
+   "baseId": "examples-emptystate--empty-state-pictogram",
+   "v11": "examples-emptystate--empty-state-pictogram",
+   "v12": "examples-emptystate--empty-state-pictogram",
+   "title": "Examples/EmptyState",
+   "name": "Empty State unit with pictogram illustration",
+   "component": "EmptyState",
+   "match": "exact"
+  },
+  {
+   "base": "v11",
    "baseId": "helpers-hideatbreakpoint--hide-at-breakpoint",
    "v11": "helpers-hideatbreakpoint--hide-at-breakpoint",
    "v12": "helpers-hideatbreakpoint--hide-at-breakpoint",
@@ -4685,6 +4725,16 @@
    "v12": "preview-preview-chatbutton--default",
    "title": "Preview/preview__ChatButton",
    "name": "Default",
+   "component": "preview__ChatButton",
+   "match": "exact"
+  },
+  {
+   "base": "v11",
+   "baseId": "preview-preview-chatbutton--skeleton",
+   "v11": "preview-preview-chatbutton--skeleton",
+   "v12": "preview-preview-chatbutton--skeleton",
+   "title": "Preview/preview__ChatButton",
+   "name": "Skeleton",
    "component": "preview__ChatButton",
    "match": "exact"
   },
@@ -5965,29 +6015,6 @@
    "unmatched": []
   },
   {
-   "component": "EmptyState",
-   "v12Title": "Examples/EmptyState",
-   "ibmpTitles": [
-    "Patterns/Prebuilt patterns/Empty states/EmptyState"
-   ],
-   "tagged": false,
-   "matched": 0,
-   "unmatched": [
-    {
-     "id": "examples-emptystate--empty-state-in-ui",
-     "name": "Empty State unit"
-    },
-    {
-     "id": "examples-emptystate--empty-state-isometric",
-     "name": "Empty State unit with isometric illustration"
-    },
-    {
-     "id": "examples-emptystate--empty-state-pictogram",
-     "name": "Empty State unit with pictogram illustration"
-    }
-   ]
-  },
-  {
    "component": "ExportModal",
    "v12Title": "Examples/ExportModal",
    "ibmpTitles": [
@@ -6322,7 +6349,6 @@
    "Examples/Create flows/Create Tearsheet",
    "Examples/Create flows/Create Tearsheet Narrow",
    "Examples/Delete and remove",
-   "Examples/EmptyState",
    "Examples/ExportModal",
    "Examples/Generate an API Key",
    "Examples/Import and upload",
@@ -6363,11 +6389,6 @@
     "id": "components-addselect--add-select-selection-summary-item",
     "title": "Components/AddSelect",
     "name": "AddSelect.SelectionSummaryItem"
-   },
-   {
-    "id": "components-button--radius",
-    "title": "Components/Button",
-    "name": "Radius"
    },
    {
     "id": "components-conditionbuilder--default",
@@ -6458,26 +6479,6 @@
     "id": "preview-preview-bignumber--default",
     "title": "Preview/preview__BigNumber",
     "name": "Default"
-   },
-   {
-    "id": "preview-preview-chatbutton--skeleton",
-    "title": "Preview/preview__ChatButton",
-    "name": "Skeleton"
-   },
-   {
-    "id": "examples-emptystate--empty-state-in-ui",
-    "title": "Examples/EmptyState",
-    "name": "Empty State unit"
-   },
-   {
-    "id": "examples-emptystate--empty-state-isometric",
-    "title": "Examples/EmptyState",
-    "name": "Empty State unit with isometric illustration"
-   },
-   {
-    "id": "examples-emptystate--empty-state-pictogram",
-    "title": "Examples/EmptyState",
-    "name": "Empty State unit with pictogram illustration"
    },
    {
     "id": "examples-import-and-upload--standard",
